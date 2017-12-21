@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 /**
  * Generated class for the LoginPage page.
@@ -14,7 +16,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  formLogin: FormGroup;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+    this.formLogin = formBuilder.group({
+      email: ['natthaponsricort@gmail.com'],
+      password: ['lovesrk01']
+    })
+
+    this.formLogin.valueChanges.subscribe(value => console.log(value))
   }
 
   ionViewDidLoad() {
