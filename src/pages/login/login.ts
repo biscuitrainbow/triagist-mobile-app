@@ -1,3 +1,4 @@
+import { TabPage } from './../tab/tab';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -38,12 +39,17 @@ export class LoginPage {
     this.firebaseAuth.auth.signInWithEmailAndPassword(email, password)
       .then(user => {
         this.hideLoading();
+        this.showTabPage();
       })
       .catch(error => {
         this.showToast(error.message);
         this.hideLoading();
       })
 
+  }
+
+  showTabPage() {
+    this.navCtrl.push(TabPage);
   }
 
   showToast(message: string) {
