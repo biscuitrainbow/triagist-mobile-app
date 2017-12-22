@@ -12,7 +12,6 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { MyApp } from './app.component';
 import { ProfilePage } from '../pages/profile/profile';
 import { HospitalPage } from '../pages/hospital/hospital';
-import { GoogleMaps } from '@ionic-native/google-maps';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -51,7 +50,6 @@ var config = {
     StatusBar,
     SplashScreen,
     AngularFireAuth,
-    GoogleMaps,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

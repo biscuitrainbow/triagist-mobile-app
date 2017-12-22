@@ -3,7 +3,7 @@
     <name>triage</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.1.15:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -85,8 +85,5 @@
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
-    <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDIbke2ppe-1W4FhBE5tsH3utV6iiMpZdQ" />
-        <variable name="API_KEY_FOR_IOS" value="AIzaSyBrScf4yTOHKNhKWuZr-iOyH2onWqvsaho" />
-    </plugin>
+    <plugin name="cordova-plugin-geolocation" spec="^3.0.0" />
 </widget>
