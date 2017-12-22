@@ -21,29 +21,10 @@
 
   <div [ngSwitch]="view">
     <ion-list *ngSwitchCase="'list'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Ruby</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-2.jpg">
-        </ion-thumbnail>
-        <h2>Oscar</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-4.jpg">
-        </ion-thumbnail>
-        <h2>Zoey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-puppy-3.jpg">
-        </ion-thumbnail>
-        <h2>Otto</h2>
+      <ion-item *ngFor="let hospital of hospitals">
+        <h2>{{hospital.name}}</h2>
+        <p>{{hospital.distance}}</p>
+        <button ion-button clear item-end>Call</button>
       </ion-item>
     </ion-list>
   </div>

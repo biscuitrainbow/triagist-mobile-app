@@ -12,8 +12,11 @@ declare var google;
 export class HospitalPage {
   @ViewChild('map') element;
   map: any;
-  googlePlaceService;
   view: string = 'map'
+  hospitals: any;
+
+  googlePlaceService;
+  googleDistanceMatrix;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation: Geolocation) {
   }
@@ -26,26 +29,37 @@ export class HospitalPage {
     this.geolocation.getCurrentPosition().then(result => {
       let lat = result.coords.latitude
       let lng = result.coords.longitude
-
       let latLng = new google.maps.LatLng(lat, lng);
 
-      let mapOptions = {
-        center: latLng,
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      }
+      let mapOptions = { center: latLng, zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP }
+
       this.map = new google.maps.Map(this.element.nativeElement, mapOptions)
-
       this.googlePlaceService = new google.maps.places.PlacesService(this.map);
+      this.googleDistanceMatrix = new google.maps.DistanceMatrixService();
 
-      let pyrmont = new google.maps.LatLng(lat, lng);
-      let request = {
-        location: pyrmont,
-        radius: '5000',
-        type: ['hospital']
-      };
+      let currentLocation = new google.maps.LatLng(lat, lng);
+      let nearyByRequest = { location: currentLocation, radius: '5000', type: ['hospital'] };
 
-      this.googlePlaceService.nearbySearch(request, (result, status) => console.log(result));
+      this.googlePlaceService.nearbySearch(nearyByRequest, (result, status) => {
+        result.map((hospital) => {
+          let hospitalLatLng = new google.maps.LatLng(hospital.geometry.location.lat(), hospital.geometry.location.lng());
+          let distanceRequest = { origins: [currentLocation], destinations: [hospitalLatLng], travelMode: 'DRIVING', }
+
+          this.googleDistanceMatrix.getDistanceMatrix(distanceRequest, (response) => {
+            hospital.distance = response.rows[0].elements[0].distance.text;
+            hospital.duration = response.rows[0].elements[0].duration.text;
+          });
+
+          let placeDetailRequest = { placeId: hospital.place_id };
+
+          this.googlePlaceService.getDetails(placeDetailRequest, (place, status) => {
+            hospital.phoneNumber = place.international_phone_number;
+          })
+        })
+
+
+        this.hospitals = result;
+      });
     })
   }
 
