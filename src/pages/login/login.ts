@@ -1,3 +1,4 @@
+import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -18,7 +19,7 @@ export class LoginPage {
 
   formLogin: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, firebaseAuth: AngularFireAuth) {
     this.formLogin = formBuilder.group({
       email: ['natthaponsricort@gmail.com'],
       password: ['lovesrk01']
@@ -27,8 +28,8 @@ export class LoginPage {
     this.formLogin.valueChanges.subscribe(value => console.log(value))
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  login() {
+    console.log("login");
   }
 
 }

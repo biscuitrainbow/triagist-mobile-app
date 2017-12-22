@@ -1,5 +1,5 @@
 <ion-content padding>
-  <form padding [formGroup]="formLogin">
+  <form padding [formGroup]="formLogin" (ngSubmit)="login()">
     <ion-list>
       <ion-item>
         <ion-label floating>Email</ion-label>
@@ -11,6 +11,7 @@
       </ion-item>
       <ion-input [hidden]="true"></ion-input>
     </ion-list>
-    <button margin-top ion-button block>Login</button>
+
+    <button type="submit" margin-top ion-button block>Login</button>
   </form>
 </ion-content>
