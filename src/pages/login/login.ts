@@ -7,7 +7,6 @@ import { LoadingController } from 'ionic-angular/components/loading/loading-cont
 import { Loading } from 'ionic-angular/components/loading/loading';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 
-
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
