@@ -1,4 +1,5 @@
 import { LoginPage } from './../pages/login/login';
+import { TabPage } from './../pages/tab/tab';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -21,7 +22,8 @@ var config = {
 @NgModule({
   declarations: [
     MyApp,
-    LoginPage
+    LoginPage,
+    TabPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ var config = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    LoginPage
+    LoginPage,
+    TabPage
   ],
   providers: [
     StatusBar,
