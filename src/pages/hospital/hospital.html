@@ -12,6 +12,7 @@
 </ion-header>
 <ion-content overflow-scroll="true">
   <div #map style="height:100%;" [style.display]="view == 'map' ? 'block' : 'none'"></div>
+  <div #web_map style="display:none"></div>
 
   <div [ngSwitch]="view">
     <ion-list *ngSwitchCase="'list'">

@@ -10,6 +10,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { Geolocation } from '@ionic-native/geolocation';
 import { CallNumber } from '@ionic-native/call-number';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 
 import { MyApp } from './app.component';
@@ -54,6 +55,7 @@ var config = {
     SplashScreen,
     AngularFireAuth,
     Geolocation,
+    GoogleMaps,
     CallNumber,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
