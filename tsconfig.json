@@ -27,5 +27,8 @@
   "compileOnSave": false,
   "atom": {
     "rewriteTsconfig": false
-  }
+  },
+  "types": [
+    "firebase"
+  ]
 }
