@@ -8,6 +8,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 import { MyApp } from './app.component';
 import { ProfilePage } from '../pages/profile/profile';
@@ -35,7 +37,7 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,6 +52,7 @@ var config = {
     StatusBar,
     SplashScreen,
     AngularFireAuth,
+    Geolocation,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
