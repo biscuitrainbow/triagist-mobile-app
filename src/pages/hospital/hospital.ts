@@ -53,6 +53,11 @@ export class HospitalPage {
             let hospitalLatLng = new google.maps.LatLng(hospital.geometry.location.lat(), hospital.geometry.location.lng());
             let distanceRequest = { origins: [currentLocation], destinations: [hospitalLatLng], travelMode: 'DRIVING', }
 
+            let marker = new google.maps.Marker({
+              position: { lat: hospital.geometry.location.lat(), lng: hospital.geometry.location.lng() },
+              map: this.map
+            });
+
             this.googleDistanceMatrix.getDistanceMatrix(distanceRequest, (response) => {
               hospital.distance = response.rows[0].elements[0].distance.text;
               hospital.duration = response.rows[0].elements[0].duration.text;
