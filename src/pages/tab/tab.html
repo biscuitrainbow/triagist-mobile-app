@@ -1,18 +1,5 @@
-<!--
-  Generated template for the TabPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>tab</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+<ion-tabs tabs-only>
+  <ion-tab tabTitle="Triage" [root]="triagePage"></ion-tab>
+  <ion-tab tabTitle="Hospital" [root]="hospitalPage" tabBadge="23"></ion-tab>
+  <ion-tab tabTitle="Profile" [root]="profilePage"></ion-tab>
+</ion-tabs>

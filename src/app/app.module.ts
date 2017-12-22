@@ -1,3 +1,4 @@
+import { TriagePage } from './../pages/triage/triage';
 import { LoginPage } from './../pages/login/login';
 import { TabPage } from './../pages/tab/tab';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +10,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
+import { ProfilePage } from '../pages/profile/profile';
+import { HospitalPage } from '../pages/hospital/hospital';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -23,7 +26,10 @@ var config = {
   declarations: [
     MyApp,
     LoginPage,
-    TabPage
+    TabPage,
+    ProfilePage,
+    TriagePage,
+    HospitalPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,10 @@ var config = {
   entryComponents: [
     MyApp,
     LoginPage,
-    TabPage
+    TabPage,
+    ProfilePage,
+    TriagePage,
+    HospitalPage
   ],
   providers: [
     StatusBar,
