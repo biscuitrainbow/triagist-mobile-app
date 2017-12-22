@@ -1,12 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+declare var google;
+
+
 @Component({
   selector: 'page-hospital',
   templateUrl: 'hospital.html',
 })
 export class HospitalPage {
   @ViewChild('map') element;
+  map: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -16,7 +20,15 @@ export class HospitalPage {
   }
 
   loadMap() {
+    let latLng = new google.maps.LatLng(-34.9290, 138.6010);
 
+    let mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    this.map = new google.maps.Map(this.element.nativeElement, mapOptions)
   }
 
 }
