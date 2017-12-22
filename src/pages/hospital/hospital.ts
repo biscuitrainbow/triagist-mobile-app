@@ -1,3 +1,4 @@
+import { Geolocation } from '@ionic-native/geolocation';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -14,7 +15,7 @@ export class HospitalPage {
   googlePlaceService;
   view: string = 'map'
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation: Geolocation) {
   }
 
   ionViewDidLoad() {
@@ -22,27 +23,30 @@ export class HospitalPage {
   }
 
   loadMap() {
-    let latLng = new google.maps.LatLng(-34.9290, 138.6010);
+    this.geolocation.getCurrentPosition().then(result => {
+      let lat = result.coords.latitude
+      let lng = result.coords.longitude
 
-    let mapOptions = {
-      center: latLng,
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
+      let latLng = new google.maps.LatLng(lat, lng);
 
-    this.map = new google.maps.Map(this.element.nativeElement, mapOptions)
-    this.googlePlaceService = new google.maps.places.PlacesService(this.map);
+      let mapOptions = {
+        center: latLng,
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      this.map = new google.maps.Map(this.element.nativeElement, mapOptions)
 
-    let pyrmont = new google.maps.LatLng(13.57517, 99.9433905);
-    let request = {
-      location: pyrmont,
-      radius: '5000',
-      type: ['hospital']
-    };
+      this.googlePlaceService = new google.maps.places.PlacesService(this.map);
 
-    this.googlePlaceService.nearbySearch(request, (result, status) => console.log(result));
+      let pyrmont = new google.maps.LatLng(lat, lng);
+      let request = {
+        location: pyrmont,
+        radius: '5000',
+        type: ['hospital']
+      };
 
-
+      this.googlePlaceService.nearbySearch(request, (result, status) => console.log(result));
+    })
   }
 
 }
