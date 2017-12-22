@@ -12,7 +12,7 @@ export class HospitalPage {
   @ViewChild('map') element;
   map: any;
   googlePlaceService;
-  view: string = 'list'
+  view: string = 'map'
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
