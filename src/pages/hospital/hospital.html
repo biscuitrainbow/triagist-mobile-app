@@ -1,22 +1,16 @@
 <ion-header>
-  <!-- <ion-navbar no-border-bottom>
-    <ion-title>
-      Segments
-    </ion-title>
-  </ion-navbar> -->
-
-  <ion-toolbar no-border-top>
+  <ion-toolbar no-border-top color="primary">
     <ion-segment [(ngModel)]="view">
       <ion-segment-button value="map">
-        Map
+        <span ion-text color="light">Map</span>
       </ion-segment-button>
       <ion-segment-button value="list">
-        List
+        <span ion-text color="light">List</span>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content overflow-scroll="true">
   <div #map style="height:100%;" [style.display]="view == 'map' ? 'block' : 'none'"></div>
 
   <div [ngSwitch]="view">
@@ -24,7 +18,7 @@
       <ion-item *ngFor="let hospital of hospitals">
         <h2>{{hospital.name}}</h2>
         <p>{{hospital.distance}}</p>
-        <button ion-button clear item-end>Call</button>
+        <button ion-button clear item-end (click)="callNumber(hospital.phoneNumber)">Call</button>
       </ion-item>
     </ion-list>
   </div>
