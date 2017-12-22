@@ -70,6 +70,7 @@ export class HospitalPage {
               let hospitalLatLng = new google.maps.LatLng(hospital.geometry.location.lat(), hospital.geometry.location.lng());
               let distanceRequest = { origins: [currentLocation], destinations: [hospitalLatLng], travelMode: 'DRIVING', }
 
+              this.map.setMyLocationEnabled(true);
               this.map.addMarker({
                 title: hospital.name,
                 icon: 'red',
