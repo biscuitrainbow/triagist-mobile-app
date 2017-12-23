@@ -1,3 +1,4 @@
+import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
 import { TabPage } from './../pages/tab/tab';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,7 +24,8 @@ var config = {
   declarations: [
     MyApp,
     LoginPage,
-    TabPage
+    TabPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ var config = {
   entryComponents: [
     MyApp,
     LoginPage,
-    TabPage
+    TabPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
