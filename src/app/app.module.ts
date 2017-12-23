@@ -1,4 +1,5 @@
 import { TriagePage } from './../pages/triage/triage';
+import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
 import { TabPage } from './../pages/tab/tab';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,7 +35,8 @@ var config = {
     TabPage,
     ProfilePage,
     TriagePage,
-    HospitalPage
+    HospitalPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ var config = {
     TabPage,
     ProfilePage,
     TriagePage,
-    HospitalPage
+    HospitalPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
