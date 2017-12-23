@@ -11,6 +11,7 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { Geolocation } from '@ionic-native/geolocation';
 import { CallNumber } from '@ionic-native/call-number';
 import { GoogleMaps } from '@ionic-native/google-maps';
+import { IonicStorageModule } from '@ionic/storage';
 
 
 import { MyApp } from './app.component';
@@ -39,6 +40,7 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
+    IonicStorageModule.forRoot(),
     AngularFireAuthModule,
   ],
   bootstrap: [IonicApp],
