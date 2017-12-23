@@ -11,9 +11,8 @@
       </ion-item>
       <ion-input [hidden]="true"></ion-input>
     </ion-list>
-
     <button type="submit" margin-top ion-button block>Login</button>
   </form>
 
-  <button ion-button clear block>Register</button>
+  <button ion-button clear block (click)="showRegister()">Register</button>
 </ion-content>

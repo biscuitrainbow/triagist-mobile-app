@@ -1,3 +1,4 @@
+import { RegisterPage } from './../register/register';
 import { TabPage } from './../tab/tab';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
@@ -50,6 +51,10 @@ export class LoginPage {
 
   showTabPage() {
     this.navCtrl.push(TabPage);
+  }
+
+  showRegister() {
+    this.navCtrl.push(RegisterPage)
   }
 
   showToast(message: string) {
