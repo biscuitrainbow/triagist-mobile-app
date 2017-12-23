@@ -1,3 +1,4 @@
+import { RegisterPage } from './../register/register';
 import { TabPage } from './../tab/tab';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
@@ -26,9 +27,9 @@ export class LoginPage {
     public toastCtrl: ToastController,
     private storage: Storage
   ) {
-    if (storage.get('uid')) {
-      this.showTabPage();
-    }
+    // if (storage.get('uid')) {
+    //   this.showTabPage();
+    // }
 
     this.formLogin = formBuilder.group({
       email: ['natthaponsricort@gmail.com'],
@@ -56,6 +57,10 @@ export class LoginPage {
 
   showTabPage() {
     this.navCtrl.push(TabPage);
+  }
+
+  showRegister() {
+    this.navCtrl.push(RegisterPage)
   }
 
   showToast(message: string) {
