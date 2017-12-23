@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { Loading } from 'ionic-angular/components/loading/loading';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-login',
@@ -22,8 +23,13 @@ export class LoginPage {
     public formBuilder: FormBuilder,
     public firebaseAuth: AngularFireAuth,
     public loadingCtrl: LoadingController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private storage: Storage
   ) {
+    if (storage.get('uid')) {
+      this.showTabPage();
+    }
+
     this.formLogin = formBuilder.group({
       email: ['natthaponsricort@gmail.com'],
       password: ['lovesrk01']
@@ -37,6 +43,7 @@ export class LoginPage {
     this.showLoading("Logging in...");
     this.firebaseAuth.auth.signInWithEmailAndPassword(email, password)
       .then(user => {
+        this.storage.set('uid', user.uid);
         this.hideLoading();
         this.showTabPage();
       })

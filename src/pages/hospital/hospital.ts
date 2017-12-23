@@ -86,7 +86,6 @@ export class HospitalPage {
                   });
               });
 
-
               this.googleDistanceMatrix.getDistanceMatrix(distanceRequest, (response) => {
                 hospital.distance = response.rows[0].elements[0].distance.text;
                 hospital.duration = response.rows[0].elements[0].duration.text;
