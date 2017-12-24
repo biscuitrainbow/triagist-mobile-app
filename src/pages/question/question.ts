@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { ResultPage } from './../result/result';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Slides } from 'ionic-angular';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { firestore } from 'firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -9,7 +10,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
   templateUrl: 'question.html',
 })
 export class QuestionPage {
-
+  @ViewChild(Slides) slides: Slides
   question: object;
 
   constructor(
@@ -33,6 +34,11 @@ export class QuestionPage {
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
 
+    this.navCtrl.push(ResultPage, {
+      result: result
+    })
   }
+
+
 
 }
