@@ -1,7 +1,7 @@
 <ion-header>
 
-  <ion-navbar [color]="color">
-    <ion-title>{{type}}</ion-title>
+  <ion-navbar [color]="question.color">
+    <ion-title>{{question.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,7 +10,7 @@
 <ion-content>
   <ion-slides pager>
 
-    <ion-slide *ngFor="let question of questions">
+    <ion-slide *ngFor="let question of question.questions">
       <ion-toolbar>
         <ion-buttons end>
           <button ion-button color="primary">Skip</button>

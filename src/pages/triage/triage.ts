@@ -10,9 +10,47 @@ import { App } from 'ionic-angular';
 })
 export class TriagePage {
 
-  types: any = [
-    { name: 'แพ้ยา', description: 'แพ้อาหาร , สัตว์ต่อย , ภูมิแพ้', image: 'assets/imgs/vitamins.png', color: '#B1DC76' },
-    { name: 'ได้รับสารพิษ', description: 'ยาเกินขนาด', image: 'assets/imgs/poison.png', color: '#FF85A7' }
+  questions: any = [
+    {
+      name: 'แพ้ยา',
+      description: 'แพ้อาหาร , สัตว์ต่อย , ภูมิแพ้',
+      image: 'assets/imgs/vitamins.png',
+      color: '#B1DC76',
+      questions: [
+        {
+          question: "<b>ไม่รู้สึกตัว</b> หรือ <b>ไม่หายใจ</b> หรือ <b>ไม่มีชีพจร</b>",
+          result: "2วิกฤต1"
+        },
+        {
+          question: "มีอาการ<b>บวม</b> บริเวณใบหน้า ปาก และลิ้น รวมกับมีอาการ<b>หายใจเสียงดัง</b> หรือ <b>Stridor</b>",
+          result: "2วิกฤต2"
+        },
+        {
+          question: " <b>พูดได้สั้นๆ</b> หรือ <b>หายใจมีเสียง</b> หรือ <b>ซีด</b> และ <b>มีเหงื่อท่วม</b> หรือ <b>หายใจเร็ว</b> หรือ ใช้กล้ามเนื้อ <b>ช่วยหายใจ</b>",
+          result: "2วิกฤต3"
+        }
+      ]
+    },
+    {
+      name: 'ได้รับสารพิษ',
+      description: 'ยาเกินขนาด',
+      image: 'assets/imgs/poison.png',
+      color: '#FF85A7',
+      questions: [
+        {
+          question: "<b>ไม่รู้สึกตัว</b> หรือ <b>ไม่หายใจ</b> หรือ <b>ไม่มีชีพจร</b>",
+          result: "2วิกฤต1"
+        },
+        {
+          question: "มีอาการ<b>บวม</b> บริเวณใบหน้า ปาก และลิ้น รวมกับมีอาการ<b>หายใจเสียงดัง</b> หรือ <b>Stridor</b>",
+          result: "2วิกฤต2"
+        },
+        {
+          question: " <b>พูดได้สั้นๆ</b> หรือ <b>หายใจมีเสียง</b> หรือ <b>ซีด</b> และ <b>มีเหงื่อท่วม</b> หรือ <b>หายใจเร็ว</b> หรือ ใช้กล้ามเนื้อ <b>ช่วยหายใจ</b>",
+          result: "2วิกฤต3"
+        }
+      ]
+    }
   ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
@@ -22,10 +60,9 @@ export class TriagePage {
     console.log('ionViewDidLoad TriagePage');
   }
 
-  startTriage(type: string, color: string) {
+  startTriage(question: object) {
     this.app.getRootNav().push(QuestionPage, {
-      type: type,
-      color: color
+      question: question
     })
   }
 
