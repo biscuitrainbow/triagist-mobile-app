@@ -19,6 +19,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { ProfilePage } from '../pages/profile/profile';
 import { HospitalPage } from '../pages/hospital/hospital';
+import { QuestionPage } from '../pages/question/question';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -37,7 +38,8 @@ var config = {
     ProfilePage,
     TriagePage,
     HospitalPage,
-    RegisterPage
+    RegisterPage,
+    QuestionPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ var config = {
     ProfilePage,
     TriagePage,
     HospitalPage,
-    RegisterPage
+    RegisterPage,
+    QuestionPage
   ],
   providers: [
     StatusBar,

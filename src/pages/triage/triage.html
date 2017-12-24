@@ -1,33 +1,15 @@
 <ion-content>
     <ion-list no-line>
-        <button ion-item style="background-color:#B1DC76">
-
+        <button *ngFor="let type of types" ion-item [style.background-color]="type.color" (click)="startTriage(type.name,type.color)">
             <ion-card-header class="header">
-                แพ้ยา
+                {{type.name}}
             </ion-card-header>
 
-            <img class="img" item-start src="assets/imgs/vitamins.png" />
+            <img class="img" item-start [src]="type.image" />
 
             <ion-card-content class="content">
-                แพ้อาหาร , สัตว์ต่อย , ภูมิแพ้
+                {{type.description}}
             </ion-card-content>
-
         </button>
-        <button ion-item style="background-color:#FF85A7">
-
-            <ion-card-header class="header">
-                ยาเกินขนาด
-            </ion-card-header>
-
-            <img class="img" item-start src="assets/imgs/poison.png" />
-
-
-            <ion-card-content class="content">
-                แพ้สารพิษ
-            </ion-card-content>
-
-        </button>
-
-
     </ion-list>
 </ion-content>

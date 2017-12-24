@@ -27,9 +27,9 @@ export class LoginPage {
     public toastCtrl: ToastController,
     private storage: Storage
   ) {
-    // if (storage.get('uid')) {
-    //   this.showTabPage();
-    // }
+    if (storage.get('uid')) {
+      this.showTabPage();
+    }
 
     this.formLogin = formBuilder.group({
       email: ['natthaponsricort@gmail.com'],
