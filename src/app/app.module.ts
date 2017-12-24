@@ -1,3 +1,4 @@
+import { ResultPage } from './../pages/result/result';
 import { TriagePage } from './../pages/triage/triage';
 import { RegisterPage } from './../pages/register/register';
 import { LoginPage } from './../pages/login/login';
@@ -41,7 +42,8 @@ var config = {
     TriagePage,
     HospitalPage,
     RegisterPage,
-    QuestionPage
+    QuestionPage,
+    ResultPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ var config = {
     TriagePage,
     HospitalPage,
     RegisterPage,
-    QuestionPage
+    QuestionPage,
+    ResultPage
   ],
   providers: [
     StatusBar,
