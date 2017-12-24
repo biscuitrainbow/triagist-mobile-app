@@ -12,7 +12,6 @@ export class TabPage {
 
   triagePage = TriagePage;
   hospitalPage = HospitalPage;
-  profilePage = ProfilePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
