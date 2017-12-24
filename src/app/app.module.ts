@@ -1,3 +1,4 @@
+import { File } from '@ionic-native/file';
 import { ResultPage } from './../pages/result/result';
 import { TriagePage } from './../pages/triage/triage';
 import { RegisterPage } from './../pages/register/register';
@@ -73,6 +74,7 @@ var config = {
     Geolocation,
     GoogleMaps,
     CallNumber,
+    File,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

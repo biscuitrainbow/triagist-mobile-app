@@ -92,4 +92,5 @@
     </plugin>
     <plugin name="cordova-sqlite-storage" spec="^2.1.4" />
     <allow-navigation href="http://192.168.1.24:8100" />
+    <plugin name="cordova-plugin-file" spec="^5.0.0" />
 </widget>
