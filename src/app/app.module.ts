@@ -14,6 +14,8 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { CallNumber } from '@ionic-native/call-number';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { IonicStorageModule } from '@ionic/storage';
+import { SuperTabsModule } from 'ionic2-super-tabs';
+
 
 
 import { MyApp } from './app.component';
@@ -46,6 +48,7 @@ var config = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
     IonicStorageModule.forRoot(),
+    SuperTabsModule.forRoot(),
     AngularFireAuthModule,
     AngularFirestoreModule
   ],
