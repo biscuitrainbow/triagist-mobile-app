@@ -54,8 +54,6 @@ export class ResultPage {
   }
 
   createPdf() {
-
-
     Promise.all([
       this.userProvider.getUser().then(user => this.user = user.data()),
       this.getCurrentAddress().then(results => this.location = results[0].formatted_address)
