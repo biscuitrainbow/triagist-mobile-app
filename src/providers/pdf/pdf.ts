@@ -17,8 +17,6 @@ export class PdfProvider {
     this.doc.setFontSize(12);
     this.doc.text(data.name, 15, 20)
 
-    console.log(data);
-
     this.doc.setFontType('normal')
     this.doc.setFontSize(10);
     this.doc.setTextColor(100)
