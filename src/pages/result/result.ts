@@ -1,9 +1,12 @@
+import { FirebaseUserProvider } from './../../providers/firebase-user/firebase-user';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import * as jsPDF from 'jspdf';
-import * as html2canvas from 'html2canvas';
 import { File } from '@ionic-native/file';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore } from 'angularfire2/firestore';
+import * as _ from "lodash";
+import { PdfProvider } from '../../providers/pdf/pdf';
 
 @Component({
   selector: 'page-result',
@@ -11,29 +14,37 @@ import { File } from '@ionic-native/file';
 })
 export class ResultPage {
 
-  result;
+  private result;
+  private user;
+  private triages = new Array();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public file: File, public toastCtrl: ToastController) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public file: File,
+    public toastCtrl: ToastController,
+    public userProvider: FirebaseUserProvider,
+    public pdf: PdfProvider
+  ) {
     this.result = navParams.get('result');
 
-    let doc = new jsPDF("p", "mm", "a4");
-    doc.text('Hello world!', 10, 10)
+    this.createPdf();
+  }
 
-    let output = doc.output();
-    let buffer = new ArrayBuffer(output.length);
-    let array = new Uint8Array(buffer);
+  createPdf() {
+    Promise.all([
+      this.userProvider.getUser().then(user => this.user = user.data())
+    ]).then(() => {
+      let output = this.pdf.create({
+        name: `${this.user.name} ${this.user.lastName}`,
+        location: '223 Chiangmai City Thailand',
+        datetime: '23 May 2016 14.30 PM.'
+      })
 
-    for (let i = 0; i < output.length; i++) {
-      array[i] = output.charCodeAt(i);
-    }
-
-    const directory = this.file.externalApplicationStorageDirectory;
-    const name = "triage.pdf"
-
-    this.file.writeFile(directory, name, buffer)
-      .then(result => this.showToast(JSON.stringify(result)))
-      .catch(error => this.showToast(JSON.stringify(error)))
-
+      this.pdf.save(output)
+        .then(result => this.showToast("Saved success"))
+        .catch(error => this.showToast(JSON.stringify(error)))
+    })
   }
 
   showToast(message: string) {
