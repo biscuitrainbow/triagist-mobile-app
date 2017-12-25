@@ -24,6 +24,8 @@ import { MyApp } from './app.component';
 import { ProfilePage } from '../pages/profile/profile';
 import { HospitalPage } from '../pages/hospital/hospital';
 import { QuestionPage } from '../pages/question/question';
+import { FirebaseUserProvider } from '../providers/firebase-user/firebase-user';
+import { PdfProvider } from '../providers/pdf/pdf';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -75,7 +77,9 @@ var config = {
     GoogleMaps,
     CallNumber,
     File,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    FirebaseUserProvider,
+    PdfProvider
   ]
 })
 export class AppModule { }
