@@ -1,3 +1,4 @@
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { File } from '@ionic-native/file';
 import { ResultPage } from './../pages/result/result';
 import { TriagePage } from './../pages/triage/triage';
@@ -77,6 +78,7 @@ var config = {
     GoogleMaps,
     CallNumber,
     File,
+    SocialSharing,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseUserProvider,
     PdfProvider

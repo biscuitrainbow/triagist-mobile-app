@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import * as jsPDF from 'jspdf';
 import { File } from '@ionic-native/file';
+import * as moment from 'moment';
+import * as jsPDF from 'jspdf';
 
 @Injectable()
 export class PdfProvider {
@@ -24,7 +25,6 @@ export class PdfProvider {
     this.doc.text(data.location, 15, 30)
     this.doc.text(data.datetime, 15, 35)
 
-    this.doc.save("triage.pdf");
     return this.doc.output()
   }
 
@@ -37,7 +37,7 @@ export class PdfProvider {
     }
 
     const directory = this.file.externalApplicationStorageDirectory;
-    const name = "triage.pdf"
+    const name = `${moment()}.pdf`;
 
     return this.file.writeFile(directory, name, buffer)
   }

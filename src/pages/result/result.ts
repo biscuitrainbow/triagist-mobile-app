@@ -8,6 +8,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import * as _ from "lodash";
 import { PdfProvider } from '../../providers/pdf/pdf';
 import { Geolocation } from '@ionic-native/geolocation';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 declare var google;
@@ -28,7 +29,8 @@ export class ResultPage {
     public toastCtrl: ToastController,
     public userProvider: FirebaseUserProvider,
     public pdf: PdfProvider,
-    public geolocation: Geolocation
+    public geolocation: Geolocation,
+    public socialSharing: SocialSharing
   ) {
     this.result = navParams.get('result');
 
@@ -65,7 +67,16 @@ export class ResultPage {
       })
 
       this.pdf.save(output)
-        .then(result => this.showToast("Saved success"))
+        .then(result => {
+          this.socialSharing.shareViaEmail(
+            'Body',
+            'Subject',
+            ['natthaponsricort@gmail.com'],
+            undefined,
+            undefined,
+            result.nativeURL
+          )
+        })
         .catch(error => this.showToast(JSON.stringify(error)))
     })
   }
