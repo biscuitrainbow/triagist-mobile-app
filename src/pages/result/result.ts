@@ -22,6 +22,7 @@ export class ResultPage {
   private result;
   private user;
   private location;
+  private pdfMake;
 
   constructor(
     public navCtrl: NavController,
@@ -56,29 +57,31 @@ export class ResultPage {
   }
 
   createPdf() {
-    Promise.all([
-      this.userProvider.getUser().then(user => this.user = user.data()),
-      this.getCurrentAddress().then(results => this.location = results[0].formatted_address)
-    ]).then(() => {
-      let output = this.pdf.create({
-        name: `${this.user.name} ${this.user.lastName}`,
-        location: this.location,
-        datetime: '23 May 2016 14.30 PM.'
-      })
+    this.pdf.create()
 
-      this.pdf.save(output)
-        .then(result => {
-          this.socialSharing.shareViaEmail(
-            'Body',
-            'Subject',
-            ['natthaponsricort@gmail.com'],
-            undefined,
-            undefined,
-            result.nativeURL
-          )
-        })
-        .catch(error => this.showToast(JSON.stringify(error)))
-    })
+    // Promise.all([
+    //   this.userProvider.getUser().then(user => this.user = user.data()),
+    //   this.getCurrentAddress().then(results => this.location = results[0].formatted_address)
+    // ]).then(() => {
+    //   let output = this.pdf.create({
+    //     name: `${this.user.name} ${this.user.lastName}`,
+    //     location: this.location,
+    //     datetime: '23 May 2016 14.30 PM.'
+    //   })
+
+    //   this.pdf.save(output)
+    //     .then(result => {
+    //       this.socialSharing.shareViaEmail(
+    //         'Body',
+    //         'Subject',
+    //         ['natthaponsricort@gmail.com'],
+    //         undefined,
+    //         undefined,
+    //         result.nativeURL
+    //       )
+    //     })
+    //     .catch(error => this.showToast(JSON.stringify(error)))
+    // })
   }
 
   showToast(message: string) {

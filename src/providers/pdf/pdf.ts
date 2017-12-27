@@ -4,28 +4,21 @@ import { File } from '@ionic-native/file';
 import * as moment from 'moment';
 import * as jsPDF from 'jspdf';
 
+import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+
 @Injectable()
 export class PdfProvider {
 
-  private doc: jsPDF;
 
   constructor(private file: File) {
-    this.doc = new jsPDF("p", "mm", "a4");
+    pdfMake.vfs = pdfFonts.pdfMake.vfs;
   }
 
   create(data) {
-    this.doc.setFontType('bold')
-    this.doc.setFontSize(12);
-    this.doc.text(data.name, 15, 20)
+    var dd = { content: 'your pdf data' };
+    pdfMake.createPdf(dd).download();
 
-    this.doc.setFontType('normal')
-    this.doc.setFontSize(10);
-    this.doc.setTextColor(100)
-
-    this.doc.text(data.location, 15, 30)
-    this.doc.text(data.datetime, 15, 35)
-
-    return this.doc.output()
   }
 
   save(output) {

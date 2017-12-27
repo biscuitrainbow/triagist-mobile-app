@@ -36,6 +36,7 @@
     "angularfire2": "^5.0.0-rc.4",
     "call-number": "^1.0.1",
     "cordova-android": "~6.3.0",
+    "cordova-ios": "~4.5.4",
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-file": "^5.0.0",
     "cordova-plugin-geolocation": "^3.0.0",
@@ -57,10 +58,10 @@
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
     "mx.ferreyra.callnumber": "~0.0.2",
+    "pdfmake": "^0.1.35",
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.18",
-    "cordova-ios": "~4.5.4"
+    "zone.js": "0.8.18"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.6",
