@@ -33,7 +33,7 @@
     "@types/html2canvas": "^0.5.35",
     "@types/jspdf": "^1.1.31",
     "@types/lodash": "^4.14.91",
-    "angularfire2": "^5.0.0-rc.4",
+    "angularfire2": "^5.0.0-rc.5",
     "call-number": "^1.0.1",
     "cordova-android": "~6.3.0",
     "cordova-ios": "~4.5.4",
