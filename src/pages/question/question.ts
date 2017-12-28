@@ -34,10 +34,10 @@ export class QuestionPage {
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
 
-
     this.navCtrl.push(ResultPage, {
       question: data.question,
-      code: data.code
+      code: data.code,
+      description: data.description
     })
   }
 

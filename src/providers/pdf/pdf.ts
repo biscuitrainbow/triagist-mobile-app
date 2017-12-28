@@ -12,6 +12,15 @@ export class PdfProvider {
 
 
   constructor(private file: File) {
+    pdfMake.fonts = {
+      THSarabunNew: {
+        normal: 'THSarabunNew.ttf',
+        bold: 'THSarabunNew Bold.ttf',
+        italics: 'THSarabunNew Italic.ttf',
+        bolditalics: 'THSarabunNew BoldItalic.ttf'
+      }
+    }
+
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
   }
 
@@ -24,7 +33,7 @@ export class PdfProvider {
             style: 'header'
           },
           {
-            text: `${data.name}\n\n`,
+            text: `${data.name}\n`,
             style: 'subheader'
           },
           {
@@ -36,34 +45,29 @@ export class PdfProvider {
             style: 'detail'
           },
           {
-            text: `\n\n Result `,
+            text: `\n\n${data.result.code}`,
             style: 'subheader'
           },
           {
-            text: data.result.code,
-            style: 'subheader'
-          },
-          {
-            text: data.result.question,
+            text: data.result.description,
             style: 'detail'
           },
         ],
+        defaultStyle: {
+          font: 'THSarabunNew'
+        },
         styles: {
           header: {
-            fontSize: 18,
+            fontSize: 22,
             bold: true,
             alignment: 'right',
           },
           subheader: {
-            fontSize: 13
+            fontSize: 17
           },
           detail: {
-            fontSize: 10,
+            fontSize: 14,
             color: '#A1A1A4'
-          },
-          superMargin: {
-            margin: [20, 0, 40, 0],
-            fontSize: 15
           }
         }
       }

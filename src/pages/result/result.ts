@@ -23,6 +23,7 @@ export class ResultPage {
 
   private question;
   private code;
+  private description;
   private user;
   private location;
   private pdfMake;
@@ -42,6 +43,7 @@ export class ResultPage {
   ) {
     this.code = navParams.get('code');
     this.question = navParams.get('question');
+    this.description = navParams.get('description');
   }
 
   getCurrentAddress(): Promise<any> {
@@ -75,7 +77,8 @@ export class ResultPage {
         datetime: moment().format('MMMM Do YYYY, h:mm:ss a'),
         result: {
           question: this.question,
-          code: this.code
+          code: this.code,
+          description: this.description
         }
       }).then(blob => {
         this.hideLoading();
