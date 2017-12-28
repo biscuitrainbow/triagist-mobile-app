@@ -1,7 +1,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>ผลลัพธ์</ion-title>
+    <ion-title>
+      ผลการคัดกรอง
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createPdf()">
+        <ion-icon name="share"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -16,7 +24,7 @@
         </ion-buttons>
       </ion-toolbar> -->
       <p>ผู้ป่วยมีระดับอาการ</p>
-      <h3 [innerHTML]="result"></h3>
+      <h3 [innerHTML]="code"></h3>
 
       <!-- <button ion-button large clear icon-end color="primary" (click)="showResult(question.result)">
         ใช่

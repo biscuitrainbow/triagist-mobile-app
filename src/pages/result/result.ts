@@ -1,3 +1,4 @@
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { FirebaseUserProvider } from './../../providers/firebase-user/firebase-user';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 import { Component } from '@angular/core';
@@ -9,7 +10,8 @@ import * as _ from "lodash";
 import { PdfProvider } from '../../providers/pdf/pdf';
 import { Geolocation } from '@ionic-native/geolocation';
 import { SocialSharing } from '@ionic-native/social-sharing';
-
+import * as moment from 'moment';
+import { Loading } from 'ionic-angular/components/loading/loading';
 
 declare var google;
 
@@ -19,10 +21,13 @@ declare var google;
 })
 export class ResultPage {
 
-  private result;
+  private question;
+  private code;
   private user;
   private location;
   private pdfMake;
+  private loader: Loading;
+
 
   constructor(
     public navCtrl: NavController,
@@ -31,11 +36,12 @@ export class ResultPage {
     public userProvider: FirebaseUserProvider,
     public pdf: PdfProvider,
     public geolocation: Geolocation,
-    public socialSharing: SocialSharing
-  ) {
-    this.result = navParams.get('result');
+    public socialSharing: SocialSharing,
+    public loadingCtrl: LoadingController,
 
-    this.createPdf();
+  ) {
+    this.code = navParams.get('code');
+    this.question = navParams.get('question');
   }
 
   getCurrentAddress(): Promise<any> {
@@ -57,31 +63,36 @@ export class ResultPage {
   }
 
   createPdf() {
-    this.pdf.create()
+    this.showLoading("Generating PDF file...")
 
-    // Promise.all([
-    //   this.userProvider.getUser().then(user => this.user = user.data()),
-    //   this.getCurrentAddress().then(results => this.location = results[0].formatted_address)
-    // ]).then(() => {
-    //   let output = this.pdf.create({
-    //     name: `${this.user.name} ${this.user.lastName}`,
-    //     location: this.location,
-    //     datetime: '23 May 2016 14.30 PM.'
-    //   })
+    Promise.all([
+      this.userProvider.getUser().then(user => this.user = user.data()),
+      this.getCurrentAddress().then(results => this.location = results[0].formatted_address)
+    ]).then(() => {
+      this.pdf.create({
+        name: `${this.user.name} ${this.user.lastName}`,
+        location: this.location,
+        datetime: moment().format('MMMM Do YYYY, h:mm:ss a'),
+        result: {
+          question: this.question,
+          code: this.code
+        }
+      }).then(blob => {
+        this.hideLoading();
 
-    //   this.pdf.save(output)
-    //     .then(result => {
-    //       this.socialSharing.shareViaEmail(
-    //         'Body',
-    //         'Subject',
-    //         ['natthaponsricort@gmail.com'],
-    //         undefined,
-    //         undefined,
-    //         result.nativeURL
-    //       )
-    //     })
-    //     .catch(error => this.showToast(JSON.stringify(error)))
-    // })
+        this.pdf.save(blob).then(result => {
+          this.socialSharing.shareViaEmail(
+            'Body',
+            'Subject',
+            ['natthaponsricort@gmail.com'],
+            undefined,
+            undefined,
+            result.nativeURL
+          )
+        }
+        ).catch(error => this.showToast(JSON.stringify(error)))
+      })
+    })
   }
 
   showToast(message: string) {
@@ -92,5 +103,18 @@ export class ResultPage {
 
     toast.present();
   }
+
+  showLoading(message: string) {
+    this.loader = this.loadingCtrl.create({
+      content: message
+    });
+
+    this.loader.present();
+  }
+
+  hideLoading() {
+    this.loader.dismiss();
+  }
+
 
 }

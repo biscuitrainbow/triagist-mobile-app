@@ -22,20 +22,22 @@ export class QuestionPage {
     this.question = navParams.get('question');
   }
 
-  showResult(result: string) {
+  showResult(data) {
     let uid = this.firebaseAuth.auth.currentUser.uid;
     this.firestore
       .collection('users')
       .doc(uid)
       .collection('triages')
       .add({
-        code: result
+        code: data.code
       })
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
 
+
     this.navCtrl.push(ResultPage, {
-      result: result
+      question: data.question,
+      code: data.code
     })
   }
 

@@ -16,19 +16,67 @@ export class PdfProvider {
   }
 
   create(data) {
-    var dd = { content: 'your pdf data' };
-    pdfMake.createPdf(dd).download();
+    return new Promise((resolve, reject) => {
+      var dd = {
+        content: [
+          {
+            text: 'Triage Summary\n\n',
+            style: 'header'
+          },
+          {
+            text: `${data.name}\n\n`,
+            style: 'subheader'
+          },
+          {
+            text: data.location,
+            style: 'detail'
+          },
+          {
+            text: data.datetime,
+            style: 'detail'
+          },
+          {
+            text: `\n\n Result `,
+            style: 'subheader'
+          },
+          {
+            text: data.result.code,
+            style: 'subheader'
+          },
+          {
+            text: data.result.question,
+            style: 'detail'
+          },
+        ],
+        styles: {
+          header: {
+            fontSize: 18,
+            bold: true,
+            alignment: 'right',
+          },
+          subheader: {
+            fontSize: 13
+          },
+          detail: {
+            fontSize: 10,
+            color: '#A1A1A4'
+          },
+          superMargin: {
+            margin: [20, 0, 40, 0],
+            fontSize: 15
+          }
+        }
+      }
 
+      pdfMake.createPdf(dd).download();
+
+      pdfMake.createPdf(dd).getBlob(blob => {
+        resolve(blob);
+      })
+    })
   }
 
-  save(output) {
-    let buffer = new ArrayBuffer(output.length);
-    let array = new Uint8Array(buffer);
-
-    for (let i = 0; i < output.length; i++) {
-      array[i] = output.charCodeAt(i);
-    }
-
+  save(buffer) {
     const directory = this.file.externalApplicationStorageDirectory;
     const name = `${moment()}.pdf`;
 
