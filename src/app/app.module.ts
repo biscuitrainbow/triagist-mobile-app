@@ -27,6 +27,7 @@ import { HospitalPage } from '../pages/hospital/hospital';
 import { QuestionPage } from '../pages/question/question';
 import { FirebaseUserProvider } from '../providers/firebase-user/firebase-user';
 import { PdfProvider } from '../providers/pdf/pdf';
+import { MapProvider } from '../providers/map/map';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -81,7 +82,8 @@ var config = {
     SocialSharing,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseUserProvider,
-    PdfProvider
+    PdfProvider,
+    MapProvider
   ]
 })
 export class AppModule { }

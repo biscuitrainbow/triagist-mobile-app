@@ -1,22 +1,21 @@
-import { RegisterPage } from './../register/register';
-import { TabPage } from './../tab/tab';
-import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { Loading } from 'ionic-angular/components/loading/loading';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
-import { Storage } from '@ionic/storage';
+import { RegisterPage } from './../register/register';
+import { TabPage } from './../tab/tab';
 
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
-  formLogin: FormGroup;
-  loader: Loading;
+  private formLogin: FormGroup;
+  private loader: Loading;
 
   constructor(
     public navCtrl: NavController,
@@ -48,7 +47,6 @@ export class LoginPage {
         this.showToast(error.message);
         this.hideLoading();
       })
-
   }
 
   showTabPage() {
@@ -63,9 +61,7 @@ export class LoginPage {
     let toast = this.toastCtrl.create({
       message: message,
       duration: 3000,
-    })
-
-    toast.present();
+    }).present();
   }
 
   showLoading(message: string) {
@@ -79,5 +75,4 @@ export class LoginPage {
   hideLoading() {
     this.loader.dismiss();
   }
-
 }

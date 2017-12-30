@@ -59,10 +59,6 @@ export class TriagePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TriagePage');
-  }
-
   startTriage(question: object) {
     this.app.getRootNav().push(QuestionPage, {
       question: question

@@ -1,5 +1,4 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>
       ผลการคัดกรอง
@@ -11,26 +10,13 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content>
   <ion-slides pager>
     <ion-slide>
-      <!-- <ion-toolbar>
-        <ion-buttons end>
-          <button ion-button color="primary">Skip</button>
-        </ion-buttons>
-      </ion-toolbar> -->
       <p>ผู้ป่วยมีระดับอาการ</p>
-      <h3 [innerHTML]="code"></h3>
-
-      <!-- <button ion-button large clear icon-end color="primary" (click)="showResult(question.result)">
-        ใช่
-        <ion-icon name="arrow-forward"></ion-icon>
-      </button> -->
+      <h3 [innerHTML]="question.code"></h3>
     </ion-slide>
   </ion-slides>
-
 </ion-content>

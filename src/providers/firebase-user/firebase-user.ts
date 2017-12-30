@@ -12,7 +12,11 @@ export class FirebaseUserProvider {
   }
 
   getUser() {
-    return this.firestore.collection('users').doc(this.uid).ref.get();
+    return this.firestore
+      .collection('users')
+      .doc(this.uid)
+      .ref
+      .get();
   }
 
   getTriages() {

@@ -1,7 +1,7 @@
-import { CallNumber } from '@ionic-native/call-number';
-import { Geolocation } from '@ionic-native/geolocation';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
+import { Geolocation } from '@ionic-native/geolocation';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 import {
   GoogleMaps,
@@ -12,6 +12,7 @@ import {
   MarkerOptions,
   Marker
 } from '@ionic-native/google-maps';
+
 declare var google;
 
 @Component({
@@ -19,14 +20,15 @@ declare var google;
   templateUrl: 'hospital.html',
 })
 export class HospitalPage {
-  @ViewChild('map') mapElement;
-  @ViewChild('web_map') webMapElement;
-  map: any;
-  view: string = 'map'
-  hospitals: any;
+  @ViewChild('map') private mapElement;
+  @ViewChild('web_map') private webMapElement;
 
-  googlePlaceService;
-  googleDistanceMatrix;
+  private map: any;
+  private view: string = 'map'
+  private hospitals: any;
+
+  private googlePlaceService;
+  private googleDistanceMatrix;
 
   constructor(
     public navCtrl: NavController,
@@ -112,12 +114,10 @@ export class HospitalPage {
   }
 
   showToast(message: string) {
-    let toast = this.toastCtrl.create({
+    this.toastCtrl.create({
       message: message,
       duration: 3000
-    })
-
-    toast.present();
+    }).present();
   }
 
 }
