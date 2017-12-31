@@ -1,6 +1,6 @@
 <ion-content>
-    <ion-list no-line>
-        <button *ngFor="let question of questions" ion-item [style.background-color]="question.color" (click)="startTriage(question)">
+    <ion-list no-lines>
+        <button *ngFor="let question of questions" ion-item (click)="startTriage(question)">
             <ion-card-header class="header">
                 {{question.name}}
             </ion-card-header>
