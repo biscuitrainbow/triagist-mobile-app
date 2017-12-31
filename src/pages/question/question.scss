@@ -1,36 +1,32 @@
 page-question {
+    font-family: 'Kanit', sans-serif;
     .toolbar-background {
         background: #fff;
         border-color: transparent;
-      }
-    
-      .slide-zoom {
+    }
+    .slide-zoom {
         height: 100%;
-      }
-    
-      .slide-title {
+    }
+    .slide-title {
         margin-top: 2.8rem;
-      }
-    
-      .slide-image {
+    }
+    .slide-image {
         max-height: 50%;
         max-width: 60%;
         margin: 18px 0;
-      }
-
-    
-      h3 {
-        color: #60646B;
+    }
+    h3 {
+        margin-top: 80px;
         margin-bottom: 36px;
-      }
-    
-     
-    
-      p {
+    }
+    b {
+        color: #666;
+    }
+    p {
         font-size: 1.5em;
         padding: 0 40px;
         font-size: 14px;
         line-height: 3;
-        color: #60646B;
-      }
+        color: #666;
+    }
 }

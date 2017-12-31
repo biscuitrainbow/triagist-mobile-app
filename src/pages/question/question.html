@@ -1,27 +1,31 @@
 <ion-header>
-
   <ion-navbar [color]="question.color">
     <ion-title>{{question.name}}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content>
-  <ion-slides pager>
-
+  <ion-slides>
     <ion-slide *ngFor="let question of question.questions">
       <ion-toolbar>
         <ion-buttons end>
           <button ion-button color="primary" (click)="slides.slideNext()">ข้าม</button>
         </ion-buttons>
       </ion-toolbar>
+
       <h3>ผู้ป่วยมีอาการเหล่านี้หรือไม่</h3>
       <p [innerHTML]="question.question"></p>
-      <button ion-button large clear icon-end color="primary" (click)="showResult(question)">
-        ใช่
-        <ion-icon name="arrow-forward"></ion-icon>
-      </button>
+
+
+      <ion-footer no-border>
+        <ion-toolbar>
+          <button ion-button block large icon-end color="primary" (click)="showResult(question)">
+            ใช่
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-toolbar>
+      </ion-footer>
+
     </ion-slide>
   </ion-slides>
 
