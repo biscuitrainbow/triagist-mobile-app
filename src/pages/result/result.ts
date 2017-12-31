@@ -41,6 +41,7 @@ export class ResultPage {
     public loadingCtrl: LoadingController,
   ) {
     this.question = navParams.get('question');
+    console.log(this.question)
   }
 
   async createPdf() {

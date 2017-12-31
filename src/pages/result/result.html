@@ -12,11 +12,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-slides pager>
-    <ion-slide>
-      <p>ผู้ป่วยมีระดับอาการ</p>
-      <h3 [innerHTML]="question.code"></h3>
-    </ion-slide>
-  </ion-slides>
+<ion-content [ngStyle]="{ 'backgroundColor': question.color}">
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%">
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <h1 text-center ion-text [innerHTML]=" question.level "></h1>
+          </ion-card-header>
+          <ion-card-content>
+            <h3 text-center [innerHTML]="question.code "></h3>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
