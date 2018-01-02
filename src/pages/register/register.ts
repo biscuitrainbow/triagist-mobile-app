@@ -13,10 +13,8 @@ import { LoadingController } from 'ionic-angular/components/loading/loading-cont
 })
 export class RegisterPage {
 
-  formRegister: FormGroup;
-  loader: Loading;
-
-
+  private formRegister: FormGroup;
+  private loader: Loading;
 
   constructor(
     public navCtrl: NavController,
@@ -36,32 +34,32 @@ export class RegisterPage {
   }
 
 
-  register() {
+  async register() {
     let email = this.formRegister.controls.email.value;
     let password = this.formRegister.controls.password.value;
     let name = this.formRegister.controls.name.value;
     let lastName = this.formRegister.controls.lastName.value;
 
-    this.showLoading("Registering...")
-    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password)
-      .then(user => {
-        this.hideLoading()
+    try {
+      this.showLoading("Registering...")
+      let user = await this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password)
+      this.hideLoading();
 
-        this.showLoading("Storing Information...")
-        this.firestore.collection('users').doc(user.uid).set({ name, lastName, })
-          .then(() => {
-            this.hideLoading();
-            this.showToast("Register successfully")
-          })
-          .catch(error => {
-            this.hideLoading()
-            this.showToast(error.message)
-          })
+      this.showLoading("Storing Information...")
+      await this.firebaseAuth.auth.currentUser.updateProfile({
+        displayName: `${name} ${lastName}`,
+        photoURL: ''
       })
-      .catch(error => {
-        this.hideLoading();
-        this.showToast(error.message)
-      })
+
+      await this.firestore.collection('users').doc(user.uid).set({ name, lastName, })
+
+      this.hideLoading();
+      this.showToast("Register successfully")
+
+    } catch (error) {
+      this.showToast(error.message)
+    }
+
   }
 
   showToast(message: string) {

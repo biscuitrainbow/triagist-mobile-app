@@ -1,3 +1,5 @@
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
+import { Loading } from 'ionic-angular/components/loading/loading';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
@@ -27,12 +29,15 @@ export class HospitalPage {
   private view: string = 'map'
   private hospitals: any;
 
+  private loader: Loading;
+
   private googlePlaceService;
   private googleDistanceMatrix;
 
   constructor(
     public navCtrl: NavController,
     public toastCtrl: ToastController,
+    public loadingCtrl: LoadingController,
     public navParams: NavParams,
     public geolocation: Geolocation,
     public googleMaps: GoogleMaps,
@@ -44,6 +49,7 @@ export class HospitalPage {
   }
 
   loadMap() {
+    this.showLoading("Preparing map...")
     this.geolocation.getCurrentPosition()
       .then(result => {
         let lat = result.coords.latitude
@@ -51,6 +57,7 @@ export class HospitalPage {
 
         this.map = this.googleMaps.create(this.mapElement.nativeElement)
         this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
+          this.hideLoading();
 
           let webMap = new google.maps.Map(this.webMapElement.nativeElement);
           this.googlePlaceService = new google.maps.places.PlacesService(webMap);
@@ -118,6 +125,18 @@ export class HospitalPage {
       message: message,
       duration: 3000
     }).present();
+  }
+
+  showLoading(message: string) {
+    this.loader = this.loadingCtrl.create({
+      content: message
+    });
+
+    this.loader.present();
+  }
+
+  hideLoading() {
+    this.loader.dismiss();
   }
 
 }

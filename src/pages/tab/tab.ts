@@ -17,11 +17,11 @@ export class TabPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    firebaseAuth: AngularFireAuth) {
-    firebaseAuth.authState.subscribe(user => {
-      if (!user) {
-        navCtrl.push(LoginPage)
-      }
-    })
+    public firebaseAuth: AngularFireAuth
+  ) {
+
+    if (!firebaseAuth.auth.currentUser) {
+      navCtrl.setRoot(LoginPage)
+    }
   }
 }

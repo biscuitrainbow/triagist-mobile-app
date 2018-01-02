@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { App } from 'ionic-angular';
 import { QuestionPage } from '../question/question';
 import { QUESTIONS } from './questions';
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 
 @Component({
   selector: 'page-triage',
@@ -14,8 +15,11 @@ export class TriagePage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    public menuCtrl: MenuController,
     public app: App
-  ) { }
+  ) {
+    menuCtrl.enable(true);
+  }
 
   startTriage(question: object) {
     this.app.getRootNav().push(QuestionPage, {

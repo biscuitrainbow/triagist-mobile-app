@@ -1,3 +1,14 @@
+<ion-header>
+    <ion-toolbar no-border-top>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Triage
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
 <ion-content>
     <ion-list no-lines>
         <button *ngFor="let question of questions" ion-item (click)="startTriage(question)">

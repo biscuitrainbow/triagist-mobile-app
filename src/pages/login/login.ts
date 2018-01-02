@@ -32,6 +32,7 @@ export class LoginPage {
     })
   }
 
+
   login() {
     let email = this.formLogin.controls.email.value;
     let password = this.formLogin.controls.password.value;
