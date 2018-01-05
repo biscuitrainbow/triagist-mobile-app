@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { File } from '@ionic-native/file';
 import { FirebaseUserProvider } from '../firebase-user/firebase-user';

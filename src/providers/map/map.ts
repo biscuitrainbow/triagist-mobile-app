@@ -1,5 +1,4 @@
 import { Geolocation } from '@ionic-native/geolocation';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 declare var google;
