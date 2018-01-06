@@ -27,7 +27,7 @@ export class HospitalPage {
 
   private map: any;
   private view: string = "map";
-  private hospitals: any;
+  public hospitals: any;
 
   private loader: Loading;
 
@@ -42,7 +42,7 @@ export class HospitalPage {
     public geolocation: Geolocation,
     public googleMaps: GoogleMaps,
     public phone: CallNumber
-  ) {}
+  ) { }
 
   ionViewDidLoad() {
     this.loadMap();
@@ -60,12 +60,6 @@ export class HospitalPage {
         this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
           this.hideLoading();
 
-          let webMap = new google.maps.Map(this.webMapElement.nativeElement);
-          this.googlePlaceService = new google.maps.places.PlacesService(
-            webMap
-          );
-          this.googleDistanceMatrix = new google.maps.DistanceMatrixService();
-
           let currentLocation = new google.maps.LatLng(lat, lng);
           let nearyByRequest = {
             location: currentLocation,
@@ -73,74 +67,68 @@ export class HospitalPage {
             type: ["hospital"]
           };
 
-          this.map.animateCamera(
-            {
-              target: currentLocation,
-              zoom: 13
-            },
-            function() {
-              console.log("The animation is done");
-            }
-          );
+          this.map.animateCamera({
+            target: currentLocation,
+            zoom: 13
+          });
 
-          this.googlePlaceService.nearbySearch(
-            nearyByRequest,
-            (result, status) => {
-              result.map(hospital => {
-                let hospitalLatLng = new google.maps.LatLng(
-                  hospital.geometry.location.lat(),
-                  hospital.geometry.location.lng()
-                );
-                let distanceRequest = {
-                  origins: [currentLocation],
-                  destinations: [hospitalLatLng],
-                  travelMode: "DRIVING"
-                };
+          this.map.setMyLocationEnabled(true);
 
-                this.map.setMyLocationEnabled(true);
-                this.map
-                  .addMarker({
-                    title: hospital.name,
-                    icon: "red",
-                    animation: "BOUNCE",
-                    position: {
-                      lat: hospital.geometry.location.lat(),
-                      lng: hospital.geometry.location.lng()
-                    }
-                  })
-                  .then(marker => {
-                    marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-                      // alert('clicked');
-                    });
+          let webMap = new google.maps.Map(this.webMapElement.nativeElement);
+          this.googlePlaceService = new google.maps.places.PlacesService(webMap);
+          this.googleDistanceMatrix = new google.maps.DistanceMatrixService();
+
+          this.googlePlaceService.nearbySearch(nearyByRequest, (result, status) => {
+            result.map(hospital => {
+              let hospitalLatLng = new google.maps.LatLng(
+                hospital.geometry.location.lat(),
+                hospital.geometry.location.lng()
+              );
+
+              let distanceRequest = {
+                origins: [currentLocation],
+                destinations: [hospitalLatLng],
+                travelMode: "DRIVING"
+              };
+
+              this.map
+                .addMarker({
+                  title: hospital.name,
+                  icon: "red",
+                  animation: "BOUNCE",
+                  position: {
+                    lat: hospital.geometry.location.lat(),
+                    lng: hospital.geometry.location.lng()
+                  }
+                })
+                .then(marker => {
+                  marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+                    // alert('clicked');
                   });
+                });
 
-                this.googleDistanceMatrix.getDistanceMatrix(
-                  distanceRequest,
-                  response => {
-                    hospital.distance =
-                      response.rows[0].elements[0].distance.text;
-                    hospital.duration =
-                      response.rows[0].elements[0].duration.text;
-                  }
-                );
+              this.googleDistanceMatrix.getDistanceMatrix(
+                distanceRequest,
+                response => {
+                  hospital.distance = response.rows[0].elements[0].distance.text;
+                  hospital.duration = response.rows[0].elements[0].duration.text;
+                }
+              );
 
-                let placeDetailRequest = { placeId: hospital.place_id };
+              let placeDetailRequest = { placeId: hospital.place_id };
 
-                this.googlePlaceService.getDetails(
-                  placeDetailRequest,
-                  (place, status) => {
-                    hospital.phoneNumber = place.international_phone_number;
-                  }
-                );
-              });
+              this.googlePlaceService.getDetails(
+                placeDetailRequest,
+                (place, status) => {
+                  if (status === 'OK') hospital.phoneNumber = place.international_phone_number;
+                }
+              );
 
-              this.hospitals = result;
-              console.log(this.hospitals);
-            }
-          );
-        });
-      })
-      .catch(error => this.showToast(error.message));
+            });
+            this.hospitals = result;
+          });
+        }).catch(error => this.showToast(error.message));
+      }).catch(error => this.showToast(error.message));
   }
 
   callNumber(number: string) {
