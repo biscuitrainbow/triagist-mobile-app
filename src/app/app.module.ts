@@ -19,8 +19,6 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 import { IonicStorageModule } from '@ionic/storage';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 
-
-
 import { MyApp } from './app.component';
 import { ProfilePage } from '../pages/profile/profile';
 import { HospitalPage } from '../pages/hospital/hospital';

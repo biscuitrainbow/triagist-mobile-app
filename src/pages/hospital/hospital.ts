@@ -49,7 +49,7 @@ export class HospitalPage {
   }
 
   loadMap() {
-    this.showLoading("Preparing map...");
+    //this.showLoading("Preparing map...");
     this.geolocation
       .getCurrentPosition()
       .then(result => {
@@ -58,7 +58,7 @@ export class HospitalPage {
 
         this.map = this.googleMaps.create(this.mapElement.nativeElement);
         this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
-          this.hideLoading();
+          //    this.hideLoading();
 
           let currentLocation = new google.maps.LatLng(lat, lng);
           let nearyByRequest = {
