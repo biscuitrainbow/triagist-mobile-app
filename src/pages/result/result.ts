@@ -14,6 +14,7 @@ import { FirebaseUserProvider } from "./../../providers/firebase-user/firebase-u
 
 import * as moment from "moment";
 import * as _ from "lodash";
+import { DocumentViewer } from "@ionic-native/document-viewer";
 
 declare var google;
 
@@ -31,6 +32,7 @@ export class ResultPage {
   private loader: Loading;
 
   constructor(
+    public document: DocumentViewer,
     public navCtrl: NavController,
     public navParams: NavParams,
     public toastCtrl: ToastController,
@@ -59,14 +61,16 @@ export class ResultPage {
 
       this.hideLoading();
 
-      this.socialSharing.shareViaEmail(
-        "Body",
-        "Subject",
-        ["natthaponsricort@gmail.com"],
-        undefined,
-        undefined,
-        saveResult.nativeURL
-      );
+      this.document.viewDocument(saveResult.nativeURL, 'application/pdf', { title: 'My PDF' })
+
+      // this.socialSharing.shareViaEmail(
+      //   "Body",
+      //   "Subject",
+      //   ["natthaponsricort@gmail.com"],
+      //   undefined,
+      //   undefined,
+      //   saveResult.nativeURL
+      // );
     } catch (e) {
       this.showToast(e);
       this.hideLoading();

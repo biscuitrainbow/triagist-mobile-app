@@ -1,3 +1,4 @@
+import { DocumentViewer } from '@ionic-native/document-viewer';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { File } from '@ionic-native/file';
 import { ResultPage } from './../pages/result/result';
@@ -81,7 +82,8 @@ var config = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseUserProvider,
     PdfProvider,
-    MapProvider
+    MapProvider,
+    DocumentViewer
   ]
 })
 export class AppModule { }
