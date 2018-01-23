@@ -1,3 +1,4 @@
+import { HistoryPage } from './../pages/history/history';
 import { DocumentViewer } from '@ionic-native/document-viewer';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { File } from '@ionic-native/file';
@@ -48,7 +49,8 @@ var config = {
     HospitalPage,
     RegisterPage,
     QuestionPage,
-    ResultPage
+    ResultPage,
+    HistoryPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ var config = {
     HospitalPage,
     RegisterPage,
     QuestionPage,
-    ResultPage
+    ResultPage,
+    HistoryPage
   ],
   providers: [
     StatusBar,

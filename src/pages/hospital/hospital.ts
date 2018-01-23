@@ -91,21 +91,19 @@ export class HospitalPage {
                 travelMode: "DRIVING"
               };
 
-              this.map
-                .addMarker({
-                  title: hospital.name,
-                  icon: "red",
-                  animation: "BOUNCE",
-                  position: {
-                    lat: hospital.geometry.location.lat(),
-                    lng: hospital.geometry.location.lng()
-                  }
-                })
-                .then(marker => {
-                  marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-                    // alert('clicked');
-                  });
+              this.map.addMarker({
+                title: hospital.name,
+                icon: "red",
+                animation: "BOUNCE",
+                position: {
+                  lat: hospital.geometry.location.lat(),
+                  lng: hospital.geometry.location.lng()
+                }
+              }).then(marker => {
+                marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+                  // alert('clicked');
                 });
+              });
 
               this.googleDistanceMatrix.getDistanceMatrix(
                 distanceRequest,
@@ -116,7 +114,6 @@ export class HospitalPage {
               );
 
               let placeDetailRequest = { placeId: hospital.place_id };
-
               this.googlePlaceService.getDetails(
                 placeDetailRequest,
                 (place, status) => {

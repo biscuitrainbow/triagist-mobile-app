@@ -1,3 +1,5 @@
+import { NavController } from 'ionic-angular';
+import { HistoryPage } from './../pages/history/history';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { TabPage } from './../pages/tab/tab';
 import { LoginPage } from './../pages/login/login';
@@ -7,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Loading } from 'ionic-angular/components/loading/loading';
+import { App } from 'ionic-angular/components/app/app';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,6 +27,7 @@ export class MyApp {
     splashScreen: SplashScreen,
     private loadingCtrl: LoadingController,
     private firebaseAuth: AngularFireAuth,
+    private app: App
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -45,6 +49,10 @@ export class MyApp {
 
   logout() {
     this.firebaseAuth.auth.signOut()
+  }
+
+  history() {
+    this.app.getActiveNav().push(HistoryPage);
   }
 
   showLoading(message: string) {
