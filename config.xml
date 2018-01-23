@@ -108,4 +108,5 @@
     <allow-navigation href="http://192.168.2.99:8100" />
     <allow-navigation href="http://192.168.137.88:8100" />
     <plugin name="cordova-plugin-document-viewer" spec="^0.9.7" />
+    <plugin name="cordova-plugin-file-opener2" spec="^2.0.19" />
 </widget>

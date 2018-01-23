@@ -24,6 +24,7 @@
     "@ionic-native/core": "^4.5.2",
     "@ionic-native/document-viewer": "^4.5.2",
     "@ionic-native/file": "^4.5.2",
+    "@ionic-native/file-opener": "^4.5.2",
     "@ionic-native/geolocation": "^4.5.2",
     "@ionic-native/google-maps": "^4.5.2",
     "@ionic-native/social-sharing": "^4.5.2",
@@ -42,6 +43,7 @@
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-document-viewer": "^0.9.7",
     "cordova-plugin-file": "^5.0.0",
+    "cordova-plugin-file-opener2": "^2.0.19",
     "cordova-plugin-geolocation": "^3.0.0",
     "cordova-plugin-googlemaps": "^2.1.1",
     "cordova-plugin-googlemaps-sdk": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
@@ -94,7 +96,8 @@
         "XWALK_MODE": "embedded",
         "XWALK_MULTIPLEAPK": "true"
       },
-      "cordova-plugin-document-viewer": {}
+      "cordova-plugin-document-viewer": {},
+      "cordova-plugin-file-opener2": {}
     },
     "platforms": [
       "android",

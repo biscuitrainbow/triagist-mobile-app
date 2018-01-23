@@ -3,18 +3,22 @@ import { NavController, NavParams } from "ionic-angular";
 import { LoadingController } from "ionic-angular/components/loading/loading-controller";
 import { ToastController } from "ionic-angular/components/toast/toast-controller";
 import { Loading } from "ionic-angular/components/loading/loading";
+
 import { AngularFireAuth } from "angularfire2/auth";
 import { AngularFirestore } from "angularfire2/firestore";
+
 import { File } from "@ionic-native/file";
 import { Geolocation } from "@ionic-native/geolocation";
+import { FileOpener } from '@ionic-native/file-opener';
 import { SocialSharing } from "@ionic-native/social-sharing";
+
 import { MapProvider } from "../../providers/map/map";
 import { PdfProvider } from "../../providers/pdf/pdf";
 import { FirebaseUserProvider } from "./../../providers/firebase-user/firebase-user";
 
 import * as moment from "moment";
 import * as _ from "lodash";
-import { DocumentViewer } from "@ionic-native/document-viewer";
+
 
 declare var google;
 
@@ -31,8 +35,10 @@ export class ResultPage {
   private pdfMake;
   private loader: Loading;
 
+  private pdfUrl = '';
+
   constructor(
-    public document: DocumentViewer,
+    public fileOpener: FileOpener,
     public navCtrl: NavController,
     public navParams: NavParams,
     public toastCtrl: ToastController,
@@ -43,38 +49,56 @@ export class ResultPage {
     public loadingCtrl: LoadingController
   ) {
     this.question = navParams.get("question");
-    console.log(this.question);
+  }
+
+  async openPdf() {
+    if (this.pdfUrl == '') {
+      this.showLoading("Generating PDF file...");
+      await this.createPdf();
+      this.hideLoading();
+    }
+
+    this.fileOpener.open(this.pdfUrl, 'application/pdf')
+      .then(() => console.log('File is opened'))
+      .catch(e => console.log('Error openening file', e));
+  }
+
+  async share() {
+    if (this.pdfUrl == '') {
+      this.showLoading("Generating PDF file...");
+      await this.createPdf();
+      this.hideLoading();
+    }
+
+    this.socialSharing.shareViaEmail(
+      "Body",
+      "Subject",
+      ["natthaponsricort@gmail.com"],
+      undefined,
+      undefined,
+      this.pdfUrl
+    );
   }
 
   async createPdf() {
-    this.showLoading("Generating PDF file...");
 
-    try {
-      let data = {
-        question: this.question.question,
-        code: this.question.code,
-        description: this.question.description
-      };
+    return new Promise(async (resolve, reject) => {
+      try {
+        let data = {
+          question: this.question.question,
+          code: this.question.code,
+          description: this.question.description
+        };
 
-      let blob = await this.pdf.create(data);
-      let saveResult = await this.pdf.save(blob);
+        let blob = await this.pdf.create(data);
+        let saveResult = await this.pdf.save(blob);
+        this.pdfUrl = saveResult.nativeURL;
 
-      this.hideLoading();
-
-      this.document.viewDocument(saveResult.nativeURL, 'application/pdf', { title: 'My PDF' })
-
-      // this.socialSharing.shareViaEmail(
-      //   "Body",
-      //   "Subject",
-      //   ["natthaponsricort@gmail.com"],
-      //   undefined,
-      //   undefined,
-      //   saveResult.nativeURL
-      // );
-    } catch (e) {
-      this.showToast(e);
-      this.hideLoading();
-    }
+        resolve(saveResult);
+      } catch (e) {
+        reject(e);
+      }
+    })
   }
 
   showToast(message: string) {
