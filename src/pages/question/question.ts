@@ -27,9 +27,7 @@ export class QuestionPage {
       .collection('users')
       .doc(uid)
       .collection('triages')
-      .add({
-        code: question.code
-      })
+      .add(question)
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
 
