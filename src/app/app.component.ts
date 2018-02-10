@@ -1,4 +1,3 @@
-import { NavController } from 'ionic-angular';
 import { HistoryPage } from './../pages/history/history';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { TabPage } from './../pages/tab/tab';
@@ -52,7 +51,7 @@ export class MyApp {
   }
 
   history() {
-    this.app.getActiveNav().push(HistoryPage);
+    this.app.getRootNav().push(HistoryPage);
   }
 
   showLoading(message: string) {

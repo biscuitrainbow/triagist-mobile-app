@@ -67,7 +67,7 @@ export class HospitalPage {
             type: ["hospital"]
           };
 
-          this.map.animateCamera({
+          this.map.moveCamera({
             target: currentLocation,
             zoom: 13
           });
@@ -91,20 +91,6 @@ export class HospitalPage {
                 travelMode: "DRIVING"
               };
 
-              this.map.addMarker({
-                title: hospital.name,
-                icon: "red",
-                animation: "BOUNCE",
-                position: {
-                  lat: hospital.geometry.location.lat(),
-                  lng: hospital.geometry.location.lng()
-                }
-              }).then(marker => {
-                marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-                  // alert('clicked');
-                });
-              });
-
               this.googleDistanceMatrix.getDistanceMatrix(
                 distanceRequest,
                 response => {
@@ -120,6 +106,20 @@ export class HospitalPage {
                   if (status === 'OK') hospital.phoneNumber = place.international_phone_number;
                 }
               );
+
+              this.map.addMarker({
+                title: hospital.name,
+                icon: "red",
+                animation: "BOUNCE",
+                position: {
+                  lat: hospital.geometry.location.lat(),
+                  lng: hospital.geometry.location.lng()
+                }
+              }).then(marker => {
+                marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+                  alert(JSON.stringify(hospital));
+                });
+              });
 
             });
             this.hospitals = result;

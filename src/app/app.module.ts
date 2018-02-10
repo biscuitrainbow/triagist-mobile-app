@@ -56,6 +56,7 @@ var config = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
+    AngularFirestoreModule.enablePersistence(),
     IonicStorageModule.forRoot(),
     SuperTabsModule.forRoot(),
     AngularFireAuthModule,
