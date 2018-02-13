@@ -4,6 +4,45 @@ export const TYPE = {
     'RESULT': 'result',
     'QUESTION': 'question'
 }
+
+export const LEVEL = {
+    'R': 'ผู้ป่วยฉุกเฉินวิกฤติ',
+    'Y': 'ผู้ป่วยฉุกเฉินเร่งด่วน'
+}
+
+export const RESULT = {
+    'R21': {
+        code: '2 แดง 1',
+        leave: LEVEL.R,
+        advise: {
+            detail: [
+                '1. มีใครที่อยู่บริเวณนั้นรู้เรื่องการกู้ชีพบ้างหรือไม่ <br> ถ้ามี  ให้ตะโกนขอความช่วยเหลือปั๊มหัวใจผู้ป่วย <br> ถ้ามี  ให้ตะโกนขอความช่วยเหลือปั๊มหัวใจผู้ป่วย'
+            ]
+        }
+    },
+    'R22': {
+        code: '2 แดง 2',
+        leave: LEVEL.R
+    },
+    'R23': {
+        code: '2 แดง 3',
+        leave: LEVEL.R
+    },
+    'R24': {
+        code: '2 แดง 4',
+        leave: LEVEL.R
+    },
+    'Y28': {
+        code: '2 เหลือง 8',
+        leave: LEVEL.Y
+    },
+    'Y29': {
+        code: '2 เหลือง 9',
+        leave: LEVEL.Y
+    }
+}
+
+
 export const QUESTIONS = [
     {
         name: 'แพ้ยา',
@@ -54,8 +93,8 @@ export const QUESTIONS = [
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 1',
+                            level: LEVEL.R,
+                            code: RESULT.R21.code,
                             color: '#D72732',
                         }
                     }
@@ -70,8 +109,8 @@ export const QUESTIONS = [
                         name: 'พูดได้แค่ประโยคสั้นๆ',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 3',
+                            level: LEVEL.R,
+                            code: RESULT.R23.code,
                             color: '#D72732',
                         }
                     },
@@ -81,8 +120,8 @@ export const QUESTIONS = [
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 3',
+                            level: LEVEL.R,
+                            code: RESULT.R23.code,
                             color: '#D72732',
                         }
                     },
@@ -92,8 +131,8 @@ export const QUESTIONS = [
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 3',
+                            level: LEVEL.R,
+                            code: RESULT.R23.code,
                             color: '#D72732',
                         }
                     },
@@ -103,8 +142,8 @@ export const QUESTIONS = [
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 3',
+                            level: LEVEL.R,
+                            code: RESULT.R23.code,
                             color: '#D72732',
                         }
                     },
@@ -114,8 +153,8 @@ export const QUESTIONS = [
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 3',
+                            level: LEVEL.R,
+                            code: RESULT.R23.code,
                             color: '#D72732',
                         }
                     },
@@ -125,8 +164,8 @@ export const QUESTIONS = [
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 3',
+                            level: LEVEL.R,
+                            code: RESULT.R23.code,
                             color: '#D72732',
                         }
                     },
@@ -147,8 +186,8 @@ export const QUESTIONS = [
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 2',
+                            level: LEVEL.R,
+                            code: RESULT.R22.code,
                             color: '#D72732',
                         }
                     },
@@ -169,8 +208,8 @@ export const QUESTIONS = [
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 แดง 2',
+                            level: LEVEL.R,
+                            code: RESULT.R22.code,
                             color: '#D72732',
                         }
                     },
