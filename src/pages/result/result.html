@@ -15,16 +15,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content [ngStyle]="{ 'backgroundColor': question.color}">
+<ion-content [ngStyle]="{ 'backgroundColor': payload.color}">
   <ion-grid style="height: 100%">
     <ion-row justify-content-center align-items-center style="height: 100%">
       <ion-col>
         <ion-card>
           <ion-card-header>
-            <h1 text-center ion-text [innerHTML]=" question.level "></h1>
+            <h1 text-center ion-text [innerHTML]=" payload.level "></h1>
           </ion-card-header>
           <ion-card-content>
-            <h3 text-center [innerHTML]="question.code "></h3>
+            <h3 text-center [innerHTML]="payload.code "></h3>
           </ion-card-content>
         </ion-card>
       </ion-col>

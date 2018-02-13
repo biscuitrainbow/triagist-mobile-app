@@ -27,7 +27,7 @@ declare var google;
   templateUrl: "result.html"
 })
 export class ResultPage {
-  private question;
+  private payload;
   private code;
   private description;
   private user;
@@ -48,7 +48,7 @@ export class ResultPage {
     public socialSharing: SocialSharing,
     public loadingCtrl: LoadingController
   ) {
-    this.question = navParams.get("question");
+    this.payload = navParams.get("payload");
   }
 
   async openPdf() {
@@ -85,9 +85,9 @@ export class ResultPage {
     return new Promise(async (resolve, reject) => {
       try {
         let data = {
-          question: this.question.question,
-          code: this.question.code,
-          description: this.question.description
+          question: this.payload.question,
+          code: this.payload.code,
+          description: this.payload.description
         };
 
         let blob = await this.pdf.create(data);

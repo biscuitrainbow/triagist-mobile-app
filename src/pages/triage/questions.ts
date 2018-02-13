@@ -1,3 +1,9 @@
+import { ResultPage } from './../result/result';
+
+export const TYPE = {
+    'RESULT': 'result',
+    'QUESTION': 'question'
+}
 export const QUESTIONS = [
     {
         name: 'แพ้ยา',
@@ -6,13 +12,181 @@ export const QUESTIONS = [
         color: '#CA1F13',
         questions: [
             {
-                question: '<b>ไม่รู้สึกตัว</b> หรือ <b>ไม่หายใจ</b> หรือ <b>ไม่มีชีพจร</b>',
-                code: "2วิกฤต1",
-                description: "Cadiac arrest โดยมีอาการ ไม่รู้สึกตัว หรือ ไม่หายใจ หรือ ไม่มีชีพจร",
-                level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                color: '#D72732',
-                image: 'assets/imgs/pill.png',
-                name: 'แพ้ยา',
+                question: 'ผู้ป่วยรู้สึกตัวหรือไม่',
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        from: 0,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        from: 0,
+                        name: 'ไม่รู้สึกตัว',
+                        to: 1
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 0,
+                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 เหลือง 9',
+                            color: '#F7E744',
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        from: 1,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 1,
+                        name: 'ยังคงไม่รู้สึกตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 1',
+                            color: '#D72732',
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'ลักษณะอาการหายใจเป็นอย่างไร',
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 2,
+                        name: 'พูดได้แค่ประโยคสั้นๆ',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 3',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 2,
+                        name: 'หายใจมีเสียงดัง',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 3',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 2,
+                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 3',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 2,
+                        name: 'ตัวซีดและเหงือท่วมตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 3',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 2,
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 3',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 2,
+                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 3',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        from: 1,
+                        name: 'หายใจเร็ว',
+                        to: 3
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 3,
+                        name: 'มี',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 2',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        from: 3,
+                        name: 'ไม่มี',
+                        to: 4
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยอายุเท่าไหร่',
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 4,
+                        name: 'มากกว่า 20 ปี',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 แดง 2',
+                            color: '#D72732',
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 4,
+                        name: 'น้อยกว่า 20 ปี',
+                        to: ResultPage,
+                        payload: {
+                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
+                            code: '2 เหลือง 8',
+                            color: '#F7E744',
+                        }
+                    },
+
+                ]
             },
             {
                 question: "มีอาการ<b>บวม</b> บริเวณใบหน้า ปาก และลิ้น รวมกับมีอาการ<b>หายใจเสียงดัง</b> หรือ <b>Stridor</b>",

@@ -1,3 +1,4 @@
+import { TYPE } from './../triage/questions';
 import { ResultPage } from './../result/result';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides } from 'ionic-angular';
@@ -21,19 +22,39 @@ export class QuestionPage {
     this.question = navParams.get('question');
   }
 
-  showResult(question) {
-    let uid = this.firebaseAuth.auth.currentUser.uid;
-    this.firestore
-      .collection('users')
-      .doc(uid)
-      .collection('triages')
-      .add(question)
-      .then(() => console.log("Saved successfully"))
-      .catch(error => console.log(error.message));
+  ionViewDidLoad() {
+  }
 
-    this.navCtrl.push(ResultPage, {
-      question: question
-    })
+  // showResult(question) {
+  //   let uid = this.firebaseAuth.auth.currentUser.uid;
+  //   this.firestore
+  //     .collection('users')
+  //     .doc(uid)
+  //     .collection('triages')
+  //     .add(question)
+  //     .then(() => console.log("Saved successfully"))
+  //     .catch(error => console.log(error.message));
+
+  //   this.navCtrl.push(ResultPage, {
+  //     question: question
+  //   })
+  // }
+
+  onChoiceClick(choice) {
+    switch (choice.type) {
+      case TYPE.QUESTION: {
+        this.slides.slideTo(choice.to);
+        break;
+      }
+
+      case TYPE.RESULT: {
+        this.navCtrl.push(ResultPage, {
+          payload: choice.payload
+        });
+        break;
+      }
+    }
+
   }
 
 
