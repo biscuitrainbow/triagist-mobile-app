@@ -1,3 +1,4 @@
+import { AdvisePage } from './../advise/advise';
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { LoadingController } from "ionic-angular/components/loading/loading-controller";
@@ -49,6 +50,7 @@ export class ResultPage {
     public loadingCtrl: LoadingController
   ) {
     this.payload = navParams.get("payload");
+    console.log(this.payload);
   }
 
   async openPdf() {
@@ -120,5 +122,11 @@ export class ResultPage {
 
   hideLoading() {
     this.loader.dismiss();
+  }
+
+  navigateAdvisePage() {
+    this.navCtrl.push(AdvisePage, {
+      advise: this.payload.advise
+    })
   }
 }

@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>คำแนะนำ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let content of advise.contents">
+      <ion-buttons end>
+        <button (click)="navigateNotePage()" clear ion-button color="primary">
+          <ion-icon class="mr-2" name="information-circle"></ion-icon>หมายเหตุ</button>
+      </ion-buttons>
+      <p text-center class="leading-loose px-4 text-3xl" [innerHTML]="content.detail"></p>
+      <p *ngFor="let subDetail of content.subDetails" [innerHTML]="subDetail" class="text-grey-darker text-2xl leading-loose px-4 my-4"></p>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

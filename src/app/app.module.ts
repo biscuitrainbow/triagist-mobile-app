@@ -1,3 +1,4 @@
+import { AdvisePage } from './../pages/advise/advise';
 import { HistoryPage } from './../pages/history/history';
 import { DocumentViewer } from '@ionic-native/document-viewer';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -29,6 +30,7 @@ import { FirebaseUserProvider } from '../providers/firebase-user/firebase-user';
 import { PdfProvider } from '../providers/pdf/pdf';
 import { MapProvider } from '../providers/map/map';
 import { FileOpener } from '@ionic-native/file-opener';
+import { NotePage } from '../pages/note/note';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -50,7 +52,9 @@ var config = {
     RegisterPage,
     QuestionPage,
     ResultPage,
-    HistoryPage
+    HistoryPage,
+    AdvisePage,
+    NotePage
   ],
   imports: [
     BrowserModule,
@@ -73,7 +77,9 @@ var config = {
     RegisterPage,
     QuestionPage,
     ResultPage,
-    HistoryPage
+    HistoryPage,
+    AdvisePage,
+    NotePage
   ],
   providers: [
     StatusBar,
