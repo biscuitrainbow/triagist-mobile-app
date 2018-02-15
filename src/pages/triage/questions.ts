@@ -1,13 +1,24 @@
 import { ResultPage } from './../result/result';
 
+export const CHOICE_TYPE = {
+    CHECKBOX: 'checkbox',
+    BUTTON: 'button'
+}
+
 export const TYPE = {
     'RESULT': 'result',
     'QUESTION': 'question'
 }
 
 export const LEVEL = {
-    'R': 'ผู้ป่วยฉุกเฉินวิกฤติ',
-    'Y': 'ผู้ป่วยฉุกเฉินเร่งด่วน'
+    R: {
+        text: 'ผู้ป่วยฉุกเฉินวิกฤติ',
+        color: '#D72732'
+    },
+    Y: {
+        text: 'ผู้ป่วยฉุกเฉินเร่งด่วน',
+        color: '#F7E744'
+    }
 }
 
 export const RESULT = {
@@ -169,10 +180,10 @@ export const QUESTIONS = [
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R21.code,
                             advise: RESULT.R21.advise,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     }
                 ]
@@ -186,10 +197,10 @@ export const QUESTIONS = [
                         name: 'พูดได้แค่ประโยคสั้นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R23.code,
                             advise: RESULT.R23.advise,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -198,10 +209,10 @@ export const QUESTIONS = [
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R23.code,
                             advise: RESULT.R23.advise,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -210,10 +221,10 @@ export const QUESTIONS = [
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R23.code,
                             advise: RESULT.R23.advise,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -222,10 +233,10 @@ export const QUESTIONS = [
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R23.code,
                             advise: RESULT.R23.advise,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -234,9 +245,9 @@ export const QUESTIONS = [
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R23.code,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -245,10 +256,10 @@ export const QUESTIONS = [
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R23.code,
                             advise: RESULT.R23.advise,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -256,6 +267,12 @@ export const QUESTIONS = [
                         from: 1,
                         name: 'หายใจเร็ว',
                         to: 3
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        from: 1,
+                        name: 'พูดได้ / หายใจปกติ',
+                        to: 5
                     },
                 ]
             },
@@ -268,10 +285,10 @@ export const QUESTIONS = [
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R22.code,
                             advise: RESULT.R22.advise,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -291,9 +308,9 @@ export const QUESTIONS = [
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R,
+                            level: LEVEL.R.text,
                             code: RESULT.R22.code,
-                            color: '#D72732',
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -302,9 +319,64 @@ export const QUESTIONS = [
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: 'ผู้ป่วยฉุกเฉินวิกฤต',
-                            code: '2 เหลือง 8',
-                            color: '#F7E744',
+                            level: LEVEL.Y.text,
+                            code: RESULT.Y28.code,
+                            color: LEVEL.Y.color,
+                        }
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 5,
+                        name: 'เหงื่อท่วมตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R,
+                            code: RESULT.R23.code,
+                            advise: RESULT.R23.advise,
+                            color: LEVEL.R.color,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 5,
+                        name: 'ซีดและผิวซีดเย็ด',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            code: RESULT.R23.code,
+                            advise: RESULT.R23.advise,
+                            color: LEVEL.R.color,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 5,
+                        name: 'เป็นลมหรือเกือบเป็นลม',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            code: RESULT.R23.code,
+                            advise: RESULT.R23.advise,
+                            color: LEVEL.R.color,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 5,
+                        name: 'อาการซึมลง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            code: RESULT.R23.code,
+                            advise: RESULT.R23.advise,
+                            color: LEVEL.R.color,
                         }
                     },
 

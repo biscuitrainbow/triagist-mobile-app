@@ -1,6 +1,6 @@
 {
   "name": "triage",
-  "app_id": "2722c0f8",
+  "app_id": "2d05f0f5",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

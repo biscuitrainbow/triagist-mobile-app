@@ -16,19 +16,18 @@
 </ion-header>
 
 <ion-content [ngStyle]="{ 'backgroundColor': payload.color}">
-  <ion-grid style="height: 100%">
-    <ion-row justify-content-center align-items-center style="height: 100%">
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <h1 text-center ion-text [innerHTML]=" payload.code "></h1>
-          </ion-card-header>
-          <ion-card-content>
-            <h3 text-center [innerHTML]="payload.level "></h3>
-          </ion-card-content>
-        </ion-card>
-        <button ion-button (click)="navigateAdvisePage()">คำแนะนำ</button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
+  <div class="flex flex-col items-center justify-center h-full">
+    <ion-card>
+      <ion-card-header>
+        <h1 text-center ion-text [innerHTML]=" payload.code "></h1>
+      </ion-card-header>
+      <ion-card-content>
+        <h3 text-center [innerHTML]="payload.level "></h3>
+      </ion-card-content>
+    </ion-card>
+    <button class="bg-red hover:bg-red-dark active:bg-red-dark" ion-button (click)="navigateAdvisePage()">คำแนะนำ</button>
+  </div>
+
+
 </ion-content>
