@@ -29,8 +29,7 @@ declare var google;
 })
 export class ResultPage {
   private payload;
-  private code;
-  private description;
+  public answers;
   private user;
   private location;
   private pdfMake;
@@ -49,8 +48,11 @@ export class ResultPage {
     public socialSharing: SocialSharing,
     public loadingCtrl: LoadingController
   ) {
-    this.payload = navParams.get("payload");
-    console.log(this.payload);
+    this.payload = navParams.get('payload');
+    this.answers = navParams.get('answers');
+
+    console.log(this.answers);
+
   }
 
   async openPdf() {
@@ -87,9 +89,7 @@ export class ResultPage {
     return new Promise(async (resolve, reject) => {
       try {
         let data = {
-          question: this.payload.question,
           code: this.payload.code,
-          description: this.payload.description
         };
 
         let blob = await this.pdf.create(data);

@@ -17,17 +17,39 @@
 
 <ion-content [ngStyle]="{ 'backgroundColor': payload.color}">
 
-  <div class="flex flex-col items-center justify-center h-full">
-    <ion-card>
-      <ion-card-header>
-        <h1 text-center ion-text [innerHTML]=" payload.code "></h1>
-      </ion-card-header>
-      <ion-card-content>
-        <h3 text-center [innerHTML]="payload.level "></h3>
-      </ion-card-content>
-    </ion-card>
-    <button class="bg-red hover:bg-red-dark active:bg-red-dark" ion-button (click)="navigateAdvisePage()">คำแนะนำ</button>
-  </div>
+  <ion-scroll class="flex flex-col  h-full" scrollY="true">
+    <div class="flex flex-col  h-full">
+      <ion-card>
+        <ion-card-header>
+          <h1 text-center ion-text [innerHTML]=" payload.code "></h1>
+        </ion-card-header>
+        <ion-card-content>
+          <h3 text-center [innerHTML]="payload.level "></h3>
+        </ion-card-content>
+      </ion-card>
+      <!-- <button class="bg-red hover:bg-red-dark active:bg-red-dark" ion-button (click)="navigateAdvisePage()">คำแนะนำ</button> -->
 
+      <ion-card>
+        <div class="flex justify-between">
+          <p class="px-8 card-header py-4">ลำดับการตอบคำถาม</p>
+          <ion-buttons end>
+            <button (click)="navigateAdvisePage()" clear ion-button color="primary">
+              <ion-icon class="mr-2" name="information-circle"></ion-icon>คำแนะนำ</button>
+          </ion-buttons>
+        </div>
+        <ion-list #scheduleList>
+          <ion-item *ngFor="let answer of answers">
+            <div class="border-l-2 border-yellow py-4 px-4">
+              <h2>{{answer.question}}</h2>
+              <p>{{answer.answer}}</p>
+            </div>
+          </ion-item>
+          <hr>
+
+        </ion-list>
+      </ion-card>
+
+    </div>
+  </ion-scroll>
 
 </ion-content>

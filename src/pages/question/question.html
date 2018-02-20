@@ -12,7 +12,7 @@
         <h3>{{question.question}}</h3>
 
 
-        <button ion-button class="flex flex-col h-24 bg-white mt-2 shadow" *ngFor="let choice of question.choices" (click)="onChoiceClick(choice)">
+        <button ion-button class="flex flex-col h-24 bg-white mt-2 shadow" *ngFor="let choice of question.choices" (click)="onChoiceClick(choice,question.question)">
           <ion-item *ngIf="question.type == 'checkbox'">
             <ion-checkbox [(ngModel)]="choice.checked"></ion-checkbox>
           </ion-item>

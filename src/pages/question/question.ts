@@ -13,6 +13,8 @@ export class QuestionPage {
   @ViewChild(Slides) slides: Slides
   question: object;
 
+  answers = [];
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -40,16 +42,29 @@ export class QuestionPage {
   //   })
   // }
 
-  onChoiceClick(choice) {
+  onChoiceClick(choice, question) {
     switch (choice.type) {
       case TYPE.QUESTION: {
+
+        this.answers.push({
+          question: question,
+          answer: choice.name
+        });
+
         this.slides.slideTo(choice.to);
         break;
       }
 
       case TYPE.RESULT: {
+
+        this.answers.push({
+          question: question,
+          answer: choice.name
+        });
+
         this.navCtrl.push(ResultPage, {
-          payload: choice.payload
+          payload: choice.payload,
+          answers: this.answers
         });
         break;
       }
@@ -63,6 +78,7 @@ export class QuestionPage {
       this.navCtrl.push(ResultPage, {
         payload: question.payload
       });
+
     } else {
       this.slides.slideTo(question.to);
     }

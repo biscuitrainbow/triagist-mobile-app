@@ -30,7 +30,11 @@ export class PdfProvider {
           let dd = {
             content: [
               {
-                text: "Triage Summary\n\n",
+                text: `${data.code}`,
+                style: "code"
+              },
+              {
+                text: "Triage Summary\n",
                 style: "header"
               },
               {
@@ -45,14 +49,14 @@ export class PdfProvider {
                 text: moment().format("MMMM Do YYYY, h:mm:ss a"),
                 style: "detail"
               },
-              {
-                text: `\n\n${data.code}`,
-                style: "subheader"
-              },
-              {
-                text: data.description,
-                style: "detail"
-              }
+              // {
+              //   text: `${data.code}`,
+              //   style: "subheader"
+              // },
+              // {
+              //   text: data.description,
+              //   style: "detail"
+              // }
             ],
             defaultStyle: {
               font: "THSarabunNew"

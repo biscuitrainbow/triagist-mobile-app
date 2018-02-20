@@ -1,8 +1,13 @@
 export const style = {
+    code: {
+        fontSize: 28,
+        bold: true,
+        alignment: 'left',
+    },
     header: {
         fontSize: 22,
         bold: true,
-        alignment: 'right',
+        alignment: 'left',
     },
     subheader: {
         fontSize: 17
