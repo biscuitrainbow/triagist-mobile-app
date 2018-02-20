@@ -16,6 +16,14 @@
     border-radius: 50%;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+button:focus {
+    outline: 0;
+}
+
 #menu-material {
     .menu-header {
         padding: 5px 15px;

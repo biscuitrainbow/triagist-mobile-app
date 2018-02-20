@@ -18,11 +18,15 @@ export const LEVEL = {
     Y: {
         text: 'ผู้ป่วยฉุกเฉินเร่งด่วน',
         color: '#F7E744'
+    },
+    W: {
+        text: 'ผู้ป่วยฉุกเฉินปกติ',
+        color: '#F0F0F0'
     }
 }
 
 export const RESULT = {
-    'R21': {
+    R21: {
         code: '2 แดง 1',
         leave: LEVEL.R,
         advise: {
@@ -57,7 +61,7 @@ export const RESULT = {
             ]
         }
     },
-    'R22': {
+    R22: {
         code: '2 แดง 2',
         leave: LEVEL.R,
         advise: {
@@ -89,7 +93,7 @@ export const RESULT = {
             ]
         }
     },
-    'R23': {
+    R23: {
         code: '2 แดง 3',
         leave: LEVEL.R,
         advise: {
@@ -115,17 +119,89 @@ export const RESULT = {
             ]
         }
     },
-    'R24': {
+    R24: {
         code: '2 แดง 4',
         leave: LEVEL.R
     },
-    'Y28': {
+    Y21: {
+        code: '2 เหลือง 1',
+        leave: LEVEL.Y,
+        advise: {
+            contents: [
+                {
+                    detail: 'จัดท่านอนศรีษะสูง',
+                    subDetails: [
+                        'หรือนั่งเพื่อให้หายใจได้สะดวก อยู่ในสถานที่อากาศถ่ายเท'
+                    ]
+
+                },
+                {
+                    detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                    subDetails: [
+                        'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                    ]
+                },
+            ],
+            notes: [
+                '1. ผู้ป่วยมีอาการเปลี่ยนแปลงให้โทร 1669 อีกครั้ง เพื่อรับวิธีการปฐมพยาบาล ระหว่างรอรถพยาบาล',
+                '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                '3. กดเหล็กในออก(หากทำได้) ,ประคบน้ำแข็งบริเวณที่ถูกต่อย',
+
+            ]
+        }
+    },
+    Y24: {
+        code: '2 เหลือง 4',
+        leave: LEVEL.Y,
+        advise: {
+            contents: [
+                {
+                    detail: 'จัดท่านอนตะแคงซ้าย อยู่ในสถานที่อากาศถ่ายเท',
+                    subDetails: [
+                        'จัดท่านอนตะแคงซ้าย อยู่ในสถานที่อากาศถ่ายเท'
+                    ]
+
+                },
+                {
+                    detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                    subDetails: [
+                        'จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                    ]
+                },
+            ],
+            notes: [
+                '1. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                '2. กดเหล็กในออก(หากทำได้) ,ประคบน้ำแข็งบริเวณที่ถูกต่อย',
+
+            ]
+        }
+    },
+    Y28: {
         code: '2 เหลือง 8',
         leave: LEVEL.Y
     },
-    'Y29': {
+    Y29: {
         code: '2 เหลือง 9',
         leave: LEVEL.Y
+    },
+    W23: {
+        code: '2 ขาว 3',
+        leave: LEVEL.W,
+        advise: {
+            contents: [
+                {
+                    detail: 'แนะนำให้ผู้ป่วยนอนพัก',
+                    subDetails: [
+                        'หากมีอาการแน่นหน้าอก'
+                    ]
+
+                },
+
+            ],
+            notes: [
+
+            ]
+        }
     }
 }
 
@@ -330,56 +406,128 @@ export const QUESTIONS = [
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
                 type: CHOICE_TYPE.CHECKBOX,
+                to: 6,
+                payload: {
+                    level: LEVEL.R.text,
+                    code: RESULT.R23.code,
+                    advise: RESULT.R23.advise,
+                    color: LEVEL.R.color,
+                },
                 choices: [
                     {
                         type: TYPE.RESULT,
                         from: 5,
                         name: 'เหงื่อท่วมตัว',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R,
-                            code: RESULT.R23.code,
-                            advise: RESULT.R23.advise,
-                            color: LEVEL.R.color,
-                        }
+                        checked: false,
+
                     },
                     {
                         type: TYPE.RESULT,
                         from: 5,
                         name: 'ซีดและผิวซีดเย็ด',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            code: RESULT.R23.code,
-                            advise: RESULT.R23.advise,
-                            color: LEVEL.R.color,
-                        }
+                        checked: false,
+
                     },
                     {
                         type: TYPE.RESULT,
                         from: 5,
                         name: 'เป็นลมหรือเกือบเป็นลม',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            code: RESULT.R23.code,
-                            advise: RESULT.R23.advise,
-                            color: LEVEL.R.color,
-                        }
+                        checked: false,
+
                     },
                     {
                         type: TYPE.RESULT,
                         from: 5,
                         name: 'อาการซึมลง',
+                        checked: false,
+
+                    },
+                ]
+            },
+            {
+                question: 'ผุ้ป่วยเคยมีประวัติแพ้รุนแรงต่อสิ่งใดหรือไม่',
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        from: 6,
+                        name: 'ใช่',
+                        to: 7
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        from: 6,
+                        name: 'ไม่ใช่',
+                        to: 7
+                    },
+                ]
+            },
+            {
+                question: 'เคยมีอาการเกิดขึ้นหลังจากได้รับสิ่งที่แพ้ภายใน 30 นาทีหรือไม่',
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 7,
+                        name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            code: RESULT.R23.code,
-                            advise: RESULT.R23.advise,
-                            color: LEVEL.R.color,
+                            level: LEVEL.Y.text,
+                            code: RESULT.Y21.code,
+                            advise: RESULT.Y21.advise,
+                            color: LEVEL.Y.color,
                         }
                     },
-
+                    {
+                        type: TYPE.QUESTION,
+                        from: 7,
+                        name: 'ไม่ใช่',
+                        to: 9
+                    },
+                ]
+            },
+            {
+                question: 'ผุ้ป่วยเคยแพ้ยา / ช่วงนี้ผู้ป่วยกิน / ได้รับยาแล้วมีอาการแพ้หรือไม่',
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 8,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            code: RESULT.Y24.code,
+                            advise: RESULT.Y24.advise,
+                            color: LEVEL.Y.color,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        from: 8,
+                        name: 'ไม่ใช่',
+                        to: 9
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการผิดปกติอย่างไรบ้าง',
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 10,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            code: RESULT.W23.code,
+                            advise: RESULT.W23.advise,
+                            color: LEVEL.W.color,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        from: 8,
+                        name: 'ไม่ใช่',
+                        to: 7
+                    },
                 ]
             },
             {

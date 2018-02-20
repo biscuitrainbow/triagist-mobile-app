@@ -54,8 +54,21 @@ export class QuestionPage {
         break;
       }
     }
-
   }
+
+  onNextClick(choices, question) {
+    let checkedChoices = choices.filter(item => item.checked == true);
+
+    if (checkedChoices.length >= 2) {
+      this.navCtrl.push(ResultPage, {
+        payload: question.payload
+      });
+    } else {
+      this.slides.slideTo(question.to);
+    }
+  }
+
+
 
 
 

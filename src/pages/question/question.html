@@ -14,12 +14,15 @@
 
         <button ion-button class="flex flex-col h-24 bg-white mt-2 shadow" *ngFor="let choice of question.choices" (click)="onChoiceClick(choice)">
           <ion-item *ngIf="question.type == 'checkbox'">
-            <ion-checkbox></ion-checkbox>
+            <ion-checkbox [(ngModel)]="choice.checked"></ion-checkbox>
           </ion-item>
           <div class="flex items-center justify-between text-3xl">
             <p class="text-3xl">{{choice.name}}</p>
           </div>
         </button>
+
+        <button (click)="onNextClick(question.choices,question)" *ngIf="question.type == 'checkbox'" ion-button full>ต่อไป</button>
+
 
 
 
