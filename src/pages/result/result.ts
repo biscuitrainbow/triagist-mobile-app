@@ -46,13 +46,25 @@ export class ResultPage {
     public pdf: PdfProvider,
     public map: MapProvider,
     public socialSharing: SocialSharing,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    public firestore: AngularFirestore,
+    public firebaseAuth: AngularFireAuth
   ) {
     this.payload = navParams.get('payload');
     this.answers = navParams.get('answers');
 
-    console.log(this.answers);
+    this.saveResult();
+  }
 
+  saveResult() {
+    let uid = this.firebaseAuth.auth.currentUser.uid;
+    this.firestore
+      .collection('users')
+      .doc(uid)
+      .collection('triages')
+      .add({ answers: this.answers, payload: this.payload })
+      .then(() => console.log("Saved successfully"))
+      .catch(error => console.log(error.message));
   }
 
   async openPdf() {

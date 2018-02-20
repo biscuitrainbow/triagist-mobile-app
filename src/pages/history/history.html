@@ -12,13 +12,11 @@
 
     <ion-item-sliding *ngFor="let triage of triages">
       <ion-item>
-        <div class="flex items-center">
-          <h2 style="margin-right:0.5rem">{{triage.level}}</h2>
-
-          <ion-badge [style.background-color]="triage.color">{{triage.code}}</ion-badge>
+        <div class="flex items-center my-2">
+          <ion-badge [style.background-color]="triage.payload.color">{{triage.payload.code}}</ion-badge>
         </div>
 
-        <p>{{triage.name}}</p>
+        <p>{{triage.payload.level}}</p>
         <button ion-button clear item-end>View</button>
       </ion-item>
 

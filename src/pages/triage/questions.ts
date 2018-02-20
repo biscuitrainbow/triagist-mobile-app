@@ -20,11 +20,11 @@ export const LEVEL = {
         color: '#F7E744'
     },
     G: {
-        text: 'ผู้ป่วยปกติ',
-        color: '#F0F0F0'
+        text: 'ผู้ป่วยฉุกเฉินไม่รุนแรง',
+        color: '#1BA153'
     },
     W: {
-        text: 'ผู้ป่วยฉุกเฉินปกติ',
+        text: 'ผู้ป่วยทั่วไป',
         color: '#F0F0F0'
     }
 }

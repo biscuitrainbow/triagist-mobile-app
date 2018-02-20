@@ -27,20 +27,6 @@ export class QuestionPage {
   ionViewDidLoad() {
   }
 
-  // showResult(question) {
-  //   let uid = this.firebaseAuth.auth.currentUser.uid;
-  //   this.firestore
-  //     .collection('users')
-  //     .doc(uid)
-  //     .collection('triages')
-  //     .add(question)
-  //     .then(() => console.log("Saved successfully"))
-  //     .catch(error => console.log(error.message));
-
-  //   this.navCtrl.push(ResultPage, {
-  //     question: question
-  //   })
-  // }
 
   onChoiceClick(choice, question) {
     switch (choice.type) {
@@ -73,10 +59,19 @@ export class QuestionPage {
 
   onNextClick(choices, question) {
     let checkedChoices = choices.filter(item => item.checked == true);
+    let textChoice = checkedChoices.map(item => item.name).join(" ,");
+
+
+    this.answers.push({
+      question: question.question,
+      answer: textChoice
+    });
+
 
     if (checkedChoices.length >= 2) {
       this.navCtrl.push(ResultPage, {
-        payload: question.payload
+        payload: question.payload,
+        answers: this.answers
       });
 
     } else {
