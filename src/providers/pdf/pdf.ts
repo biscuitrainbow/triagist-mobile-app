@@ -64,7 +64,7 @@ export class PdfProvider {
             styles: style
           };
 
-          pdfMake.createPdf(dd).download();
+          // pdfMake.createPdf(dd).download();
           pdfMake.createPdf(dd).getBlob(blob => {
             resolve(blob);
           });

@@ -11,7 +11,6 @@
       <div class="flex flex-col justify-center h-full">
         <h3>{{question.question}}</h3>
 
-
         <button ion-button class="flex flex-col h-24 bg-white mt-2 shadow" *ngFor="let choice of question.choices" (click)="onChoiceClick(choice,question.question)">
           <ion-item *ngIf="question.type == 'checkbox'">
             <ion-checkbox [(ngModel)]="choice.checked"></ion-checkbox>
@@ -23,18 +22,7 @@
 
         <button (click)="onNextClick(question.choices,question)" *ngIf="question.type == 'checkbox'" ion-button full>ต่อไป</button>
 
-
-
-
       </div>
-      <!-- <ion-footer no-border>
-        <ion-toolbar>
-          <button ion-button block large icon-end color="primary" (click)="showResult(question)">
-            ใช่
-            <ion-icon name="arrow-forward"></ion-icon>
-          </button>
-        </ion-toolbar>
-      </ion-footer> -->
 
     </ion-slide>
   </ion-slides>
