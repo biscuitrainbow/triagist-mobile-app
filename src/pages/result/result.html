@@ -39,7 +39,7 @@
         </div>
         <ion-list #scheduleList>
           <ion-item *ngFor="let answer of answers">
-            <div class="border-l-2 border-yellow py-4 px-4">
+            <div class="border-l-2 py-4 px-4" [ngStyle]="{ 'border-color': payload.color}">
               <h2>{{answer.question}}</h2>
               <p>{{answer.answer}}</p>
             </div>

@@ -24,7 +24,7 @@ export const LEVEL = {
         color: '#1BA153'
     },
     W: {
-        text: 'ผู้ป่วยทั่วไป',
+        text: 'ผู้ป่วยทั่วไ',
         color: '#F0F0F0'
     }
 }
@@ -825,7 +825,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.RESULT,
                         from: 5,
-                        name: 'ซีดและผิวซีดเย็ด',
+                        name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
                     },

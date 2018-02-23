@@ -8,17 +8,18 @@
   <ion-slides class="swiper-no-swiping">
     <ion-slide *ngFor="let question of question.questions">
 
-      <div class="flex flex-col justify-center h-full">
-        <h3>{{question.question}}</h3>
+      <div class="flex flex-col justify-center h-full pt-4">
+        <h3 class="mb-6">{{question.question}}</h3>
 
-        <button ion-button class="flex flex-col h-24 bg-white mt-2 shadow" *ngFor="let choice of question.choices" (click)="onChoiceClick(choice,question.question)">
-          <ion-item *ngIf="question.type == 'checkbox'">
-            <ion-checkbox [(ngModel)]="choice.checked"></ion-checkbox>
-          </ion-item>
-          <div class="flex items-center justify-between text-3xl">
-            <p class="text-3xl">{{choice.name}}</p>
-          </div>
-        </button>
+        <div class="flex flex-col bg-white shadow mt-2 px-4" *ngFor="let choice of question.choices" (click)="onChoiceClick(choice,question.question)">
+
+          <button class="flex flex-wrap items-center hover:green px-4 py-6 ">
+            <ion-checkbox class="mr-8" *ngIf="question.type == 'checkbox'" [(ngModel)]="choice.checked"></ion-checkbox>
+            <p class="font-light text-grey-darkest text-3xl leading-normal">
+              {{choice.name}}
+            </p>
+          </button>
+        </div>
 
         <button (click)="onNextClick(question.choices,question)" *ngIf="question.type == 'checkbox'" ion-button full>ต่อไป</button>
 
