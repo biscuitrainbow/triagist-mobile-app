@@ -1,7 +1,7 @@
 import { TYPE } from './../triage/questions';
 import { ResultPage } from './../result/result';
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, Slides } from 'ionic-angular';
+import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
 
@@ -14,12 +14,14 @@ export class QuestionPage {
   question: object;
 
   answers = [];
+  questionPassed = [];
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public firestore: AngularFirestore,
-    public firebaseAuth: AngularFireAuth
+    public firebaseAuth: AngularFireAuth,
+    public platform: Platform
   ) {
     this.question = navParams.get('question');
   }
@@ -37,6 +39,7 @@ export class QuestionPage {
           answer: choice.name
         });
 
+        this.questionPassed.push(question.from);
         this.slides.slideTo(choice.to);
         break;
       }
@@ -76,6 +79,13 @@ export class QuestionPage {
 
     } else {
       this.slides.slideTo(question.to);
+    }
+  }
+
+  onSwipe(event, question) {
+    if (event.direction === 2) {
+      this.slides.slideTo(this.questionPassed[this.questionPassed.length - 1]);
+      this.questionPassed.pop();
     }
   }
 

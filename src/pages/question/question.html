@@ -4,9 +4,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="bg-grey-lighter">
+<ion-content padding class="bg-grey-lighter" >
   <ion-slides class="swiper-no-swiping">
-    <ion-slide *ngFor="let question of question.questions">
+    <ion-slide *ngFor="let question of question.questions" (swipe)="onSwipe($event,question)">
 
       <div class="flex flex-col justify-center h-full pt-4">
         <h3 class="mb-6">{{question.question}}</h3>
