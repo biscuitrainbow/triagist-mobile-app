@@ -1,3 +1,4 @@
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 import { TYPE } from './../triage/questions';
 import { ResultPage } from './../result/result';
@@ -23,9 +24,11 @@ export class QuestionPage {
     public navParams: NavParams,
     public firestore: AngularFirestore,
     public firebaseAuth: AngularFireAuth,
-    public platform: Platform
+    public platform: Platform,
+    public menuCtrl: MenuController
   ) {
     this.question = navParams.get('question');
+    this.menuCtrl.enable(false);
   }
 
   ionViewDidLoad() {
