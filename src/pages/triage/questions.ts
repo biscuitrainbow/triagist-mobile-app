@@ -841,7 +841,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่เคย',
-                        to: 7
+                        to: 8
                     },
                 ]
             },
@@ -891,7 +891,7 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการผิดปกติอย่างไรบ้าง',
-                from: 10,
+                from: 9,
                 choices: [
                     {
                         type: TYPE.RESULT,
@@ -924,7 +924,7 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยเคยมีประวัติการแพ้หรือไม่',
-                from: 11,
+                from: 10,
                 choices: [
                     {
                         type: TYPE.RESULT,
@@ -960,22 +960,20 @@ export const QUESTIONS = [
         questions: [
             {
                 question: 'ผู้ป่วยรู้สึกตัวหรือไม่',
+                from: 0,
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        from: 0,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 0,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 0,
                         name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
@@ -989,16 +987,15 @@ export const QUESTIONS = [
             },
             {
                 question: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
+                from: 1,
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        from: 1,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 1,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
@@ -1012,10 +1009,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'ลักษณะอาการหายใจเป็นอย่างไร',
+                from: 2,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 2,
                         name: 'พูดได้แค่ประโยคสั้นๆ',
                         to: ResultPage,
                         payload: {
@@ -1027,7 +1024,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 2,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
@@ -1039,7 +1035,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 2,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
@@ -1051,7 +1046,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 2,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
@@ -1063,7 +1057,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 2,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
@@ -1075,7 +1068,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 2,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
@@ -1087,13 +1079,11 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 2,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 2,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -1101,10 +1091,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
+                from: 3,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 3,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
@@ -1116,7 +1106,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 3,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -1124,10 +1113,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยอายุเท่าไหร่',
+                from: 4,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 4,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
@@ -1139,7 +1128,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 4,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
@@ -1189,10 +1177,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการชักหรือไม่',
+                from: 6,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 6,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
@@ -1204,7 +1192,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 6,
                         name: 'ไม่ใช่',
                         to: 7
                     },
@@ -1212,10 +1199,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'เจ้าหน้าที่ร้องขอการเตรียมพร้อมเนื่องจากผู้ป่วยมีภาวะคุกคาม อันจะเป็นอัตรายต่อตนเองและผู้อื่นหรือไม่',
+                from: 7,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 7,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
@@ -1227,7 +1214,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 7,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -1235,10 +1221,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยได้รับ/สารอะไรเข้าสู่ร่างกาย',
+                from: 8,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 8,
                         name: 'ยา',
                         to: ResultPage,
                         payload: {
@@ -1250,7 +1236,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 8,
                         name: 'สารเคมีที่ใช้ในการเกษตร',
                         to: ResultPage,
                         payload: {
@@ -1262,19 +1247,16 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 8,
                         name: 'สารกัดกร่อน / สารเคมีอื่น (ที่ไม่ใช่อาหารยา)',
                         to: 9,
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 8,
                         name: 'สารป้องกันตัว เช่น แก๊สน้ำตา สเปรย์พริกไทย',
                         to: 11,
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 8,
                         name: 'สารเสพติด',
                         to: ResultPage,
                         payload: {
@@ -1288,10 +1270,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยกลืน น้ำลาย น้ำ และอากหาร ลำบากหรือไม่่',
+                from: 9,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 9,
                         name: 'กลืนลำบาก',
                         to: ResultPage,
                         payload: {
@@ -1303,7 +1285,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        from: 9,
                         name: 'กลืนได้ปกติ',
                         to: 10
                     },
@@ -1311,10 +1292,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'มีอาการผิดปกติอื่นเช่น เจ็บคอ ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
+                from: 10,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 10,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
@@ -1326,7 +1307,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 10,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
@@ -1340,10 +1320,10 @@ export const QUESTIONS = [
             },
             {
                 question: 'มีอาการผิดปกติหรือไม่ เช่น ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
+                from: 11,
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        from: 11,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
@@ -1355,7 +1335,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        from: 11,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
