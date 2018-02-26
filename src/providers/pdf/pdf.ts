@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { File } from "@ionic-native/file";
 import { FirebaseUserProvider } from "../firebase-user/firebase-user";
 import { MapProvider } from "./../map/map";
-import { style, THSarabunNew } from "./constant";
+import { style, THSarabunNew, defaultStyle } from "./constant";
 
 import * as pdfMake from "pdfmake/build/pdfmake";
 import * as pdfFonts from "pdfmake/build/vfs_fonts";
@@ -20,65 +20,43 @@ export class PdfProvider {
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
   }
 
-  create(data) {
+  async create(data) {
     return new Promise(async (resolve, reject) => {
-      try {
-        let location = await this.map.getCurrentAddress();
-        let user = await this.user.getUser();
+      let user = await this.user.getUser();
 
-        Promise.all([user, location]).then(() => {
-          let dd = {
-            content: [
-              {
-                text: `${data.code}`,
-                style: "code"
-              },
-              {
-                text: "Triage Summary\n",
-                style: "header"
-              },
-              {
-                text: `${user.data().name} ${user.data().lastName} \n`,
-                style: "subheader"
-              },
-              {
-                text: location[0].formatted_address,
-                style: "detail"
-              },
-              {
-                text: moment().format("MMMM Do YYYY, h:mm:ss a"),
-                style: "detail"
-              },
-              // {
-              //   text: `${data.code}`,
-              //   style: "subheader"
-              // },
-              // {
-              //   text: data.description,
-              //   style: "detail"
-              // }
-            ],
-            defaultStyle: {
-              font: "THSarabunNew"
-            },
-            styles: style
-          };
+      let pdfContent = {
+        content: [
+          {
+            text: `${data.code}`,
+            style: "code"
+          },
+          {
+            text: "Triage Summary\n",
+            style: "header"
+          },
+          {
+            text: `${user.data().name} ${user.data().lastName} \n`,
+            style: "subheader"
+          },
+          {
+            text: moment().format("MMMM Do YYYY, h:mm:ss a"),
+            style: "detail"
+          },
+        ],
+        defaultStyle: defaultStyle,
+        styles: style
+      };
 
-          // pdfMake.createPdf(dd).download();
-          pdfMake.createPdf(dd).getBlob(blob => {
-            resolve(blob);
-          });
-        });
-      } catch (error) {
-        reject(error);
-      }
-    });
+      pdfMake.createPdf(pdfContent).getBlob(blob => {
+        resolve(blob);
+      });
+    })
   }
 
   save(blob) {
-    const directory = this.file.externalApplicationStorageDirectory;
+    const directory = this.file.dataDirectory;
     const name = `${moment()}.pdf`;
 
-    return this.file.writeFile(directory, name, blob);
+    return this.file.writeFile(directory, name, blob)
   }
 }

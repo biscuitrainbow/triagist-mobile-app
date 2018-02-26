@@ -97,22 +97,11 @@ export class ResultPage {
   }
 
   async createPdf() {
+    let data = { code: this.payload.code };
+    let blob = await this.pdf.create(data);
+    let saveResult = await this.pdf.save(blob);
 
-    return new Promise(async (resolve, reject) => {
-      try {
-        let data = {
-          code: this.payload.code,
-        };
-
-        let blob = await this.pdf.create(data);
-        let saveResult = await this.pdf.save(blob);
-        this.pdfUrl = saveResult.nativeURL;
-
-        resolve(saveResult);
-      } catch (e) {
-        reject(e);
-      }
-    })
+    return this.pdfUrl = saveResult.nativeURL;
   }
 
   showToast(message: string) {

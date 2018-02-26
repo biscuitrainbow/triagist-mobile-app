@@ -18,6 +18,10 @@ export const style = {
     }
 }
 
+export const defaultStyle = {
+    font: "THSarabunNew"
+}
+
 export const THSarabunNew = {
     THSarabunNew: {
         normal: 'THSarabunNew.ttf',
