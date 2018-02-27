@@ -8,7 +8,7 @@
 
 
 <ion-content padding>
-  <ion-list>
+  <ion-list no-lines>
 
     <ion-item-sliding *ngFor="let triage of triages">
       <ion-item>
@@ -16,8 +16,11 @@
           <ion-badge [style.background-color]="triage.payload.color">{{triage.payload.code}}</ion-badge>
         </div>
 
-        <p>{{triage.payload.level}}</p>
-        <button ion-button clear item-end>View</button>
+        <div class="flex items-center">
+          <p class="font-light font-sm">{{triage.payload.level}}</p>
+          <p class="passed-time font-light mt-2">32 Minute ago</p>
+        </div>
+        <button ion-button clear item-end (click)="view(triage)">View</button>
       </ion-item>
 
       <ion-item-options side="right">

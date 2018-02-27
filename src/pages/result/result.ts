@@ -52,8 +52,7 @@ export class ResultPage {
   ) {
     this.payload = navParams.get('payload');
     this.answers = navParams.get('answers');
-
-    //this.saveResult();
+    // this.saveResult();
   }
 
   saveResult() {

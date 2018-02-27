@@ -1,3 +1,4 @@
+import { ResultPage } from './../result/result';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -39,6 +40,13 @@ export class HistoryPage extends BasePage {
       this.triages = value
       this.hideLoading();
     });
+  }
+
+  view(triage) {
+    this.navCtrl.push(ResultPage, {
+      payload: triage.payload,
+      answers: triage.answers
+    })
   }
 
   delete(triage) {

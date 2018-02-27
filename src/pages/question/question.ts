@@ -51,14 +51,16 @@ export class QuestionPage {
       case TYPE.QUESTION: {
 
         this.questionStack.push({ from: question.from, question: question.question, answer: choice.name });
-        console.log(this.questionStack);
         this.slides.slideTo(choice.to);
         break;
       }
 
       case TYPE.RESULT: {
 
+
         this.questionStack.push({ from: question.from, question: question.question, answer: choice.name });
+        this.saveResult(choice.payload, this.questionStack);
+
         this.navCtrl.push(ResultPage, { payload: choice.payload, answers: this.questionStack });
         break;
       }
@@ -70,10 +72,7 @@ export class QuestionPage {
     let checkedChoices = choices.filter(item => item.checked == true);
     let textChoice = checkedChoices.map(item => item.name).join(" ,");
 
-
     this.questionStack.push({ from: question.from, question: question.question, answer: textChoice });
-    console.log(this.questionStack);
-
 
     if (checkedChoices.length >= 2) {
       this.navCtrl.push(ResultPage, { payload: question.payload, answers: this.questionStack });
@@ -86,14 +85,24 @@ export class QuestionPage {
     if (event.direction === 4) {
 
       this.slides.slideTo(this.questionStack[this.questionStack.length - 1].from);
-      console.log(this.questionStack);
-
       this.questionStack.pop();
     }
   }
 
   close() {
     this.navCtrl.pop();
+  }
+
+  saveResult(payload, answers) {
+    console.log(this.questionStack);
+    let uid = this.firebaseAuth.auth.currentUser.uid;
+    this.firestore
+      .collection('users')
+      .doc(uid)
+      .collection('triages')
+      .add({ answers: answers, payload: payload })
+      .then(() => console.log("Saved successfully"))
+      .catch(error => console.log(error.message));
   }
 
 
