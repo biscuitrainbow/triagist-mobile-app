@@ -1,7 +1,13 @@
 <ion-header>
-  <ion-navbar [color]="question.color">
+  <ion-toolbar [color]="question.color">
     <ion-title>{{question.name}}</ion-title>
-  </ion-navbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding class="bg-grey-lighter">
@@ -9,13 +15,13 @@
     <ion-slide *ngFor="let question of question.questions" (swipe)="onSwipe($event,question)">
 
       <div class="flex flex-col justify-center h-full pt-4">
-        <h3 class="mb-6">{{question.question}}</h3>
+        <h4 class="mb-6">{{question.question}}</h4>
 
         <div class="flex flex-col bg-white shadow mt-2 px-4" *ngFor="let choice of question.choices" (click)="onChoiceClick(choice,question)">
 
           <button class="flex flex-wrap items-center hover:green px-4 py-6 ">
             <ion-checkbox class="mr-8" *ngIf="question.type == 'checkbox'" [(ngModel)]="choice.checked"></ion-checkbox>
-            <p class="font-light text-grey-darkest text-3xl leading-normal">
+            <p class="font-light text-grey-darkest text-2xl leading-normal">
               {{choice.name}}
             </p>
           </button>

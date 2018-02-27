@@ -28,16 +28,21 @@ export class QuestionPage {
     public menuCtrl: MenuController
   ) {
     this.question = navParams.get('question');
-    this.menuCtrl.enable(false);
   }
 
   ionViewDidLoad() {
+    this.menuCtrl.enable(false);
+
     let toast = this.toastCtrl.create({
       message: 'กวาดนิ้วไปด้านขวาเพื่อนย้อนกลับ',
       duration: 5000
     })
 
     toast.present();
+  }
+
+  ionViewDidLeave() {
+    this.menuCtrl.enable(true);
   }
 
 
@@ -79,9 +84,16 @@ export class QuestionPage {
 
   onSwipe(event, question) {
     if (event.direction === 4) {
+
       this.slides.slideTo(this.questionStack[this.questionStack.length - 1].from);
+      console.log(this.questionStack);
+
       this.questionStack.pop();
     }
+  }
+
+  close() {
+    this.navCtrl.pop();
   }
 
 

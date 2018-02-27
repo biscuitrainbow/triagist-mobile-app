@@ -25,8 +25,8 @@
   <div [ngSwitch]="view">
     <ion-list *ngSwitchCase="'list'">
       <ion-item *ngFor="let hospital of hospitals">
-        <h2>{{hospital.name}}</h2>
-        <p>{{hospital.distance}}</p>
+        <p>{{hospital.name}}</p>
+        <p class="font-light font-sm">{{hospital.distance}}</p>
         <button ion-button clear item-end (click)="callNumber(hospital.phoneNumber)">Call</button>
       </ion-item>
     </ion-list>
