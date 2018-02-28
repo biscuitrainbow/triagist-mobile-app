@@ -1,0 +1,17 @@
+page-result {
+    font-family: 'Kanit', sans-serif;
+    h3 {
+        color: #60646B;
+        margin-bottom: 36px;
+    }
+    .card-header {
+        font-size: 1.6rem !important;
+        color: #606F7B;
+    }
+}
+
+@function auxiliary-categories() {
+    @return map-remove($categories);
+}
+
+$categories: ( ionic: color($colors, primary), angular: #AC282B, communication: #8E8D93, tooling: #FE4C52, services: #FD8B2D, design: #FED035, workshop: #69BB7B, food: #3BC7C4, documentation: #B16BE3, navigation: #6600CC, );

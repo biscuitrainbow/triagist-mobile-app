@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Hospital
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="view">
+      <ion-segment-button value="map">
+        <span ion-text>Map</span>
+      </ion-segment-button>
+      <ion-segment-button value="list">
+        <span ion-text>List</span>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div #map style="height:100%;" [style.display]="view == 'map' ? 'block' : 'none'"></div>
+  <div #web_map style="display:none"></div>
+
+  <div [ngSwitch]="view">
+    <ion-list no-lines *ngSwitchCase="'list'">
+      <ion-item *ngFor="let hospital of hospitals">
+        <p class="font-medium">{{hospital.name}}</p>
+        <p class="font-light font-xs font-grey-lighter">{{hospital.distance}}</p>
+        <button ion-button clear item-end (click)="callNumber(hospital.phoneNumber)">Call</button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,13 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>หมายเหตุ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p *ngFor="let note of notes" [innerHTML]="note" class="text-grey-darker text-2xl leading-loose px-4 my-4"></p>
+
+</ion-content>

@@ -1,1 +1,27 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" id="menu-material">
+    <ion-content>
+        <div class="menu-header">
+            <img class="user-avatar round" src="assets/imgs/default-profile.png" />
+            <p class="name">{{displayName}}</p>
+            <p class="e-mail">{{email}}</p>
+        </div>
+        <ion-list no-lines>
+            <button menuClose="left" ion-item detail-none>
+                <ion-icon name="person" item-left></ion-icon>
+                Profile
+            </button>
+            <button menuClose="left" ion-item detail-none (click)="history()">
+                <ion-icon name="list-box" item-left></ion-icon>
+                History
+            </button>
+            <button menuClose="left" ion-item detail-none (click)="logout()">
+                <ion-icon name="log-out" item-left></ion-icon>
+                Sign out
+            </button>
+
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+
+<ion-nav #content [root]="rootPage"></ion-nav>
