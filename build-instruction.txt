@@ -1,0 +1,7 @@
+
+
+ionic cordova build --release android
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore /Users/biscuitrainbow/new-triage/platforms/android/app/build/outputs/apk/armv7/release/app-armv7-release-unsigned.apk alias_name
+
+./zipalign -v 4 /Users/biscuitrainbow/new-triage/platforms/android/app/build/outputs/apk/armv7/release/app-armv7-release-unsigned.apk ~/release.apk
