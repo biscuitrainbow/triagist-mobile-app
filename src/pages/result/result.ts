@@ -102,7 +102,8 @@ export class ResultPage {
       let saveResult = await this.pdf.save(blob);
       return this.pdfUrl = saveResult.nativeURL;
     } catch (e) {
-      this.hideLoading();
+      this.showToast(e);
+     // this.hideLoading();
     }
   }
 

@@ -47,9 +47,13 @@ export class PdfProvider {
         styles: style
       };
 
-      pdfMake.createPdf(pdfContent).getBlob(blob => {
-        resolve(blob);
-      });
+      try {
+        pdfMake.createPdf(pdfContent).getBlob(blob => {
+          resolve(blob);
+        });
+      } catch (e) {
+        reject(e);
+      }
     })
   }
 

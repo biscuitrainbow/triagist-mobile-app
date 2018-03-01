@@ -124,8 +124,14 @@ export class HospitalPage {
             });
             this.hospitals = result;
           });
-        }).catch(error => this.showToast(error.message));
-      }).catch(error => this.showToast(error.message));
+        }).catch(error => {
+          this.hideLoading();
+          this.showToast(error.message)
+        });
+      }).catch(error => {
+        this.hideLoading();
+        this.showToast(error.message)
+      });
   }
 
   callNumber(number: string) {

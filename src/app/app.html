@@ -1,15 +1,15 @@
 <ion-menu [content]="content" id="menu-material">
     <ion-content>
-        <div class="menu-header">
+        <div class="menu-header bg-blue">
             <img class="user-avatar round" src="assets/imgs/default-profile.png" />
             <p class="name">{{displayName}}</p>
             <p class="e-mail">{{email}}</p>
         </div>
         <ion-list no-lines>
-            <button menuClose="left" ion-item detail-none>
+            <!-- <button menuClose="left" ion-item detail-none>
                 <ion-icon name="person" item-left></ion-icon>
                 Profile
-            </button>
+            </button> -->
             <button menuClose="left" ion-item detail-none (click)="history()">
                 <ion-icon name="list-box" item-left></ion-icon>
                 History
