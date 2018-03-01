@@ -6,6 +6,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import BasePage from '../BasePage';
+import * as moment from "moment";
 
 @Component({
   selector: 'page-history',
@@ -14,7 +15,10 @@ import BasePage from '../BasePage';
 export class HistoryPage extends BasePage {
 
   private historyObservable: Observable<any>;
-  private triages;
+  private triages: Array<Object> = [];
+
+  private lastVisible;
+  private limit = 8;
 
   constructor(
     public navCtrl: NavController,
@@ -30,16 +34,19 @@ export class HistoryPage extends BasePage {
     this.showLoading("Fetching data...");
     let uid = this.firebaseAuth.auth.currentUser.uid;
 
-    this.historyObservable = this.firestore
+    let ref = this.firestore
       .collection('users')
       .doc(uid)
       .collection('triages')
-      .valueChanges()
-
-    this.historyObservable.subscribe(value => {
-      this.triages = value
-      this.hideLoading();
-    });
+      .ref
+      .orderBy('timestamp', "desc")
+      .limit(this.limit)
+      .get()
+      .then(val => {
+        this.lastVisible = val.docs[val.docs.length - 1];
+        val.docs.map(doc => this.triages.push(doc.data()));
+        this.hideLoading();
+      })
   }
 
   view(triage) {
@@ -57,6 +64,29 @@ export class HistoryPage extends BasePage {
     //   .doc(uid)
     //   .collection('triages')
     //   .doc(triage);
+  }
+
+  doInfinite(event) {
+    let uid = this.firebaseAuth.auth.currentUser.uid;
+
+    if (this.lastVisible !== undefined) {
+      this.firestore
+        .collection('users')
+        .doc(uid)
+        .collection('triages')
+        .ref
+        .orderBy('timestamp', "desc")
+        .startAfter(this.lastVisible)
+        .limit(this.limit)
+        .get()
+        .then(val => {
+          this.lastVisible = val.docs[val.docs.length - 1];
+          val.docs.map(doc => this.triages.push(doc.data()));
+          event.complete();
+        })
+    } else {
+      event.complete();
+    }
   }
 
 }

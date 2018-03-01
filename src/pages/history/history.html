@@ -9,7 +9,6 @@
 
 <ion-content padding>
   <ion-list no-lines>
-
     <ion-item-sliding *ngFor="let triage of triages">
       <ion-item>
         <div class="flex items-center my-2">
@@ -18,7 +17,7 @@
 
         <div class="flex items-center">
           <p class="font-light font-sm">{{triage.payload.level}}</p>
-          <p class="passed-time font-light mt-2">32 Minute ago</p>
+          <p class="passed-time font-light mt-2">{{triage.timestamp | duration}}</p>
         </div>
         <button ion-button clear item-end (click)="view(triage)">View</button>
       </ion-item>
@@ -27,6 +26,13 @@
         <button ion-button color="danger" (click)="delete(triage)">Delete</button>
       </ion-item-options>
     </ion-item-sliding>
-
   </ion-list>
+  <!-- <button ion-button (click)="doInfinite($event)">
+      Load more
+  </button> -->
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

@@ -31,6 +31,7 @@ import { PdfProvider } from '../providers/pdf/pdf';
 import { MapProvider } from '../providers/map/map';
 import { FileOpener } from '@ionic-native/file-opener';
 import { NotePage } from '../pages/note/note';
+import { DurationPipe } from '../pipes/duration/duration';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -54,7 +55,8 @@ var config = {
     ResultPage,
     HistoryPage,
     AdvisePage,
-    NotePage
+    NotePage,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
