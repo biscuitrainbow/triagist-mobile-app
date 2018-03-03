@@ -19,6 +19,7 @@ export class MyApp {
 
   private displayName: string = ''
   private email: string = ''
+  private isAnonymous = false;
 
   constructor(
     platform: Platform,
@@ -38,6 +39,9 @@ export class MyApp {
 
     firebaseAuth.authState.subscribe(user => {
       if (user) {
+        this.isAnonymous = user.isAnonymous;
+        console.log(this.isAnonymous);
+        
         this.displayName = user.displayName;
         this.email = user.email;
         this.rootPage = TabPage;
