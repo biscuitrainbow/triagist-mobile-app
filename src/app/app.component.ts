@@ -40,8 +40,7 @@ export class MyApp {
     firebaseAuth.authState.subscribe(user => {
       if (user) {
         this.isAnonymous = user.isAnonymous;
-        console.log(this.isAnonymous);
-        
+
         this.displayName = user.displayName;
         this.email = user.email;
         this.rootPage = TabPage;
