@@ -24,7 +24,7 @@ export class LoginPage {
     public firebaseAuth: AngularFireAuth,
     public loadingCtrl: LoadingController,
     public toastCtrl: ToastController,
-    private storage: Storage
+    private storage: Storage,
   ) {
     this.formLogin = formBuilder.group({
       email: ['natthaponsricort@gmail.com'],
@@ -40,9 +40,19 @@ export class LoginPage {
     this.showLoading("Logging in...");
     this.firebaseAuth.auth.signInWithEmailAndPassword(email, password)
       .then(user => {
-        this.storage.set('uid', user.uid);
         this.hideLoading();
-        this.showTabPage();
+      })
+      .catch(error => {
+        this.showToast(error.message);
+        this.hideLoading();
+      })
+  }
+
+  loginWithAnonymously() {
+    this.showLoading("Logging in...");
+    this.firebaseAuth.auth.signInAnonymously()
+      .then(user => {
+        this.hideLoading();
       })
       .catch(error => {
         this.showToast(error.message);

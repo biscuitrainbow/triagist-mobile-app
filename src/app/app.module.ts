@@ -97,7 +97,7 @@ var config = {
     PdfProvider,
     MapProvider,
     DocumentViewer,
-    FileOpener
+    FileOpener,
   ]
 })
 export class AppModule { }
