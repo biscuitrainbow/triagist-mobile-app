@@ -1,9 +1,11 @@
 <ion-menu [content]="content" id="menu-material">
     <ion-content>
-        <div class="menu-header bg-blue">
-            <img class="user-avatar round" src="assets/imgs/default-profile.png" />
-            <p class="name">{{displayName}}</p>
-            <p class="e-mail">{{email}}</p>
+        <div class="flex py-8 px-4" style="background-color:#488aff">
+            <img class="rounded-full w-24 h-24 " src="assets/imgs/default-profile.png" />
+            <div class="flex flex-col justify-center px-4 text-white">
+                <p class="font-bold">{{displayName}}</p>
+                <p class="e-mail text-grey-lighter">{{email}}</p>
+            </div>
         </div>
         <ion-list no-lines>
             <!-- <button menuClose="left" ion-item detail-none>

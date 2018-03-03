@@ -26,7 +26,7 @@ export class MyApp {
     splashScreen: SplashScreen,
     private loadingCtrl: LoadingController,
     private firebaseAuth: AngularFireAuth,
-    private app: App
+    private app: App,
   ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -35,10 +35,11 @@ export class MyApp {
       splashScreen.hide();
     });
 
+
     firebaseAuth.authState.subscribe(user => {
       if (user) {
+        this.displayName = user.displayName;
         this.email = user.email;
-
         this.rootPage = TabPage;
       } else {
         this.rootPage = LoginPage;
