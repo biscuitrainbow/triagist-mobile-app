@@ -29,7 +29,8 @@ export class RegisterPage {
       email: [''],
       password: [''],
       name: [''],
-      lastName: ['']
+      lastName: [''],
+      number: ['']
     })
   }
 
@@ -39,6 +40,7 @@ export class RegisterPage {
     let password = this.formRegister.controls.password.value;
     let name = this.formRegister.controls.name.value;
     let lastName = this.formRegister.controls.lastName.value;
+    let number = this.formRegister.controls.number.value;
 
     try {
       this.showLoading("Registering...")
@@ -51,7 +53,7 @@ export class RegisterPage {
         photoURL: ''
       })
 
-      await this.firestore.collection('users').doc(user.uid).set({ name, lastName, })
+      await this.firestore.collection('users').doc(user.uid).set({ name, lastName, number })
 
       this.hideLoading();
       this.showToast("Register successfully")

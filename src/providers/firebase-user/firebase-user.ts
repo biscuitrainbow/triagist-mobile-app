@@ -14,11 +14,7 @@ export class FirebaseUserProvider {
   }
 
   getUser() {
-    console.log(this.uid);
-    return this.firestore
-      .collection("users")
-      .doc(this.uid)
-      .ref.get();
+    return this.firebaseAuth.auth.currentUser
   }
 
   getTriages() {

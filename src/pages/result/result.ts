@@ -1,6 +1,6 @@
 import { AdvisePage } from './../advise/advise';
 import { Component } from "@angular/core";
-import { NavController, NavParams } from "ionic-angular";
+import { NavController, NavParams, Alert } from "ionic-angular";
 import { LoadingController } from "ionic-angular/components/loading/loading-controller";
 import { ToastController } from "ionic-angular/components/toast/toast-controller";
 import { Loading } from "ionic-angular/components/loading/loading";
@@ -85,14 +85,15 @@ export class ResultPage {
       this.hideLoading();
     }
 
-    this.socialSharing.shareViaEmail(
+    this.socialSharing.share(
       "Body",
       "Subject",
-      ["natthaponsricort@gmail.com"],
-      undefined,
-      undefined,
+      // ["natthaponsricort@gmail.com"],
+      // undefined,
+      // undefined,
       this.pdfUrl
-    );
+    )
+      .catch(e => alert(JSON.stringify(e)));
   }
 
   async createPdf() {
@@ -102,7 +103,8 @@ export class ResultPage {
       let saveResult = await this.pdf.save(blob);
       return this.pdfUrl = saveResult.nativeURL;
     } catch (e) {
-      this.hideLoading();
+      this.showToast(e);
+      // this.hideLoading();
     }
   }
 

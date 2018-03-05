@@ -24,7 +24,7 @@ export const LEVEL = {
         color: '#1BA153'
     },
     W: {
-        text: 'ผู้ป่วยทั่วไ',
+        text: 'ผู้ป่วยทั่วไป',
         color: '#F0F0F0'
     }
 }

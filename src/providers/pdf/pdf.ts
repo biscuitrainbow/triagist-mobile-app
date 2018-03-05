@@ -35,7 +35,7 @@ export class PdfProvider {
             style: "header"
           },
           {
-            text: `${user.data().name} ${user.data().lastName} \n`,
+            text: (user.isAnonymous) ? 'Anonymous' : `${user.displayName} \n`,
             style: "subheader"
           },
           {
@@ -47,9 +47,14 @@ export class PdfProvider {
         styles: style
       };
 
-      pdfMake.createPdf(pdfContent).getBlob(blob => {
-        resolve(blob);
-      });
+      try {
+        //pdfMake.createPdf(pdfContent).download();
+        pdfMake.createPdf(pdfContent).getBlob(blob => {
+          resolve(blob);
+        });
+      } catch (e) {
+        reject(e);
+      }
     })
   }
 

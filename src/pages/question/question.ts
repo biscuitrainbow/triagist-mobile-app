@@ -7,6 +7,8 @@ import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
 
+import * as moment from "moment";
+
 @Component({
   selector: 'page-question',
   templateUrl: 'question.html',
@@ -94,13 +96,14 @@ export class QuestionPage {
   }
 
   saveResult(payload, answers) {
-    console.log(this.questionStack);
+    let timestamp = moment().unix();
     let uid = this.firebaseAuth.auth.currentUser.uid;
+
     this.firestore
       .collection('users')
       .doc(uid)
       .collection('triages')
-      .add({ answers: answers, payload: payload })
+      .add({ timestamp: timestamp, answers: answers, payload: payload })
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
   }
