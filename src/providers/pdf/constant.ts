@@ -15,7 +15,14 @@ export const style = {
     detail: {
         fontSize: 14,
         color: '#262626'
-    }
+    },
+    question: {
+        fontSize: 15
+    },
+    answer: {
+        fontSize: 13,
+        color: '#262626'
+    },
 }
 
 export const defaultStyle = {
