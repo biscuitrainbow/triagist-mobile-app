@@ -10,7 +10,7 @@
 <ion-content padding>
   <ion-list [hidden]="autoCompleteItems.length == 0">
     <ion-item *ngFor="let item of autoCompleteItems" tappable>
-      {{ item.description }}
+      <p class="font-light text-grey-darker">{{item.description}}</p>
       <button ion-button clear item-end (click)="callNumber(item.phoneNumber)">
         <ion-icon name="call"></ion-icon>
       </button>

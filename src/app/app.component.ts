@@ -45,7 +45,7 @@ export class MyApp {
 
         this.displayName = user.displayName;
         this.email = user.email;
-        this.rootPage = HospitalSearchPage;
+        this.rootPage = TabPage;
       } else {
         this.rootPage = LoginPage;
       }
