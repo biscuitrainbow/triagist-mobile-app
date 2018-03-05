@@ -31,7 +31,7 @@ export class PdfProvider {
             style: "code"
           },
           {
-            text: "Triage Summary\n",
+            text: "ผลการคัดกรอง\n",
             style: "header"
           },
           {
@@ -42,16 +42,34 @@ export class PdfProvider {
             text: moment().format("MMMM Do YYYY, h:mm:ss a"),
             style: "detail"
           },
+          {
+            text: "\nลำดับการถามตอบ\n",
+            style: "header"
+          },
         ],
         defaultStyle: defaultStyle,
         styles: style
       };
 
       try {
-        //pdfMake.createPdf(pdfContent).download();
-        pdfMake.createPdf(pdfContent).getBlob(blob => {
-          resolve(blob);
+        data.answers.forEach(item => {
+          pdfContent.content.push(
+            {
+              text: item.question,
+              style: "question"
+            },
+            {
+              text: item.answer + "\n\n",
+              style: "answer"
+            }
+          )
         });
+
+
+        pdfMake.createPdf(pdfContent).download();
+        // pdfMake.createPdf(pdfContent).getBlob(blob => {
+        //   resolve(blob);
+        // });
       } catch (e) {
         reject(e);
       }

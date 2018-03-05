@@ -98,7 +98,7 @@ export class ResultPage {
 
   async createPdf() {
     try {
-      let data = { code: this.payload.code };
+      let data = { code: this.payload.code, answers: this.answers };
       let blob = await this.pdf.create(data);
       let saveResult = await this.pdf.save(blob);
       return this.pdfUrl = saveResult.nativeURL;
