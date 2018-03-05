@@ -4,23 +4,31 @@ import { AngularFirestore } from "angularfire2/firestore";
 
 @Injectable()
 export class FirebaseUserProvider {
-  uid: string;
 
   constructor(
     public firebaseAuth: AngularFireAuth,
     public firestore: AngularFirestore
   ) {
-    this.uid = this.firebaseAuth.auth.currentUser.uid;
   }
 
   getUser() {
+    let uid = this.firebaseAuth.auth.currentUser.uid;
     return this.firebaseAuth.auth.currentUser
   }
 
-  getTriages() {
+  getUserDetail() {
+    let uid = this.firebaseAuth.auth.currentUser.uid;
     return this.firestore
       .collection("users")
-      .doc(this.uid)
+      .doc(uid)
+      .ref.get();
+  }
+
+  getTriages() {
+    let uid = this.firebaseAuth.auth.currentUser.uid;
+    return this.firestore
+      .collection("users")
+      .doc(uid)
       .collection("triages")
       .ref.get();
   }

@@ -23,6 +23,7 @@ export class PdfProvider {
   async create(data) {
     return new Promise(async (resolve, reject) => {
       let user = await this.user.getUser();
+      let userDetail = await this.user.getUserDetail();
 
       let pdfContent = {
         content: [
@@ -35,8 +36,12 @@ export class PdfProvider {
             style: "header"
           },
           {
-            text: (user.isAnonymous) ? 'Anonymous' : `${user.displayName} \n`,
+            text: (user.isAnonymous) ? 'Anonymous' : `${user.displayName}`,
             style: "subheader"
+          },
+          {
+            text: (userDetail.exists) ? `เบอร์โทรญาติ ${userDetail.data().number}` : '',
+            style: "detail"
           },
           {
             text: moment().format("MMMM Do YYYY, h:mm:ss a"),
@@ -64,7 +69,7 @@ export class PdfProvider {
             }
           )
         });
-
+        //  pdfMake.createPdf(pdfContent).download();
         pdfMake.createPdf(pdfContent).getBlob(blob => {
           resolve(blob);
         });
