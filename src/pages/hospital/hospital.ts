@@ -1,7 +1,7 @@
 import { LoadingController } from "ionic-angular/components/loading/loading-controller";
 import { Loading } from "ionic-angular/components/loading/loading";
 import { Component, ViewChild } from "@angular/core";
-import { NavController, NavParams, ActionSheetController, Platform } from "ionic-angular";
+import { NavController, NavParams, ActionSheetController, Platform, ModalController } from "ionic-angular";
 import { CallNumber } from "@ionic-native/call-number";
 import { Geolocation } from "@ionic-native/geolocation";
 import { ToastController } from "ionic-angular/components/toast/toast-controller";
@@ -14,6 +14,7 @@ import {
   MarkerOptions,
   Marker
 } from "@ionic-native/google-maps";
+import { HospitalSearchPage } from "../hospital-search/hospital-search";
 
 declare var google;
 
@@ -43,7 +44,8 @@ export class HospitalPage {
     public googleMaps: GoogleMaps,
     public phone: CallNumber,
     public actionSheetCtrl: ActionSheetController,
-    public platform: Platform
+    public platform: Platform,
+    public modalCtrl: ModalController
   ) { }
 
   ionViewDidLoad() {
@@ -176,5 +178,9 @@ export class HospitalPage {
 
   hideLoading() {
     this.loader.dismiss();
+  }
+
+  search() {
+    this.modalCtrl.create(HospitalSearchPage).present();
   }
 }

@@ -32,6 +32,7 @@ import { MapProvider } from '../providers/map/map';
 import { FileOpener } from '@ionic-native/file-opener';
 import { NotePage } from '../pages/note/note';
 import { DurationPipe } from '../pipes/duration/duration';
+import { HospitalSearchPage } from '../pages/hospital-search/hospital-search';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -56,7 +57,8 @@ var config = {
     HistoryPage,
     AdvisePage,
     NotePage,
-    DurationPipe
+    DurationPipe,
+    HospitalSearchPage
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,8 @@ var config = {
     ResultPage,
     HistoryPage,
     AdvisePage,
-    NotePage
+    NotePage,
+    HospitalSearchPage
   ],
   providers: [
     StatusBar,
