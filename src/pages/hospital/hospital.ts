@@ -1,7 +1,7 @@
 import { LoadingController } from "ionic-angular/components/loading/loading-controller";
 import { Loading } from "ionic-angular/components/loading/loading";
 import { Component, ViewChild } from "@angular/core";
-import { NavController, NavParams } from "ionic-angular";
+import { NavController, NavParams, ActionSheetController, Platform } from "ionic-angular";
 import { CallNumber } from "@ionic-native/call-number";
 import { Geolocation } from "@ionic-native/geolocation";
 import { ToastController } from "ionic-angular/components/toast/toast-controller";
@@ -41,7 +41,9 @@ export class HospitalPage {
     public navParams: NavParams,
     public geolocation: Geolocation,
     public googleMaps: GoogleMaps,
-    public phone: CallNumber
+    public phone: CallNumber,
+    public actionSheetCtrl: ActionSheetController,
+    public platform: Platform
   ) { }
 
   ionViewDidLoad() {
@@ -110,6 +112,7 @@ export class HospitalPage {
               this.map.addMarker({
                 title: hospital.name,
                 icon: "red",
+                label: "H",
                 animation: "BOUNCE",
                 position: {
                   lat: hospital.geometry.location.lat(),
@@ -117,7 +120,20 @@ export class HospitalPage {
                 }
               }).then(marker => {
                 marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-                  alert(JSON.stringify(hospital));
+                  let actionSheet = this.actionSheetCtrl.create({
+                    title: 'Action',
+                    buttons: [
+                      {
+                        text: 'Emergency call',
+                        role: 'destructive',
+                        icon: !this.platform.is('ios') ? 'call' : null,
+                        handler: () => {
+                          this.callNumber(hospital.phoneNumber);
+                        }
+                      },
+                    ]
+                  });
+                  actionSheet.present();
                 });
               });
 
