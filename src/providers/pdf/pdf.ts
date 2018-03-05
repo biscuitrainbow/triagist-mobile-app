@@ -52,6 +52,7 @@ export class PdfProvider {
       };
 
       try {
+<<<<<<< HEAD
         data.answers.forEach(item => {
           pdfContent.content.push(
             {
@@ -70,6 +71,12 @@ export class PdfProvider {
         // pdfMake.createPdf(pdfContent).getBlob(blob => {
         //   resolve(blob);
         // });
+=======
+        //pdfMake.createPdf(pdfContent).download();
+        pdfMake.createPdf(pdfContent).getBlob(blob => {
+          resolve(blob);
+        });
+>>>>>>> daaeb84b1f9a69fb58e7fec36f043d1b8d238dab
       } catch (e) {
         reject(e);
       }
