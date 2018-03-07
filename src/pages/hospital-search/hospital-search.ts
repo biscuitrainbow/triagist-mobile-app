@@ -1,5 +1,5 @@
 import { Component, ViewChild, NgZone } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 
 declare var google;
@@ -20,7 +20,7 @@ export class HospitalSearchPage {
   private autoComplete = { input: '' };
   private autoCompleteItems = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public zone: NgZone, public phone: CallNumber, ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public zone: NgZone, public phone: CallNumber, public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
@@ -70,6 +70,10 @@ export class HospitalSearchPage {
       .callNumber(number, true)
       .then(() => console.log("Launched dialer!"))
       .catch(() => console.log("Error launching dialer"));
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
   }
 
 }

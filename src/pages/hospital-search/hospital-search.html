@@ -1,6 +1,9 @@
 <ion-header>
 
   <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Close</button>
+    </ion-buttons>
     <ion-searchbar [(ngModel)]="autoComplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
   </ion-navbar>
 

@@ -231,9 +231,9 @@ export class HospitalPage {
           })
 
           this.map.
-          marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-            this.showActionSheet(prediction.phoneNumber);
-          });
+            marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+              this.showActionSheet(prediction.phoneNumber);
+            });
 
           this.hospitals = prediction;
 
