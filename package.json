@@ -37,7 +37,8 @@
     "@types/lodash": "^4.14.92",
     "angularfire2": "^5.0.0-rc.5-next",
     "call-number": "^1.0.1",
-    "cordova-android": "6.3.0",
+    "cordova-android": "~7.0.0",
+    "cordova-android-support-gradle-release": "^1.2.0",
     "cordova-browser": "~5.0.3",
     "cordova-plugin-crosswalk-webview": "^2.4.0",
     "cordova-plugin-device": "^1.1.7",
@@ -103,6 +104,9 @@
         "ANDROID_SUPPORT_V4_VERSION": "24.1.0",
         "LOCATION_WHEN_IN_USE_DESCRIPTION": "This app wants to get your location while this app runs only.",
         "LOCATION_ALWAYS_USAGE_DESCRIPTION": "This app wants to get your location always, even this app runs in background."
+      },
+      "cordova-android-support-gradle-release": {
+        "ANDROID_SUPPORT_VERSION": "26.+"
       }
     },
     "platforms": [
