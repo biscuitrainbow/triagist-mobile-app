@@ -21,6 +21,7 @@
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="xwalkZOrderOnTop" value="true" />
     <preference name="BackgroundColor" value="0" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
