@@ -665,7 +665,7 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        name: 'พูดได้แค่ประโยคสั้นๆ',
+                        name: 'พูดได้แค่สั้นๆ',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -1013,7 +1013,7 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        name: 'พูดได้แค่ประโยคสั้นๆ',
+                        name: 'พูดได้แค่สั้นๆ',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
