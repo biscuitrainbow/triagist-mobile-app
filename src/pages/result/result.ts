@@ -53,6 +53,9 @@ export class ResultPage {
     this.payload = navParams.get('payload');
     this.answers = navParams.get('answers');
     // this.saveResult();
+
+    console.log(this.payload);
+    
   }
 
   saveResult() {
@@ -130,6 +133,8 @@ export class ResultPage {
   }
 
   navigateAdvisePage() {
+    console.log(this.payload.advise.length);
+    
     this.navCtrl.push(AdvisePage, {
       advise: this.payload.advise
     })

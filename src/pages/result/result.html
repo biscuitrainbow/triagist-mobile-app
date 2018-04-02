@@ -8,7 +8,7 @@
       <button ion-button icon-only (click)="openPdf()">
         <ion-icon name="document"></ion-icon>
       </button>
-      <button  hideWhen="ios" ion-button icon-only (click)="share()">
+      <button hideWhen="ios" ion-button icon-only (click)="share()">
         <ion-icon name="share"></ion-icon>
       </button>
     </ion-buttons>
@@ -37,7 +37,9 @@
           <p class="px-8 card-header py-4">ลำดับการตอบคำถาม</p>
           <ion-buttons end>
             <button (click)="navigateAdvisePage()" clear ion-button color="primary">
-              <ion-icon class="mr-2" name="information-circle"></ion-icon>คำแนะนำ</button>
+              <ion-icon class="mr-2" name="information-circle"></ion-icon>
+              คำแนะนำ
+            </button>
           </ion-buttons>
         </div>
         <ion-list #scheduleList>

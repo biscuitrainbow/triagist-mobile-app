@@ -37,7 +37,7 @@ export class QuestionPage {
 
     let toast = this.toastCtrl.create({
       message: 'กวาดนิ้วไปด้านขวาเพื่อนย้อนกลับ',
-      duration: 5000
+      duration: 2000
     })
 
     toast.present();
