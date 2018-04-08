@@ -114,7 +114,8 @@ export class HospitalPage {
         /* Request place detail for phone number */
         let placeDetailRequest = { placeId: hospital.place_id };
         this.googlePlaceService.getDetails(placeDetailRequest, (place, status) => {
-          if (status === 'OK') hospital.phoneNumber = place.international_phone_number;
+          if (status === 'OK') hospital.phoneNumber = (place.international_phone_number !== ' ' || place.international_phone_number !== null) ? place.international_phone_number : 1669;
+          else hospital.phoneNumber = 1669;
         });
 
         /* Add each hospital to marker and show actionsheet when cliked*/
@@ -204,8 +205,13 @@ export class HospitalPage {
           /* Request place detail for phone number */
           let placeDetailRequest = { placeId: prediction.place_id };
           this.googlePlaceService.getDetails(placeDetailRequest, (place, status) => {
+            prediction.phoneNumber = place.international_phone_number;
+
             if (status === 'OK') {
-              prediction.phoneNumber = (place.international_phone_number == '') ? place.international_phone_number : 1669;
+              prediction.phoneNumber = (place.international_phone_number !== null || place.international_phone_number !== ' ') ? place.international_phone_number : 1669;
+              prediction.phoneNumber = 1669;
+            } else {
+              prediction.phoneNumber = 1669;
             }
           });
 
@@ -226,10 +232,10 @@ export class HospitalPage {
               this.showActionSheet(prediction.phoneNumber);
             });
 
+
           this.hospitals = prediction;
 
         });
-
       });
     });
   }
