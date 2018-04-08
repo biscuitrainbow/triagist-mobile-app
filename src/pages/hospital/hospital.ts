@@ -201,21 +201,12 @@ export class HospitalPage {
           this.autoCompleteItems.push(prediction);
           this.hospitals = [];
 
-          /* Request distance and duration */
-          // let distanceRequest = {
-          //   origins: [currentLocation],
-          //   destinations: [hospitalLatLng],
-          //   travelMode: "DRIVING"
-          // };
-          // this.googleDistanceMatrix.getDistanceMatrix(distanceRequest, response => {
-          //   hospital.distance = response.rows[0].elements[0].distance.text;
-          //   hospital.duration = response.rows[0].elements[0].duration.text;
-          // });
-
           /* Request place detail for phone number */
           let placeDetailRequest = { placeId: prediction.place_id };
           this.googlePlaceService.getDetails(placeDetailRequest, (place, status) => {
-            if (status === 'OK') prediction.phoneNumber = place.international_phone_number;
+            if (status === 'OK') {
+              prediction.phoneNumber = (place.international_phone_number == '') ? place.international_phone_number : 1669;
+            }
           });
 
           /* Add each hospital to marker and show actionsheet when cliked*/
