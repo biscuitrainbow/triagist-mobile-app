@@ -11,6 +11,7 @@ import { Loading } from 'ionic-angular/components/loading/loading';
 import { App } from 'ionic-angular/components/app/app';
 import { HospitalPage } from '../pages/hospital/hospital';
 import { HospitalSearchPage } from '../pages/hospital-search/hospital-search';
+import { ReferencePage } from '../pages/reference/reference';
 
 @Component({
   templateUrl: 'app.html'

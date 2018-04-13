@@ -33,6 +33,7 @@ import { FileOpener } from '@ionic-native/file-opener';
 import { NotePage } from '../pages/note/note';
 import { DurationPipe } from '../pipes/duration/duration';
 import { HospitalSearchPage } from '../pages/hospital-search/hospital-search';
+import { ReferencePage } from '../pages/reference/reference';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -58,7 +59,8 @@ var config = {
     AdvisePage,
     NotePage,
     DurationPipe,
-    HospitalSearchPage
+    HospitalSearchPage,
+    ReferencePage
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,8 @@ var config = {
     HistoryPage,
     AdvisePage,
     NotePage,
-    HospitalSearchPage
+    HospitalSearchPage,
+    ReferencePage
   ],
   providers: [
     StatusBar,

@@ -4,6 +4,7 @@ import { App } from 'ionic-angular';
 import { QuestionPage } from '../question/question';
 import { QUESTIONS } from './questions';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
+import { ReferencePage } from '../reference/reference';
 
 @Component({
   selector: 'page-triage',
@@ -25,5 +26,9 @@ export class TriagePage {
     this.app.getRootNav().push(QuestionPage, {
       question: question
     })
+  }
+
+  navigateReferencePage() {
+    this.navCtrl.push(ReferencePage);
   }
 }

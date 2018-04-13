@@ -45,8 +45,8 @@
         <ion-list #scheduleList>
           <ion-item *ngFor="let answer of answers">
             <div class="border-l-2 py-4 px-4" [ngStyle]="{ 'border-color': payload.color}">
-              <h3>{{answer.question}}</h3>
-              <p class="font-light font-sm">{{answer.answer}}</p>
+              <h4>{{answer.question}}</h4>
+              <p class="font-light font-sm text-2xl">{{answer.answer}}</p>
             </div>
           </ion-item>
           <hr>
