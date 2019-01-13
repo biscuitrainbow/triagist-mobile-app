@@ -1,9 +1,9 @@
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
-import { TYPE } from './../triage/questions';
+import { TYPE, QUESTIONS } from './../triage/questions';
 import { ResultPage } from './../result/result';
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
+import { NavController, NavParams, Slides, Platform, App } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
 
@@ -27,7 +27,8 @@ export class QuestionPage {
     public firestore: AngularFirestore,
     public firebaseAuth: AngularFireAuth,
     public platform: Platform,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    public app: App,
   ) {
     this.question = navParams.get('question');
   }
@@ -65,6 +66,12 @@ export class QuestionPage {
 
         this.navCtrl.push(ResultPage, { payload: choice.payload, answers: this.questionStack });
         break;
+      }
+
+      case TYPE.MODULE: {
+        this.app.getRootNav().push(QuestionPage, {
+          question: QUESTIONS[choice.module_index]
+        })
       }
     }
   }
