@@ -1,6 +1,6 @@
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
-import { TYPE } from './../triage/questions';
+import { TYPE, QUESTIONS } from './../triage/questions';
 import { ResultPage } from './../result/result';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
@@ -8,6 +8,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
 
 import * as moment from "moment";
+import { App } from 'ionic-angular/components/app/app';
 
 @Component({
   selector: 'page-question',
@@ -27,7 +28,8 @@ export class QuestionPage {
     public firestore: AngularFirestore,
     public firebaseAuth: AngularFireAuth,
     public platform: Platform,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    public app: App
   ) {
     this.question = navParams.get('question');
   }
@@ -59,12 +61,17 @@ export class QuestionPage {
 
       case TYPE.RESULT: {
 
-
         this.questionStack.push({ from: question.from, question: question.question, answer: choice.name });
         this.saveResult(choice.payload, this.questionStack);
 
         this.navCtrl.push(ResultPage, { payload: choice.payload, answers: this.questionStack });
         break;
+      }
+
+      case TYPE.MODULE: {
+        this.app.getRootNav().push(QuestionPage, {
+          question: QUESTIONS[choice.moduleIndex]
+        })
       }
     }
   }
@@ -76,11 +83,33 @@ export class QuestionPage {
 
     this.questionStack.push({ from: question.from, question: question.question, answer: textChoice });
 
-    if (checkedChoices.length >= 2) {
-      this.navCtrl.push(ResultPage, { payload: question.payload, answers: this.questionStack });
+    if (question.criteria != null) {
+      console.log('criteria');
+      console.log(checkedChoices.length);
+      console.log(question.criteria.minimumChecked);
+
+
+      if (checkedChoices.length >= question.criteria.minimumChecked) {
+        if(question.criteria.payload != null){
+          
+         this.navCtrl.push(ResultPage, { payload: question.criteria.payload, answers: this.questionStack });
+        }else {
+
+          this.slides.slideTo(question.criteria.to);
+        }
+
+      } else {
+        this.slides.slideTo(question.to);
+      }
     } else {
-      this.slides.slideTo(question.to);
+      console.log('normal');
+      if (checkedChoices.length >= 2) {
+        this.navCtrl.push(ResultPage, { payload: question.payload, answers: this.questionStack });
+      } else {
+        this.slides.slideTo(question.to);
+      }
     }
+
   }
 
   onSwipe(event, question) {

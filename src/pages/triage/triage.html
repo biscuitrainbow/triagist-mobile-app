@@ -16,16 +16,25 @@
 
 <ion-content>
     <ion-list>
-        <button *ngFor="let question of questions" ion-item (click)="startTriage(question)">
+        <button *ngFor="let question of questions; let i = index" ion-item (click)="startTriage(question)">
             <ion-card-header class="header">
                 {{question.name}}
+
             </ion-card-header>
 
+
+
+
             <img class="img" item-start [src]="question.image" />
+
+            <ion-badge>
+                กลุ่มอาการที่ {{i +1}}
+            </ion-badge>
 
             <ion-card-content class="content">
                 {{question.description}}
             </ion-card-content>
+
         </button>
     </ion-list>
 </ion-content>
