@@ -3424,6 +3424,18 @@ export const RESULT = {
                 ]
             }
         },
+        R7: {
+            code: '9 แดง 7',
+            level: LEVEL.R,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            }
+        },
         Y1: {
             code: '9 เหลือง 1',
             level: LEVEL.Y,
@@ -4226,6 +4238,363 @@ export const RESULT = {
             }
         },
     },
+    GROUP12: {
+        R1: {
+            code: '12 แดง 1',
+            leave: LEVEL.R,
+            advise: {
+                contents: [
+                    {
+                        detail: 'มีใครที่อยู่บริเวณนั้นรู้เรื่องการกู้ชีพบ้างหรือไม่',
+                        subDetails: [
+                            '<b>ถ้ามี </b>ให้ตะโกนขอความช่วยเหลือปั๊มหัวใจผู้ป่วย <br> <b>ถ้าไม่มี</b> ให้ปฏิบัติตามหัวข้อถัดไป'
+                        ]
+
+                    },
+                    {
+                        detail: 'นำโทรศัพท์ไปใกล้ๆ ผู้ป่วยพร้อมเปิดลำโพง',
+                        subDetails: [
+                            ' พร้อมบอกว่าญาติว่า (ตอนนี้กำลังส่งรถพยาบาลที่ใกล้ที่สุดไป แต่ตอนนี้ผู้ป่วยมีภาวะหัวใจหยุดเต้น  ซึ่งหัวใจสามารถขาดเลือดได้ 4 นาทีเท่านั้น ญาติคือบุคคลคนเดียวที่จะสามารถช่วยผู้ป่วยได้ ) ให้ญาติตั้งสติ และใจเย็นๆ ก่อนนะค่ะ กระผม/ดิฉัน จะบอกคุณว่า ต้องทำไรค่ะ'
+                        ]
+                    },
+                    {
+                        detail: 'สอนวิธีปั๊มหัวใจ',
+                        subDetails: [
+                            'ให้นำผู้ป่วยนอนราบบนพื้นแข็ง คุกเข่าข้างๆลำตัวผู้ป่วย',
+                            'ใช้มือข้างใดข้างหนึ่ง วางบนครึ่งล่างของกระดูกหน้าอก แล้วใช้มืออีกข้างหนึ่งวางทับพร้อมล็อคไว้ให้แน่น เหยียดแขนตรง ทำมุม 90 องศา',
+                            'ให้ทำการปั๊มหัวใจผู้ป่วย ลึก 2-2.4 นิ้ว(5-6 ซม.) อัตราเร็ว 100-120/นาที โดยไม่ยกมือออกจากหน้าอกผู้ป่วย หรือนับเป็นจังหวะ หนึ่ง และ สอง และ สาม.... ไปเรื่อยๆจนกว่าหน่วยช่วยเหลือจะมาถึง (หากมีผู้ช่วยเหลือหลายคนให้เปลี่ยนคนปั๊มหัวใจทุก 2 นาที หรือหากมีอาการเมื่อยล้า สามารถเปลี่ยนคนได้)'
+                        ]
+                    }
+                ],
+                notes: [
+                    '1. หากผู้ป่วยเริ่มรู้สึกตัว / หายใจเองได้ หรือ  อาเจียน ให้จัดท่านอนตะแคงซ้าย',
+                    '2. เฝ้าสังเกตอาการผู้ป่วยและประเมินซ้ำทุก 2 นาที หากผู้ป่วยไม่รู้สึกตัวและไม่หายใจให้ทำการปั๊มหัวใจทันที',
+                ]
+            }
+        },
+        R2: {
+            code: '12 แดง 2',
+            leave: LEVEL.R,
+            advise: {
+                contents: [
+                    {
+                        detail: 'แนะนำให้ผู้ป่วยนอนราบศีรษะสูง ',
+                        subDetails: [
+                            'หรือนั่งเพื่อให้หายใจได้สะดวก อยู่ในสถานที่อากาศถ่ายเท'
+                        ]
+
+                    },
+                    {
+                        detail: 'ให้ผู้ป่วยควบคุมการหายใจเข้า-ออก ไม่เร็วจนเกินไป',
+                        subDetails: [
+
+                        ]
+                    },
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด ',
+                        subDetails: [
+                            'จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    }
+                ],
+                notes: [
+                    '1. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            }
+        },
+        R3: {
+            code: '12 แดง 3',
+            leave: LEVEL.R,
+            advise: {
+                contents: [
+                    {
+                        detail: 'จัดท่าผู้ป่วยนอนราบศรีษะต่ำ',
+                        subDetails: [
+                            'ยกขาสูง อยู่ในสถานที่อากาศถ่ายเท'
+                        ]
+
+                    },
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+
+                ]
+            }
+        },
+        R4: {
+            code: '12 แดง 4',
+            leave: LEVEL.R,
+            eave: LEVEL.R,
+            advise: {
+                contents: [
+                    {
+                        detail: 'จัดท่าผู้ป่วยนอนราบศรีษะต่ำ',
+                        subDetails: [
+                            'ยกขาสูง อยู่ในสถานที่อากาศถ่ายเท'
+                        ]
+
+                    },
+                    {
+                        detail: 'อย่าให้ผู้ป่วยดื่ม',
+                        subDetails: [
+                            'อย่าให้ผู้ป่วยดื่ม'
+                        ]
+
+                    },
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+
+                ]
+            }
+        },
+        R5: {
+            code: '12 แดง 5',
+            leave: LEVEL.R,
+            eave: LEVEL.R,
+            advise: {
+                contents: [
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+                    '1. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            }
+        },
+        Y8: {
+            code: '12 เหลือง 8',
+            leave: LEVEL.Y,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            }
+        },
+        Y1: {
+            code: '12 เหลือง 1',
+            leave: LEVEL.Y,
+            advise: {
+                contents: [
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+                    '1. ผู้ป่วยมีอาการเปลี่ยนแปลงให้โทร 1669 อีกครั้ง เพื่อรับวิธีการปฐมพยาบาล ระหว่างรอรถพยาบาล',
+                    '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            }
+        },
+        Y2: {
+            code: '12 เหลือง 2',
+            leave: LEVEL.Y,
+            advise: {
+                contents: [
+                    {
+                        detail: 'จัดท่าผู้ป่วยนอนราบศรีษะต่ำ ยกขาสูง อยู่ในสถานที่อากาศถ่ายเท',
+                        subDetails: [
+                            ''
+                        ]
+                    },
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+                    '1. ผู้ป่วยมีอาการเปลี่ยนแปลงให้โทร 1669 อีกครั้ง เพื่อรับวิธีการปฐมพยาบาล ระหว่างรอรถพยาบาล',
+                    '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            }
+        },
+        Y4: {
+            code: '12 เหลือง 4',
+            leave: LEVEL.Y,
+            advise: {
+                contents: [
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+                    '1. ผู้ป่วยมีอาการเปลี่ยนแปลงให้โทร 1669 อีกครั้ง เพื่อรับวิธีการปฐมพยาบาล ระหว่างรอรถพยาบาล',
+                    '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            }
+        },
+        Y5: {
+            code: '12 เหลือง 5',
+            leave: LEVEL.Y,
+            advise: {
+                contents: [
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+                    '1. ผู้ป่วยมีอาการเปลี่ยนแปลงให้โทร 1669 อีกครั้ง เพื่อรับวิธีการปฐมพยาบาล ระหว่างรอรถพยาบาล',
+                    '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            }
+        },
+        Y9: {
+            code: '12 เหลือง 9',
+            leave: LEVEL.Y,
+            advise: {
+                contents: [
+                    {
+                        detail: 'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด',
+                        subDetails: [
+                            'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
+                        ]
+                    },
+                ],
+                notes: [
+                    '1. ผู้ป่วยมีอาการเปลี่ยนแปลงให้โทร 1669 อีกครั้ง เพื่อรับวิธีการปฐมพยาบาล ระหว่างรอรถพยาบาล',
+                    '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            }
+        },
+        G1: {
+            code: '12 เขียว 1',
+            leave: LEVEL.G,
+            advise: {
+                contents: [
+                    {
+                        detail: '1. ให้ผู้ป่วยอยู่ในพื้นที่โล่งและให้ผู้ป่วยนอนพัก',
+                        subDetails: [
+                        ]
+                    },
+                    {
+                        detail: '2. แนะนำให้นำผู้ป่วย ไปตรวจในวันและเวลาราชการ',
+                        subDetails: [
+                        ]
+                    },
+                    {
+                        detail: '3. หากมีเลือดกำเดาไหล ให้ก้มหน้าและบีบปลายจมูกไว้ไม่คลาย ',
+                        subDetails: [
+                        ]
+                    },
+                    {
+                        detail: '4. หากผู้ป่วยมีอาการเปลี่ยนแปลงให้โทรแจ้ง 1669 อีกครั้ง',
+                        subDetails: [
+                        ]
+                    },
+                ],
+                notes: [
+                ]
+            }
+        },
+        G2: {
+            code: '12 เขียว 2',
+            leave: LEVEL.G,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            }
+        },
+        W1: {
+            code: '12 ขาว 1',
+            leave: LEVEL.W,
+            advise: {
+                contents: [
+                    {
+                        detail: 'แนะนำให้ผู้ป่วยนอนพัก',
+                        subDetails: [
+                            ' หากมีอาการแน่นหน้าอก  หายใจติดขัด เหงื่อออกตัวเย็น ซึมลง ให้รีบมาพบแพทย์ทันที  หากไม่มีอาการดังกล่าว ให้มาพบแพทย์ในวันเวลาราชการ'
+                        ]
+                    },
+                ],
+                notes: [
+
+                ]
+            }
+        },
+        W2: {
+            code: '12 ขาว 2',
+            leave: LEVEL.W,
+            advise: {
+                contents: [
+                    {
+                        detail: 'แนะนำให้ผู้ป่วยนอนพัก',
+                        subDetails: [
+                            ' หากมีอาการแน่นหน้าอก  หายใจติดขัด เหงื่อออกตัวเย็น ซึมลง ให้รีบมาพบแพทย์ทันที  หากไม่มีอาการดังกล่าว ให้มาพบแพทย์ในวันเวลาราชการ'
+                        ]
+                    },
+                ],
+                notes: [
+
+                ]
+            }
+        },
+        W3: {
+            code: '12 ขาว 3',
+            leave: LEVEL.W,
+            advise: {
+                contents: [
+                    {
+                        detail: 'แนะนำให้ผู้ป่วยนอนพัก',
+                        subDetails: [
+                            ' หากมีอาการแน่นหน้าอก  หายใจติดขัด เหงื่อออกตัวเย็น ซึมลง ให้รีบมาพบแพทย์ทันที  หากไม่มีอาการดังกล่าว ให้มาพบแพทย์ในวันเวลาราชการ'
+                        ]
+                    },
+                ],
+                notes: [
+
+                ]
+            }
+        },
+        W4: {
+            code: '12 ขาว 4',
+            leave: LEVEL.W,
+            advise: {
+                contents: [
+                    {
+                        detail: 'แนะนำให้ผู้ป่วยนอนพัก',
+                        subDetails: [
+                            ' หากมีอาการแน่นหน้าอก  หายใจติดขัด เหงื่อออกตัวเย็น ซึมลง ให้รีบมาพบแพทย์ทันที  หากไม่มีอาการดังกล่าว ให้มาพบแพทย์ในวันเวลาราชการ'
+                        ]
+                    },
+                ],
+                notes: [
+
+                ]
+            }
+        },
+    },
     GROUP14: {
         R1: {
             code: '14 แดง 1',
@@ -4575,6 +4944,7 @@ export const QUESTIONS = [
     {
         name: 'ปวดท้อง',
         description: 'ปวดท้อง, หลัง, เชิงกรานและขาหนีบ',
+        module : 1,
         image: 'assets/imgs/stomach-ache.png',
         color: '#CA1F13',
         questions: [
@@ -5260,6 +5630,7 @@ export const QUESTIONS = [
     {
         name: 'แพ้ยา',
         description: 'แพ้อาหาร , สัตว์ต่อย , ภูมิแพ้ ',
+        module : 2,
         image: 'assets/imgs/pill.png',
         color: '#CA1F13',
         questions: [
@@ -5608,6 +5979,8 @@ export const QUESTIONS = [
     {
         name: 'สัตว์กัด',
         description: 'สัตว์กัด',
+        module : 3,
+
         image: 'assets/imgs/cobra.png',
         color: '#CA1F13',
         questions: [
@@ -5902,6 +6275,7 @@ export const QUESTIONS = [
     {
         name: 'เลือดออก',
         description: 'ไม่มีสาเหตุจากการบาดเจ็บ',
+        module : 4,
         image: 'assets/imgs/broken-heart-bleeding.png',
         color: '#CA1F13',
         questions: [
@@ -6239,6 +6613,7 @@ export const QUESTIONS = [
     {
         name: 'หายใจลำบาก',
         description: 'ติดขัด',
+        module : 5,
         image: 'assets/imgs/nose.png',
         color: '#CA1F13',
         questions: [
@@ -6566,6 +6941,7 @@ export const QUESTIONS = [
     {
         name: 'หัวใจหยุดเต้น',
         description: 'หัวใจหยุดเต้น',
+        module : 6,
         image: 'assets/imgs/heartbeat.png',
         color: '#CA1F13',
         questions: [
@@ -6591,6 +6967,7 @@ export const QUESTIONS = [
     {
         name: 'เจ็บแน่นทรวงอก',
         description: 'หัวใจ, มีปัญหาทางด้านหัวใจ',
+        module : 7,
         image: 'assets/imgs/female-trunk.png',
         color: '#CA1F13',
         questions: [
@@ -6938,6 +7315,7 @@ export const QUESTIONS = [
     {
         name: 'สำลัก',
         description: 'อุดกั้นทางเดินหายใจ',
+        module : 8,
         image: 'assets/imgs/respiratory-system.png',
         color: '#CA1F13',
         questions: [
@@ -7043,8 +7421,760 @@ export const QUESTIONS = [
         ]
     },
     {
+        name: 'เบาหวาน',
+        description: 'เบาหวาน',
+        module : 9,
+        image: 'assets/imgs/sugar-blood-level.png',
+        color: '#CA1F13',
+        questions: [
+            {
+                question: 'ผู้ป่วยรู้สึกตัวหรือไม่',
+                from: 0,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่รู้สึกตัว',
+                        to: 1
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP9.Y9.code,
+                            advise: RESULT.GROUP9.Y9.advise,
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
+                from: 1,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ยังคงไม่รู้สึกตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R1.code,
+                            advise: RESULT.GROUP9.R1.advise,
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการซึมๆ สับสนหรือไม่',
+                from: 2,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีอาการดังกล่าง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R7.code,
+                            advise: RESULT.GROUP9.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มี/อื่นๆ',
+                        to: 3
+                    },
+                ]
+            },
+            {
+                question: 'ลักษณะอาการหายใจเป็นอย่างไร',
+                from: 3,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจมีเสียงดัง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตัวซีดและเหงือท่วมตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'หายใจเร็ว',
+                        to: 4
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พูดได้ / หายใจปกติ',
+                        to: 6
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
+                from: 4,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มี',
+                        to: 5
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยอายุเท่าไหร่',
+                from: 5,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มากกว่า 20 ปี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R2.code,
+                            advise: RESULT.GROUP9.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'น้อยกว่า 20 ปี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP9.Y8.code,
+                            advise: RESULT.GROUP9.Y8.advise,
+                        }
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                from: 6,
+                to: 7,
+                criteria: {
+                    minimumChecked: 2,
+                    to: 7,
+                    payload: {
+                        level: LEVEL.R.text,
+                        color: LEVEL.R.color,
+                        code: RESULT.GROUP9.R3.code,
+                        advise: RESULT.GROUP9.R3.advise,
+                    }
+                },
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เหงื่อท่วมตัว',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
+                        checked: false,
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซีดและผิวซีดเย็น',
+                        checked: false,
+
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยเจ็บแน่นทรวงอกหรือไม่',
+                from: 7,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R5.code,
+                            advise: RESULT.GROUP9.R5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 8
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยชักหรือไม่',
+                from: 8,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP9.R6.code,
+                            advise: RESULT.GROUP9.R6.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 9
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการอย่างไร',
+                from: 9,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'อ่อนเพลีย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP9.W2.code,
+                            advise: RESULT.GROUP9.W2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'รู้สึกตัวดี พูดคุยรู้เรื่อง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP9.W1.code,
+                            advise: RESULT.GROUP9.W1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'รู้สึกไม่สบายอย่างมาก แต่ไม่เฉพาะเจาะจง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP9.Y3.code,
+                            advise: RESULT.GROUP9.Y3.advise,
+                        }
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        name: 'ภาวะฉุกเฉินเหตุสิ่งแวดล้อม',
+        description: 'ภาวะฉุกเฉินเหตุสิ่งแวดล้อม',
+        module : 10,
+        image: 'assets/imgs/erupting-volcano.png',
+        color: '#CA1F13',
+        questions: [
+            {
+                question: 'พิจารณาไม่ใช้เนื่องจากซ้ำซ้อนกับกลุ่มอาการที่ 17',
+                from: 0,
+                choices: [
+                    {
+                        type: TYPE.MODULE,
+                        name: 'ใช้กลุ่มอาการที่ 17',
+                        moduleIndex: 18,
+                    },
+                ]
+            },
+        ],
+    },
+    {
+        name: 'ปวดศีรษะ',
+        description: 'ภาวะผิดปกติทางตา/หู/คอ/จมูก',
+        module : 12,
+        image: 'assets/imgs/headache.png',
+        color: '#FF85A7',
+        questions: [
+            {
+                question: 'ผู้ป่วยรู้สึกตัวหรือไม่',
+                from: 0,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่รู้สึกตัว',
+                        to: 1
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP12.Y9.code,
+                            advise: RESULT.GROUP12.Y9.advise,
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
+                from: 1,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่รู้สึกตัวเพิ่มขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R1.code,
+                            advise: RESULT.GROUP12.R1.advise,
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'ลักษณะอาการหายใจเป็นอย่างไร',
+                from: 2,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'พูดได้แค่สั้นๆ / พูดติดขัด',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจมีเสียงดัง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตัวซีดและเหงือท่วมตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'หายใจเร็ว',
+                        to: 3
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พูดได้ / หายใจปกติ',
+                        to: 5
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
+                from: 3,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มี',
+                        to: 4
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยอายุเท่าไหร่',
+                from: 4,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มากกว่า 20 ปี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'น้อยกว่า 20 ปี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP12.Y8.code,
+                            advise: RESULT.GROUP12.Y8.advise,
+                        }
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                from: 5,
+                to: 6,
+                payload: {
+                    level: LEVEL.R.text,
+                    color: LEVEL.R.color,
+                    code: RESULT.GROUP12.R3.code,
+                    advise: RESULT.GROUP12.R3.advise,
+                },
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 5,
+                        name: 'เหงื่อท่วมตัว',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 5,
+                        name: 'ซีดและผิวซีดเย็ด',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 5,
+                        name: 'เป็นลมหรือเกือบเป็นลม',
+                        checked: false,
+
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                from: 6,
+                to: 7,
+                criteria: {
+                    minimumChecked: 1,
+                    to: 7,
+                    payload: {
+                        level: LEVEL.R.text,
+                        color: LEVEL.R.color,
+                        code: RESULT.GROUP12.R5.code,
+                        advise: RESULT.GROUP12.R5.advise,
+                    }
+                },         
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        from: 6,
+                        name: 'พูดเสียงพร่า',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 6,
+                        name: 'เห็นภาพมัว/ภาพซ่อน',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 6,
+                        name: 'อ่อนแรง/อัมพาต',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        from: 6,
+                        name: 'อาเจียน',
+                        checked: false,
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยเพิ่งได้รับบาดเจ็บมาหรือไม่',
+                from: 7,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP12.G1.code,
+                            advise: RESULT.GROUP12.G1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 8
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยเวียนศรีษะหรือทรงตัวผิดปกติหรือไม่',
+                from: 8,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP12.Y5.code,
+                            advise: RESULT.GROUP12.Y5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 9
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมองเห็นภาพผิดไปจากปกติหรือไม่',
+                from: 9,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP12.Y4.code,
+                            advise: RESULT.GROUP12.Y4.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 10
+                    },
+                ]
+            },
+            {
+                question: 'กรณีปวดศรีษะ ผู้ป่วยเคยได้รับการวินิจฉัยว่าเป็นไมเกรนใช่หรือไม่',
+                from: 10,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP12.W2.code,
+                            advise: RESULT.GROUP12.W2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP12.W1.code,
+                            advise: RESULT.GROUP12.W1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'เจ็บปวดบริเวณอื่น',
+                        to: 11
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการเจ็บปวดที่ใด',
+                from: 11,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ศึรษะ / ใบหน้า / คอ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP12.W3.code,
+                            advise: RESULT.GROUP12.W3.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตา / หู / จมูก / ปาก / ฟัน / คอหอย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP12.W4.code,
+                            advise: RESULT.GROUP12.W4.advise,
+                        }
+                    },
+                ]
+            },
+
+        ]
+    },
+    {
         name: 'ได้รับสารพิษ',
         description: 'ยาเกินขนาด',
+        module : 14,
         image: 'assets/imgs/poison.png',
         color: '#FF85A7',
         questions: [
