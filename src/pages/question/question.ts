@@ -70,7 +70,7 @@ export class QuestionPage {
 
       case TYPE.MODULE: {
         this.app.getRootNav().push(QuestionPage, {
-          question: QUESTIONS[choice.moduleIndex]
+          question: QUESTIONS.find((question) => choice.module == question.module),
         })
       }
     }
@@ -90,10 +90,10 @@ export class QuestionPage {
 
 
       if (checkedChoices.length >= question.criteria.minimumChecked) {
-        if(question.criteria.payload != null){
-          
-         this.navCtrl.push(ResultPage, { payload: question.criteria.payload, answers: this.questionStack });
-        }else {
+        if (question.criteria.payload != null) {
+
+          this.navCtrl.push(ResultPage, { payload: question.criteria.payload, answers: this.questionStack });
+        } else {
 
           this.slides.slideTo(question.criteria.to);
         }
