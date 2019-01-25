@@ -18,6 +18,7 @@
         <div class="flex items-center">
           <p class="font-light font-sm">{{triage.payload.level}}</p>
           <p class="passed-time font-light mt-2">{{triage.timestamp | duration}}</p>
+          <!-- <p class="passed-time font-light mt-2">{{triage.timestamp }}</p> -->
         </div>
         <button ion-button clear item-end (click)="view(triage)">View</button>
       </ion-item>

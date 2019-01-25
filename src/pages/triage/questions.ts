@@ -8880,10 +8880,10 @@ export const RESULT = {
             level: LEVEL.R,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
-                   
+
                 ]
             },
         },
@@ -8892,10 +8892,10 @@ export const RESULT = {
             level: LEVEL.R,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
-                   
+
                 ]
             },
         },
@@ -9221,10 +9221,10 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
-                  
+
                 ]
             },
         },
@@ -10019,10 +10019,10 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                 
+
                 ],
                 notes: [
-                   
+
                 ]
             },
         },
@@ -10252,7 +10252,7 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
 
@@ -10282,7 +10282,7 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
 
@@ -10554,7 +10554,7 @@ export const RESULT = {
             level: LEVEL.R,
             advise: {
                 contents: [
-                  
+
                 ],
                 notes: [
                 ]
@@ -10819,10 +10819,10 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
-                   
+
                 ]
             },
         },
@@ -10888,7 +10888,7 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                    
+
                 ],
                 notes: [
 
@@ -10923,7 +10923,7 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                    
+
                 ],
                 notes: [
 
@@ -11657,6 +11657,31 @@ export const RESULT = {
                 ]
             },
         },
+        G6: {
+            code: '24 เขียว 6',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            },
+        },
+        G9: {
+            code: '24 เขียว 9',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+
+
+                ],
+                notes: [
+
+                ]
+            },
+        },
         W1: {
             code: '24 ขาว 1',
             level: LEVEL.Y,
@@ -11926,6 +11951,17 @@ export const RESULT = {
                 ]
             },
         },
+        R6: {
+            code: '25 แดง 6',
+            level: LEVEL.R,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+                ]
+            },
+        },
         R7: {
             code: '25 แดง 7',
             level: LEVEL.R,
@@ -12098,6 +12134,18 @@ export const RESULT = {
                 ]
             },
         },
+        Y3: {
+            code: '25 เหลือง 3',
+            level: LEVEL.Y,
+            advise: {
+                contents: [
+                 
+                ],
+                notes: [
+                   
+                ]
+            },
+        },
         Y4: {
             code: '25 เหลือง 4',
             level: LEVEL.Y,
@@ -12130,6 +12178,30 @@ export const RESULT = {
                 notes: [
                     '1. ผู้ป่วยมีอาการเปลี่ยนแปลงให้โทร 1669 อีกครั้ง เพื่อรับวิธีการปฐมพยาบาล ระหว่างรอรถพยาบาล',
                     '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ',
+                ]
+            },
+        },
+        Y5: {
+            code: '25 เหลือง 5',
+            level: LEVEL.Y,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            },
+        },
+        Y8: {
+            code: '25 เหลือง 8',
+            level: LEVEL.Y,
+            advise: {
+                contents: [
+                   
+                ],
+                notes: [
+                    
                 ]
             },
         },
@@ -12168,6 +12240,30 @@ export const RESULT = {
                 ]
             },
         },
+        G1: {
+            code: '25 เขียว 1',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            },
+        },
+        G6: {
+            code: '25 เขียว 6',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            },
+        },
         G7: {
             code: '25 เขียว 7',
             level: LEVEL.G,
@@ -12178,6 +12274,54 @@ export const RESULT = {
                         subDetails: [
                         ]
                     },
+                ],
+                notes: [
+
+                ]
+            },
+        },
+        G8: {
+            code: '25 เขียว 8',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+                   
+                ],
+                notes: [
+
+                ]
+            },
+        },
+        G9: {
+            code: '25 เขียว 9',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+                   
+                ],
+                notes: [
+
+                ]
+            },
+        },
+        W1: {
+            code: '25 ขาว 1',
+            level: LEVEL.W,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+
+                ]
+            },
+        },
+        W2: {
+            code: '25 ขาว 2',
+            level: LEVEL.W,
+            advise: {
+                contents: [
+
                 ],
                 notes: [
 
@@ -18791,7 +18935,7 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'มีตำรวจอยู่ในที่เกิดเหตุแล้ว (คาดว่าปลอดภัย)',
                         to: 1,
-                    },                   
+                    },
                 ]
             },
             {
@@ -19193,7 +19337,7 @@ export const QUESTIONS = [
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
-                   
+
                 ]
             },
             {
@@ -19232,7 +19376,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
-                    },                 
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
@@ -19313,7 +19457,7 @@ export const QUESTIONS = [
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
-                    },                  
+                    },
                     {
                         type: TYPE.RESULT,
                         from: 3,
@@ -19349,7 +19493,7 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'ไม่ชัก',
                         to: 5
-                    }, 
+                    },
                 ]
             },
             {
@@ -19360,13 +19504,13 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'เลือดยังไหลอยู่',
                         to: 6
-                    }, 
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
                         to: 7
 
-                    },                  
+                    },
                 ]
             },
             {
@@ -19383,12 +19527,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R5.code,
                             advise: RESULT.GROUP22.R5.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่ใช่',
                         to: 7
-                    },          
+                    },
                 ]
             },
             {
@@ -19399,12 +19543,12 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'ไฟ/ของร้อน',
                         to: 8
-                    },      
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'สารเคมี',
                         to: 12
-                    },     
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ไฟฟ้าช๊อต',
@@ -19415,7 +19559,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R9.code,
                             advise: RESULT.GROUP22.R9.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ถูกสารป้องกันตัว เช่น แก็สน้ำตา สเปรย์พริกไทย',
@@ -19426,7 +19570,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.G8.code,
                             advise: RESULT.GROUP22.G8.advise,
                         }
-                    },       
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ถูกไม้ขีดไฟ / บุหรี่จี้',
@@ -19437,7 +19581,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.W1.code,
                             advise: RESULT.GROUP22.W1.advise,
                         }
-                    },       
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ร้อยไหม้จากของเย็นจัด เช่น น้ำแข็งแห้ง',
@@ -19448,7 +19592,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.W2.code,
                             advise: RESULT.GROUP22.W2.advise,
                         }
-                    },      
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'แสบร้อนจากถูกแดด',
@@ -19459,29 +19603,29 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.W3.code,
                             advise: RESULT.GROUP22.W3.advise,
                         }
-                    },       
-                      
+                    },
+
                 ]
             },
             {
                 question: '่ผู้ป่วยเป็นเด็ก/ผู้ใหญ่',
                 from: 8,
-                choices: [ 
+                choices: [
                     {
                         type: TYPE.QUESTION,
                         name: 'ทารก (อายุน้อยกว่า 1 ปี)',
                         to: 9
-                    },    
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'เด็ก (อายุ 1-15 ปี)',
                         to: 10
-                    },    
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'ผู้ใหญ่ (อายุมากกว่า 15 ปี)',
                         to: 11
-                    },          
+                    },
                 ]
             },
             {
@@ -19498,7 +19642,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
-                    },       
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'มากกว่า 10%',
@@ -19509,7 +19653,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
-                    },         
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'มากกว่าหรือเท่ากับ 5%',
@@ -19531,7 +19675,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.G6.code,
                             advise: RESULT.GROUP22.G6.advise,
                         }
-                    },        
+                    },
                 ]
             },
             {
@@ -19548,7 +19692,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
-                    },       
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'มากกว่า 10%',
@@ -19559,7 +19703,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
-                    },         
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'มากกว่าหรือเท่ากับ 5%',
@@ -19581,7 +19725,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.G6.code,
                             advise: RESULT.GROUP22.G6.advise,
                         }
-                    },        
+                    },
                 ]
             },
             {
@@ -19598,7 +19742,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
-                    },       
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'มากกว่า 20%',
@@ -19609,7 +19753,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
-                    },         
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'มากกว่าหรือเท่ากับ 10%',
@@ -19631,23 +19775,23 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.G6.code,
                             advise: RESULT.GROUP22.G6.advise,
                         }
-                    },        
+                    },
                 ]
             },
             {
                 question: 'ผู้ป่วยสัมผัสสารเคมีจากภายนอก หรือ การกิน',
                 from: 12,
-                choices: [ 
+                choices: [
                     {
                         type: TYPE.QUESTION,
                         name: 'สัมผัสภายนอก',
                         to: 13
-                    },    
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'กิน / หายใจเข้าไป',
                         to: 14
-                    },                          
+                    },
                 ]
             },
             {
@@ -19664,7 +19808,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R7.code,
                             advise: RESULT.GROUP22.R7.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'อื่นๆ ที่ไม่ใช่ ศรีษะและคอ',
@@ -19675,13 +19819,13 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.G7.code,
                             advise: RESULT.GROUP22.G7.advise,
                         }
-                    },        
+                    },
                 ]
             },
             {
                 question: 'ผู้ป่วยกลืน (น้ำลาย น้ำ อาหาร) ลำบากหรือไม่',
                 from: 14,
-                choices: [ 
+                choices: [
                     {
                         type: TYPE.RESULT,
                         name: 'กลืนลำบาก',
@@ -19692,18 +19836,18 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.R7.code,
                             advise: RESULT.GROUP22.R7.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'กลืนได้ปกติ',
                         to: 15
-                    },                          
+                    },
                 ]
             },
             {
                 question: 'มีอาการผิดปกติอื่นหรือไม่ เช่น เจ็บคอ ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
                 from: 15,
-                choices: [ 
+                choices: [
                     {
                         type: TYPE.RESULT,
                         name: 'มี',
@@ -19714,7 +19858,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.Y4.code,
                             advise: RESULT.GROUP22.Y4.advise,
                         }
-                    },  
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ไม่มี',
@@ -19725,10 +19869,10 @@ export const QUESTIONS = [
                             code: RESULT.GROUP22.G5.code,
                             advise: RESULT.GROUP22.G5.advise,
                         }
-                    },                              
+                    },
                 ]
             },
-          
+
         ]
     },
     {
@@ -19774,7 +19918,7 @@ export const QUESTIONS = [
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
-                   
+
                 ]
             },
             {
@@ -19818,7 +19962,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
-                    },                 
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
@@ -19873,7 +20017,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
-                    },                  
+                    },
                 ]
             },
             {
@@ -19894,7 +20038,7 @@ export const QUESTIONS = [
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
-                    },                  
+                    },
                     {
                         type: TYPE.RESULT,
                         from: 3,
@@ -19930,7 +20074,7 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'ไม่ชัก',
                         to: 5
-                    }, 
+                    },
                 ]
             },
             {
@@ -19952,12 +20096,12 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'ที่อื่นๆ',
                         to: 6
-                    }, 
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่มีบาดแผล',
                         to: 8
-                    }, 
+                    },
                 ]
             },
             {
@@ -19968,13 +20112,13 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'เลือดยังไหลอยู่',
                         to: 7
-                    }, 
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
                         to: 8
 
-                    },                  
+                    },
                 ]
             },
             {
@@ -19991,12 +20135,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.R5.code,
                             advise: RESULT.GROUP23.R5.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่ใช่',
                         to: 8
-                    },          
+                    },
                 ]
             },
             {
@@ -20013,12 +20157,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.Y7.code,
                             advise: RESULT.GROUP23.Y7.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่ใช่',
                         to: 9
-                    },          
+                    },
                 ]
             },
             {
@@ -20035,7 +20179,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.Y3.code,
                             advise: RESULT.GROUP23.Y3.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ไม่ใช่',
@@ -20046,7 +20190,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.G3.code,
                             advise: RESULT.GROUP23.G3.advise,
                         }
-                    },             
+                    },
                 ]
             },
             {
@@ -20063,7 +20207,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.Y5.code,
                             advise: RESULT.GROUP23.Y5.advise,
                         }
-                    },        
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ไม่ปวด',
@@ -20074,7 +20218,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.G5.code,
                             advise: RESULT.GROUP23.G5.advise,
                         }
-                    },          
+                    },
                 ]
             },
             {
@@ -20085,7 +20229,7 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'มี',
                         to: 12
-                    },     
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ไม่มี',
@@ -20096,14 +20240,14 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.W1.code,
                             advise: RESULT.GROUP23.W1.advise,
                         }
-                    },        
-                        
+                    },
+
                 ]
             },
             {
                 question: 'กระดูกหักตำแหน่งใด',
                 from: 12,
-                choices: [ 
+                choices: [
                     {
                         type: TYPE.RESULT,
                         name: 'ต้นคอ / หลัง / กระดูกเชิงกราน / ต้นขา / ต้นแขน',
@@ -20114,7 +20258,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.R9.code,
                             advise: RESULT.GROUP23.R9.advise,
                         }
-                    },      
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'อื่นๆ ที่เหลือ',
@@ -20125,7 +20269,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP23.G1.code,
                             advise: RESULT.GROUP23.G1.advise,
                         }
-                    },          
+                    },
                 ]
             },
         ]
@@ -20144,9 +20288,9 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
-                        to: 1
+                        to: 17
                     },
-                   
+
                     {
                         type: TYPE.RESULT,
                         name: 'กำลังชัก',
@@ -20161,7 +20305,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'รู้สึกตัว',
-                        to: 2,
+                        to: 1,
                     },
                     {
                         type: TYPE.RESULT,
@@ -20174,7 +20318,7 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP24.Y9.advise,
                         }
                     },
-                   
+
                 ]
             },
             {
@@ -20200,7 +20344,7 @@ export const QUESTIONS = [
                 ]
             },
             {
-                question: 'ผู้ป่วยมีอวัยวะ๖(แขน/ขา/ส่วนอื่น) ขาด/ติดคาที่ หรือไม่',
+                question: 'ผู้ป่วยมีอวัยวะ(แขน/ขา/ส่วนอื่น) ขาด/ติดคาที่ หรือไม่',
                 from: 2,
                 choices: [
                     {
@@ -20294,7 +20438,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'มี',
-                        to: 7
+                        to: 16
                     },
                     {
                         type: TYPE.RESULT,
@@ -20306,12 +20450,310 @@ export const QUESTIONS = [
                             code: RESULT.GROUP24.W1.code,
                             advise: RESULT.GROUP24.W1.advise,
                         }
-                    },                  
+                    },
                 ]
             },
             {
-                question: 'กระดูกหักตำแหน่งไหน',
+                question: 'ก่อนเกิดอุบุติเหตุมีอาการต่อไปนี้บ้างหรือไม่',
                 from: 7,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เจ็บแน่นทรวงอก',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP24.Y3.code,
+                            advise: RESULT.GROUP24.Y3.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'วิงเวียนศรีษะ/ปวดหัว/มึนงง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP24.Y3.code,
+                            advise: RESULT.GROUP24.Y3.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เบาหวาน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP24.Y3.code,
+                            advise: RESULT.GROUP24.Y3.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มีอาการดังกล่าวข้างต้น',
+                        to: 8
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วย/ผู้แจ้งยังยืนยันการขอความช่วยเหลือใช่หรือไม่',
+                from: 8,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP24.G6.code,
+                            advise: RESULT.GROUP24.G6.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 9
+                    },
+
+                ]
+            },
+            {
+                question: 'ลักษณะอาการหายใจเป็นอย่างไร',
+                from: 9,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'พูดได้แค่สั้นๆ / พูดติดขัด',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP22.R2.code,
+                            advise: RESULT.GROUP22.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP22.R2.code,
+                            advise: RESULT.GROUP22.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจมีเสียงดัง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP22.R2.code,
+                            advise: RESULT.GROUP22.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP22.R2.code,
+                            advise: RESULT.GROUP22.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตัวซีดและเหงือท่วมตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP22.R2.code,
+                            advise: RESULT.GROUP22.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP22.R2.code,
+                            advise: RESULT.GROUP22.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พูดได้ / หายใจปกติ',
+                        to: 10
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                from: 10,
+                to: 11,
+                payload: {
+                    level: LEVEL.R.text,
+                    color: LEVEL.R.color,
+                    code: RESULT.GROUP24.R3.code,
+                    advise: RESULT.GROUP24.R3.advise,
+                },
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เหงื่อท่วมตัว',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
+                        checked: false,
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซีดและผิวซีดเย็น',
+                        checked: false,
+
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้ป่วยสามารถขยับแขน/ขาได้หรือไม่',
+                from: 11,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ขยับไม่ได้',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP24.R8.code,
+                            advise: RESULT.GROUP24.R8.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ขยับได้',
+                        to: 12
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการปวดบริเวณใดหรือไม่',
+                from: 12,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ศรีษะ / คอ / หลัง / สะโพก / ลำตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP24.Y4.code,
+                            advise: RESULT.GROUP24.Y4.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'แขนยา',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP24.W2.code,
+                            advise: RESULT.GROUP24.W2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มีอาการปวด',
+                        to: 13
+                    },
+                ]
+            },
+            {
+                question: 'มีตำแหน่งของบาดแผลส่วนใดของร่างกาย',
+                from: 13,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ศรีษะ / คอ / ทรวงอก / ช่องท้อง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP24.R5.code,
+                            advise: RESULT.GROUP24.R5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ที่อื่นๆ',
+                        to: 14
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มีบาดแผล',
+                        to: null, // TODO : FIX THIS
+                    },
+                ]
+            },
+            {
+                question: 'ขณะนี้ผู้ป่วยยังมีเลือดออกอยู่หรือไม่',
+                from: 14,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'เลือดยังไหลอยู่',
+                        to: 15
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
+                        to: null // TODO : FIX THIS
+
+                    },
+                ]
+            },
+            {
+                question: 'ให้ใช้ผ้าสะอาดหนาๆ กดบนแผนแน่นๆ ค้างไว้ แล้วมีเลือดชุ่มขึ้นมาหรือไม่',
+                from: 15,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP24.R5.code,
+                            advise: RESULT.GROUP24.R5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: null // TODO : FIX THIS
+                    },
+                ]
+            },
+            {
+                question: 'กระดูกหักตำแหน่งใด',
+                from: 16,
                 choices: [
                     {
                         type: TYPE.RESULT,
@@ -20323,7 +20765,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP24.R9.code,
                             advise: RESULT.GROUP24.R9.advise,
                         }
-                    },         
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'อื่นๆ ที่เหลือ',
@@ -20334,7 +20776,832 @@ export const QUESTIONS = [
                             code: RESULT.GROUP24.G1.code,
                             advise: RESULT.GROUP24.G1.advise,
                         }
-                    },                  
+                    },
+                ]
+            },
+            {
+                question: 'อย่าขยับผู้ป่วย (โดยเฉพาะส่วนศรีษะและคอ) แล้วเรียกผู้ป่วยดังๆ ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
+                from: 17,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 1
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ยังคงไม่รู้สึกตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP24.R1.code,
+                            advise: RESULT.GROUP24.R1.advise,
+                        }
+                    }
+                ]
+            },
+
+        ]
+    },
+    {
+        name: 'อุบัติเหตุยานยนต์',
+        description: 'อุบัติเหตุยานยนต์',
+        module: 25,
+        image: 'assets/imgs/car-crash.png',
+        color: '#CA1F13',
+        questions: [
+            {
+                question: 'ผู้แจ้งอยู่ใน/หยุดดูเหตุการณ์ หรือเพียงขับรถผ่าน',
+                from: 0,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'อยู่ใน/หยุดดูเหตุการณ์',
+                        to: 1
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ขับรถผ่าน',
+                        to: 22,
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้แจ้งคือใคร',
+                from: 1,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พลเมืองดี / อาสาสมัคร / ตำรวจ',
+                        to: 2
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ผู้บาดเจ็บแจ้งเอง',
+                        to: 17
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'หน่วยบริการ (FR/BLS/ALS)',
+                        to: 20
+                    },
+
+                ]
+            },
+            {
+                question: 'สามารถระบุข้อใดต่อไปนี้หรือไม่',
+                from: 2,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนเสียชีวิต',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นรถยนต์ชนคนเดินเท้า',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ติดภายใน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'มีคนเจ็บน้อยกว่า 3 คน',
+                        to: 3
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยรู้สึกตัวหรือไม่',
+                from: 3,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 5,
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'กำลังชัก',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R6.code,
+                            advise: RESULT.GROUP25.R6.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่รู้สึกตัว',
+                        to: 4,
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP25.Y9.code,
+                            advise: RESULT.GROUP25.Y9.advise,
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'อย่าขยับผู้ป่วย (โดยเฉพาะส่วนศรีษะและคอ) แล้วเรียกผู้ป่วยดังๆ ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
+                from: 4,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 5
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ยังคงไม่รู้สึกตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R1.code,
+                            advise: RESULT.GROUP25.R1.advise,
+                        }
+                    }
+                ]
+            },
+            {
+                question: 'ลักษณะอาการหายใจเป็นอย่างไร',
+                from: 5,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R2.code,
+                            advise: RESULT.GROUP25.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R2.code,
+                            advise: RESULT.GROUP25.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจมีเสียงดัง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R2.code,
+                            advise: RESULT.GROUP25.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R2.code,
+                            advise: RESULT.GROUP25.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ตัวซีดและเหงือท่วมตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R2.code,
+                            advise: RESULT.GROUP25.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R2.code,
+                            advise: RESULT.GROUP25.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พูดได้ / หายใจปกติ',
+                        to: 6
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                from: 6,
+                to: 7,
+                payload: {
+                    level: LEVEL.R.text,
+                    color: LEVEL.R.color,
+                    code: RESULT.GROUP25.R3.code,
+                    advise: RESULT.GROUP25.R3.advise,
+                },
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เหงื่อท่วมตัว',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
+                        checked: false,
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซีดและผิวซีดเย็น',
+                        checked: false,
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้ป่วยสามารถขยับแขน/ขาได้หรือไม่',
+                from: 7,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ขยับไม่ได้',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R8.code,
+                            advise: RESULT.GROUP25.R8.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ขยับได้',
+                        to: 8
+                    },
+
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการปวดบริเวณใดหรือไม่',
+                from: 8,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ศรีษะ / คอ / หลัง / สะโพก / ลำตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP25.Y4.code,
+                            advise: RESULT.GROUP25.Y4.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'แขนขา',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP25.W2.code,
+                            advise: RESULT.GROUP25.W2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มีอาการปวด',
+                        to: 9
+                    },
+                ]
+            },
+            {
+                question: 'มีตำแหน่งของบาดแผลส่วนใดของร่างกาย',
+                from: 9,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ศรีษะ / คอ / ทรวงอก / ช่องท้อง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R5.code,
+                            advise: RESULT.GROUP25.R5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ที่อื่นๆ',
+                        to: 10
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มีบาดแผล',
+                        to: 12,
+                    },
+                ]
+            },
+            {
+                question: 'ขณะนี้ผู้ป่วยยังมีเลือดออกอยู่หรือไม่',
+                from: 10,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'เลือดยังไหลอยู่',
+                        to: 11
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
+                        to: 12
+
+                    },
+                ]
+            },
+            {
+                question: 'ให้ใช้ผ้าสะอาดหนาๆ กดบนแผนแน่นๆ ค้างไว้ แล้วมีเลือดชุ่มขึ้นมาหรือไม่',
+                from: 11,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R5.code,
+                            advise: RESULT.GROUP25.R5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 12
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยชักหลังการบาดเจ็บหรือไม่',
+                from: 12,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ชัก',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R6.code,
+                            advise: RESULT.GROUP25.R6.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ชัก',
+                        to: 13
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยหมดสติชั่ววูบหรือไม่',
+                from: 13,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP25.Y1.code,
+                            advise: RESULT.GROUP25.Y1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 14
+                    },
+                ]
+            },
+            {
+                question: 'มีกระดูกหักหรือไม่',
+                from: 14,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP25.W1.code,
+                            advise: RESULT.GROUP25.W1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'มี',
+                        to: 15
+                    },
+                ]
+            },
+            {
+                question: 'กระดูกหักตำแหน่งใดบ้าง',
+                from: 15,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ต้นคอ / หลัง / กระดูกเชิงกราน / ต้นขา / ต้นแขน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R9.code,
+                            advise: RESULT.GROUP25.R9.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'อื่นๆ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP25.G1.code,
+                            advise: RESULT.GROUP25.G1.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วย/ผู้แจ้งยืนยันการขอความช่วยเหลือใช่หรือไม่',
+                from: 16,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP25.G6.code,
+                            advise: RESULT.GROUP25.G6.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่ใช่',
+                        to: null,                  
+                    },
+                ]
+            },
+            {
+                question: 'สามารถระบุข้อใดต่อไปนี้หรือไม่',
+                from: 17,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนเสียชีวิต',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นรถยนต์ชนคนเดินเท้า',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ติดภายใน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'มีคนเจ็บน้อยกว่า 3 คน',
+                        to: 18
+                    },
+                ]
+            },
+            {
+                question: 'มีผู้บาดเจ็บไม่รู้สึกตัวหรือไม่',
+                from: 18,
+                choices: [                    
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'มีคนไม่รู้สึกตัว',
+                        to: 19,                  
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ทุกคนรู้สึกตัวดี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP25.Y3.code,
+                            advise: RESULT.GROUP25.Y3.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'อย่าขยับตัวผู้ป่วย (โดยเฉพาะส่วนศรีษะและคอ) แล้วเรียกผู้ป่วยด้วยเสียงดังๆ ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
+                from: 19,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ยังคงไม่รู้สึกตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R1.code,
+                            advise: RESULT.GROUP25.R1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'พอรู้สึกตัว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP25.Y3.code,
+                            advise: RESULT.GROUP25.Y3.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'สามารถระบุข้อใดต่อไปนี้หรือไม่',
+                from: 20,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนเสียชีวิต',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นรถยนต์ชนคนเดินเท้า',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ติดภายใน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'มีคนเจ็บน้อยกว่า 3 คน',
+                        to: 21
+                    },
+                ]
+            },
+            {
+                question: 'อาการผู้บาดเจ็บเป็นอย่างไร',
+                from: 21,
+                choices: [                                   
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีผู้บาดเจ็บหนัก (สัญญาณชีพ หรือระดับความรู้สึกผิดปกติ)',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีผู้บาดเจ็บเล็กน้อย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP25.G8.code,
+                            advise: RESULT.GROUP25.G8.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'สามารถระบุข้อใดต่อไปนี้หรือไม่',
+                from: 22,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มีคนเสียชีวิต',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นรถยนต์ชนคนเดินเท้า',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP25.R7.code,
+                            advise: RESULT.GROUP25.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ติดภายใน',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP25.Y8.code,
+                            advise: RESULT.GROUP25.Y8.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่สามารถระบุได้ / อื่นๆ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP25.G9.code,
+                            advise: RESULT.GROUP25.G9.advise,
+                        }
+                    },
                 ]
             },
         ]
