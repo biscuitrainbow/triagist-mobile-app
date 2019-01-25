@@ -2,8 +2,8 @@
 
 ionic cordova build --release android
 
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore /Users/biscuitrainbow/new-triage/platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk alias_name
-
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore /Users/biscuitrainbow/code/triage-mobile-app/platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk alias_name
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore /Users/biscuitrainbow/code/triage-mobile-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk  alias_name
 cd Library/Android/sdk/build-tools/27.0.0/
 
-~/Library/Android/sdk/build-tools/27.0.0/./zipalign -v 4 /Users/biscuitrainbow/new-triage/platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk ~/release.apk
+~/Library/Android/sdk/build-tools/27.0.0/./zipalign -v 4 /Users/biscuitrainbow/code/triage-mobile-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk ~/release.apk
