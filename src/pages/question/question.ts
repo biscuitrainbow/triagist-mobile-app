@@ -120,6 +120,11 @@ export class QuestionPage {
     }
   }
 
+  back() {
+    this.slides.slideTo(this.questionStack[this.questionStack.length - 1].from);
+    this.questionStack.pop();
+  }
+
   close() {
     this.navCtrl.pop();
   }

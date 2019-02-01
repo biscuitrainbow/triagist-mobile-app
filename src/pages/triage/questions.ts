@@ -6523,10 +6523,10 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                    
+
                 ],
                 notes: [
-                   
+
                 ]
             },
         },
@@ -6658,7 +6658,7 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                  
+
                 ],
                 notes: [
                 ]
@@ -12368,17 +12368,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -12394,11 +12394,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -12408,7 +12403,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP1.R1.code,
                             advise: RESULT.GROUP1.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -12607,7 +12607,7 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        name: 'ใช่',
+                        name: 'อายุมากกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -12618,7 +12618,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ไม่ใช่',
+                        name: 'อายุน้อยกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -12641,7 +12641,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.MODULE,
                         name: 'เกิดอาการบาดเจ็บ',
-                        module: 19,
+                        module: 21,
                     },
                 ]
             },
@@ -12798,7 +12798,7 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        name: 'ใช่',
+                        name: 'อายุมากกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -12809,7 +12809,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ไม่',
+                        name: 'อายุน้อยกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.W.text,
@@ -12826,16 +12826,15 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.MODULE,
-                        name: 'ใช่',
-                        moduleIndex: 20,
-                    },
-                    {
                         type: TYPE.QUESTION,
-                        name: 'ไม่',
+                        name: 'ไม่ใช่',
                         to: 15
                     },
-
+                    {
+                        type: TYPE.MODULE,
+                        name: 'ใช่',
+                        module: 21,
+                    },
                 ]
             },
             {
@@ -12844,7 +12843,7 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        name: 'ใช่',
+                        name: 'อายุมากกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -12855,7 +12854,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ไม่',
+                        name: 'อายุน้อยกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.W.text,
@@ -12872,6 +12871,11 @@ export const QUESTIONS = [
                 from: 16,
                 choices: [
                     {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 17
+                    },
+                    {
                         type: TYPE.RESULT,
                         name: 'ใช่',
                         to: ResultPage,
@@ -12882,12 +12886,6 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP1.W6.advise,
                         }
                     },
-                    {
-                        type: TYPE.QUESTION,
-                        name: 'ไม่',
-                        to: 17
-                    },
-
                 ]
             },
             {
@@ -12896,12 +12894,12 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'ใช่',
+                        name: 'อายุมากกว่า 50 ปี',
                         to: 18
                     },
                     {
                         type: TYPE.QUESTION,
-                        name: 'ไม่',
+                        name: 'อายุน้อยกว่า 50 ปี',
                         to: 19
                     },
                 ]
@@ -12923,7 +12921,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ไม่',
+                        name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.W.text,
@@ -12932,7 +12930,6 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP1.W3.advise,
                         }
                     },
-
                 ]
             },
 
@@ -12953,7 +12950,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ไม่',
+                        name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.W.text,
@@ -12982,7 +12979,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ไม่',
+                        name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.W.text,
@@ -13054,17 +13051,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -13080,11 +13077,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -13094,7 +13086,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP2.R1.code,
                             advise: RESULT.GROUP2.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -13104,6 +13101,17 @@ export const QUESTIONS = [
                     {
                         type: TYPE.RESULT,
                         name: 'พูดได้แค่ประโยคสั้นๆ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP2.R2.code,
+                            advise: RESULT.GROUP2.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -13125,7 +13133,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -13146,15 +13154,9 @@ export const QUESTIONS = [
                         }
                     },
                     {
-                        type: TYPE.RESULT,
-                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
-                            code: RESULT.GROUP2.R2.code,
-                            advise: RESULT.GROUP2.R2.advise,
-                        }
+                        type: TYPE.QUESTION,
+                        name: 'หายใจเร็ว',
+                        to: 3
                     },
                     {
                         type: TYPE.RESULT,
@@ -13166,11 +13168,6 @@ export const QUESTIONS = [
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
-                    },
-                    {
-                        type: TYPE.QUESTION,
-                        name: 'หายใจเร็ว',
-                        to: 3
                     },
                     {
                         type: TYPE.QUESTION,
@@ -13404,17 +13401,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -13699,17 +13696,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -13725,13 +13722,8 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
-                        name: 'ยังคงไม่รู้สึกตัว',
+                        name: 'ไม่รู้สึกตัวเพิ่มขึ้น',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -13739,7 +13731,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP4.R1.code,
                             advise: RESULT.GROUP4.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -13770,6 +13767,17 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
+                        name: 'หายใจมีเสียงดัง',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP4.R2.code,
+                            advise: RESULT.GROUP4.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
@@ -13781,7 +13789,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'หายใจมีเสียงดัง',
+                        name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -13795,17 +13803,7 @@ export const QUESTIONS = [
                         name: 'หายใจเร็ว',
                         to: 3
                     },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'ตัวซีดและเหงือท่วมตัว',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
-                            code: RESULT.GROUP4.R2.code,
-                            advise: RESULT.GROUP4.R2.advise,
-                        }
-                    },
+
                     {
                         type: TYPE.RESULT,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
@@ -14037,17 +14035,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -14063,11 +14061,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -14077,7 +14070,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP5.R1.code,
                             advise: RESULT.GROUP5.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -14108,17 +14106,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
-                            code: RESULT.GROUP5.R2.code,
-                            advise: RESULT.GROUP5.R2.advise,
-                        }
-                    },
-                    {
-                        type: TYPE.RESULT,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
@@ -14129,9 +14116,15 @@ export const QUESTIONS = [
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
-                        name: 'หายใจเร็ว',
-                        to: 3
+                        type: TYPE.RESULT,
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP5.R2.code,
+                            advise: RESULT.GROUP5.R2.advise,
+                        }
                     },
                     {
                         type: TYPE.RESULT,
@@ -14145,15 +14138,9 @@ export const QUESTIONS = [
                         }
                     },
                     {
-                        type: TYPE.RESULT,
-                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
-                            code: RESULT.GROUP5.R2.code,
-                            advise: RESULT.GROUP5.R2.advise,
-                        }
+                        type: TYPE.QUESTION,
+                        name: 'หายใจเร็ว',
+                        to: 3
                     },
                     {
                         type: TYPE.QUESTION,
@@ -14391,17 +14378,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -14417,11 +14404,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -14431,7 +14413,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP7.R1.code,
                             advise: RESULT.GROUP7.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -14451,7 +14438,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        name: 'ซี่โครงบาน จมูกบานไห ปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -14702,7 +14689,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'หญิง อายุมากกว่าหรือเท่ากับ 40 ปี',
+                        name: 'หญิง อายุมากกว่าหรือเท่ากับ 45 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -14713,7 +14700,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'หญิง อายุน้อยกว่า 40 ปี',
+                        name: 'หญิง อายุน้อยกว่า 45 ปี',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.G.text,
@@ -14739,17 +14726,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -14765,11 +14752,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -14779,7 +14761,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP8.R1.code,
                             advise: RESULT.GROUP8.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -14847,17 +14834,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -14873,11 +14860,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -14887,7 +14869,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP9.R1.code,
                             advise: RESULT.GROUP9.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -14907,7 +14894,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        name: 'ไม่มี/อื่นๆ',
+                        name: 'ไม่มีอาการดังกล่าว',
                         to: 3
                     },
                 ]
@@ -15180,7 +15167,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.MODULE,
                         name: 'ใช้กลุ่มอาการที่ 17',
-                        moduleIndex: 18,
+                        module: 17,
                     },
                 ]
             },
@@ -15199,17 +15186,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -15217,18 +15204,13 @@ export const QUESTIONS = [
                             code: RESULT.GROUP12.Y9.code,
                             advise: RESULT.GROUP12.Y9.advise,
                         }
-                    }
+                    },
                 ]
             },
             {
                 question: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
                 from: 1,
                 choices: [
-                    {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ไม่รู้สึกตัวเพิ่มขึ้น',
@@ -15239,7 +15221,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP12.R1.code,
                             advise: RESULT.GROUP12.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -15249,17 +15236,6 @@ export const QUESTIONS = [
                     {
                         type: TYPE.RESULT,
                         name: 'พูดได้แค่สั้นๆ / พูดติดขัด',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
-                            code: RESULT.GROUP12.R2.code,
-                            advise: RESULT.GROUP12.R2.advise,
-                        }
-                    },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -15281,7 +15257,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ตัวซีดและเหงือท่วมตัว',
+                        name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -15290,6 +15266,7 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
+
                     {
                         type: TYPE.RESULT,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
@@ -15303,7 +15280,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
+                        name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -15316,6 +15293,17 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'หายใจเร็ว',
                         to: 3
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP12.R2.code,
+                            advise: RESULT.GROUP12.R2.advise,
+                        }
                     },
                     {
                         type: TYPE.QUESTION,
@@ -15598,17 +15586,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -15624,11 +15612,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -15638,7 +15621,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP14.R1.code,
                             advise: RESULT.GROUP14.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -15647,13 +15635,24 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.RESULT,
-                        name: 'พูดได้แค่ประโยคสั้นๆ',
+                        name: 'พูดได้แค่ประโยคสั้นๆ / พูดติดขัด',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
                             color: LEVEL.R.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซี่โครงบาน จมูกบานไห ปลาร้ายุบ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            code: RESULT.GROUP14.R2.code,
+                            advise: RESULT.GROUP14.R2.advise,
+                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -15665,17 +15664,6 @@ export const QUESTIONS = [
                             color: LEVEL.R.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
-                        }
-                    },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            code: RESULT.GROUP14.R2.code,
-                            advise: RESULT.GROUP14.R2.advise,
-                            color: LEVEL.R.color,
                         }
                     },
                     {
@@ -15701,6 +15689,11 @@ export const QUESTIONS = [
                         }
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'หายใจเร็ว',
+                        to: 3
+                    },
+                    {
                         type: TYPE.RESULT,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
@@ -15711,11 +15704,7 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP14.R2.advise,
                         }
                     },
-                    {
-                        type: TYPE.QUESTION,
-                        name: 'หายใจเร็ว',
-                        to: 3
-                    },
+
                     {
                         type: TYPE.QUESTION,
                         name: 'พูดได้ / หายใจปกติ',
@@ -15886,11 +15875,6 @@ export const QUESTIONS = [
                         to: 9,
                     },
                     {
-                        type: TYPE.QUESTION,
-                        name: 'สารป้องกันตัว เช่น แก๊สน้ำตา สเปรย์พริกไทย',
-                        to: 11,
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'สารเสพติด',
                         to: ResultPage,
@@ -15900,6 +15884,11 @@ export const QUESTIONS = [
                             code: RESULT.GROUP14.G3.code,
                             advise: RESULT.GROUP14.G3.advise,
                         }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'สารป้องกันตัว เช่น แก๊สน้ำตา สเปรย์พริกไทย',
+                        to: 11,
                     },
                 ]
             },
@@ -15996,17 +15985,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -16022,11 +16011,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -16036,7 +16020,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP15.R1.code,
                             advise: RESULT.GROUP15.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },
                 ]
             },
             {
@@ -16056,7 +16045,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        name: 'ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -16231,8 +16220,8 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.QUESTION,
-                        name: 'ไม่ใช่',
-                        to: 7
+                        name: 'น้อยกว่า 20 สัปดาห์',
+                        to: 14
                     },
                 ]
             },
@@ -16253,7 +16242,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'เลือดออกทางช่องท้อง',
+                        name: 'เลือดออกทางช่องคลอด',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -16301,11 +16290,6 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'ไม่มี',
-                        to: 11
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'มี',
                         to: ResultPage,
@@ -16316,6 +16300,11 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP15.R8.advise,
                         }
                     },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มี',
+                        to: 11
+                    },                  
                 ]
             },
             {
@@ -16465,10 +16454,10 @@ export const QUESTIONS = [
                         name: 'ไม่มีเลือดออก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
-                            code: RESULT.GROUP15.W1.code,
-                            advise: RESULT.GROUP15.W1.advise,
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP15.G1.code,
+                            advise: RESULT.GROUP15.G1.advise,
                         }
                     },
                 ]
@@ -16576,17 +16565,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 3,
-                    },
-                    {
-                        type: TYPE.QUESTION,
-                        name: 'ไม่รู้สึกตัว',
+                        name: 'ยังไม่รู้สึกตัว',
                         to: 2
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 3,
+                    },                  
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -16690,17 +16679,6 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
-                            code: RESULT.GROUP16.R2.code,
-                            advise: RESULT.GROUP16.R2.advise,
-                        }
-                    },
-                    {
-                        type: TYPE.RESULT,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
@@ -16711,9 +16689,15 @@ export const QUESTIONS = [
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
-                        name: 'หายใจเร็ว',
-                        to: 6
+                        type: TYPE.RESULT,
+                        name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP16.R2.code,
+                            advise: RESULT.GROUP16.R2.advise,
+                        }
                     },
                     {
                         type: TYPE.RESULT,
@@ -16726,6 +16710,11 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'หายใจเร็ว',
+                        to: 6
+                    },                  
                     {
                         type: TYPE.RESULT,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
@@ -16854,7 +16843,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP16.Y4.code,
                             advise: RESULT.GROUP16.Y4.advise,
                         }
-                    },                
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ไม่มีอาการชัก แต่สัญญาณบอกเหตุการชัก',
@@ -16906,9 +16895,9 @@ export const QUESTIONS = [
                             code: RESULT.GROUP16.Y5.code,
                             advise: RESULT.GROUP16.Y5.advise,
                         }
-                    },                   
+                    },
                 ]
-            },          
+            },
         ]
     },
     {
@@ -16924,17 +16913,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },                  
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -16950,11 +16939,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -16964,7 +16948,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP17.R1.code,
                             advise: RESULT.GROUP17.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },                  
                 ]
             },
             {
@@ -17399,7 +17388,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.MODULE,
                         name: 'ใช่',
-                        module: 7,
+                        module: 17,
                     },
                     {
                         type: TYPE.QUESTION,
@@ -17415,14 +17404,14 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 3,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 2
                     },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 3,
+                    },                 
                     {
                         type: TYPE.RESULT,
                         name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
@@ -17441,11 +17430,6 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 3
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -17455,7 +17439,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP18.R1.code,
                             advise: RESULT.GROUP18.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 3
+                    },                 
                 ]
             },
             {
@@ -17491,7 +17480,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        name: 'หายใจเร็ว ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -17840,17 +17829,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
-                    },
-                    {
-                        type: TYPE.QUESTION,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
+                        type: TYPE.QUESTION,
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },               
+                    {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -17866,11 +17855,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -17880,7 +17864,23 @@ export const QUESTIONS = [
                             code: RESULT.GROUP19.R1.code,
                             advise: RESULT.GROUP19.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },       
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ผู้แจ้งไม่สามารถเข้าไปปลุก/เรียกผู้ป่วยได้',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP19.Y1.code,
+                            advise: RESULT.GROUP19.Y1.advise,
+                        }
+                    }           
                 ]
             },
             {
@@ -17916,7 +17916,7 @@ export const QUESTIONS = [
                     },
                     {
                         type: TYPE.RESULT,
-                        name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
+                        name: 'ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.R.text,
@@ -18227,8 +18227,8 @@ export const QUESTIONS = [
                         payload: {
                             level: LEVEL.R.text,
                             color: LEVEL.R.color,
-                            code: RESULT.GROUP19.R9.code,
-                            advise: RESULT.GROUP19.R9.advise,
+                            code: RESULT.GROUP19.R8.code,
+                            advise: RESULT.GROUP19.R8.advise,
                         }
                     },
                     {
@@ -18322,17 +18322,17 @@ export const QUESTIONS = [
                 choices: [
                     {
                         type: TYPE.QUESTION,
-                        name: 'รู้สึกตัว',
-                        to: 2,
+                        name: 'ไม่รู้สึกตัว',
+                        to: 24,
                     },
                     {
                         type: TYPE.QUESTION,
-                        name: 'ไม่รู้สึกตัว',
-                        to: 1
-                    },
+                        name: 'รู้สึกตัว',
+                        to: 2,
+                    },               
                     {
                         type: TYPE.RESULT,
-                        name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
+                        name: 'ตรวจสอบยืนยันรายละเอียดของเด็กไม่ได้',
                         to: ResultPage,
                         payload: {
                             level: LEVEL.Y.text,
@@ -18348,11 +18348,6 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'พอรู้สึกตัว',
-                        to: 2
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
@@ -18362,7 +18357,12 @@ export const QUESTIONS = [
                             code: RESULT.GROUP20.R1.code,
                             advise: RESULT.GROUP20.R1.advise,
                         }
-                    }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'พอรู้สึกตัว',
+                        to: 2
+                    },                
                 ]
             },
             {
@@ -18687,20 +18687,20 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
-                        name: 'อายุมากกว่า 3 เดือน',
-                        to: 23,
-                    },
-                    {
                         type: TYPE.RESULT,
                         name: 'อายุน้อยกว่า 3 เดือน',
                         payload: {
                             level: LEVEL.W.text,
                             color: LEVEL.W.color,
-                            code: RESULT.GROUP20.W7.code,
-                            advise: RESULT.GROUP20.W7.advise,
+                            code: RESULT.GROUP20.W6.code,
+                            advise: RESULT.GROUP20.W6.advise,
                         }
                     },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'อายุมากกว่า 3 เดือน',
+                        to: 23,
+                    },                    
                 ]
             },
             {
@@ -18960,6 +18960,22 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'ไม่ใช่',
                         to: 11
+                    },
+                ]
+            },
+            {
+                question: 'อาการหมดสติมีสาเหตุจากการบาดเจ็บหรือไม่',
+                from: 24,
+                choices: [
+                    {
+                        type: TYPE.MODULE,
+                        name: 'มี / สงสัยอาจมี / ไม่แน่ใจ',
+                        module : 21,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ได้มีสาเหตุจากการบาดเจ็บ',
+                        to: 1,
                     },
                 ]
             },
