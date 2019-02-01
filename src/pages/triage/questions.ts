@@ -6518,6 +6518,18 @@ export const RESULT = {
                 ]
             },
         },
+        Y2: {
+            code: '16 เหลือง 2',
+            level: LEVEL.Y,
+            advise: {
+                contents: [
+                    
+                ],
+                notes: [
+                   
+                ]
+            },
+        },
         Y4: {
             code: '16 เหลือง 4',
             level: LEVEL.Y,
@@ -6640,6 +6652,17 @@ export const RESULT = {
                     '2. หากไม่รู้สึกตัวและไม่หายใจ แนะนำให้ปั๊มหัวใจ ',
                 ]
             },
+        },
+        G1: {
+            code: '16 เขียว 1',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+                  
+                ],
+                notes: [
+                ]
+            }
         },
         W1: {
             code: '16 ขาว 1',
@@ -12139,10 +12162,10 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                 
+
                 ],
                 notes: [
-                   
+
                 ]
             },
         },
@@ -12198,10 +12221,10 @@ export const RESULT = {
             level: LEVEL.Y,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
-                    
+
                 ]
             },
         },
@@ -12285,7 +12308,7 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
 
@@ -12297,7 +12320,7 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
 
@@ -16608,7 +16631,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'มีเสียงออกมา',
-                        to: 7
+                        to: 5
                     },
                 ]
             },
@@ -16640,90 +16663,8 @@ export const QUESTIONS = [
                 ]
             },
             {
-                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
-                from: 5,
-                to: 6,
-                criteria: {
-                    minimumChecked: 1,
-                    to: 6,
-                    payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
-                        code: RESULT.GROUP16.R3.code,
-                        advise: RESULT.GROUP16.R3.advise,
-                    }
-                },
-                choices: [
-                    {
-                        type: TYPE.RESULT,
-                        name: 'เหงื่อท่วมตัว',
-                        checked: false,
-
-                    },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
-                        checked: false,
-                    },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'ซีดและผิวซีดเย็น',
-                        checked: false,
-
-                    },
-                ]
-            },
-            {
-                question: 'เคยมีประวัติการชักมาก่อนหน้านี้หรือไม่',
-                from: 6,
-                choices: [
-                    {
-                        type: TYPE.RESULT,
-                        name: 'ไม่เคย',
-                        to: ResultPage,
-                        payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
-                            code: RESULT.GROUP16.Y1.code,
-                            advise: RESULT.GROUP16.Y1.advise,
-                        }
-                    },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'เคย',
-                        payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
-                            code: RESULT.GROUP16.Y4.code,
-                            advise: RESULT.GROUP16.Y4.advise,
-                        }
-                    },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'ไม่ทราบ',
-                        payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
-                            code: RESULT.GROUP16.Y5.code,
-                            advise: RESULT.GROUP16.Y5.advise,
-                        }
-                    },
-                    {
-                        type: TYPE.RESULT,
-                        name: 'ไม่มีอาการชัก แต่สัญญาณบอกเหตุการชัก',
-                        payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
-                            code: RESULT.GROUP16.W1.code,
-                            advise: RESULT.GROUP16.W1.advise,
-                        }
-                    },
-                ]
-            },
-            {
                 question: 'ลักษณะอาการหายใจเป็นอย่างไร',
-                from: 7,
+                from: 5,
                 choices: [
                     {
                         type: TYPE.RESULT,
@@ -16772,7 +16713,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'หายใจเร็ว',
-                        to: 8
+                        to: 6
                     },
                     {
                         type: TYPE.RESULT,
@@ -16799,13 +16740,13 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'พูดได้ / หายใจปกติ',
-                        to: 5
+                        to: 8
                     },
                 ]
             },
             {
                 question: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
-                from: 8,
+                from: 6,
                 choices: [
                     {
                         type: TYPE.RESULT,
@@ -16821,13 +16762,13 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่มี',
-                        to: 9
+                        to: 7
                     },
                 ]
             },
             {
                 question: 'ผู้ป่วยอายุเท่าไหร่',
-                from: 9,
+                from: 7,
                 choices: [
                     {
                         type: TYPE.RESULT,
@@ -16854,6 +16795,120 @@ export const QUESTIONS = [
 
                 ]
             },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                from: 8,
+                to: 9,
+                criteria: {
+                    minimumChecked: 1,
+                    to: 9,
+                    payload: {
+                        level: LEVEL.R.text,
+                        color: LEVEL.R.color,
+                        code: RESULT.GROUP16.R3.code,
+                        advise: RESULT.GROUP16.R3.advise,
+                    }
+                },
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เหงื่อท่วมตัว',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
+                        checked: false,
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซีดและผิวซีดเย็น',
+                        checked: false,
+
+                    },
+                ]
+            },
+            {
+                question: 'เคยมีประวัติการชักมาก่อนหน้านี้หรือไม่',
+                from: 10,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่เคย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP16.Y1.code,
+                            advise: RESULT.GROUP16.Y1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เคย',
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP16.Y4.code,
+                            advise: RESULT.GROUP16.Y4.advise,
+                        }
+                    },                
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่มีอาการชัก แต่สัญญาณบอกเหตุการชัก',
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP16.W1.code,
+                            advise: RESULT.GROUP16.W1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ทราบ',
+                        to: 11
+                    },
+                ]
+            },
+            {
+                question: 'เคยมีอาการจากภาวะเครียด/ถูกขัดใจ/ตื่นตระหนก/หายใจมากเกิน ในลักษณะเดียวกันนี้มาก่อนบ้างหรือไม่',
+                from: 11,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เคย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP16.G1.code,
+                            advise: RESULT.GROUP16.G1.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่เคย',
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP16.Y2.code,
+                            advise: RESULT.GROUP16.Y2.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่ทราบ',
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP16.Y5.code,
+                            advise: RESULT.GROUP16.Y5.advise,
+                        }
+                    },                   
+                ]
+            },          
         ]
     },
     {
@@ -18576,7 +18631,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'น้อยกว่า 4 วัน หรือ มากกว่า 7 วัน',
-                        to: 23
+                        to: 13,
                     },
                 ]
             },
@@ -18632,14 +18687,9 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: TYPE.QUESTION,
                         name: 'อายุมากกว่า 3 เดือน',
-                        payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
-                            code: RESULT.GROUP20.W6.code,
-                            advise: RESULT.GROUP20.W6.advise,
-                        }
+                        to: 23,
                     },
                     {
                         type: TYPE.RESULT,
@@ -20095,12 +20145,12 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'ที่อื่นๆ',
-                        to: 6
+                        to: 10
                     },
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่มีบาดแผล',
-                        to: 8
+                        to: 11
                     },
                 ]
             },
@@ -20266,8 +20316,8 @@ export const QUESTIONS = [
                         payload: {
                             level: LEVEL.G.text,
                             color: LEVEL.G.color,
-                            code: RESULT.GROUP23.G1.code,
-                            advise: RESULT.GROUP23.G1.advise,
+                            code: RESULT.GROUP23.G4.code,
+                            advise: RESULT.GROUP23.G4.advise,
                         }
                     },
                 ]
@@ -20724,7 +20774,13 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
-                        to: null // TODO : FIX THIS
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP24.W1.code,
+                            advise: RESULT.GROUP24.W1.advise,
+                        }
 
                     },
                 ]
@@ -20747,7 +20803,13 @@ export const QUESTIONS = [
                     {
                         type: TYPE.QUESTION,
                         name: 'ไม่ใช่',
-                        to: null // TODO : FIX THIS
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP24.G1.code,
+                            advise: RESULT.GROUP24.W1.advise,
+                        }
                     },
                 ]
             },
@@ -21318,7 +21380,7 @@ export const QUESTIONS = [
                     {
                         type: TYPE.RESULT,
                         name: 'ไม่ใช่',
-                        to: null,                  
+                        to: null,
                     },
                 ]
             },
@@ -21391,11 +21453,11 @@ export const QUESTIONS = [
             {
                 question: 'มีผู้บาดเจ็บไม่รู้สึกตัวหรือไม่',
                 from: 18,
-                choices: [                    
+                choices: [
                     {
                         type: TYPE.QUESTION,
                         name: 'มีคนไม่รู้สึกตัว',
-                        to: 19,                  
+                        to: 19,
                     },
                     {
                         type: TYPE.RESULT,
@@ -21507,7 +21569,7 @@ export const QUESTIONS = [
             {
                 question: 'อาการผู้บาดเจ็บเป็นอย่างไร',
                 from: 21,
-                choices: [                                   
+                choices: [
                     {
                         type: TYPE.RESULT,
                         name: 'มีผู้บาดเจ็บหนัก (สัญญาณชีพ หรือระดับความรู้สึกผิดปกติ)',
