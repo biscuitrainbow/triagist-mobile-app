@@ -34,6 +34,7 @@ import { NotePage } from '../pages/note/note';
 import { DurationPipe } from '../pipes/duration/duration';
 import { HospitalSearchPage } from '../pages/hospital-search/hospital-search';
 import { ReferencePage } from '../pages/reference/reference';
+import { PipesModule } from '../pipes/pipes.module';
 
 var config = {
   apiKey: "AIzaSyD_bpH743Uu9PcQSFi6xSOFiQ_qtuydzxU",
@@ -58,9 +59,8 @@ var config = {
     HistoryPage,
     AdvisePage,
     NotePage,
-    DurationPipe,
     HospitalSearchPage,
-    ReferencePage
+    ReferencePage,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +70,8 @@ var config = {
     IonicStorageModule.forRoot(),
     SuperTabsModule.forRoot(),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    PipesModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

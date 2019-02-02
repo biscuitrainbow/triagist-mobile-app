@@ -4887,6 +4887,18 @@ export const RESULT = {
                 ]
             },
         },
+        R9: {
+            code: '13 แดง 9',
+            level: LEVEL.R,
+            advise: {
+                contents: [
+                    
+                ],
+                notes: [
+
+                ]
+            },
+        },
         Y1: {
             code: '13 เหลือง 1',
             level: LEVEL.Y,
@@ -5142,6 +5154,17 @@ export const RESULT = {
                 ]
             },
         },
+        G1: {
+            code: '13 เขียว 1',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+                   
+                ],
+                notes: [
+                ]
+            }
+        },
         G4: {
             code: '13 เขียว 4',
             level: LEVEL.G,
@@ -5169,6 +5192,17 @@ export const RESULT = {
                             'ให้ญาติผู้พบเห็นเหตุการณ์ เฝ้าสังเกตอาการผู้ป่วยอย่างใกล้ชิด จนกว่ารถพยาบาลจะมาถึง และรวบรวมยาประจำตัวผู้ป่วยและผู้พบเห็นเหตุการณ์ ขึ้นรถพยาบาลไปพร้อมกับผู้ป่วยด้วย เพื่อให้ประวัติแก่ แพทย์ และเจ้าหน้าที่พยาบาล'
                         ]
                     },
+                ],
+                notes: [
+                ]
+            }
+        },
+        G5: {
+            code: '13 เขียว 5',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+
                 ],
                 notes: [
                 ]
@@ -5250,6 +5284,17 @@ export const RESULT = {
                 ]
             }
         },
+        G9: {
+            code: '13 เขียว 9',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+
+                ],
+                notes: [
+                ]
+            }
+        },
         W1: {
             code: '13 ขาว 1',
             level: LEVEL.G,
@@ -5270,7 +5315,30 @@ export const RESULT = {
                 ]
             }
         },
-
+        W8: {
+            code: '13 ขาว 8',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+                  
+                ],
+                notes: [
+                   
+                ]
+            }
+        },
+        W9: {
+            code: '13 ขาว 9',
+            level: LEVEL.G,
+            advise: {
+                contents: [
+                  
+                ],
+                notes: [
+                   
+                ]
+            }
+        },
 
     },
     GROUP14: {
@@ -15574,6 +15642,440 @@ export const QUESTIONS = [
         ]
     },
     {
+        name: 'คลุ้มคลั่ง',
+        description: 'ภาวะทางจิตประสาท, อารมณ์',
+        module: 13,
+        image: 'assets/imgs/angry-man.png',
+        color: '#FF85A7',
+        questions: [
+            {
+                question: 'สถานการณ์ปลอดภัยหรือไม่',
+                from: 0,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ปลอดภัย',
+                        to: 1
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่ปลอดภัย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP13.G9.code,
+                            advise: RESULT.GROUP13.G9.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
+                type: CHOICE_TYPE.CHECKBOX,
+                from: 1,
+                to: 2,
+                criteria: {
+                    minimumChecked: 2,
+                    to:2,
+                    payload: {
+                        level: LEVEL.R.text,
+                        color: LEVEL.R.color,
+                        code: RESULT.GROUP13.R3.code,
+                        advise: RESULT.GROUP13.R3.advise,
+                    }
+                },
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เหงื่อท่วมตัว',
+                        checked: false,
+
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
+                        checked: false,
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ซีดและผิวซีดเย็น',
+                        checked: false,
+
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีเลือดออกหรือไม่',
+                from: 2,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ใช่',
+                        to: 3,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 4,
+                    },
+                ]
+            },
+            {
+                question: 'ห้ามเลือดแล้วหยุดหรือไม่',
+                from: 3,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่หยุด',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP13.R5.code,
+                            advise: RESULT.GROUP13.R5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'หยุด',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP13.G5.code,
+                            advise: RESULT.GROUP13.G5.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่สามารถห้ามเลือดได้',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP13.R5.code,
+                            advise: RESULT.GROUP13.R5.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีทำร้ายตนเองหรือไม่',
+                from: 4,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ใช่',
+                        to: 5,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 6,
+                    },
+                ]
+            },
+            {
+                question: 'ด้วยวิธีใด',
+                from: 5,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'การยิง / การแทง / การบดทับ (มีบาดแผลทะลวง)',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP13.R8.code,
+                            advise: RESULT.GROUP13.R8.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'วิธีอื่น เช่น กระโดกจากที่สูง การแขวนคอ การกระแทก การตี การฟัน ใช้ของมีคมกรีดร่างกาย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP13.R8.code,
+                            advise: RESULT.GROUP13.R8.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช้สารป้องกันตัว เช่น แก็สน้ำตา สเปรยร์พริกไทย',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP13.G8.code,
+                            advise: RESULT.GROUP13.G8.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'อื่นๆ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP13.G1.code,
+                            advise: RESULT.GROUP13.G1.advise,
+                        }
+                    },
+                ]
+            },
+            {
+                question: 'มีตัวประกันหรือไม่',
+                from: 6,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP13.R9.code,
+                            advise: RESULT.GROUP13.R9.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มี',
+                        to: 7
+                    },
+                    
+                ]
+            },
+            {
+                question: 'ผู้ป่วยกินยาเกินขนาด / สารพิษ / แอลกอฮอล์ ก่อนมีอาการหรือไม่',
+                from: 7,
+                choices: [
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ใช่',
+                        to: 8,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 12,
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่แน่ใจ / ไม่ทราบ',
+                        to: 12,
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยได้รับยา / สารอะไรเข้าสู่ร่างกาย',
+                from: 8,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ยา',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP14.G4.code,
+                            advise: RESULT.GROUP14.G4.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'สารเคมีที่ใช้ในการเกษตร',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP14.R9.code,
+                            advise: RESULT.GROUP14.R9.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'สารกัดกร่อน / สารเคมีอื่น (ที่ไม่ใช่อาหาร/ยา)',
+                        to: 9
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ยา / สารเสพติด / เพื่อความเพลิดเพลิน เช่น ยาบ้า ยาอี กาว',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP14.G4.code,
+                            advise: RESULT.GROUP14.G4.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'สารป้องกันตัว เช่น แก็สน้ำตา สเปรย์พริกไทย',
+                        to: 11,
+                    },
+                ]
+            },
+            {
+                question: 'ผู้ป่วยกลืน (น้ำลาย น้ำ อาหาร) ลำบากหรือไม่',
+                from: 9,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'กลืนลำบาก',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP14.R9.code,
+                            advise: RESULT.GROUP14.R9.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'กลืนได้ปกติ',
+                        to: 10
+                    },
+                    
+                ]
+            },
+            {
+                question: 'มีอาการผิดปกติอื่นหรือไม่ เช่น เจ็บคอ ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
+                from: 10,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.Y.text,
+                            color: LEVEL.Y.color,
+                            code: RESULT.GROUP14.Y4.code,
+                            advise: RESULT.GROUP14.Y4.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP14.G5.code,
+                            advise: RESULT.GROUP14.G5.advise,
+                        }
+                    },
+                    
+                ]
+            },
+            {
+                question: 'มีอาการผิดปกติหรือไม่ เช่น ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
+                from: 11,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.G.text,
+                            color: LEVEL.G.color,
+                            code: RESULT.GROUP14.G8.code,
+                            advise: RESULT.GROUP14.G8.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่มี',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP14.W1.code,
+                            advise: RESULT.GROUP14.W1.advise,
+                        }
+                    },                    
+                ]
+            },
+            {
+                question: 'ผู้ป่วยมีอาการชักร่วมด้วยหรือไม่',
+                from: 12,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ชัก',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP13.R6.code,
+                            advise: RESULT.GROUP13.R6.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ชัก',
+                        to: 13
+                    },
+                    
+                ]
+            },
+            {
+                question: 'ตำรวจ / เจ้าหน้าที่ระงับภัยร้องขอการเตรียมพร้อมเนื่องจากผู้ป่วยมีภาวะคุกคาม อันอาจจะเป็นภยันอันตรายต่อตนเอง/ผู้อื่น หรือไม่',
+                from: 13,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ใช่',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.R.text,
+                            color: LEVEL.R.color,
+                            code: RESULT.GROUP13.R7.code,
+                            advise: RESULT.GROUP13.R7.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่ใช่',
+                        to: 14
+                    },
+                    
+                ]
+            },
+            {
+                question: 'พิจารณาแจ้งตำรวจ',
+                from: 14,
+                choices: [
+                    {
+                        type: TYPE.RESULT,
+                        name: 'แจ้งตำรวจ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP13.W9.code,
+                            advise: RESULT.GROUP13.W9.advise,
+                        }
+                    },
+                    {
+                        type: TYPE.RESULT,
+                        name: 'ไม่แจ้งตำรวจ',
+                        to: ResultPage,
+                        payload: {
+                            level: LEVEL.W.text,
+                            color: LEVEL.W.color,
+                            code: RESULT.GROUP13.W8.code,
+                            advise: RESULT.GROUP13.W8.advise,
+                        }
+                    },
+                ]
+            },
+        ],
+    },
+    {
         name: 'ได้รับสารพิษ',
         description: 'ยาเกินขนาด',
         module: 14,
@@ -21019,7 +21521,7 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'รู้สึกตัว',
                         to: 5,
-                    },               
+                    },
                     {
                         type: TYPE.RESULT,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
@@ -21052,7 +21554,7 @@ export const QUESTIONS = [
                         type: TYPE.QUESTION,
                         name: 'พอรู้สึกตัว',
                         to: 5
-                    },            
+                    },
                 ]
             },
             {
