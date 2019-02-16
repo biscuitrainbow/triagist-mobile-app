@@ -1,40 +1,40 @@
 <ion-header>
-    <ion-toolbar no-border-top>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>
-            คัดแยกผู้ป่วยตามอาการ
-        </ion-title>
-        <ion-buttons end>
-            <button ion-button icon-only (click)="navigateReferencePage()">
-                <ion-icon name="help"></ion-icon>
-            </button>
-        </ion-buttons>
-    </ion-toolbar>
+  <ion-toolbar no-border-top>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      คัดแยกผู้ป่วยตามอาการ
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="navigateReferencePage()">
+        <ion-icon name="help"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <button *ngFor="let question of questions; let i = index" ion-item (click)="startTriage(question)">
-            <ion-card-header class="header">
-                {{question.name}}
+  <ion-searchbar (ionInput)="search($event)" debounce="0"></ion-searchbar>
 
-            </ion-card-header>
+  <ion-list>
+    <button *ngFor="let question of filteredTriages; let i = index" ion-item (click)="startTriage(question)">
+      <ion-card-header [ngClass]="{'header' : !simpleMode}">
+
+        <ion-badge>
+          {{question.module}}
+        </ion-badge>
+
+        {{question.name}}
+      </ion-card-header>
+
+      <img class="img" *ngIf="!simpleMode" item-start [src]="question.image" />
 
 
+      <ion-card-content *ngIf="!simpleMode" class="content">
+        {{question.description}}
+      </ion-card-content>
 
-
-            <img class="img" item-start [src]="question.image" />
-
-            <ion-badge>
-                กลุ่มอาการที่ {{question.module}}
-            </ion-badge>
-
-            <ion-card-content class="content">
-                {{question.description}}
-            </ion-card-content>
-
-        </button>
-    </ion-list>
+    </button>
+  </ion-list>
 </ion-content>

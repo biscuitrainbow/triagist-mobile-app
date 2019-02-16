@@ -11,7 +11,10 @@ import { ReferencePage } from '../reference/reference';
   templateUrl: 'triage.html',
 })
 export class TriagePage {
-  private questions = QUESTIONS;
+  questions = QUESTIONS;
+  simpleMode = false;
+  searchQuery: string = '';
+  filteredTriages = [];
 
   constructor(
     public navCtrl: NavController,
@@ -20,6 +23,8 @@ export class TriagePage {
     public app: App
   ) {
     menuCtrl.enable(true);
+
+    this.filteredTriages = this.questions;
   }
 
   startTriage(question: object) {
@@ -30,5 +35,19 @@ export class TriagePage {
 
   navigateReferencePage() {
     this.navCtrl.push(ReferencePage);
+  }
+
+
+  search(ev: any) {
+    const val = ev.target.value;
+
+    if (val && val.trim() != '') {
+      this.filteredTriages = this.questions.filter((item) => {
+        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    } else {
+      this.filteredTriages = this.questions;
+    }
+
   }
 }
