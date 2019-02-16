@@ -19,7 +19,7 @@ export const LEVEL = {
     },
     Y: {
         text: 'ผู้ป่วยฉุกเฉินเร่งด่วน',
-        color: '#F7E744'
+        color: '#FFA610'
     },
     G: {
         text: 'ผู้ป่วยฉุกเฉินไม่รุนแรง',
@@ -27,7 +27,7 @@ export const LEVEL = {
     },
     W: {
         text: 'ผู้ป่วยทั่วไป',
-        color: '#F0F0F0'
+        color: '#A5A4A4'
     }
 }
 
@@ -4892,7 +4892,7 @@ export const RESULT = {
             level: LEVEL.R,
             advise: {
                 contents: [
-                    
+
                 ],
                 notes: [
 
@@ -5159,7 +5159,7 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                   
+
                 ],
                 notes: [
                 ]
@@ -5320,10 +5320,10 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                  
+
                 ],
                 notes: [
-                   
+
                 ]
             }
         },
@@ -5332,10 +5332,10 @@ export const RESULT = {
             level: LEVEL.G,
             advise: {
                 contents: [
-                  
+
                 ],
                 notes: [
-                   
+
                 ]
             }
         },
@@ -15677,7 +15677,7 @@ export const QUESTIONS = [
                 to: 2,
                 criteria: {
                     minimumChecked: 2,
-                    to:2,
+                    to: 2,
                     payload: {
                         level: LEVEL.R.text,
                         color: LEVEL.R.color,
@@ -15846,7 +15846,7 @@ export const QUESTIONS = [
                         name: 'ไม่มี',
                         to: 7
                     },
-                    
+
                 ]
             },
             {
@@ -15939,7 +15939,7 @@ export const QUESTIONS = [
                         name: 'กลืนได้ปกติ',
                         to: 10
                     },
-                    
+
                 ]
             },
             {
@@ -15968,7 +15968,7 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP14.G5.advise,
                         }
                     },
-                    
+
                 ]
             },
             {
@@ -15996,7 +15996,7 @@ export const QUESTIONS = [
                             code: RESULT.GROUP14.W1.code,
                             advise: RESULT.GROUP14.W1.advise,
                         }
-                    },                    
+                    },
                 ]
             },
             {
@@ -16019,7 +16019,7 @@ export const QUESTIONS = [
                         name: 'ไม่ชัก',
                         to: 13
                     },
-                    
+
                 ]
             },
             {
@@ -16042,7 +16042,7 @@ export const QUESTIONS = [
                         name: 'ไม่ใช่',
                         to: 14
                     },
-                    
+
                 ]
             },
             {
@@ -18743,7 +18743,7 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการหมดสติชั่ววูบเป็นครั้งแรกในวันนี้ใช่หรือไม่',
-                from: 13,
+                from: 14,
                 choices: [
                     {
                         type: TYPE.RESULT,
@@ -18778,11 +18778,16 @@ export const QUESTIONS = [
                             advise: RESULT.GROUP19.W1.advise,
                         }
                     },
+                    {
+                        type: TYPE.QUESTION,
+                        name: 'ไม่มี',
+                        to: 15,
+                    },
                 ]
             },
             {
                 question: 'ผู้ป่วยมีประวัติบาดเจ็บที่ศรีษะมาก่อนหรือไม่ (ภายใน 3 วัน)',
-                from: 14,
+                from: 15,
                 choices: [
                     {
                         type: TYPE.RESULT,

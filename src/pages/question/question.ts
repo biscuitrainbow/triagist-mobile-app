@@ -16,7 +16,7 @@ import { App } from 'ionic-angular/components/app/app';
 })
 export class QuestionPage {
   @ViewChild(Slides) slides: Slides
-  question: object;
+  question: any;
 
   answers = [];
   questionStack = [];
@@ -84,17 +84,12 @@ export class QuestionPage {
     this.questionStack.push({ from: question.from, question: question.question, answer: textChoice });
 
     if (question.criteria != null) {
-      console.log('criteria');
-      console.log(checkedChoices.length);
-      console.log(question.criteria.minimumChecked);
-
-
       if (checkedChoices.length >= question.criteria.minimumChecked) {
         if (question.criteria.payload != null) {
-
           this.navCtrl.push(ResultPage, { payload: question.criteria.payload, answers: this.questionStack });
-        } else {
+          this.saveResult(question.criteria.payload, this.questionStack);
 
+        } else {
           this.slides.slideTo(question.criteria.to);
         }
 
@@ -102,9 +97,11 @@ export class QuestionPage {
         this.slides.slideTo(question.to);
       }
     } else {
-      console.log('normal');
       if (checkedChoices.length >= 2) {
+
         this.navCtrl.push(ResultPage, { payload: question.payload, answers: this.questionStack });
+        this.saveResult(question.payload, this.questionStack);
+
       } else {
         this.slides.slideTo(question.to);
       }
@@ -114,13 +111,13 @@ export class QuestionPage {
 
   onSwipe(event, question) {
     if (event.direction === 4) {
-
-      this.slides.slideTo(this.questionStack[this.questionStack.length - 1].from);
-      this.questionStack.pop();
+      this.back();
     }
   }
 
   back() {
+    console.log((this.questionStack[this.questionStack.length - 1]));
+
     this.slides.slideTo(this.questionStack[this.questionStack.length - 1].from);
     this.questionStack.pop();
   }
@@ -134,16 +131,9 @@ export class QuestionPage {
     let uid = this.firebaseAuth.auth.currentUser.uid;
 
     this.firestore
-      .collection('users')
-      .doc(uid)
       .collection('triages')
-      .add({ timestamp: timestamp, answers: answers, payload: payload })
+      .add({ timestamp: timestamp, answers: answers, payload: payload, user: uid, module: this.question.name })
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
   }
-
-
-
-
-
 }

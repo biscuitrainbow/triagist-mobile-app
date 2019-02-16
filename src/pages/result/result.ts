@@ -55,16 +55,16 @@ export class ResultPage {
     // this.saveResult();
 
     console.log(this.payload);
-    
+
   }
 
   saveResult() {
     let uid = this.firebaseAuth.auth.currentUser.uid;
     this.firestore
-      .collection('users')
-      .doc(uid)
+      // .collection('users')
+      // .doc(uid)
       .collection('triages')
-      .add({ answers: this.answers, payload: this.payload })
+      .add({ answers: this.answers, payload: this.payload, user: uid })
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
   }
@@ -134,7 +134,7 @@ export class ResultPage {
 
   navigateAdvisePage() {
     console.log(this.payload.advise.length);
-    
+
     this.navCtrl.push(AdvisePage, {
       advise: this.payload.advise
     })

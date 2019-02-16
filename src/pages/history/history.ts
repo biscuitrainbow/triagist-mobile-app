@@ -35,10 +35,11 @@ export class HistoryPage extends BasePage {
     let uid = this.firebaseAuth.auth.currentUser.uid;
 
     let ref = this.firestore
-      .collection('users')
-      .doc(uid)
+      // .collection('users')
+      // .doc(uid)
       .collection('triages')
       .ref
+      .where('user', '==', uid)
       .orderBy('timestamp', "desc")
       .limit(this.limit)
       .get()
