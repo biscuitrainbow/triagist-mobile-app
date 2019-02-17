@@ -29,8 +29,10 @@ export class TriagePage {
   }
 
   navigateTriageQuestion(question: object) {
+    const newQuestion = { ...question };
+
     this.app.getRootNav().push(QuestionPage, {
-      question: question
+      question: newQuestion
     })
   }
 

@@ -1,5 +1,4 @@
 import { choiceType, level, questionType, criteriaType } from "../meta";
-import { RESULT, answerType } from "../../../pages/triage/questions";
 
 const result = {
     red1: {
