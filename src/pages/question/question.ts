@@ -76,6 +76,7 @@ export class QuestionPage {
     switch (choice.type) {
       case choiceType.question: {
         this.toQuestion(choice.to);
+        this.pushQuestion(question.from);
         break;
       }
 
@@ -94,9 +95,7 @@ export class QuestionPage {
     }
 
     this.histories.push(history);
-    this.questionStacks.push(question.from);
 
-    console.log(this.questionStacks);
   }
 
   checkboxChoiceNavigation(question) {
@@ -112,6 +111,7 @@ export class QuestionPage {
       switch (criteria.type) {
         case criteriaType.question:
           this.toQuestion(criteria.to);
+          this.pushQuestion(question.from);
           break;
 
         case criteriaType.result:
@@ -127,7 +127,6 @@ export class QuestionPage {
     }
 
     this.histories.push(history);
-    this.questionStacks.push(question.from);
   }
 
   navigateResult(result) {
@@ -142,7 +141,6 @@ export class QuestionPage {
     })
   }
 
-
   toQuestion(to) {
     this.slides.slideTo(to);
   }
@@ -150,6 +148,14 @@ export class QuestionPage {
   onSwipe(event, question) {
     if (event.direction === 4) {
       this.back();
+    }
+  }
+
+  pushQuestion(index) {
+    const last = this.questionStacks[this.questionStacks.length - 1];
+
+    if (index !== last) {
+      this.questionStacks.push(index);
     }
   }
 

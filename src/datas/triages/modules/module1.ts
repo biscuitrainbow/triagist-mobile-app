@@ -743,31 +743,31 @@ const questions = [
             {
                 type: choiceType.result,
                 name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
-                result: result.red1
+                result: result.red2
 
             },
             {
                 type: choiceType.result,
                 name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
-                result: result.red1
+                result: result.red2
 
             },
             {
                 type: choiceType.result,
                 name: 'หายใจมีเสียงดัง',
-                result: result.red1
+                result: result.red2
 
             },
             {
                 type: choiceType.result,
                 name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
-                result: result.red1
+                result: result.red2
 
             },
             {
                 type: choiceType.result,
                 name: 'ตัวซีดและเหงือท่วมตัว',
-                result: result.red1
+                result: result.red2
 
             },
             {
@@ -778,7 +778,7 @@ const questions = [
             {
                 type: choiceType.result,
                 name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
-                result: result.red1
+                result: result.red2
             },
             {
                 type: choiceType.question,
@@ -1050,7 +1050,7 @@ const questions = [
             {
                 type: choiceType.result,
                 name: 'อายุมากกว่า 50 ปี',
-                result: result.white4
+                result: result.yellow4
             },
             {
                 type: choiceType.result,
@@ -1178,7 +1178,7 @@ const questions = [
             {
                 type: choiceType.result,
                 name: 'สายสวนอื่นๆ',
-                result: result.white2
+                result: result.green2
             },
         ]
     },
