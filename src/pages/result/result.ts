@@ -8,8 +8,7 @@ import { Loading } from "ionic-angular/components/loading/loading";
 import { AngularFireAuth } from "angularfire2/auth";
 import { AngularFirestore } from "angularfire2/firestore";
 
-import { File } from "@ionic-native/file";
-import { Geolocation } from "@ionic-native/geolocation";
+
 import { FileOpener } from '@ionic-native/file-opener';
 import { SocialSharing } from "@ionic-native/social-sharing";
 
@@ -17,7 +16,6 @@ import { MapProvider } from "../../providers/map/map";
 import { PdfProvider } from "../../providers/pdf/pdf";
 import { FirebaseUserProvider } from "./../../providers/firebase-user/firebase-user";
 
-import * as moment from "moment";
 import * as _ from "lodash";
 
 
@@ -28,11 +26,8 @@ declare var google;
   templateUrl: "result.html"
 })
 export class ResultPage {
-  private payload;
-  public answers;
-  private user;
-  private location;
-  private pdfMake;
+  private result;
+  public histories;
   private loader: Loading;
 
   private pdfUrl = '';
@@ -50,21 +45,19 @@ export class ResultPage {
     public firestore: AngularFirestore,
     public firebaseAuth: AngularFireAuth
   ) {
-    this.payload = navParams.get('payload');
-    this.answers = navParams.get('answers');
-    // this.saveResult();
+    this.result = navParams.get('result');
+    this.histories = navParams.get('histories');
 
-    console.log(this.payload);
-
+    console.log(this.histories);
   }
+
+  ion
 
   saveResult() {
     let uid = this.firebaseAuth.auth.currentUser.uid;
     this.firestore
-      // .collection('users')
-      // .doc(uid)
       .collection('triages')
-      .add({ answers: this.answers, payload: this.payload, user: uid })
+      .add({ histories: this.histories, result: this.result, user: uid })
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
   }
@@ -101,7 +94,7 @@ export class ResultPage {
 
   async createPdf() {
     try {
-      let data = { code: this.payload.code, answers: this.answers };
+      let data = { code: this.result.code, histories: this.histories };
       let blob = await this.pdf.create(data);
       let saveResult = await this.pdf.save(blob);
       return this.pdfUrl = saveResult.nativeURL;
@@ -133,10 +126,10 @@ export class ResultPage {
   }
 
   navigateAdvisePage() {
-    console.log(this.payload.advise.length);
+    //  console.log(this.result.advise.length);
 
     this.navCtrl.push(AdvisePage, {
-      advise: this.payload.advise
+      advise: this.result.advise
     })
   }
 }

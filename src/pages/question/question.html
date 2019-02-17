@@ -13,30 +13,32 @@
 <ion-content padding style="background-color: #488aff" scroll="true">
 
   <ion-slides class="swiper-no-swiping ">
-    <ion-slide class="slide-zoom h-auto" *ngFor="let question of question.questions" (swipe)="onSwipe($event,question)">
-
+    <ion-slide class="slide-zoom h-auto" *ngFor="let question of question.questions; let i = index"
+      (swipe)="onSwipe($event,question)">
       <div class="flex flex-col justify-center h-full pt-4">
-        <h3 class="mb-6 text-white ">{{question.question}}</h3>
+        <h3 class="mb-6 text-white ">{{question.name}}</h3>
 
         <div class="flex flex-col bg-white shadow rounded mt-2 px-4 mb-4 mx-4" *ngFor="let choice of question.choices"
           (click)="onChoiceClick(choice,question)">
-
           <button class="flex flex-wrap items-center hover:green px-4 py-4 h-auto">
+
             <ion-checkbox class="mr-8" *ngIf="question.type == 'checkbox'" [(ngModel)]="choice.checked"></ion-checkbox>
+
             <p class="text-left font-light text-grey-darkest leading-normal" style="font-size:1.6rem">
               {{choice.name}}
             </p>
           </button>
         </div>
 
-        <button class=" mt-8" color="light" (click)="onNextClick(question.choices,question)" *ngIf="question.type == 'checkbox'"
+        <!-- <button class=" mt-8" color="light" (click)="onNextClick(question.choices,question)"
+          *ngIf="question.type == 'checkbox'" ion-button full>ต่อไป</button> -->
+
+        <button class=" mt-8" color="light" (click)="onChoiceClick(choice,question)" *ngIf="question.type == 'checkbox'"
           ion-button full>ต่อไป</button>
 
-
-        <button class="mt-8" clear color="light" (click)="back()" ion-button full>ย้อนกลับ</button>
+        <button class="mt-8" clear color="light" *ngIf="i !== 0" (click)="back()" ion-button full>ย้อนกลับ</button>
 
       </div>
-
     </ion-slide>
   </ion-slides>
 

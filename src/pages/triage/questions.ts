@@ -1,32 +1,32 @@
 import { ResultPage } from './../result/result';
 import { QuestionPage } from '../question/question';
 
-export const CHOICE_TYPE = {
-    CHECKBOX: 'checkbox',
-    BUTTON: 'button'
+export const answerType = {
+    checkbox: 'checkbox',
+    button: 'button'
 }
 
-export const TYPE = {
-    'RESULT': 'result',
-    'QUESTION': 'question',
-    'MODULE': 'module'
+export const type = {
+    result: 'result',
+    question: 'question',
+    module: 'module'
 }
 
-export const LEVEL = {
-    R: {
-        text: 'ผู้ป่วยฉุกเฉินวิกฤติ',
+export const level = {
+    red: {
+        description: 'ผู้ป่วยฉุกเฉินวิกฤติ',
         color: '#D72732'
     },
-    Y: {
-        text: 'ผู้ป่วยฉุกเฉินเร่งด่วน',
+    yellow: {
+        description: 'ผู้ป่วยฉุกเฉินเร่งด่วน',
         color: '#FFA610'
     },
-    G: {
-        text: 'ผู้ป่วยฉุกเฉินไม่รุนแรง',
+    green: {
+        description: 'ผู้ป่วยฉุกเฉินไม่รุนแรง',
         color: '#1BA153'
     },
-    W: {
-        text: 'ผู้ป่วยทั่วไป',
+    white: {
+        description: 'ผู้ป่วยทั่วไป',
         color: '#A5A4A4'
     }
 }
@@ -35,7 +35,7 @@ export const RESULT = {
     GROUP1: {
         R1: {
             code: '1 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -68,7 +68,7 @@ export const RESULT = {
         },
         R2: {
             code: '1 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -96,7 +96,7 @@ export const RESULT = {
         },
         R3: {
             code: '1 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -120,7 +120,7 @@ export const RESULT = {
         },
         R4: {
             code: '1 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -150,7 +150,7 @@ export const RESULT = {
         },
         R5: {
             code: '1 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -180,7 +180,7 @@ export const RESULT = {
         },
         R6: {
             code: '1 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -210,7 +210,7 @@ export const RESULT = {
         },
         R7: {
             code: '1 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -240,7 +240,7 @@ export const RESULT = {
         },
         R8: {
             code: '1 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -270,7 +270,7 @@ export const RESULT = {
         },
         R9: {
             code: '1 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -300,7 +300,7 @@ export const RESULT = {
         },
         Y1: {
             code: '1 เหลือง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -324,7 +324,7 @@ export const RESULT = {
         },
         Y2: {
             code: '1 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -351,7 +351,7 @@ export const RESULT = {
         },
         Y3: {
             code: '1 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -378,7 +378,7 @@ export const RESULT = {
         },
         Y4: {
             code: '1 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -405,7 +405,7 @@ export const RESULT = {
         },
         Y5: {
             code: '1 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -432,7 +432,7 @@ export const RESULT = {
         },
         Y6: {
             code: '1 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -444,7 +444,7 @@ export const RESULT = {
         },
         Y8: {
             code: '1 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -456,7 +456,7 @@ export const RESULT = {
         },
         Y9: {
             code: '1 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -483,7 +483,7 @@ export const RESULT = {
         },
         G1: {
             code: '1 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -510,7 +510,7 @@ export const RESULT = {
         },
         G2: {
             code: '1 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -537,7 +537,7 @@ export const RESULT = {
         },
         W1: {
             code: '1 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -564,7 +564,7 @@ export const RESULT = {
         },
         W2: {
             code: '1 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -591,7 +591,7 @@ export const RESULT = {
         },
         W3: {
             code: '1 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -618,7 +618,7 @@ export const RESULT = {
         },
         W4: {
             code: '1 ขาว 4',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -645,7 +645,7 @@ export const RESULT = {
         },
         W5: {
             code: '1 ขาว 5',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -672,7 +672,7 @@ export const RESULT = {
         },
         W6: {
             code: '1 ขาว 6',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -699,7 +699,7 @@ export const RESULT = {
         },
         W7: {
             code: '1 ขาว 7',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -728,7 +728,7 @@ export const RESULT = {
     GROUP2: {
         R1: {
             code: '2 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -763,7 +763,7 @@ export const RESULT = {
         },
         R2: {
             code: '2 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -794,7 +794,7 @@ export const RESULT = {
         },
         R3: {
             code: '2 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -820,11 +820,11 @@ export const RESULT = {
         },
         R4: {
             code: '2 แดง 4',
-            level: LEVEL.R
+            level: level.red
         },
         Y1: {
             code: '2 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -851,7 +851,7 @@ export const RESULT = {
         },
         Y4: {
             code: '2 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -863,7 +863,7 @@ export const RESULT = {
         },
         Y8: {
             code: '2 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -875,7 +875,7 @@ export const RESULT = {
         },
         Y9: {
             code: '2 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -887,7 +887,7 @@ export const RESULT = {
         },
         W1: {
             code: '2 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -904,7 +904,7 @@ export const RESULT = {
         },
         W2: {
             code: '2 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -921,7 +921,7 @@ export const RESULT = {
         },
         W3: {
             code: '2 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -938,7 +938,7 @@ export const RESULT = {
         },
         W4: {
             code: '2 ขาว 4',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -957,7 +957,7 @@ export const RESULT = {
     GROUP3: {
         R1: {
             code: '3 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -991,7 +991,7 @@ export const RESULT = {
         },
         R2: {
             code: '3 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1023,7 +1023,7 @@ export const RESULT = {
         },
         R3: {
             code: '3 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1049,7 +1049,7 @@ export const RESULT = {
         },
         R4: {
             code: '3 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1075,7 +1075,7 @@ export const RESULT = {
         },
         R5: {
             code: '3 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1106,7 +1106,7 @@ export const RESULT = {
         },
         R6: {
             code: '3 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1138,7 +1138,7 @@ export const RESULT = {
         },
         Y1: {
             code: '3 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1172,7 +1172,7 @@ export const RESULT = {
         },
         Y2: {
             code: '3 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1198,7 +1198,7 @@ export const RESULT = {
         },
         Y8: {
             code: '3 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -1210,7 +1210,7 @@ export const RESULT = {
         },
         Y9: {
             code: '3 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1244,7 +1244,7 @@ export const RESULT = {
         },
         W1: {
             code: '3 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -1261,7 +1261,7 @@ export const RESULT = {
         },
         W2: {
             code: '3 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -1295,7 +1295,7 @@ export const RESULT = {
         },
         W3: {
             code: '3 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -1318,7 +1318,7 @@ export const RESULT = {
         },
         G1: {
             code: '3 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -1332,7 +1332,7 @@ export const RESULT = {
     GROUP4: {
         R1: {
             code: '4 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1365,7 +1365,7 @@ export const RESULT = {
         },
         R2: {
             code: '4 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1395,7 +1395,7 @@ export const RESULT = {
         },
         R3: {
             code: '4 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1419,7 +1419,7 @@ export const RESULT = {
         },
         R4: {
             code: '4 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1448,7 +1448,7 @@ export const RESULT = {
         },
         R5: {
             code: '4 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1477,7 +1477,7 @@ export const RESULT = {
         },
         R6: {
             code: '4 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1506,7 +1506,7 @@ export const RESULT = {
         },
         R7: {
             code: '4 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1535,7 +1535,7 @@ export const RESULT = {
         },
         R9: {
             code: '4 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1565,7 +1565,7 @@ export const RESULT = {
         },
         Y1: {
             code: '4 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1586,7 +1586,7 @@ export const RESULT = {
         },
         Y2: {
             code: '4 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1613,7 +1613,7 @@ export const RESULT = {
         },
         Y3: {
             code: '4 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1640,7 +1640,7 @@ export const RESULT = {
         },
         Y4: {
             code: '4 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1667,7 +1667,7 @@ export const RESULT = {
         },
         Y6: {
             code: '4 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1694,7 +1694,7 @@ export const RESULT = {
         },
         Y8: {
             code: '4 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -1706,7 +1706,7 @@ export const RESULT = {
         },
         Y9: {
             code: '4 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -1733,7 +1733,7 @@ export const RESULT = {
         },
         W1: {
             code: '4 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -1763,7 +1763,7 @@ export const RESULT = {
         },
         W2: {
             code: '4 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -1794,7 +1794,7 @@ export const RESULT = {
         },
         W3: {
             code: '4 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -1824,7 +1824,7 @@ export const RESULT = {
         },
         G1: {
             code: '4 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -1836,7 +1836,7 @@ export const RESULT = {
         },
         G2: {
             code: '4 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -1850,7 +1850,7 @@ export const RESULT = {
     GROUP5: {
         R1: {
             code: '5 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1883,7 +1883,7 @@ export const RESULT = {
         },
         R2: {
             code: '5 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1913,7 +1913,7 @@ export const RESULT = {
         },
         R3: {
             code: '5 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1937,7 +1937,7 @@ export const RESULT = {
         },
         R4: {
             code: '5 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1960,7 +1960,7 @@ export const RESULT = {
         },
         R6: {
             code: '5 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -1988,7 +1988,7 @@ export const RESULT = {
         },
         Y1: {
             code: '5 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2020,7 +2020,7 @@ export const RESULT = {
         },
         Y2: {
             code: '5 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2047,7 +2047,7 @@ export const RESULT = {
         },
         Y4: {
             code: '5 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2069,7 +2069,7 @@ export const RESULT = {
         },
         Y5: {
             code: '5 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2096,7 +2096,7 @@ export const RESULT = {
         },
         Y7: {
             code: '5 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -2108,7 +2108,7 @@ export const RESULT = {
         },
         Y8: {
             code: '5 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -2120,7 +2120,7 @@ export const RESULT = {
         },
         Y9: {
             code: '5 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2148,7 +2148,7 @@ export const RESULT = {
         },
         G1: {
             code: '5 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -2180,7 +2180,7 @@ export const RESULT = {
         },
         G4: {
             code: '5 เขียว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -2213,7 +2213,7 @@ export const RESULT = {
         },
         G6: {
             code: '5 เขียว 6',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -2229,7 +2229,7 @@ export const RESULT = {
         },
         G7: {
             code: '5 เขียว 7',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -2240,7 +2240,7 @@ export const RESULT = {
         },
         G8: {
             code: '5 เขียว 8',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -2262,7 +2262,7 @@ export const RESULT = {
         },
         W1: {
             code: '5 ขาว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -2279,7 +2279,7 @@ export const RESULT = {
     GROUP6: {
         R1: {
             code: '6 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2313,7 +2313,7 @@ export const RESULT = {
         },
         R2: {
             code: '6 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2347,7 +2347,7 @@ export const RESULT = {
         },
         Y1: {
             code: '6 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2381,7 +2381,7 @@ export const RESULT = {
         },
         Y4: {
             code: '6 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2415,7 +2415,7 @@ export const RESULT = {
         },
         Y8: {
             code: '6 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -2429,7 +2429,7 @@ export const RESULT = {
     GROUP7: {
         R1: {
             code: '7 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2462,7 +2462,7 @@ export const RESULT = {
         },
         R2: {
             code: '7 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2492,7 +2492,7 @@ export const RESULT = {
         },
         R3: {
             code: '7 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2516,7 +2516,7 @@ export const RESULT = {
         },
         R4: {
             code: '7 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2539,7 +2539,7 @@ export const RESULT = {
         },
         R5: {
             code: '7 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2562,7 +2562,7 @@ export const RESULT = {
         },
         R6: {
             code: '7 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2595,7 +2595,7 @@ export const RESULT = {
         },
         R7: {
             code: '7 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2628,7 +2628,7 @@ export const RESULT = {
         },
         R8: {
             code: '7 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2661,7 +2661,7 @@ export const RESULT = {
         },
         R9: {
             code: '7 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2689,7 +2689,7 @@ export const RESULT = {
         },
         Y1: {
             code: '7 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2717,7 +2717,7 @@ export const RESULT = {
         },
         Y4: {
             code: '7 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2745,7 +2745,7 @@ export const RESULT = {
         },
         Y5: {
             code: '7 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2773,7 +2773,7 @@ export const RESULT = {
         },
         Y6: {
             code: '7 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2800,7 +2800,7 @@ export const RESULT = {
         },
         Y8: {
             code: '7 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -2812,7 +2812,7 @@ export const RESULT = {
         },
         Y9: {
             code: '7 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2840,7 +2840,7 @@ export const RESULT = {
         },
         G1: {
             code: '7 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -2873,7 +2873,7 @@ export const RESULT = {
         },
         G6: {
             code: '7 เขียว 6',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -2884,7 +2884,7 @@ export const RESULT = {
         },
         W1: {
             code: '7 ขาว 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2906,7 +2906,7 @@ export const RESULT = {
         },
         W2: {
             code: '7 ขาว 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -2930,7 +2930,7 @@ export const RESULT = {
     GROUP8: {
         R1: {
             code: '8 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -2964,7 +2964,7 @@ export const RESULT = {
         },
         R2: {
             code: '8 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3021,7 +3021,7 @@ export const RESULT = {
         },
         R3: {
             code: '8 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3078,7 +3078,7 @@ export const RESULT = {
         },
         Y1: {
             code: '8 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3109,7 +3109,7 @@ export const RESULT = {
         },
         Y2: {
             code: '8 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3140,7 +3140,7 @@ export const RESULT = {
         },
         Y8: {
             code: '8 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -3152,7 +3152,7 @@ export const RESULT = {
         },
         Y9: {
             code: '8 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3181,7 +3181,7 @@ export const RESULT = {
         },
         G1: {
             code: '8 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -3210,7 +3210,7 @@ export const RESULT = {
         },
         W1: {
             code: '8 ขาว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -3229,7 +3229,7 @@ export const RESULT = {
     GROUP9: {
         R1: {
             code: '9 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3263,7 +3263,7 @@ export const RESULT = {
         },
         R2: {
             code: '9 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3295,7 +3295,7 @@ export const RESULT = {
         },
         R3: {
             code: '9 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3321,7 +3321,7 @@ export const RESULT = {
         },
         R4: {
             code: '9 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3353,7 +3353,7 @@ export const RESULT = {
         },
         R5: {
             code: '9 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3379,7 +3379,7 @@ export const RESULT = {
         },
         R6: {
             code: '9 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3426,7 +3426,7 @@ export const RESULT = {
         },
         R7: {
             code: '9 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -3438,7 +3438,7 @@ export const RESULT = {
         },
         Y1: {
             code: '9 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3463,7 +3463,7 @@ export const RESULT = {
         },
         Y3: {
             code: '9 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3493,7 +3493,7 @@ export const RESULT = {
         },
         Y8: {
             code: '9 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -3505,7 +3505,7 @@ export const RESULT = {
         },
         Y9: {
             code: '9 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3535,7 +3535,7 @@ export const RESULT = {
         },
         W1: {
             code: '9 ขาว 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3559,7 +3559,7 @@ export const RESULT = {
         },
         W2: {
             code: '9 ขาว 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3585,7 +3585,7 @@ export const RESULT = {
     GROUP10: {
         R1: {
             code: '10 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3618,7 +3618,7 @@ export const RESULT = {
         },
         R2: {
             code: '10 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3648,7 +3648,7 @@ export const RESULT = {
         },
         R3: {
             code: '10 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3672,7 +3672,7 @@ export const RESULT = {
         },
         R4: {
             code: '10 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3703,7 +3703,7 @@ export const RESULT = {
         },
         R5: {
             code: '10 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3751,7 +3751,7 @@ export const RESULT = {
         },
         R6: {
             code: '10 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3794,7 +3794,7 @@ export const RESULT = {
         },
         R7: {
             code: '10 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3840,7 +3840,7 @@ export const RESULT = {
         },
         R8: {
             code: '10 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3886,7 +3886,7 @@ export const RESULT = {
         },
         R9: {
             code: '10 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -3910,7 +3910,7 @@ export const RESULT = {
         },
         Y1: {
             code: '10 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3956,7 +3956,7 @@ export const RESULT = {
         },
         Y2: {
             code: '10 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -3985,7 +3985,7 @@ export const RESULT = {
         },
         Y3: {
             code: '10 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4031,7 +4031,7 @@ export const RESULT = {
         },
         Y4: {
             code: '10 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4073,7 +4073,7 @@ export const RESULT = {
         },
         Y5: {
             code: '10 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4106,7 +4106,7 @@ export const RESULT = {
         },
         Y6: {
             code: '10 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4135,7 +4135,7 @@ export const RESULT = {
         },
         Y9: {
             code: '10 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4164,7 +4164,7 @@ export const RESULT = {
         },
         Y8: {
             code: '10 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -4176,7 +4176,7 @@ export const RESULT = {
         },
         G2: {
             code: '10 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -4205,7 +4205,7 @@ export const RESULT = {
         },
         G8: {
             code: '10 เขียว 8',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -4222,7 +4222,7 @@ export const RESULT = {
         },
         W1: {
             code: '10 ขาว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -4241,7 +4241,7 @@ export const RESULT = {
     GROUP12: {
         R1: {
             code: '12 แดง 1',
-            leave: LEVEL.R,
+            leave: level.red,
             advise: {
                 contents: [
                     {
@@ -4274,7 +4274,7 @@ export const RESULT = {
         },
         R2: {
             code: '12 แดง 2',
-            leave: LEVEL.R,
+            leave: level.red,
             advise: {
                 contents: [
                     {
@@ -4304,7 +4304,7 @@ export const RESULT = {
         },
         R3: {
             code: '12 แดง 3',
-            leave: LEVEL.R,
+            leave: level.red,
             advise: {
                 contents: [
                     {
@@ -4328,8 +4328,8 @@ export const RESULT = {
         },
         R4: {
             code: '12 แดง 4',
-            leave: LEVEL.R,
-            eave: LEVEL.R,
+            leave: level.red,
+            eave: level.red,
             advise: {
                 contents: [
                     {
@@ -4360,8 +4360,8 @@ export const RESULT = {
         },
         R5: {
             code: '12 แดง 5',
-            leave: LEVEL.R,
-            eave: LEVEL.R,
+            leave: level.red,
+            eave: level.red,
             advise: {
                 contents: [
                     {
@@ -4378,7 +4378,7 @@ export const RESULT = {
         },
         Y8: {
             code: '12 เหลือง 8',
-            leave: LEVEL.Y,
+            leave: level.yellow,
             advise: {
                 contents: [
 
@@ -4390,7 +4390,7 @@ export const RESULT = {
         },
         Y1: {
             code: '12 เหลือง 1',
-            leave: LEVEL.Y,
+            leave: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4408,7 +4408,7 @@ export const RESULT = {
         },
         Y2: {
             code: '12 เหลือง 2',
-            leave: LEVEL.Y,
+            leave: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4432,7 +4432,7 @@ export const RESULT = {
         },
         Y4: {
             code: '12 เหลือง 4',
-            leave: LEVEL.Y,
+            leave: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4450,7 +4450,7 @@ export const RESULT = {
         },
         Y5: {
             code: '12 เหลือง 5',
-            leave: LEVEL.Y,
+            leave: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4468,7 +4468,7 @@ export const RESULT = {
         },
         Y9: {
             code: '12 เหลือง 9',
-            leave: LEVEL.Y,
+            leave: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4486,7 +4486,7 @@ export const RESULT = {
         },
         G1: {
             code: '12 เขียว 1',
-            leave: LEVEL.G,
+            leave: level.green,
             advise: {
                 contents: [
                     {
@@ -4516,7 +4516,7 @@ export const RESULT = {
         },
         G2: {
             code: '12 เขียว 2',
-            leave: LEVEL.G,
+            leave: level.green,
             advise: {
                 contents: [
 
@@ -4528,7 +4528,7 @@ export const RESULT = {
         },
         W1: {
             code: '12 ขาว 1',
-            leave: LEVEL.W,
+            leave: level.white,
             advise: {
                 contents: [
                     {
@@ -4545,7 +4545,7 @@ export const RESULT = {
         },
         W2: {
             code: '12 ขาว 2',
-            leave: LEVEL.W,
+            leave: level.white,
             advise: {
                 contents: [
                     {
@@ -4562,7 +4562,7 @@ export const RESULT = {
         },
         W3: {
             code: '12 ขาว 3',
-            leave: LEVEL.W,
+            leave: level.white,
             advise: {
                 contents: [
                     {
@@ -4579,7 +4579,7 @@ export const RESULT = {
         },
         W4: {
             code: '12 ขาว 4',
-            leave: LEVEL.W,
+            leave: level.white,
             advise: {
                 contents: [
                     {
@@ -4598,7 +4598,7 @@ export const RESULT = {
     GROUP13: {
         R1: {
             code: '13 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4632,7 +4632,7 @@ export const RESULT = {
         },
         R2: {
             code: '13 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4662,7 +4662,7 @@ export const RESULT = {
         },
         R3: {
             code: '13 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4687,7 +4687,7 @@ export const RESULT = {
         },
         R4: {
             code: '13 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4717,7 +4717,7 @@ export const RESULT = {
         },
         R5: {
             code: '13 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4746,7 +4746,7 @@ export const RESULT = {
         },
         R6: {
             code: '13 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4790,7 +4790,7 @@ export const RESULT = {
         },
         R7: {
             code: '13 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4827,7 +4827,7 @@ export const RESULT = {
         },
         R8: {
             code: '13 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -4889,7 +4889,7 @@ export const RESULT = {
         },
         R9: {
             code: '13 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -4901,7 +4901,7 @@ export const RESULT = {
         },
         Y1: {
             code: '13 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -4963,7 +4963,7 @@ export const RESULT = {
         },
         Y4: {
             code: '13 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -5024,7 +5024,7 @@ export const RESULT = {
         },
         Y5: {
             code: '13 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -5085,7 +5085,7 @@ export const RESULT = {
         },
         Y8: {
             code: '13 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                 ],
@@ -5095,7 +5095,7 @@ export const RESULT = {
         },
         Y9: {
             code: '13 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -5156,7 +5156,7 @@ export const RESULT = {
         },
         G1: {
             code: '13 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -5167,7 +5167,7 @@ export const RESULT = {
         },
         G4: {
             code: '13 เขียว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -5199,7 +5199,7 @@ export const RESULT = {
         },
         G5: {
             code: '13 เขียว 5',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -5210,7 +5210,7 @@ export const RESULT = {
         },
         G6: {
             code: '13 เขียว 6',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -5242,7 +5242,7 @@ export const RESULT = {
         },
         G7: {
             code: '13 เขียว 7',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -5269,7 +5269,7 @@ export const RESULT = {
         },
         G8: {
             code: '13 เขียว 8',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -5286,7 +5286,7 @@ export const RESULT = {
         },
         G9: {
             code: '13 เขียว 9',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -5297,7 +5297,7 @@ export const RESULT = {
         },
         W1: {
             code: '13 ขาว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -5317,7 +5317,7 @@ export const RESULT = {
         },
         W8: {
             code: '13 ขาว 8',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -5329,7 +5329,7 @@ export const RESULT = {
         },
         W9: {
             code: '13 ขาว 9',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -5344,7 +5344,7 @@ export const RESULT = {
     GROUP14: {
         R1: {
             code: '14 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5379,7 +5379,7 @@ export const RESULT = {
         },
         R2: {
             code: '14 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5411,7 +5411,7 @@ export const RESULT = {
         },
         R3: {
             code: '14 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5437,7 +5437,7 @@ export const RESULT = {
         },
         R6: {
             code: '14 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5476,7 +5476,7 @@ export const RESULT = {
         },
         R7: {
             code: '14 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5512,7 +5512,7 @@ export const RESULT = {
         },
         R9: {
             code: '14 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5537,7 +5537,7 @@ export const RESULT = {
         },
         Y4: {
             code: '14 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -5556,7 +5556,7 @@ export const RESULT = {
         },
         Y8: {
             code: '14 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -5580,7 +5580,7 @@ export const RESULT = {
         },
         Y9: {
             code: '14 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -5599,7 +5599,7 @@ export const RESULT = {
         },
         G3: {
             code: '14 เขียว 3',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -5627,7 +5627,7 @@ export const RESULT = {
         },
         G4: {
             code: '14 เขียว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -5639,7 +5639,7 @@ export const RESULT = {
         },
         G5: {
             code: '14 เขียว 5',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -5651,7 +5651,7 @@ export const RESULT = {
         },
         G8: {
             code: '14 เขียว 8',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -5668,7 +5668,7 @@ export const RESULT = {
         },
         W1: {
             code: '14 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -5687,7 +5687,7 @@ export const RESULT = {
     GROUP15: {
         R1: {
             code: '15 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5721,7 +5721,7 @@ export const RESULT = {
         },
         R2: {
             code: '15 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5751,7 +5751,7 @@ export const RESULT = {
         },
         R3: {
             code: '15 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5777,7 +5777,7 @@ export const RESULT = {
         },
         R4: {
             code: '15 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5802,7 +5802,7 @@ export const RESULT = {
         },
         R5: {
             code: '15 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -5814,7 +5814,7 @@ export const RESULT = {
         },
         R6: {
             code: '15 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5846,7 +5846,7 @@ export const RESULT = {
         },
         R7: {
             code: '15 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5877,7 +5877,7 @@ export const RESULT = {
         },
         R8: {
             code: '15 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5903,7 +5903,7 @@ export const RESULT = {
         },
         R9: {
             code: '15 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5929,7 +5929,7 @@ export const RESULT = {
         },
         R10: {
             code: '15 แดง 10',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -5955,7 +5955,7 @@ export const RESULT = {
         },
         Y1: {
             code: '15 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -5981,7 +5981,7 @@ export const RESULT = {
         },
         Y4: {
             code: '15 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6007,7 +6007,7 @@ export const RESULT = {
         },
         Y5: {
             code: '15 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6033,7 +6033,7 @@ export const RESULT = {
         },
         Y6: {
             code: '15 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6059,7 +6059,7 @@ export const RESULT = {
         },
         Y8: {
             code: '15 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -6070,7 +6070,7 @@ export const RESULT = {
         },
         Y7: {
             code: '15 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6096,7 +6096,7 @@ export const RESULT = {
         },
         Y9: {
             code: '15 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6122,7 +6122,7 @@ export const RESULT = {
         },
         W1: {
             code: '15 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -6138,7 +6138,7 @@ export const RESULT = {
         },
         W2: {
             code: '15 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -6154,7 +6154,7 @@ export const RESULT = {
         },
         G1: {
             code: '15 เขียว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -6165,7 +6165,7 @@ export const RESULT = {
         },
         G2: {
             code: '15 เขียว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -6176,7 +6176,7 @@ export const RESULT = {
         },
         G4: {
             code: '15 เขียว 4',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -6187,7 +6187,7 @@ export const RESULT = {
         },
         G6: {
             code: '15 เขียว 6',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -6200,7 +6200,7 @@ export const RESULT = {
     GROUP16: {
         R1: {
             code: '16 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6236,7 +6236,7 @@ export const RESULT = {
         },
         R2: {
             code: '16 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6266,7 +6266,7 @@ export const RESULT = {
         },
         R3: {
             code: '16 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6292,7 +6292,7 @@ export const RESULT = {
         },
         R4: {
             code: '16 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6329,7 +6329,7 @@ export const RESULT = {
         },
         R5: {
             code: '16 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6366,7 +6366,7 @@ export const RESULT = {
         },
         R6: {
             code: '16 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6403,7 +6403,7 @@ export const RESULT = {
         },
         R7: {
             code: '16 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6440,7 +6440,7 @@ export const RESULT = {
         },
         R8: {
             code: '16 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6477,7 +6477,7 @@ export const RESULT = {
         },
         R9: {
             code: '16 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6514,7 +6514,7 @@ export const RESULT = {
         },
         R10: {
             code: '16 แดง 10',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6551,7 +6551,7 @@ export const RESULT = {
         },
         Y1: {
             code: '16 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6588,7 +6588,7 @@ export const RESULT = {
         },
         Y2: {
             code: '16 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -6600,7 +6600,7 @@ export const RESULT = {
         },
         Y4: {
             code: '16 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6637,7 +6637,7 @@ export const RESULT = {
         },
         Y5: {
             code: '16 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6674,7 +6674,7 @@ export const RESULT = {
         },
         Y8: {
             code: '16 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -6686,7 +6686,7 @@ export const RESULT = {
         },
         Y9: {
             code: '16 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6723,7 +6723,7 @@ export const RESULT = {
         },
         G1: {
             code: '16 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -6734,7 +6734,7 @@ export const RESULT = {
         },
         W1: {
             code: '16 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -6752,7 +6752,7 @@ export const RESULT = {
     GROUP17: {
         R1: {
             code: '17 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6785,7 +6785,7 @@ export const RESULT = {
         },
         R2: {
             code: '17 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6815,7 +6815,7 @@ export const RESULT = {
         },
         R3: {
             code: '17 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6840,7 +6840,7 @@ export const RESULT = {
         },
         R4: {
             code: '17 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -6865,7 +6865,7 @@ export const RESULT = {
         },
         Y1: {
             code: '17 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -6877,7 +6877,7 @@ export const RESULT = {
         },
         Y2: {
             code: '17 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -6889,7 +6889,7 @@ export const RESULT = {
         },
         Y4: {
             code: '17 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6918,7 +6918,7 @@ export const RESULT = {
         },
         Y5: {
             code: '17 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6947,7 +6947,7 @@ export const RESULT = {
         },
         Y7: {
             code: '17 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -6976,7 +6976,7 @@ export const RESULT = {
         },
         Y8: {
             code: '17 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7005,7 +7005,7 @@ export const RESULT = {
         },
         Y9: {
             code: '17 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7034,7 +7034,7 @@ export const RESULT = {
         },
         Y6: {
             code: '17 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7053,7 +7053,7 @@ export const RESULT = {
         },
         G1: {
             code: '17 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -7065,7 +7065,7 @@ export const RESULT = {
         },
         G2: {
             code: '17 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -7077,7 +7077,7 @@ export const RESULT = {
         },
         G4: {
             code: '17 เขียว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -7089,7 +7089,7 @@ export const RESULT = {
         },
         G5: {
             code: '17 เขียว 5',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -7106,7 +7106,7 @@ export const RESULT = {
         },
         G6: {
             code: '17 เขียว 6',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -7123,7 +7123,7 @@ export const RESULT = {
         },
         G7: {
             code: '17 เขียว 7',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -7140,7 +7140,7 @@ export const RESULT = {
         },
         W1: {
             code: '17 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -7157,7 +7157,7 @@ export const RESULT = {
         },
         W2: {
             code: '17 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -7174,7 +7174,7 @@ export const RESULT = {
         },
         W3: {
             code: '17 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -7191,7 +7191,7 @@ export const RESULT = {
         },
         W4: {
             code: '17 ขาว 4',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -7210,7 +7210,7 @@ export const RESULT = {
     GROUP18: {
         R1: {
             code: '18 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7243,7 +7243,7 @@ export const RESULT = {
         },
         R2: {
             code: '18 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7273,7 +7273,7 @@ export const RESULT = {
         },
         R3: {
             code: '18 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7297,7 +7297,7 @@ export const RESULT = {
         },
         R4: {
             code: '18 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7321,7 +7321,7 @@ export const RESULT = {
         },
         R5: {
             code: '18 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7345,7 +7345,7 @@ export const RESULT = {
         },
         R6: {
             code: '18 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7369,7 +7369,7 @@ export const RESULT = {
         },
         R7: {
             code: '18 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7393,7 +7393,7 @@ export const RESULT = {
         },
         R8: {
             code: '18 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -7405,7 +7405,7 @@ export const RESULT = {
         },
         R9: {
             code: '18 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7429,7 +7429,7 @@ export const RESULT = {
         },
         Y1: {
             code: '18 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7454,7 +7454,7 @@ export const RESULT = {
         },
         Y2: {
             code: '18 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7479,7 +7479,7 @@ export const RESULT = {
         },
         Y3: {
             code: '18 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -7491,7 +7491,7 @@ export const RESULT = {
         },
         Y6: {
             code: '18 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7516,7 +7516,7 @@ export const RESULT = {
         },
         Y7: {
             code: '18 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7541,7 +7541,7 @@ export const RESULT = {
         },
         Y8: {
             code: '18 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                 ],
@@ -7552,7 +7552,7 @@ export const RESULT = {
         },
         Y9: {
             code: '18 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7577,7 +7577,7 @@ export const RESULT = {
         },
         G1: {
             code: '18 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                 ],
@@ -7588,7 +7588,7 @@ export const RESULT = {
         },
         W1: {
             code: '18 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                 ],
@@ -7601,7 +7601,7 @@ export const RESULT = {
     GROUP19: {
         R1: {
             code: '19 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7634,7 +7634,7 @@ export const RESULT = {
         },
         R2: {
             code: '19 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7664,7 +7664,7 @@ export const RESULT = {
         },
         R3: {
             code: '19 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7689,7 +7689,7 @@ export const RESULT = {
         },
         R4: {
             code: '19 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7714,7 +7714,7 @@ export const RESULT = {
         },
         R6: {
             code: '19 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7750,7 +7750,7 @@ export const RESULT = {
         },
         R7: {
             code: '19 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7774,7 +7774,7 @@ export const RESULT = {
         },
         R8: {
             code: '19 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7799,7 +7799,7 @@ export const RESULT = {
         },
         R9: {
             code: '19 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -7823,7 +7823,7 @@ export const RESULT = {
         },
         Y1: {
             code: '19 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7853,7 +7853,7 @@ export const RESULT = {
         },
         Y2: {
             code: '19 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7883,7 +7883,7 @@ export const RESULT = {
         },
         Y3: {
             code: '19 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7913,7 +7913,7 @@ export const RESULT = {
         },
         Y4: {
             code: '19 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7943,7 +7943,7 @@ export const RESULT = {
         },
         Y5: {
             code: '19 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -7973,7 +7973,7 @@ export const RESULT = {
         },
         Y7: {
             code: '19 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8003,7 +8003,7 @@ export const RESULT = {
         },
         Y6: {
             code: '19 เหลือง 6',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -8014,7 +8014,7 @@ export const RESULT = {
         },
         Y8: {
             code: '19 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8044,7 +8044,7 @@ export const RESULT = {
         },
         Y9: {
             code: '19 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8074,7 +8074,7 @@ export const RESULT = {
         },
         G1: {
             code: '19 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -8090,7 +8090,7 @@ export const RESULT = {
         },
         G2: {
             code: '19 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -8106,7 +8106,7 @@ export const RESULT = {
         },
         W1: {
             code: '19 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -8122,7 +8122,7 @@ export const RESULT = {
         },
         W2: {
             code: '19 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -8138,7 +8138,7 @@ export const RESULT = {
         },
         W6: {
             code: '19 ขาว 6',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -8149,7 +8149,7 @@ export const RESULT = {
         },
         G3: {
             code: '19 เขียว 3',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -8160,7 +8160,7 @@ export const RESULT = {
         },
         G5: {
             code: '19 เขียว 5',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -8173,7 +8173,7 @@ export const RESULT = {
     GROUP20: {
         R1: {
             code: '20 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8206,7 +8206,7 @@ export const RESULT = {
         },
         R2: {
             code: '20 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8231,7 +8231,7 @@ export const RESULT = {
         },
         R3: {
             code: '20 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8256,7 +8256,7 @@ export const RESULT = {
         },
         R4: {
             code: '20 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8281,7 +8281,7 @@ export const RESULT = {
         },
         R5: {
             code: '20 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8305,7 +8305,7 @@ export const RESULT = {
         },
         R6: {
             code: '20 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8340,7 +8340,7 @@ export const RESULT = {
         },
         R8: {
             code: '20 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8374,7 +8374,7 @@ export const RESULT = {
         },
         R7: {
             code: '20 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8408,7 +8408,7 @@ export const RESULT = {
         },
         R9: {
             code: '20 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8432,7 +8432,7 @@ export const RESULT = {
         },
         Y1: {
             code: '20 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8456,7 +8456,7 @@ export const RESULT = {
         },
         Y2: {
             code: '20 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8480,7 +8480,7 @@ export const RESULT = {
         },
         Y5: {
             code: '20 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8504,7 +8504,7 @@ export const RESULT = {
         },
         Y6: {
             code: '20 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8528,7 +8528,7 @@ export const RESULT = {
         },
         Y7: {
             code: '20 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8562,7 +8562,7 @@ export const RESULT = {
         },
         Y8: {
             code: '20 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -8596,7 +8596,7 @@ export const RESULT = {
         },
         Y9: {
             code: '20 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -8608,7 +8608,7 @@ export const RESULT = {
         },
         G1: {
             code: '20 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -8630,7 +8630,7 @@ export const RESULT = {
         },
         G2: {
             code: '20 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -8641,7 +8641,7 @@ export const RESULT = {
         },
         G3: {
             code: '20 เขียว 3',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -8652,7 +8652,7 @@ export const RESULT = {
         },
         W1: {
             code: '20 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -8668,7 +8668,7 @@ export const RESULT = {
         },
         W2: {
             code: '20 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -8684,7 +8684,7 @@ export const RESULT = {
         },
         W3: {
             code: '20 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -8700,7 +8700,7 @@ export const RESULT = {
         },
         W4: {
             code: '20 ขาว 4',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -8716,7 +8716,7 @@ export const RESULT = {
         },
         W5: {
             code: '20 ขาว 5',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -8727,7 +8727,7 @@ export const RESULT = {
         },
         W6: {
             code: '20 ขาว 6',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -8738,7 +8738,7 @@ export const RESULT = {
         },
         W7: {
             code: '20 ขาว 7',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -8751,7 +8751,7 @@ export const RESULT = {
     GROUP21: {
         R1: {
             code: '21 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8786,7 +8786,7 @@ export const RESULT = {
         },
         R2: {
             code: '21 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8831,7 +8831,7 @@ export const RESULT = {
         },
         R3: {
             code: '21 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8876,7 +8876,7 @@ export const RESULT = {
         },
         R4: {
             code: '21 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8921,7 +8921,7 @@ export const RESULT = {
         },
         R5: {
             code: '21 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -8968,7 +8968,7 @@ export const RESULT = {
         },
         R6: {
             code: '21 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -8980,7 +8980,7 @@ export const RESULT = {
         },
         R7: {
             code: '21 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -8992,7 +8992,7 @@ export const RESULT = {
         },
         R8: {
             code: '21 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9037,7 +9037,7 @@ export const RESULT = {
         },
         R9: {
             code: '21 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9081,7 +9081,7 @@ export const RESULT = {
         },
         Y1: {
             code: '21 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -9126,7 +9126,7 @@ export const RESULT = {
         },
         Y2: {
             code: '21 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -9172,7 +9172,7 @@ export const RESULT = {
         },
         Y3: {
             code: '21 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -9218,7 +9218,7 @@ export const RESULT = {
         },
         Y4: {
             code: '21 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -9264,7 +9264,7 @@ export const RESULT = {
         },
         Y5: {
             code: '21 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -9309,7 +9309,7 @@ export const RESULT = {
         },
         Y6: {
             code: '21 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -9321,7 +9321,7 @@ export const RESULT = {
         },
         Y8: {
             code: '21 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -9367,7 +9367,7 @@ export const RESULT = {
         },
         Y9: {
             code: '21 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -9407,7 +9407,7 @@ export const RESULT = {
         },
         G1: {
             code: '21 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -9425,7 +9425,7 @@ export const RESULT = {
         },
         G2: {
             code: '21 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -9443,7 +9443,7 @@ export const RESULT = {
         },
         G4: {
             code: '21 เขียว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -9461,7 +9461,7 @@ export const RESULT = {
         },
         G5: {
             code: '21 เขียว 5',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -9479,7 +9479,7 @@ export const RESULT = {
         },
         G7: {
             code: '21 เขียว 7',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -9496,7 +9496,7 @@ export const RESULT = {
         },
         G8: {
             code: '21 เขียว 8',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -9514,7 +9514,7 @@ export const RESULT = {
         },
         W1: {
             code: '21 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -9532,7 +9532,7 @@ export const RESULT = {
         },
         W2: {
             code: '21 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -9550,7 +9550,7 @@ export const RESULT = {
         },
         W3: {
             code: '21 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -9568,7 +9568,7 @@ export const RESULT = {
         },
         W4: {
             code: '21 ขาว 4',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -9586,7 +9586,7 @@ export const RESULT = {
         },
         W5: {
             code: '21 ขาว 5',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -9606,7 +9606,7 @@ export const RESULT = {
     GROUP22: {
         R1: {
             code: '22 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9640,7 +9640,7 @@ export const RESULT = {
         },
         R2: {
             code: '22 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9682,7 +9682,7 @@ export const RESULT = {
         },
         R3: {
             code: '22 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9724,7 +9724,7 @@ export const RESULT = {
         },
         R4: {
             code: '22 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9771,7 +9771,7 @@ export const RESULT = {
         },
         R5: {
             code: '22 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9818,7 +9818,7 @@ export const RESULT = {
         },
         R6: {
             code: '22 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9859,7 +9859,7 @@ export const RESULT = {
         },
         R7: {
             code: '22 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9900,7 +9900,7 @@ export const RESULT = {
         },
         R8: {
             code: '22 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9941,7 +9941,7 @@ export const RESULT = {
         },
         R9: {
             code: '22 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -9982,7 +9982,7 @@ export const RESULT = {
         },
         Y1: {
             code: '22 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10023,7 +10023,7 @@ export const RESULT = {
         },
         Y2: {
             code: '22 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10065,7 +10065,7 @@ export const RESULT = {
         },
         Y3: {
             code: '22 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10107,7 +10107,7 @@ export const RESULT = {
         },
         Y4: {
             code: '22 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -10119,7 +10119,7 @@ export const RESULT = {
         },
         Y5: {
             code: '22 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10161,7 +10161,7 @@ export const RESULT = {
         },
         Y6: {
             code: '22 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10203,7 +10203,7 @@ export const RESULT = {
         },
         Y7: {
             code: '22 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10245,7 +10245,7 @@ export const RESULT = {
         },
         Y8: {
             code: '22 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10286,7 +10286,7 @@ export const RESULT = {
         },
         Y9: {
             code: '22 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10322,7 +10322,7 @@ export const RESULT = {
         },
         G3: {
             code: '22 เขียว 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10340,7 +10340,7 @@ export const RESULT = {
         },
         G5: {
             code: '22 เขียว 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -10352,7 +10352,7 @@ export const RESULT = {
         },
         G6: {
             code: '22 เขียว 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10370,7 +10370,7 @@ export const RESULT = {
         },
         G7: {
             code: '22 เขียว 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -10382,7 +10382,7 @@ export const RESULT = {
         },
         G8: {
             code: '22 เขียว 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10400,7 +10400,7 @@ export const RESULT = {
         },
         W1: {
             code: '22 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -10418,7 +10418,7 @@ export const RESULT = {
         },
         W2: {
             code: '22 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -10436,7 +10436,7 @@ export const RESULT = {
         },
         W3: {
             code: '22 ขาว 3',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
                     {
@@ -10456,7 +10456,7 @@ export const RESULT = {
     GROUP23: {
         R1: {
             code: '23 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -10491,7 +10491,7 @@ export const RESULT = {
         },
         R2: {
             code: '23 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -10531,7 +10531,7 @@ export const RESULT = {
         },
         R3: {
             code: '23 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -10566,7 +10566,7 @@ export const RESULT = {
         },
         R4: {
             code: '23 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -10601,7 +10601,7 @@ export const RESULT = {
         },
         R5: {
             code: '23 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -10642,7 +10642,7 @@ export const RESULT = {
         },
         R6: {
             code: '23 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -10653,7 +10653,7 @@ export const RESULT = {
         },
         R7: {
             code: '23 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -10681,7 +10681,7 @@ export const RESULT = {
         },
         R9: {
             code: '23 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -10709,7 +10709,7 @@ export const RESULT = {
         },
         Y1: {
             code: '23 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10738,7 +10738,7 @@ export const RESULT = {
         },
         Y2: {
             code: '23 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10773,7 +10773,7 @@ export const RESULT = {
         },
         Y3: {
             code: '23 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10808,7 +10808,7 @@ export const RESULT = {
         },
         Y4: {
             code: '23 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10843,7 +10843,7 @@ export const RESULT = {
         },
         Y5: {
             code: '23 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10873,7 +10873,7 @@ export const RESULT = {
         },
         Y6: {
             code: '23 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10907,7 +10907,7 @@ export const RESULT = {
         },
         Y7: {
             code: '23 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -10919,7 +10919,7 @@ export const RESULT = {
         },
         Y9: {
             code: '23 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -10953,7 +10953,7 @@ export const RESULT = {
         },
         G1: {
             code: '23 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -10976,7 +10976,7 @@ export const RESULT = {
         },
         G3: {
             code: '23 เขียว 3',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -10988,7 +10988,7 @@ export const RESULT = {
         },
         G4: {
             code: '23 เขียว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -11011,7 +11011,7 @@ export const RESULT = {
         },
         G5: {
             code: '23 เขียว 5',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -11023,7 +11023,7 @@ export const RESULT = {
         },
         W1: {
             code: '23 ขาว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -11046,7 +11046,7 @@ export const RESULT = {
         },
         W4: {
             code: '23 ขาว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -11071,7 +11071,7 @@ export const RESULT = {
     GROUP24: {
         R1: {
             code: '24 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11105,7 +11105,7 @@ export const RESULT = {
         },
         R2: {
             code: '23 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11145,7 +11145,7 @@ export const RESULT = {
         },
         R3: {
             code: '24 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11179,7 +11179,7 @@ export const RESULT = {
         },
         R4: {
             code: '24 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11213,7 +11213,7 @@ export const RESULT = {
         },
         R5: {
             code: '24 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11255,7 +11255,7 @@ export const RESULT = {
         },
         R6: {
             code: '24 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11297,7 +11297,7 @@ export const RESULT = {
         },
         R7: {
             code: '24 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11338,7 +11338,7 @@ export const RESULT = {
         },
         R8: {
             code: '24 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11372,7 +11372,7 @@ export const RESULT = {
         },
         R9: {
             code: '24 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11406,7 +11406,7 @@ export const RESULT = {
         },
         Y1: {
             code: '24 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11440,7 +11440,7 @@ export const RESULT = {
         },
         Y2: {
             code: '24 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11475,7 +11475,7 @@ export const RESULT = {
         },
         Y3: {
             code: '24 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11515,7 +11515,7 @@ export const RESULT = {
         },
         Y4: {
             code: '24 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11543,7 +11543,7 @@ export const RESULT = {
         },
         Y5: {
             code: '24 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11577,7 +11577,7 @@ export const RESULT = {
         },
         Y6: {
             code: '24 เหลือง 6',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11611,7 +11611,7 @@ export const RESULT = {
         },
         Y7: {
             code: '24 เหลือง 7',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11645,7 +11645,7 @@ export const RESULT = {
         },
         Y9: {
             code: '24 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11679,7 +11679,7 @@ export const RESULT = {
         },
         G1: {
             code: '24 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -11696,7 +11696,7 @@ export const RESULT = {
         },
         G2: {
             code: '24 เขียว 2',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -11714,7 +11714,7 @@ export const RESULT = {
         },
         G3: {
             code: '24 เขียว 3',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -11732,7 +11732,7 @@ export const RESULT = {
         },
         G4: {
             code: '24 เขียว 4',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -11750,7 +11750,7 @@ export const RESULT = {
         },
         G6: {
             code: '24 เขียว 6',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -11762,7 +11762,7 @@ export const RESULT = {
         },
         G9: {
             code: '24 เขียว 9',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -11775,7 +11775,7 @@ export const RESULT = {
         },
         W1: {
             code: '24 ขาว 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11793,7 +11793,7 @@ export const RESULT = {
         },
         W2: {
             code: '24 ขาว 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11811,7 +11811,7 @@ export const RESULT = {
         },
         W3: {
             code: '24 ขาว 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11829,7 +11829,7 @@ export const RESULT = {
         },
         W4: {
             code: '24 ขาว 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -11849,7 +11849,7 @@ export const RESULT = {
     GROUP25: {
         R1: {
             code: '25 แดง 1',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11883,7 +11883,7 @@ export const RESULT = {
         },
         R2: {
             code: '25 แดง 2',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11923,7 +11923,7 @@ export const RESULT = {
         },
         R3: {
             code: '25 แดง 3',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -11963,7 +11963,7 @@ export const RESULT = {
         },
         R4: {
             code: '25 แดง 4',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -12003,7 +12003,7 @@ export const RESULT = {
         },
         R5: {
             code: '25 แดง 5',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -12044,7 +12044,7 @@ export const RESULT = {
         },
         R6: {
             code: '25 แดง 6',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
 
@@ -12055,7 +12055,7 @@ export const RESULT = {
         },
         R7: {
             code: '25 แดง 7',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -12089,7 +12089,7 @@ export const RESULT = {
         },
         R8: {
             code: '25 แดง 8',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -12123,7 +12123,7 @@ export const RESULT = {
         },
         R9: {
             code: '25 แดง 9',
-            level: LEVEL.R,
+            level: level.red,
             advise: {
                 contents: [
                     {
@@ -12157,7 +12157,7 @@ export const RESULT = {
         },
         Y1: {
             code: '25 เหลือง 1',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -12192,7 +12192,7 @@ export const RESULT = {
         },
         Y2: {
             code: '25 เหลือง 2',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -12227,7 +12227,7 @@ export const RESULT = {
         },
         Y3: {
             code: '25 เหลือง 3',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -12239,7 +12239,7 @@ export const RESULT = {
         },
         Y4: {
             code: '25 เหลือง 4',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -12274,7 +12274,7 @@ export const RESULT = {
         },
         Y5: {
             code: '25 เหลือง 5',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -12286,7 +12286,7 @@ export const RESULT = {
         },
         Y8: {
             code: '25 เหลือง 8',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
 
@@ -12298,7 +12298,7 @@ export const RESULT = {
         },
         Y9: {
             code: '25 เหลือง 9',
-            level: LEVEL.Y,
+            level: level.yellow,
             advise: {
                 contents: [
                     {
@@ -12333,7 +12333,7 @@ export const RESULT = {
         },
         G1: {
             code: '25 เขียว 1',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -12345,7 +12345,7 @@ export const RESULT = {
         },
         G6: {
             code: '25 เขียว 6',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -12357,7 +12357,7 @@ export const RESULT = {
         },
         G7: {
             code: '25 เขียว 7',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
                     {
@@ -12373,7 +12373,7 @@ export const RESULT = {
         },
         G8: {
             code: '25 เขียว 8',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -12385,7 +12385,7 @@ export const RESULT = {
         },
         G9: {
             code: '25 เขียว 9',
-            level: LEVEL.G,
+            level: level.green,
             advise: {
                 contents: [
 
@@ -12397,7 +12397,7 @@ export const RESULT = {
         },
         W1: {
             code: '25 ขาว 1',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -12409,7 +12409,7 @@ export const RESULT = {
         },
         W2: {
             code: '25 ขาว 2',
-            level: LEVEL.W,
+            level: level.white,
             advise: {
                 contents: [
 
@@ -12435,22 +12435,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y9.code,
                             advise: RESULT.GROUP1.Y9.advise,
                         }
@@ -12462,18 +12462,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R1.code,
                             advise: RESULT.GROUP1.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -12484,78 +12484,78 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -12566,18 +12566,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -12588,23 +12588,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R2.code,
                             advise: RESULT.GROUP1.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y8.code,
                             advise: RESULT.GROUP1.Y8.advise,
                         }
@@ -12614,7 +12614,7 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 21,
                 criteria: {
@@ -12623,19 +12623,19 @@ export const QUESTIONS = [
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
 
@@ -12647,22 +12647,22 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ปวด/จุกเสียด/แน่นยอดอก/ลิ้นปี่/ท้องส่วนบน (เหนือสะดือ)',
                         to: 7
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ปวดท้องน้อย/หลัง/บั้นเอว/สีข้าง',
                         to: 8
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ปวดไม่จำเพาะเจาะจง/อื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y3.code,
                             advise: RESULT.GROUP1.Y3.advise,
                         }
@@ -12674,23 +12674,23 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุมากกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R9.code,
                             advise: RESULT.GROUP1.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุน้อยกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y3.code,
                             advise: RESULT.GROUP1.Y3.advise,
                         }
@@ -12702,12 +12702,12 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่เกิดอาการบาดเจ็บ',
                         to: 9
                     },
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'เกิดอาการบาดเจ็บ',
                         module: 21,
                     },
@@ -12718,34 +12718,34 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุมากกว่า 65 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R8.code,
                             advise: RESULT.GROUP1.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุ 50 - 65 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y4.code,
                             advise: RESULT.GROUP1.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุน้อยกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y3.code,
                             advise: RESULT.GROUP1.Y3.advise,
                         }
@@ -12757,12 +12757,12 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'อาเจียน',
                         to: 11
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่อาเจียน',
                         to: 12,
                     },
@@ -12773,45 +12773,45 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อาเจียนเป็นเลือด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R5.code,
                             advise: RESULT.GROUP1.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ถ่ายอุจจาระดำ / แดงคล้ำ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R6.code,
                             advise: RESULT.GROUP1.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: '(กรณีเป็นผู้หญิง)มีเลือดออกทางช่องคลอด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP1.R7.code,
                             advise: RESULT.GROUP1.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่เห็นมีเลือดออก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP1.G1.code,
                             advise: RESULT.GROUP1.G1.advise,
                         }
@@ -12823,37 +12823,37 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ท้องส่วนบน เหนือสะดือ',
                         to: 13
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ท้องน้อย',
                         to: 14
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หลัง',
                         to: 16
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'บั้นเอว/สีข้าง',
                         to: 19
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ขาหนีบ',
                         to: 20
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ระบุบริเวณที่ปวดชัดเจนไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W1.code,
                             advise: RESULT.GROUP1.W1.advise,
                         }
@@ -12865,23 +12865,23 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุมากกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y6.code,
                             advise: RESULT.GROUP1.Y6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุน้อยกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W2.code,
                             advise: RESULT.GROUP1.W2.advise,
                         }
@@ -12894,12 +12894,12 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 15
                     },
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'ใช่',
                         module: 21,
                     },
@@ -12910,23 +12910,23 @@ export const QUESTIONS = [
                 from: 15,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุมากกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y4.code,
                             advise: RESULT.GROUP1.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุน้อยกว่า 50 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W2.code,
                             advise: RESULT.GROUP1.W2.advise,
                         }
@@ -12939,17 +12939,17 @@ export const QUESTIONS = [
                 from: 16,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 17
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W6.code,
                             advise: RESULT.GROUP1.W6.advise,
                         }
@@ -12961,12 +12961,12 @@ export const QUESTIONS = [
                 from: 17,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'อายุมากกว่า 50 ปี',
                         to: 18
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'อายุน้อยกว่า 50 ปี',
                         to: 19
                     },
@@ -12977,23 +12977,23 @@ export const QUESTIONS = [
                 from: 18,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y4.code,
                             advise: RESULT.GROUP1.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W3.code,
                             advise: RESULT.GROUP1.W3.advise,
                         }
@@ -13006,23 +13006,23 @@ export const QUESTIONS = [
                 from: 19,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP1.Y5.code,
                             advise: RESULT.GROUP1.Y5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W4.code,
                             advise: RESULT.GROUP1.W4.advise,
                         }
@@ -13035,23 +13035,23 @@ export const QUESTIONS = [
                 from: 20,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP1.G1.code,
                             advise: RESULT.GROUP1.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W5.code,
                             advise: RESULT.GROUP1.W5.advise,
                         }
@@ -13064,12 +13064,12 @@ export const QUESTIONS = [
                 from: 21,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มี',
                         to: 22
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 10
                     },
@@ -13080,23 +13080,23 @@ export const QUESTIONS = [
                 from: 22,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'สายสวนปัสสาวะ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP1.W7.code,
                             advise: RESULT.GROUP1.W7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'สายสวนอื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP1.G2.code,
                             advise: RESULT.GROUP1.G2.advise,
                         }
@@ -13118,22 +13118,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP2.Y9.code,
                             advise: RESULT.GROUP2.Y9.advise,
                         }
@@ -13145,18 +13145,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R1.code,
                             advise: RESULT.GROUP2.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -13167,78 +13167,78 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -13249,18 +13249,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -13271,23 +13271,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP2.R2.code,
                             advise: RESULT.GROUP2.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP2.Y8.code,
                             advise: RESULT.GROUP2.Y8.advise,
                         }
@@ -13297,36 +13297,36 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP2.R3.code,
                     advise: RESULT.GROUP2.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลม',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อาการซึมลง',
                         checked: false,
                     },
@@ -13337,12 +13337,12 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เคย',
                         to: 7
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่เคย',
                         to: 8
                     },
@@ -13353,18 +13353,18 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP2.Y1.code,
                             advise: RESULT.GROUP2.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -13375,18 +13375,18 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP2.Y4.code,
                             advise: RESULT.GROUP2.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 9
                     },
@@ -13397,29 +13397,29 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นผื่นคัน / ลมพิษ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP2.W3.code,
                             advise: RESULT.GROUP2.W3.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อาการอื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP2.W2.code,
                             advise: RESULT.GROUP2.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีอาการผิดปกติ',
                         to: 11
                     },
@@ -13430,23 +13430,23 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เคย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP2.W4.code,
                             advise: RESULT.GROUP2.W4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่เคย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP2.W1.code,
                             advise: RESULT.GROUP2.W1.advise,
                         }
@@ -13468,22 +13468,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP3.Y9.code,
                             advise: RESULT.GROUP3.Y9.advise,
                         }
@@ -13495,17 +13495,17 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R1.code,
                             advise: RESULT.GROUP3.R1.advise,
                         }
@@ -13517,78 +13517,78 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -13599,18 +13599,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -13621,23 +13621,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R2.code,
                             advise: RESULT.GROUP3.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP3.Y8.code,
                             advise: RESULT.GROUP3.Y8.advise,
                         }
@@ -13647,29 +13647,29 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP3.R3.code,
                     advise: RESULT.GROUP3.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -13682,40 +13682,40 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'งูพิษ/งูที่ไม่แน่ใจว่ามีพิษ/สัตว์มีพิษ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R6.code,
                             advise: RESULT.GROUP3.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หอยเต้าปูน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP3.R6.code,
                             advise: RESULT.GROUP3.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผึ้ง/แตน/ต่อ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP3.G1.code,
                             advise: RESULT.GROUP3.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สัตว์อื่นๆ',
                         to: 7
                     },
@@ -13726,23 +13726,23 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP3.W1.code,
                             advise: RESULT.GROUP3.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP3.W3.code,
                             advise: RESULT.GROUP3.W3.advise,
                         }
@@ -13763,22 +13763,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP4.Y9.code,
                             advise: RESULT.GROUP4.Y9.advise,
                         }
@@ -13790,18 +13790,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่รู้สึกตัวเพิ่มขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R1.code,
                             advise: RESULT.GROUP4.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -13812,79 +13812,79 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
 
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -13895,18 +13895,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -13917,23 +13917,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP4.R2.code,
                             advise: RESULT.GROUP4.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP4.Y8.code,
                             advise: RESULT.GROUP4.Y8.advise,
                         }
@@ -13943,39 +13943,39 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 criteria: {
                     minimumChecked: 1,
                     to: 6,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP4.R3.code,
                         advise: RESULT.GROUP4.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีอาการหมดสติชั่ววูบหลายครั้งในวันนั้น',
                         checked: false,
                     },
@@ -13987,73 +13987,73 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อาเจียนเป็นเลือด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP4.Y1.code,
                             advise: RESULT.GROUP4.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ถ่ายอุจจาระดำ / แดงคล้ำ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP4.Y1.code,
                             advise: RESULT.GROUP4.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไอเป็นเลือด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP4.Y1.code,
                             advise: RESULT.GROUP4.Y1.advise,
                         }
                     },
 
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เลือดกำเดา',
                         to: 7
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กรณีเป็นผู้หญิงมีเลือดออกทางช่องคลอด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP4.Y1.code,
                             advise: RESULT.GROUP4.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เลือดในปัสสาวะ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP4.G2.code,
                             advise: RESULT.GROUP4.G2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ที่อื่น นอกจากทวารดังกล่าวข้างต้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP4.Y1.code,
                             advise: RESULT.GROUP4.Y1.advise,
                         }
@@ -14065,23 +14065,23 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยินยอม',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP4.W2.code,
                             advise: RESULT.GROUP4.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ยินยอม',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP4.G1.code,
                             advise: RESULT.GROUP4.G1.advise,
                         }
@@ -14102,22 +14102,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP5.Y9.code,
                             advise: RESULT.GROUP5.Y9.advise,
                         }
@@ -14129,18 +14129,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R1.code,
                             advise: RESULT.GROUP5.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -14151,67 +14151,67 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R2.code,
                             advise: RESULT.GROUP5.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R2.code,
                             advise: RESULT.GROUP5.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R2.code,
                             advise: RESULT.GROUP5.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R2.code,
                             advise: RESULT.GROUP5.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R2.code,
                             advise: RESULT.GROUP5.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -14222,18 +14222,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R2.code,
                             advise: RESULT.GROUP5.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -14244,23 +14244,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP5.R2.code,
                             advise: RESULT.GROUP5.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP5.Y8.code,
                             advise: RESULT.GROUP5.Y8.advise,
                         }
@@ -14270,29 +14270,29 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP5.R3.code,
                     advise: RESULT.GROUP5.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -14305,18 +14305,18 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 7
                     },
@@ -14327,18 +14327,18 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP5.Y7.code,
                             advise: RESULT.GROUP5.Y7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -14349,18 +14349,18 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G8.code,
                             advise: RESULT.GROUP14.G8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 9
                     },
@@ -14371,34 +14371,34 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นหวัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP5.W1.code,
                             advise: RESULT.GROUP5.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยหรือผู้แจ้งยืนยันการขอความช่วยเหลือ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP5.G6.code,
                             advise: RESULT.GROUP5.G6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP5.G7.code,
                             advise: RESULT.GROUP5.G7.advise,
                         }
@@ -14419,12 +14419,12 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ส่งหน่วย ALS',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP6.R1.code,
                             advise: RESULT.GROUP6.R1.advise,
                         }
@@ -14445,22 +14445,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP7.Y9.code,
                             advise: RESULT.GROUP7.Y9.advise,
                         }
@@ -14472,18 +14472,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R1.code,
                             advise: RESULT.GROUP7.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -14494,78 +14494,78 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไห ปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -14576,18 +14576,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -14598,23 +14598,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R2.code,
                             advise: RESULT.GROUP7.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP7.Y8.code,
                             advise: RESULT.GROUP7.Y8.advise,
                         }
@@ -14624,39 +14624,39 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 criteria: {
                     minimumChecked: 1,
                     to: 6,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP7.R3.code,
                         advise: RESULT.GROUP7.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หัวใจเต้นเร็ว/ใจสั่น',
                         checked: false,
 
@@ -14668,62 +14668,62 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'โรคปอด/หลอดเลือดปอด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R9.code,
                             advise: RESULT.GROUP7.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'โรคหลอดเลือด/ลิ้น/กล้ามเนื้อหัวใจ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R9.code,
                             advise: RESULT.GROUP7.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'โรคเบาหวาน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R9.code,
                             advise: RESULT.GROUP7.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'โรคความดันเลือดสูง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R9.code,
                             advise: RESULT.GROUP7.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ฝังเครื่องกระตุกหัวใจอัติโนมัติไว้ แล้วเครื่องกระตุกขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP7.R8.code,
                             advise: RESULT.GROUP7.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี/อื่นๆ',
                         to: 7
                     },
@@ -14734,45 +14734,45 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชาย อายุมากกว่าหรือเท่ากับ 40 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP7.Y6.code,
                             advise: RESULT.GROUP7.Y6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชาย อายุน้อยกว่า 40 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP7.G6.code,
                             advise: RESULT.GROUP7.G6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หญิง อายุมากกว่าหรือเท่ากับ 45 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP7.Y6.code,
                             advise: RESULT.GROUP7.Y6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หญิง อายุน้อยกว่า 45 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP7.G6.code,
                             advise: RESULT.GROUP7.G6.advise,
                         }
@@ -14793,22 +14793,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP8.Y9.code,
                             advise: RESULT.GROUP8.Y9.advise,
                         }
@@ -14820,18 +14820,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R1.code,
                             advise: RESULT.GROUP8.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -14842,18 +14842,18 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มีเสียงออกมา',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R2.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีเสียงออกมา',
                         to: 3
                     },
@@ -14864,23 +14864,23 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังไม่โล่ง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R2.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'โล่งแล้ว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP8.Y2.code,
                             advise: RESULT.GROUP8.Y2.advise,
                         }
@@ -14901,22 +14901,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP9.Y9.code,
                             advise: RESULT.GROUP9.Y9.advise,
                         }
@@ -14928,18 +14928,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R1.code,
                             advise: RESULT.GROUP9.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -14950,18 +14950,18 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีอาการดังกล่าง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R7.code,
                             advise: RESULT.GROUP9.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีอาการดังกล่าว',
                         to: 3
                     },
@@ -14972,78 +14972,78 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
                     },
 
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 4
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 6
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
@@ -15055,18 +15055,18 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 5
                     },
@@ -15077,23 +15077,23 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R2.code,
                             advise: RESULT.GROUP9.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP9.Y8.code,
                             advise: RESULT.GROUP9.Y8.advise,
                         }
@@ -15103,33 +15103,33 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 6,
                 to: 7,
                 criteria: {
                     minimumChecked: 2,
                     to: 7,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP9.R3.code,
                         advise: RESULT.GROUP9.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -15141,18 +15141,18 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R5.code,
                             advise: RESULT.GROUP9.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -15163,18 +15163,18 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP9.R6.code,
                             advise: RESULT.GROUP9.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 9
                     },
@@ -15185,34 +15185,34 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อ่อนเพลีย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP9.W2.code,
                             advise: RESULT.GROUP9.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'รู้สึกตัวดี พูดคุยรู้เรื่อง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP9.W1.code,
                             advise: RESULT.GROUP9.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'รู้สึกไม่สบายอย่างมาก แต่ไม่เฉพาะเจาะจง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP9.Y3.code,
                             advise: RESULT.GROUP9.Y3.advise,
                         }
@@ -15233,7 +15233,7 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'ใช้กลุ่มอาการที่ 17',
                         module: 17,
                     },
@@ -15253,22 +15253,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP12.Y9.code,
                             advise: RESULT.GROUP12.Y9.advise,
                         }
@@ -15280,18 +15280,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่รู้สึกตัวเพิ่มขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R1.code,
                             advise: RESULT.GROUP12.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -15302,79 +15302,79 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่สั้นๆ / พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
 
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -15385,18 +15385,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -15407,23 +15407,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP12.R2.code,
                             advise: RESULT.GROUP12.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP12.Y8.code,
                             advise: RESULT.GROUP12.Y8.advise,
                         }
@@ -15433,32 +15433,32 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP12.R3.code,
                     advise: RESULT.GROUP12.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 5,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 5,
                         name: 'ซีดและผิวซีดเย็ด',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 5,
                         name: 'เป็นลมหรือเกือบเป็นลม',
                         checked: false,
@@ -15468,43 +15468,43 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 6,
                 to: 7,
                 criteria: {
                     minimumChecked: 1,
                     to: 7,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP12.R5.code,
                         advise: RESULT.GROUP12.R5.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 6,
                         name: 'พูดเสียงพร่า',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 6,
                         name: 'เห็นภาพมัว/ภาพซ่อน',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 6,
                         name: 'อ่อนแรง/อัมพาต',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 6,
                         name: 'อาเจียน',
                         checked: false,
@@ -15516,18 +15516,18 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP12.G1.code,
                             advise: RESULT.GROUP12.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -15538,18 +15538,18 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP12.Y5.code,
                             advise: RESULT.GROUP12.Y5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 9
                     },
@@ -15560,18 +15560,18 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP12.Y4.code,
                             advise: RESULT.GROUP12.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 10
                     },
@@ -15582,29 +15582,29 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP12.W2.code,
                             advise: RESULT.GROUP12.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP12.W1.code,
                             advise: RESULT.GROUP12.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เจ็บปวดบริเวณอื่น',
                         to: 11
                     },
@@ -15615,23 +15615,23 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศึรษะ / ใบหน้า / คอ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP12.W3.code,
                             advise: RESULT.GROUP12.W3.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตา / หู / จมูก / ปาก / ฟัน / คอหอย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP12.W4.code,
                             advise: RESULT.GROUP12.W4.advise,
                         }
@@ -15653,17 +15653,17 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ปลอดภัย',
                         to: 1
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ปลอดภัย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP13.G9.code,
                             advise: RESULT.GROUP13.G9.advise,
                         }
@@ -15672,33 +15672,33 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 1,
                 to: 2,
                 criteria: {
                     minimumChecked: 2,
                     to: 2,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP13.R3.code,
                         advise: RESULT.GROUP13.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -15710,12 +15710,12 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ใช่',
                         to: 3,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 4,
                     },
@@ -15726,34 +15726,34 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่หยุด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP13.R5.code,
                             advise: RESULT.GROUP13.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หยุด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP13.G5.code,
                             advise: RESULT.GROUP13.G5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่สามารถห้ามเลือดได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP13.R5.code,
                             advise: RESULT.GROUP13.R5.advise,
                         }
@@ -15765,12 +15765,12 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ใช่',
                         to: 5,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 6,
                     },
@@ -15781,45 +15781,45 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'การยิง / การแทง / การบดทับ (มีบาดแผลทะลวง)',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP13.R8.code,
                             advise: RESULT.GROUP13.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'วิธีอื่น เช่น กระโดกจากที่สูง การแขวนคอ การกระแทก การตี การฟัน ใช้ของมีคมกรีดร่างกาย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP13.R8.code,
                             advise: RESULT.GROUP13.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช้สารป้องกันตัว เช่น แก็สน้ำตา สเปรยร์พริกไทย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP13.G8.code,
                             advise: RESULT.GROUP13.G8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP13.G1.code,
                             advise: RESULT.GROUP13.G1.advise,
                         }
@@ -15831,18 +15831,18 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP13.R9.code,
                             advise: RESULT.GROUP13.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 7
                     },
@@ -15854,17 +15854,17 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ใช่',
                         to: 8,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 12,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่แน่ใจ / ไม่ทราบ',
                         to: 12,
                     },
@@ -15875,45 +15875,45 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยา',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G4.code,
                             advise: RESULT.GROUP14.G4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'สารเคมีที่ใช้ในการเกษตร',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R9.code,
                             advise: RESULT.GROUP14.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สารกัดกร่อน / สารเคมีอื่น (ที่ไม่ใช่อาหาร/ยา)',
                         to: 9
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยา / สารเสพติด / เพื่อความเพลิดเพลิน เช่น ยาบ้า ยาอี กาว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G4.code,
                             advise: RESULT.GROUP14.G4.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สารป้องกันตัว เช่น แก็สน้ำตา สเปรย์พริกไทย',
                         to: 11,
                     },
@@ -15924,18 +15924,18 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กลืนลำบาก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R9.code,
                             advise: RESULT.GROUP14.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'กลืนได้ปกติ',
                         to: 10
                     },
@@ -15947,23 +15947,23 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP14.Y4.code,
                             advise: RESULT.GROUP14.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G5.code,
                             advise: RESULT.GROUP14.G5.advise,
                         }
@@ -15976,23 +15976,23 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G8.code,
                             advise: RESULT.GROUP14.G8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP14.W1.code,
                             advise: RESULT.GROUP14.W1.advise,
                         }
@@ -16004,18 +16004,18 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP13.R6.code,
                             advise: RESULT.GROUP13.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ชัก',
                         to: 13
                     },
@@ -16027,18 +16027,18 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP13.R7.code,
                             advise: RESULT.GROUP13.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 14
                     },
@@ -16050,23 +16050,23 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'แจ้งตำรวจ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP13.W9.code,
                             advise: RESULT.GROUP13.W9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่แจ้งตำรวจ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP13.W8.code,
                             advise: RESULT.GROUP13.W8.advise,
                         }
@@ -16087,22 +16087,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP14.Y9.code,
                             advise: RESULT.GROUP14.Y9.advise,
                         }
@@ -16114,18 +16114,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R1.code,
                             advise: RESULT.GROUP14.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -16136,79 +16136,79 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ / พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไห ปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
+                            level: level.red.description,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
-                            color: LEVEL.R.color,
+                            color: level.red.color,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
+                            level: level.red.description,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
-                            color: LEVEL.R.color,
+                            color: level.red.color,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
                         }
                     },
 
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -16219,18 +16219,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -16241,25 +16241,25 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R2.code,
                             advise: RESULT.GROUP14.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
+                            level: level.yellow.description,
                             code: RESULT.GROUP14.Y8.code,
                             advise: RESULT.GROUP14.Y8.advise,
-                            color: LEVEL.Y.color,
+                            color: level.yellow.color,
                         }
                     },
 
@@ -16267,32 +16267,32 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP14.R3.code,
                     advise: RESULT.GROUP14.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 5,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 5,
                         name: 'ซีดและผิวซีดเย็ด',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 5,
                         name: 'เป็นลมหรือเกือบเป็นลม',
                         checked: false,
@@ -16305,18 +16305,18 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R6.code,
                             advise: RESULT.GROUP14.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 7
                     },
@@ -16327,19 +16327,19 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
+                            level: level.red.description,
 
-                            color: LEVEL.R.color,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R7.code,
                             advise: RESULT.GROUP14.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -16350,45 +16350,45 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยา',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G4.code,
                             advise: RESULT.GROUP14.G4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'สารเคมีที่ใช้ในการเกษตร',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R9.code,
                             advise: RESULT.GROUP14.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สารกัดกร่อน / สารเคมีอื่น (ที่ไม่ใช่อาหารยา)',
                         to: 9,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'สารเสพติด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G3.code,
                             advise: RESULT.GROUP14.G3.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สารป้องกันตัว เช่น แก๊สน้ำตา สเปรย์พริกไทย',
                         to: 11,
                     },
@@ -16399,18 +16399,18 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กลืนลำบาก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R9.code,
                             advise: RESULT.GROUP14.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'กลืนได้ปกติ',
                         to: 10
                     },
@@ -16421,23 +16421,23 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP14.Y4.code,
                             advise: RESULT.GROUP14.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G5.code,
                             advise: RESULT.GROUP14.G5.advise,
                         }
@@ -16449,25 +16449,25 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
+                            level: level.green.description,
                             code: RESULT.GROUP14.G8.code,
                             advise: RESULT.GROUP14.G8.advise,
-                            color: LEVEL.G.color,
+                            color: level.green.color,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
+                            level: level.white.description,
                             code: RESULT.GROUP14.W1.code,
                             advise: RESULT.GROUP14.W1.advise,
-                            color: LEVEL.W.color,
+                            color: level.white.color,
                         }
                     },
                 ]
@@ -16486,22 +16486,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP15.Y9.code,
                             advise: RESULT.GROUP15.Y9.advise,
                         }
@@ -16513,18 +16513,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R1.code,
                             advise: RESULT.GROUP15.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -16535,78 +16535,78 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 5
                     },
@@ -16617,18 +16617,18 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 4
                     },
@@ -16639,23 +16639,23 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R2.code,
                             advise: RESULT.GROUP15.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP15.Y8.code,
                             advise: RESULT.GROUP15.Y8.advise,
                         }
@@ -16665,29 +16665,29 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 6,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP15.R3.code,
                     advise: RESULT.GROUP15.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -16700,12 +16700,12 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ใช่',
                         to: 7
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 16
                     },
@@ -16716,12 +16716,12 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มากกว่า 20 สัปดาห์',
                         to: 8
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'น้อยกว่า 20 สัปดาห์',
                         to: 14
                     },
@@ -16732,55 +16732,55 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก / ปวดศรีษะ / เห็นภาพซ้อน / แน่นหน้าอก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R6.code,
                             advise: RESULT.GROUP15.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เลือดออกทางช่องคลอด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R5.code,
                             advise: RESULT.GROUP15.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เจ็บท้องคลอด',
                         to: 9
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ทารกกำลังคลอดออกมา',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R7.code,
                             advise: RESULT.GROUP15.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ได้รับบาดเจ็บช่องท้อง',
                         to: 10
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ถุงน้ำคร่ำแตก (น้ำเดิน)',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R8.code,
                             advise: RESULT.GROUP15.R8.advise,
                         }
@@ -16792,18 +16792,18 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R8.code,
                             advise: RESULT.GROUP15.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 11
                     },
@@ -16814,23 +16814,23 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ปวด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP15.G4.code,
                             advise: RESULT.GROUP15.G4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ปวด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP15.Y4.code,
                             advise: RESULT.GROUP15.Y4.advise,
                         }
@@ -16842,12 +16842,12 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ท้องแรก',
                         to: 12
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ท้องที่ 2 ขึ้นไป',
                         to: 13
                     },
@@ -16858,23 +16858,23 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 24 ชั่วโมง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP15.G6.code,
                             advise: RESULT.GROUP15.G6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 24 ชั่วโมง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP15.Y6.code,
                             advise: RESULT.GROUP15.Y6.advise,
                         }
@@ -16886,23 +16886,23 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 8 เดือน (37 สัปดาห์)',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP15.Y7.code,
                             advise: RESULT.GROUP15.Y7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เท่ากับหรือมากกว่า 8 เดือน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R8.code,
                             advise: RESULT.GROUP15.R8.advise,
                         }
@@ -16914,23 +16914,23 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ปวดท้อง',
                         to: 15
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นตะคริว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP15.W1.code,
                             advise: RESULT.GROUP15.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'ชัก',
                         module: 16,
                     },
@@ -16941,23 +16941,23 @@ export const QUESTIONS = [
                 from: 15,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีเลือดออก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP15.R5.code,
                             advise: RESULT.GROUP15.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มีเลือดออก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP15.G1.code,
                             advise: RESULT.GROUP15.G1.advise,
                         }
@@ -16969,33 +16969,33 @@ export const QUESTIONS = [
                 from: 16,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ปวดท้อง',
                         to: 17
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นตะคริว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP15.W1.code,
                             advise: RESULT.GROUP15.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'ชัก',
                         module: 16,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีเลือดออกทางช่องท้อง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP15.G2.code,
                             advise: RESULT.GROUP15.G2.advise,
                         }
@@ -17007,23 +17007,23 @@ export const QUESTIONS = [
                 from: 17,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีเลือดออก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP15.G1.code,
                             advise: RESULT.GROUP15.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มีเลือดออก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP15.W1.code,
                             advise: RESULT.GROUP15.W1.advise,
                         }
@@ -17044,18 +17044,18 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R4.code,
                             advise: RESULT.GROUP16.R4.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่ / หยุดชักแล้ว',
                         to: 1
                     },
@@ -17066,22 +17066,22 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ยังไม่รู้สึกตัว',
                         to: 2
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 3,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP16.Y9.code,
                             advise: RESULT.GROUP16.Y9.advise,
                         }
@@ -17093,17 +17093,17 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R1.code,
                             advise: RESULT.GROUP16.R1.advise,
                         }
@@ -17115,12 +17115,12 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเสียงออกมา',
                         to: 4,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีเสียงออกมา',
                         to: 5
                     },
@@ -17131,22 +17131,22 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R3.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R2.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
@@ -17158,78 +17158,78 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 6
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 8
                     },
@@ -17240,18 +17240,18 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 7
                     },
@@ -17262,23 +17262,23 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP16.R2.code,
                             advise: RESULT.GROUP16.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP16.Y8.code,
                             advise: RESULT.GROUP16.Y8.advise,
                         }
@@ -17288,33 +17288,33 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 8,
                 to: 9,
                 criteria: {
                     minimumChecked: 1,
                     to: 9,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP16.R3.code,
                         advise: RESULT.GROUP16.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -17326,38 +17326,38 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่เคย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP16.Y1.code,
                             advise: RESULT.GROUP16.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เคย',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP16.Y4.code,
                             advise: RESULT.GROUP16.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มีอาการชัก แต่สัญญาณบอกเหตุการชัก',
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP16.W1.code,
                             advise: RESULT.GROUP16.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ทราบ',
                         to: 11
                     },
@@ -17368,32 +17368,32 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เคย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP16.G1.code,
                             advise: RESULT.GROUP16.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่เคย',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP16.Y2.code,
                             advise: RESULT.GROUP16.Y2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ทราบ',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP16.Y5.code,
                             advise: RESULT.GROUP16.Y5.advise,
                         }
@@ -17414,22 +17414,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP17.Y9.code,
                             advise: RESULT.GROUP17.Y9.advise,
                         }
@@ -17441,18 +17441,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R1.code,
                             advise: RESULT.GROUP17.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -17463,12 +17463,12 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเสียงออกมา',
                         to: 7
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีเสียงออกมา',
                         to: 3
                     },
@@ -17479,78 +17479,78 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 5
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 6
                     },
@@ -17561,18 +17561,18 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 6
                     },
@@ -17583,23 +17583,23 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP17.R2.code,
                             advise: RESULT.GROUP17.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP17.Y8.code,
                             advise: RESULT.GROUP17.Y8.advise,
                         }
@@ -17609,29 +17609,29 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 6,
                 to: 8,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP17.R3.code,
                     advise: RESULT.GROUP17.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -17644,22 +17644,22 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R3.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R2.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
@@ -17671,28 +17671,28 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ทำไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP17.Y1.code,
                             advise: RESULT.GROUP17.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่อยากทำ',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP17.Y2.code,
                             advise: RESULT.GROUP17.Y2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ทำได้',
                         to: 9
                     },
@@ -17703,12 +17703,12 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'ใช่',
                         module: 7,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่่ใช่',
                         to: 10
                     },
@@ -17719,51 +17719,51 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เวียนศรีษะ/การทรงตัวผิดปกติ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP17.G4.code,
                             advise: RESULT.GROUP17.G4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อ่อนแอทั่วร่างกาย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP17.G1.code,
                             advise: RESULT.GROUP17.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เจ็บปวดทั่วร่างกาย ไม่มีตำแหน่งจำเพาะเจาะจง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP17.G2.code,
                             advise: RESULT.GROUP17.G2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'องค์กรหรือผู้เฝ้าระวัง ยิืนยันภาะวฉุกเฉินการแพทย์',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP17.G7.code,
                             advise: RESULT.GROUP17.G7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'อื่นๆ ที่เห็นว่าไม่ฉุกเฉิน',
                         to: 11
                     },
@@ -17774,100 +17774,100 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยหรือผู้แจ้งยืนยันขอให้ช่วยเหลือ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP17.G6.code,
                             advise: RESULT.GROUP17.G6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่สามารถติดต่อกลับได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP17.G5.code,
                             advise: RESULT.GROUP17.G5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'คลื่นไส้/อาเจียน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP17.W1.code,
                             advise: RESULT.GROUP17.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เจ็บคอหอย/ไอ/คัดจมูก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP17.W1.code,
                             advise: RESULT.GROUP17.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ปวดศรีษะ/ปวดเมื่อยตามตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP17.W1.code,
                             advise: RESULT.GROUP17.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หนาวสั่น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP17.W1.code,
                             advise: RESULT.GROUP17.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ความดันเลือดสูง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP17.W2.code,
                             advise: RESULT.GROUP17.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีไข้/อุณหภูมิกายสูง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP17.W3.code,
                             advise: RESULT.GROUP17.W3.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ ที่เห็นว่าไม่ฉุกเฉิน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP17.W4.code,
                             advise: RESULT.GROUP17.W4.advise,
                         }
@@ -17888,12 +17888,12 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'ใช่',
                         module: 17,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 1,
                     },
@@ -17905,22 +17905,22 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 2
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 3,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP18.Y9.code,
                             advise: RESULT.GROUP18.Y9.advise,
                         }
@@ -17932,18 +17932,18 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R1.code,
                             advise: RESULT.GROUP18.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 3
                     },
@@ -17954,12 +17954,12 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเสียงออกมา',
                         to: 8
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีเสียงออกมา',
                         to: 4
                     },
@@ -17970,78 +17970,78 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 6
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 7
                     },
@@ -18052,18 +18052,18 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 7
                     },
@@ -18074,23 +18074,23 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R2.code,
                             advise: RESULT.GROUP18.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP18.Y8.code,
                             advise: RESULT.GROUP18.Y8.advise,
                         }
@@ -18100,33 +18100,33 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 7,
                 to: 9,
                 criteria: {
                     minimumChecked: 1,
                     to: 9,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP18.R3.code,
                         advise: RESULT.GROUP18.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -18139,22 +18139,22 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R3.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R2.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
@@ -18166,23 +18166,23 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ทำไม่ได้',
                         to: 10
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่อยากทำ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP18.Y3.code,
                             advise: RESULT.GROUP18.Y3.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ทำได้',
                         to: 11
                     },
@@ -18193,23 +18193,23 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 3 ชั่วมง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R6.code,
                             advise: RESULT.GROUP18.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่าหรือเท่ากับ 3 ชั่วโมง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP18.Y6.code,
                             advise: RESULT.GROUP18.Y6.advise,
                         }
@@ -18221,18 +18221,18 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP18.G1.code,
                             advise: RESULT.GROUP18.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 12
                     },
@@ -18243,18 +18243,18 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R7.code,
                             advise: RESULT.GROUP18.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 13
                     },
@@ -18265,23 +18265,23 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 45 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP18.R8.code,
                             advise: RESULT.GROUP18.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 45 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP18.Y7.code,
                             advise: RESULT.GROUP18.Y7.advise,
                         }
@@ -18293,23 +18293,23 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP18.W1.code,
                             advise: RESULT.GROUP18.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP18.W1.code,
                             advise: RESULT.GROUP18.W1.advise,
                         }
@@ -18330,22 +18330,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP19.Y9.code,
                             advise: RESULT.GROUP19.Y9.advise,
                         }
@@ -18357,28 +18357,28 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R1.code,
                             advise: RESULT.GROUP19.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งไม่สามารถเข้าไปปลุก/เรียกผู้ป่วยได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP19.Y1.code,
                             advise: RESULT.GROUP19.Y1.advise,
                         }
@@ -18390,12 +18390,12 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเสียงออกมา',
                         to: 7
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีเสียงออกมา',
                         to: 3
                     },
@@ -18406,78 +18406,78 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หายใจเร็ว',
                         to: 5
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 6
                     },
@@ -18488,18 +18488,18 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 6
                     },
@@ -18510,23 +18510,23 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R2.code,
                             advise: RESULT.GROUP19.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 20 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP19.Y8.code,
                             advise: RESULT.GROUP19.Y8.advise,
                         }
@@ -18536,33 +18536,33 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 6,
                 to: 8,
                 criteria: {
                     minimumChecked: 1,
                     to: 8,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP19.R3.code,
                         advise: RESULT.GROUP19.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -18575,22 +18575,22 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R3.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R2.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
@@ -18602,28 +18602,28 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ทำไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP19.Y5.code,
                             advise: RESULT.GROUP19.Y5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่อยากทำ',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP19.Y6.code,
                             advise: RESULT.GROUP19.Y6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ทำได้',
                         to: 9
                     },
@@ -18634,18 +18634,18 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R6.code,
                             advise: RESULT.GROUP19.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 10
                     },
@@ -18656,18 +18656,18 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R9.code,
                             advise: RESULT.GROUP19.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 11
                     },
@@ -18678,12 +18678,12 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มี',
                         to: 12,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 13,
                     },
@@ -18695,23 +18695,23 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 40 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R7.code,
                             advise: RESULT.GROUP19.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 40 ปี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP19.Y7.code,
                             advise: RESULT.GROUP19.Y7.advise,
                         }
@@ -18723,18 +18723,18 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP19.R8.code,
                             advise: RESULT.GROUP19.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 14,
                     },
@@ -18746,40 +18746,40 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็น 2 ครั้งขึ้นไป',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP19.Y4.code,
                             advise: RESULT.GROUP19.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นครั้งแรก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP19.G5.code,
                             advise: RESULT.GROUP19.G5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หน้ามืดแต่ไม่หมดสติ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP19.W1.code,
                             advise: RESULT.GROUP19.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 15,
                     },
@@ -18790,23 +18790,23 @@ export const QUESTIONS = [
                 from: 15,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP19.G3.code,
                             advise: RESULT.GROUP19.G3.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นครั้งแรก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP19.W2.code,
                             advise: RESULT.GROUP19.W2.advise,
                         }
@@ -18828,22 +18828,22 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 24,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตรวจสอบยืนยันรายละเอียดของเด็กไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y9.code,
                             advise: RESULT.GROUP20.Y9.advise,
                         }
@@ -18855,18 +18855,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R1.code,
                             advise: RESULT.GROUP20.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -18877,12 +18877,12 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเสียงออกมา',
                         to: 6
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีเสียงออกมา',
                         to: 3
                     },
@@ -18893,61 +18893,61 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจเร็วดูเหนื่อย / ต้องผงกศรีษะช่วยให้หายใจได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R2.code,
                             advise: RESULT.GROUP20.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด (เด็กอายุมากกว่า 6 ปี)',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R2.code,
                             advise: RESULT.GROUP20.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 4,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจแล้วหน้าอกบุ๋ม',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R2.code,
                             advise: RESULT.GROUP20.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R2.code,
                             advise: RESULT.GROUP20.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กระสับกระส่าย ต้องผุดลุกผุดนั่ง / น้องนั่งโน้มตัวไปข้างหน้า ใช้มือยันเพื่อช่วยให้หายใจได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R2.code,
                             advise: RESULT.GROUP20.R2.advise,
                         }
@@ -18956,50 +18956,50 @@ export const QUESTIONS = [
             },
             {
                 question: 'เด็กมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 4,
                 to: 5,
                 criteria: {
                     minimumChecked: 1,
                     to: 5,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP20.R3.code,
                         advise: RESULT.GROUP20.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ริมผีปากเขียวคล้ำ',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวลายจ้ำๆ/ผิวลายเป็นดวงๆ',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวเย็นซีด',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลม/เกือบเป็นลมเมื่อนั่งหรือยืน',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวอ่อนปวกเปียก',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กระหม่อมบุ๋ม / ตาโหล / ปากแห้ง / ปัสสาวะน้อย',
                         checked: false,
 
@@ -19009,32 +19009,32 @@ export const QUESTIONS = [
             },
             {
                 question: 'เด็กมีอาการผิดปกต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 5,
                 to: 8,
                 criteria: {
                     minimumChecked: 2,
                     to: 8,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP20.R4.code,
                         advise: RESULT.GROUP20.R4.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เซื่องซึม / เงื่องหงอย',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เงียบผิดปกติ',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีน้ำลายยิดร่วมกับอาการกลืนลำบาก',
                         checked: false,
 
@@ -19046,22 +19046,22 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R3.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP8.R2.code,
                             advise: RESULT.GROUP8.R2.advise,
                         }
@@ -19073,12 +19073,12 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'มี / สงสัยอาจมี / ไม่แน่ใจ',
                         module: 21,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีสาเหตุจากการบาดเจ็บ',
                         to: 1
                     },
@@ -19089,12 +19089,12 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มี',
                         to: 9
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มี',
                         to: 14
                     },
@@ -19105,17 +19105,17 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y5.code,
                             advise: RESULT.GROUP20.Y5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 10
                     },
@@ -19126,17 +19126,17 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: '4 - 7 วัน',
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP20.G2.code,
                             advise: RESULT.GROUP20.G2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'น้อยกว่า 4 วัน หรือ มากกว่า 7 วัน',
                         to: 13,
                     },
@@ -19147,17 +19147,17 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP20.G1.code,
                             advise: RESULT.GROUP20.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 12
                     },
@@ -19168,21 +19168,21 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กล่อมให้หยุดร้องไม่ได้',
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP20.G1.code,
                             advise: RESULT.GROUP20.G1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กล่อมแล้วเงียบได้',
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP20.W5.code,
                             advise: RESULT.GROUP20.W5.advise,
                         }
@@ -19194,17 +19194,17 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อายุน้อยกว่า 3 เดือน',
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP20.W6.code,
                             advise: RESULT.GROUP20.W6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'อายุมากกว่า 3 เดือน',
                         to: 23,
                     },
@@ -19215,12 +19215,12 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'กิน',
                         to: 15
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่กิน',
                         to: 20,
                     },
@@ -19231,16 +19231,16 @@ export const QUESTIONS = [
                 from: 15,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'น้อยกว่า 30 นาที',
                         to: 16
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 30 นาที',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y7.code,
                             advise: RESULT.GROUP20.Y7.advise,
                         }
@@ -19252,12 +19252,12 @@ export const QUESTIONS = [
                 from: 16,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีคนเห็น',
                         to: 17
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีคนเห็น / ไม่แน่ใจ',
                         to: 19,
                     },
@@ -19268,26 +19268,26 @@ export const QUESTIONS = [
                 from: 17,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยา',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R8.code,
                             advise: RESULT.GROUP20.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สารกัดกร่อน',
                         to: 18,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้ำมันที่ไม่ใช้อาหาร เช่น น้ำมันก๊าด น้ำมันสน',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R8.code,
                             advise: RESULT.GROUP20.R8.advise,
                         }
@@ -19299,21 +19299,21 @@ export const QUESTIONS = [
                 from: 18,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R7.code,
                             advise: RESULT.GROUP20.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y7.code,
                             advise: RESULT.GROUP20.Y7.advise,
                         }
@@ -19325,26 +19325,26 @@ export const QUESTIONS = [
                 from: 19,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยา',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y7.code,
                             advise: RESULT.GROUP20.Y7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สารกัดกร่อน',
                         to: 18,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้ำมันที่ไม่ใช้อาหาร เช่น น้ำมันก๊าด น้ำมันสน',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y7.code,
                             advise: RESULT.GROUP20.Y7.advise,
                         }
@@ -19356,22 +19356,22 @@ export const QUESTIONS = [
                 from: 20,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กำลังชัก',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R6.code,
                             advise: RESULT.GROUP20.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ใช่หยุดชักแล้ว',
                         to: 21
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 22,
                     },
@@ -19382,21 +19382,21 @@ export const QUESTIONS = [
                 from: 21,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หลายครั้ง (มากกว่า 3 ครั้งต่อชั่วโมง)',
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP20.R6.code,
                             advise: RESULT.GROUP20.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 3 ครั้ง ต่อชั่วโมง',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y6.code,
                             advise: RESULT.GROUP20.Y6.advise,
                         }
@@ -19408,41 +19408,41 @@ export const QUESTIONS = [
                 from: 22,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีผื่นตามตัว',
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP20.W1.code,
                             advise: RESULT.GROUP20.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ปวดหู / ปวดฟัน',
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP20.W2.code,
                             advise: RESULT.GROUP20.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อาการไม่จำเพาะอื่นๆ',
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP20.W4.code,
                             advise: RESULT.GROUP20.W4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เด็กมีความผิดปกติแต่กำเนิด/พิการ และต้องการความช่วยเหลือ',
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP20.G3.code,
                             advise: RESULT.GROUP20.G3.advise,
                         }
@@ -19454,17 +19454,17 @@ export const QUESTIONS = [
                 from: 23,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP20.Y1.code,
                             advise: RESULT.GROUP20.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 11
                     },
@@ -19475,12 +19475,12 @@ export const QUESTIONS = [
                 from: 24,
                 choices: [
                     {
-                        type: TYPE.MODULE,
+                        type: type.module,
                         name: 'มี / สงสัยอาจมี / ไม่แน่ใจ',
                         module: 21,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ได้มีสาเหตุจากการบาดเจ็บ',
                         to: 1,
                     },
@@ -19500,12 +19500,12 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีตำรวจ',
                         to: 1,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีตำรวจอยู่ในที่เกิดเหตุแล้ว (คาดว่าปลอดภัย)',
                         to: 1,
                     },
@@ -19516,33 +19516,33 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 2
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 3,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กำลังชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R6.code,
                             advise: RESULT.GROUP21.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP21.Y9.code,
                             advise: RESULT.GROUP21.Y9.advise,
                         }
@@ -19554,18 +19554,18 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R1.code,
                             advise: RESULT.GROUP21.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 3
                     },
@@ -19576,73 +19576,73 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R2.code,
                             advise: RESULT.GROUP21.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบาน ไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R2.code,
                             advise: RESULT.GROUP21.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R2.code,
                             advise: RESULT.GROUP21.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R2.code,
                             advise: RESULT.GROUP21.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R2.code,
                             advise: RESULT.GROUP21.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R2.code,
                             advise: RESULT.GROUP21.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 4
                     },
@@ -19650,34 +19650,34 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 4,
                 to: 5,
                 criteria: {
                     minimumChecked: 2,
                     to: 5,
                     payload: {
-                        level: LEVEL.R.text,
-                        color: LEVEL.R.color,
+                        level: level.red.description,
+                        color: level.red.color,
                         code: RESULT.GROUP21.R3.code,
                         advise: RESULT.GROUP21.R3.advise,
                     }
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
 
@@ -19689,18 +19689,18 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R6.code,
                             advise: RESULT.GROUP21.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ชัก',
                         to: 6
                     },
@@ -19711,12 +19711,12 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เลือดยังไหลอยู่',
                         to: 7
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเลือดออก/หยุดแล้ว',
                         to: 8
                     },
@@ -19727,18 +19727,18 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R5.code,
                             advise: RESULT.GROUP21.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -19749,17 +19749,17 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ถูกแทง',
                         to: 9,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ถูกยิง',
                         to: 9,
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'อื่นๆ',
                         to: 10,
                     },
@@ -19770,45 +19770,45 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะหรือคอ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R8.code,
                             advise: RESULT.GROUP21.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ทรวงอก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R8.code,
                             advise: RESULT.GROUP21.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ช่องท้อง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R8.code,
                             advise: RESULT.GROUP21.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'แขนหรือขา',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP21.Y1.code,
                             advise: RESULT.GROUP21.Y1.advise,
                         }
@@ -19820,17 +19820,17 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มี',
                         to: 11
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP21.W1.code,
                             advise: RESULT.GROUP21.W1.advise,
                         }
@@ -19842,23 +19842,23 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ต้นคอ / หลัง / กระดูกเชิงกราน / ต้นขา / ต้นแขน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP21.R7.code,
                             advise: RESULT.GROUP21.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP21.G1.code,
                             advise: RESULT.GROUP21.G1.advise,
                         }
@@ -19879,34 +19879,34 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP22.Y9.code,
                             advise: RESULT.GROUP22.Y9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กำลังชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R6.code,
                             advise: RESULT.GROUP22.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
@@ -19918,18 +19918,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R1.code,
                             advise: RESULT.GROUP22.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -19940,73 +19940,73 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่สั้นๆ / พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 3
                     },
@@ -20014,32 +20014,32 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 3,
                 to: 4,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP22.R3.code,
                     advise: RESULT.GROUP22.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 3,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 3,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยิืน',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 3,
                         name: 'ซีดและผิวซีดเย็ด',
                         checked: false,
@@ -20052,18 +20052,18 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R6.code,
                             advise: RESULT.GROUP22.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ชัก',
                         to: 5
                     },
@@ -20074,12 +20074,12 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เลือดยังไหลอยู่',
                         to: 6
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
                         to: 7
 
@@ -20091,18 +20091,18 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R5.code,
                             advise: RESULT.GROUP22.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 7
                     },
@@ -20113,66 +20113,66 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไฟ/ของร้อน',
                         to: 8
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สารเคมี',
                         to: 12
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไฟฟ้าช๊อต',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R9.code,
                             advise: RESULT.GROUP22.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ถูกสารป้องกันตัว เช่น แก็สน้ำตา สเปรย์พริกไทย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP22.G8.code,
                             advise: RESULT.GROUP22.G8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ถูกไม้ขีดไฟ / บุหรี่จี้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP22.W1.code,
                             advise: RESULT.GROUP22.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ร้อยไหม้จากของเย็นจัด เช่น น้ำแข็งแห้ง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP22.W2.code,
                             advise: RESULT.GROUP22.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'แสบร้อนจากถูกแดด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP22.W3.code,
                             advise: RESULT.GROUP22.W3.advise,
                         }
@@ -20185,17 +20185,17 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ทารก (อายุน้อยกว่า 1 ปี)',
                         to: 9
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เด็ก (อายุ 1-15 ปี)',
                         to: 10
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ผู้ใหญ่ (อายุมากกว่า 15 ปี)',
                         to: 11
                     },
@@ -20206,45 +20206,45 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ และ คอ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 10%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่าหรือเท่ากับ 5%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP22.Y6.code,
                             advise: RESULT.GROUP22.Y6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 5%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP22.G6.code,
                             advise: RESULT.GROUP22.G6.advise,
                         }
@@ -20256,45 +20256,45 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ และ คอ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 10%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่าหรือเท่ากับ 5%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP22.Y6.code,
                             advise: RESULT.GROUP22.Y6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 5%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP22.G6.code,
                             advise: RESULT.GROUP22.G6.advise,
                         }
@@ -20306,45 +20306,45 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ และ คอ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่า 20%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R8.code,
                             advise: RESULT.GROUP22.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มากกว่าหรือเท่ากับ 10%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP22.Y6.code,
                             advise: RESULT.GROUP22.Y6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'น้อยกว่า 10%',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP22.G6.code,
                             advise: RESULT.GROUP22.G6.advise,
                         }
@@ -20356,12 +20356,12 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'สัมผัสภายนอก',
                         to: 13
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'กิน / หายใจเข้าไป',
                         to: 14
                     },
@@ -20372,23 +20372,23 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ และ คอ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R7.code,
                             advise: RESULT.GROUP22.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ ที่ไม่ใช่ ศรีษะและคอ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP22.G7.code,
                             advise: RESULT.GROUP22.G7.advise,
                         }
@@ -20400,18 +20400,18 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กลืนลำบาก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP14.R7.code,
                             advise: RESULT.GROUP14.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'กลืนได้ปกติ',
                         to: 15
                     },
@@ -20422,23 +20422,23 @@ export const QUESTIONS = [
                 from: 15,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP14.Y4.code,
                             advise: RESULT.GROUP14.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP14.G5.code,
                             advise: RESULT.GROUP14.G5.advise,
                         }
@@ -20460,33 +20460,33 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 1
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กำลังชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R6.code,
                             advise: RESULT.GROUP23.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 2,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP23.Y9.code,
                             advise: RESULT.GROUP23.Y9.advise,
                         }
@@ -20499,18 +20499,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R1.code,
                             advise: RESULT.GROUP23.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 2
                     },
@@ -20521,72 +20521,72 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 3
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่สั้นๆ / พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R2.code,
                             advise: RESULT.GROUP23.R2.advise,
                         }
@@ -20595,32 +20595,32 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 3,
                 to: 4,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP23.R3.code,
                     advise: RESULT.GROUP23.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 3,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 3,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยิืน',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         from: 3,
                         name: 'ซีดและผิวซีดเย็ด',
                         checked: false,
@@ -20633,18 +20633,18 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R3.code,
                             advise: RESULT.GROUP23.R3.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ชัก',
                         to: 5
                     },
@@ -20655,23 +20655,23 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ / คอ / ทรวงอก / ช่องท้อง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R5.code,
                             advise: RESULT.GROUP23.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ที่อื่นๆ',
                         to: 10
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีบาดแผล',
                         to: 11
                     },
@@ -20682,12 +20682,12 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เลือดยังไหลอยู่',
                         to: 7
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
                         to: 8
 
@@ -20699,18 +20699,18 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R5.code,
                             advise: RESULT.GROUP23.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 8
                     },
@@ -20721,18 +20721,18 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP23.Y7.code,
                             advise: RESULT.GROUP23.Y7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 9
                     },
@@ -20743,23 +20743,23 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP23.Y3.code,
                             advise: RESULT.GROUP23.Y3.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP23.G3.code,
                             advise: RESULT.GROUP23.G3.advise,
                         }
@@ -20771,23 +20771,23 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ปวด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP23.Y5.code,
                             advise: RESULT.GROUP23.Y5.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ปวด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP23.G5.code,
                             advise: RESULT.GROUP23.G5.advise,
                         }
@@ -20799,17 +20799,17 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มี',
                         to: 12
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP23.W1.code,
                             advise: RESULT.GROUP23.W1.advise,
                         }
@@ -20822,23 +20822,23 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ต้นคอ / หลัง / กระดูกเชิงกราน / ต้นขา / ต้นแขน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP23.R9.code,
                             advise: RESULT.GROUP23.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ ที่เหลือ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP23.G4.code,
                             advise: RESULT.GROUP23.G4.advise,
                         }
@@ -20859,34 +20859,34 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 17
                     },
 
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กำลังชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R6.code,
                             advise: RESULT.GROUP24.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 1,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP24.Y9.code,
                             advise: RESULT.GROUP24.Y9.advise,
                         }
@@ -20899,18 +20899,18 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R6.code,
                             advise: RESULT.GROUP24.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ชัก',
                         to: 2
                     },
@@ -20921,12 +20921,12 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ใช่',
                         to: 3
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 4
                     },
@@ -20937,23 +20937,23 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เคลื่อนย้ายไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R7.code,
                             advise: RESULT.GROUP24.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เคลื่อนย้ายได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP24.Y7.code,
                             advise: RESULT.GROUP24.Y7.advise,
                         }
@@ -20965,18 +20965,18 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R8.code,
                             advise: RESULT.GROUP24.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 5
                     },
@@ -20987,18 +20987,18 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP24.Y1.code,
                             advise: RESULT.GROUP24.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 6
                     },
@@ -21009,17 +21009,17 @@ export const QUESTIONS = [
                 from: 6,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มี',
                         to: 16
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP24.W1.code,
                             advise: RESULT.GROUP24.W1.advise,
                         }
@@ -21031,40 +21031,40 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เจ็บแน่นทรวงอก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP24.Y3.code,
                             advise: RESULT.GROUP24.Y3.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'วิงเวียนศรีษะ/ปวดหัว/มึนงง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP24.Y3.code,
                             advise: RESULT.GROUP24.Y3.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เบาหวาน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP24.Y3.code,
                             advise: RESULT.GROUP24.Y3.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีอาการดังกล่าวข้างต้น',
                         to: 8
                     },
@@ -21075,18 +21075,18 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP24.G6.code,
                             advise: RESULT.GROUP24.G6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 9
                     },
@@ -21098,73 +21098,73 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่สั้นๆ / พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP22.R2.code,
                             advise: RESULT.GROUP22.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 10
                     },
@@ -21172,29 +21172,29 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 10,
                 to: 11,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP24.R3.code,
                     advise: RESULT.GROUP24.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
 
@@ -21207,18 +21207,18 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ขยับไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R8.code,
                             advise: RESULT.GROUP24.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ขยับได้',
                         to: 12
                     },
@@ -21230,29 +21230,29 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ / คอ / หลัง / สะโพก / ลำตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP24.Y4.code,
                             advise: RESULT.GROUP24.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'แขนยา',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP24.W2.code,
                             advise: RESULT.GROUP24.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีอาการปวด',
                         to: 13
                     },
@@ -21263,23 +21263,23 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ / คอ / ทรวงอก / ช่องท้อง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R5.code,
                             advise: RESULT.GROUP24.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ที่อื่นๆ',
                         to: 14
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีบาดแผล',
                         to: null, // TODO : FIX THIS
                     },
@@ -21290,17 +21290,17 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เลือดยังไหลอยู่',
                         to: 15
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP24.W1.code,
                             advise: RESULT.GROUP24.W1.advise,
                         }
@@ -21313,23 +21313,23 @@ export const QUESTIONS = [
                 from: 15,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R5.code,
                             advise: RESULT.GROUP24.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP24.G1.code,
                             advise: RESULT.GROUP24.W1.advise,
                         }
@@ -21341,23 +21341,23 @@ export const QUESTIONS = [
                 from: 16,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ต้นคอ / หลัง / กระดูกเชิงกราน / ต้นขา / ต้นแขน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R9.code,
                             advise: RESULT.GROUP24.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ ที่เหลือ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP24.G1.code,
                             advise: RESULT.GROUP24.G1.advise,
                         }
@@ -21369,18 +21369,18 @@ export const QUESTIONS = [
                 from: 17,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP24.R1.code,
                             advise: RESULT.GROUP24.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 1
                     },
@@ -21402,12 +21402,12 @@ export const QUESTIONS = [
                 from: 0,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'อยู่ใน/หยุดดูเหตุการณ์',
                         to: 1
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ขับรถผ่าน',
                         to: 22,
                     },
@@ -21419,17 +21419,17 @@ export const QUESTIONS = [
                 from: 1,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พลเมืองดี / อาสาสมัคร / ตำรวจ',
                         to: 2
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ผู้บาดเจ็บแจ้งเอง',
                         to: 17
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'หน่วยบริการ (FR/BLS/ALS)',
                         to: 20
                     },
@@ -21441,62 +21441,62 @@ export const QUESTIONS = [
                 from: 2,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนเสียชีวิต',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นรถยนต์ชนคนเดินเท้า',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ติดภายใน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีคนเจ็บน้อยกว่า 3 คน',
                         to: 3
                     },
@@ -21507,33 +21507,33 @@ export const QUESTIONS = [
                 from: 3,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่รู้สึกตัว',
                         to: 4,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'กำลังชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R6.code,
                             advise: RESULT.GROUP25.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'รู้สึกตัว',
                         to: 5,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้แจ้งตรวจสอบยืนยันรายละเอียดของผู้ป่วยไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP25.Y9.code,
                             advise: RESULT.GROUP25.Y9.advise,
                         }
@@ -21545,18 +21545,18 @@ export const QUESTIONS = [
                 from: 4,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R1.code,
                             advise: RESULT.GROUP25.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พอรู้สึกตัว',
                         to: 5
                     },
@@ -21567,73 +21567,73 @@ export const QUESTIONS = [
                 from: 5,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พูดได้แค่ประโยคสั้นๆ/พูดติดขัด',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R2.code,
                             advise: RESULT.GROUP25.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจเร็ว ซี่โครงบาน จมูกบานไหปลาร้ายุบ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R2.code,
                             advise: RESULT.GROUP25.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจมีเสียงดัง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R2.code,
                             advise: RESULT.GROUP25.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ผู้ป่วยต้องลุกขึ้นนั่งหรือยืนเพื่อให้หายใจได้ดีขึ้น',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R2.code,
                             advise: RESULT.GROUP25.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ตัวซีดและเหงือท่วมตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R2.code,
                             advise: RESULT.GROUP25.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'หายใจขัด โดยไม่มีอาการข้างต้นร่วมด้วย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R2.code,
                             advise: RESULT.GROUP25.R2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'พูดได้ / หายใจปกติ',
                         to: 6
                     },
@@ -21641,29 +21641,29 @@ export const QUESTIONS = [
             },
             {
                 question: 'ผู้ป่วยมีอาการต่อไปนี้บ้างหรือไม่',
-                type: CHOICE_TYPE.CHECKBOX,
+                type: answerType.checkbox,
                 from: 6,
                 to: 7,
                 payload: {
-                    level: LEVEL.R.text,
-                    color: LEVEL.R.color,
+                    level: level.red.description,
+                    color: level.red.color,
                     code: RESULT.GROUP25.R3.code,
                     advise: RESULT.GROUP25.R3.advise,
                 },
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เหงื่อท่วมตัว',
                         checked: false,
 
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นลมหรือเกือบเป็นลมเมื่อลุกนั่งหรือยืน',
                         checked: false,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ซีดและผิวซีดเย็น',
                         checked: false,
                     },
@@ -21675,18 +21675,18 @@ export const QUESTIONS = [
                 from: 7,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ขยับไม่ได้',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R8.code,
                             advise: RESULT.GROUP25.R8.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ขยับได้',
                         to: 8
                     },
@@ -21698,29 +21698,29 @@ export const QUESTIONS = [
                 from: 8,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ / คอ / หลัง / สะโพก / ลำตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP25.Y4.code,
                             advise: RESULT.GROUP25.Y4.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'แขนขา',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP25.W2.code,
                             advise: RESULT.GROUP25.W2.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีอาการปวด',
                         to: 9
                     },
@@ -21731,23 +21731,23 @@ export const QUESTIONS = [
                 from: 9,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ศรีษะ / คอ / ทรวงอก / ช่องท้อง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R5.code,
                             advise: RESULT.GROUP25.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ที่อื่นๆ',
                         to: 10
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีบาดแผล',
                         to: 12,
                     },
@@ -21758,12 +21758,12 @@ export const QUESTIONS = [
                 from: 10,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'เลือดยังไหลอยู่',
                         to: 11
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่มีเลือดออก/เลือดหยุดแล้ว',
                         to: 12
 
@@ -21775,18 +21775,18 @@ export const QUESTIONS = [
                 from: 11,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R5.code,
                             advise: RESULT.GROUP25.R5.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 12
                     },
@@ -21797,18 +21797,18 @@ export const QUESTIONS = [
                 from: 12,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ชัก',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R6.code,
                             advise: RESULT.GROUP25.R6.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ชัก',
                         to: 13
                     },
@@ -21819,18 +21819,18 @@ export const QUESTIONS = [
                 from: 13,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP25.Y1.code,
                             advise: RESULT.GROUP25.Y1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'ไม่ใช่',
                         to: 14
                     },
@@ -21841,18 +21841,18 @@ export const QUESTIONS = [
                 from: 14,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่มี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.W.text,
-                            color: LEVEL.W.color,
+                            level: level.white.description,
+                            color: level.white.color,
                             code: RESULT.GROUP25.W1.code,
                             advise: RESULT.GROUP25.W1.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มี',
                         to: 15
                     },
@@ -21863,23 +21863,23 @@ export const QUESTIONS = [
                 from: 15,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ต้นคอ / หลัง / กระดูกเชิงกราน / ต้นขา / ต้นแขน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R9.code,
                             advise: RESULT.GROUP25.R9.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'อื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP25.G1.code,
                             advise: RESULT.GROUP25.G1.advise,
                         }
@@ -21891,18 +21891,18 @@ export const QUESTIONS = [
                 from: 16,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ใช่',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP25.G6.code,
                             advise: RESULT.GROUP25.G6.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่ใช่',
                         to: null,
                     },
@@ -21913,62 +21913,62 @@ export const QUESTIONS = [
                 from: 17,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนเสียชีวิต',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นรถยนต์ชนคนเดินเท้า',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ติดภายใน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีคนเจ็บน้อยกว่า 3 คน',
                         to: 18
                     },
@@ -21979,17 +21979,17 @@ export const QUESTIONS = [
                 from: 18,
                 choices: [
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีคนไม่รู้สึกตัว',
                         to: 19,
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ทุกคนรู้สึกตัวดี',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP25.Y3.code,
                             advise: RESULT.GROUP25.Y3.advise,
                         }
@@ -22001,23 +22001,23 @@ export const QUESTIONS = [
                 from: 19,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ยังคงไม่รู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R1.code,
                             advise: RESULT.GROUP25.R1.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'พอรู้สึกตัว',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP25.Y3.code,
                             advise: RESULT.GROUP25.Y3.advise,
                         }
@@ -22029,62 +22029,62 @@ export const QUESTIONS = [
                 from: 20,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนเสียชีวิต',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นรถยนต์ชนคนเดินเท้า',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ติดภายใน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.QUESTION,
+                        type: type.question,
                         name: 'มีคนเจ็บน้อยกว่า 3 คน',
                         to: 21
                     },
@@ -22095,23 +22095,23 @@ export const QUESTIONS = [
                 from: 21,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีผู้บาดเจ็บหนัก (สัญญาณชีพ หรือระดับความรู้สึกผิดปกติ)',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีผู้บาดเจ็บเล็กน้อย',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP25.G8.code,
                             advise: RESULT.GROUP25.G8.advise,
                         }
@@ -22123,67 +22123,67 @@ export const QUESTIONS = [
                 from: 22,
                 choices: [
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนกระเด็นออกจากรถยนต์ที่นั่ง',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'มีคนเสียชีวิต',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'เป็นรถยนต์ชนคนเดินเท้า',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'คนเจ็บมากกว่าหรือเท่ากับ 3 คน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.R.text,
-                            color: LEVEL.R.color,
+                            level: level.red.description,
+                            color: level.red.color,
                             code: RESULT.GROUP25.R7.code,
                             advise: RESULT.GROUP25.R7.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ติดภายใน',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.Y.text,
-                            color: LEVEL.Y.color,
+                            level: level.yellow.description,
+                            color: level.yellow.color,
                             code: RESULT.GROUP25.Y8.code,
                             advise: RESULT.GROUP25.Y8.advise,
                         }
                     },
                     {
-                        type: TYPE.RESULT,
+                        type: type.result,
                         name: 'ไม่สามารถระบุได้ / อื่นๆ',
                         to: ResultPage,
                         payload: {
-                            level: LEVEL.G.text,
-                            color: LEVEL.G.color,
+                            level: level.green.description,
+                            color: level.green.color,
                             code: RESULT.GROUP25.G9.code,
                             advise: RESULT.GROUP25.G9.advise,
                         }

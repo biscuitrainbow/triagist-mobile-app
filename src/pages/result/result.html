@@ -1,5 +1,6 @@
 <ion-header>
   <ion-navbar>
+
     <ion-title>
       ผลการคัดกรอง
     </ion-title>
@@ -12,24 +13,30 @@
         <ion-icon name="share"></ion-icon>
       </button>
     </ion-buttons>
+
   </ion-navbar>
+
 </ion-header>
 
-<ion-content [ngStyle]="{ 'backgroundColor': payload.color}">
+<ion-content [ngStyle]="{ 'backgroundColor': result.level.color}">
 
   <ion-scroll class="flex flex-col  h-full" scrollY="true">
     <div class="flex flex-col  h-full">
       <ion-card>
-        <ion-card-header>
-          <h1 text-center ion-text [innerHTML]=" payload.code "></h1>
-        </ion-card-header>
-        <ion-card-content>
-          <h2 text-center [innerHTML]="payload.level "></h2>
-        </ion-card-content>
-        <div class="mx-8 mb-8">
-          <span class="text-grey font-light font-sm">*ข้อมูลทั้งหมดเป็นเพียงข้อมูลเบื้องต้นเพื่อประกอบการตัดสินใจ กรุณาปรึกษาแพทย์หรือผู้เชี่ยวชาญเพื่อดำเนินการปฐมพยาบาลอย่างถูกต้อง</span>
 
+        <ion-card-header>
+          <h1 text-center ion-text [innerHTML]=" result.code "></h1>
+        </ion-card-header>
+
+        <ion-card-content>
+          <h2 text-center [innerHTML]="result.level.description "></h2>
+        </ion-card-content>
+
+        <div class="mx-8 mb-8">
+          <span class="text-grey font-light font-sm">*ข้อมูลทั้งหมดเป็นเพียงข้อมูลเบื้องต้นเพื่อประกอบการตัดสินใจ
+            กรุณาปรึกษาแพทย์หรือผู้เชี่ยวชาญเพื่อดำเนินการปฐมพยาบาลอย่างถูกต้อง</span>
         </div>
+
       </ion-card>
 
       <ion-card>
@@ -42,15 +49,19 @@
             </button>
           </ion-buttons>
         </div>
+
         <ion-list #scheduleList>
-          <ion-item *ngFor="let answer of answers">
-            <div class="border-l-2 py-4 px-4" [ngStyle]="{ 'border-color': payload.color}">
-              <h4>{{answer.question}}</h4>
-              <p class="font-light font-sm text-2xl">{{answer.answer}}</p>
+          <ion-item *ngFor="let history of histories">
+            <div class="border-l-2 py-4 px-4"
+              [ngStyle]="{ 'border-color': history.result ? history.result.level.color : result.color}">
+              <h4>{{history.question}}</h4>
+              <p class="font-light font-sm text-2xl">{{history.answer}} </p>
+              <p *ngIf="history.result" class="font-light font-sm text-2xl"
+                [ngStyle]="{'color': history.result.level.color}" class="font-semibold">
+                {{history.result.code}}</p>
             </div>
           </ion-item>
           <hr>
-
         </ion-list>
       </ion-card>
 

@@ -18,7 +18,7 @@
   <ion-searchbar (ionInput)="search($event)" debounce="0"></ion-searchbar>
 
   <ion-list>
-    <button *ngFor="let question of filteredTriages; let i = index" ion-item (click)="startTriage(question)">
+    <button *ngFor="let question of filteredTriages; let i = index" ion-item (click)="navigateTriageQuestion(question)">
       <ion-card-header [ngClass]="{'header' : !simpleMode}">
 
         <ion-badge>

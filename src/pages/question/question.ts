@@ -1,14 +1,14 @@
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
-import { TYPE, QUESTIONS } from './../triage/questions';
 import { ResultPage } from './../result/result';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
-
+import { questionType, choiceType, criteriaType } from '../../datas/triages/meta';
 import * as moment from "moment";
 import { App } from 'ionic-angular/components/app/app';
+import triages from '../../datas/triages/triages';
 
 @Component({
   selector: 'page-question',
@@ -16,10 +16,11 @@ import { App } from 'ionic-angular/components/app/app';
 })
 export class QuestionPage {
   @ViewChild(Slides) slides: Slides
+
   question: any;
 
-  answers = [];
-  questionStack = [];
+  histories = [];
+  questionStacks = [];
 
   constructor(
     public navCtrl: NavController,
@@ -51,62 +52,99 @@ export class QuestionPage {
 
 
   onChoiceClick(choice, question) {
-    switch (choice.type) {
-      case TYPE.QUESTION: {
-
-        this.questionStack.push({ from: question.from, question: question.question, answer: choice.name });
-        this.slides.slideTo(choice.to);
+    switch (question.type) {
+      case questionType.button:
+        console.log('button');
+        this.buttonChoiceNavgation(choice, question);
         break;
-      }
 
-      case TYPE.RESULT: {
-
-        this.questionStack.push({ from: question.from, question: question.question, answer: choice.name });
-        this.saveResult(choice.payload, this.questionStack);
-
-        this.navCtrl.push(ResultPage, { payload: choice.payload, answers: this.questionStack });
+      case questionType.checkbox:
+        console.log('checkbox');
+        this.checkboxChoiceNavigation(question);
         break;
-      }
 
-      case TYPE.MODULE: {
-        this.app.getRootNav().push(QuestionPage, {
-          question: QUESTIONS.find((question) => choice.module == question.module),
-        })
-      }
+      default:
+        console.log('default');
+
+        break;
     }
   }
 
-  onNextClick(choices, question) {
+  buttonChoiceNavgation(choice, question) {
+    let history = { from: question.from, question: question.name, answer: choice.name, result: null, };
 
-    let checkedChoices = choices.filter(item => item.checked == true);
-    let textChoice = checkedChoices.map(item => item.name).join(" ,");
-
-    this.questionStack.push({ from: question.from, question: question.question, answer: textChoice });
-
-    if (question.criteria != null) {
-      if (checkedChoices.length >= question.criteria.minimumChecked) {
-        if (question.criteria.payload != null) {
-          this.navCtrl.push(ResultPage, { payload: question.criteria.payload, answers: this.questionStack });
-          this.saveResult(question.criteria.payload, this.questionStack);
-
-        } else {
-          this.slides.slideTo(question.criteria.to);
-        }
-
-      } else {
-        this.slides.slideTo(question.to);
+    switch (choice.type) {
+      case choiceType.question: {
+        this.toQuestion(choice.to);
+        break;
       }
-    } else {
-      if (checkedChoices.length >= 2) {
 
-        this.navCtrl.push(ResultPage, { payload: question.payload, answers: this.questionStack });
-        this.saveResult(question.payload, this.questionStack);
+      case choiceType.result: {
+        this.navigateResult(choice.result);
+        history.result = choice.result;
+        break;
+      }
 
-      } else {
-        this.slides.slideTo(question.to);
+      case choiceType.module: {
+        const module = triages.find((question) => choice.module == question.module);
+        this.navigateModule(module);
+
+        break;
       }
     }
 
+    this.histories.push(history);
+    this.questionStacks.push(question.from);
+
+    console.log(this.questionStacks);
+  }
+
+  checkboxChoiceNavigation(question) {
+    const checkeds = question.choices.filter(item => item.checked == true);
+    const textChoices = checkeds.map(item => item.name).join(" ,");
+
+    let history = { from: question.from, question: question.name, answer: textChoices, result: null, };
+
+    const { criteria } = question;
+    const matchedCriteria = checkeds.length >= question.criteria.minimum;
+
+    if (matchedCriteria) {
+      switch (criteria.type) {
+        case criteriaType.question:
+          this.toQuestion(criteria.to);
+          break;
+
+        case criteriaType.result:
+          this.navigateResult(criteria.result);
+          history.result = criteria.result;
+          break;
+
+        default:
+          break;
+      }
+    } else {
+      this.toQuestion(question.to);
+    }
+
+    this.histories.push(history);
+    this.questionStacks.push(question.from);
+  }
+
+  navigateResult(result) {
+    this.saveResult(result, this.histories);
+    this.navCtrl.push(ResultPage, { result: result, histories: this.histories });
+  }
+
+
+  navigateModule(module) {
+    this.app.getRootNav().push(QuestionPage, {
+      question: module,
+    })
+  }
+
+
+  toQuestion(to) {
+    this.slides.slideTo(to);
   }
 
   onSwipe(event, question) {
@@ -116,23 +154,23 @@ export class QuestionPage {
   }
 
   back() {
-    console.log((this.questionStack[this.questionStack.length - 1]));
+    const to = this.questionStacks[this.questionStacks.length - 1];
 
-    this.slides.slideTo(this.questionStack[this.questionStack.length - 1].from);
-    this.questionStack.pop();
+    this.toQuestion(to);
+    this.questionStacks.pop();
   }
 
   close() {
     this.navCtrl.pop();
   }
 
-  saveResult(payload, answers) {
+  saveResult(payload, history) {
     let timestamp = moment().unix();
     let uid = this.firebaseAuth.auth.currentUser.uid;
 
     this.firestore
       .collection('triages')
-      .add({ timestamp: timestamp, answers: answers, payload: payload, user: uid, module: this.question.name })
+      .add({ timestamp: timestamp, history: history, payload: payload, user: uid, module: this.question.name })
       .then(() => console.log("Saved successfully"))
       .catch(error => console.log(error.message));
   }

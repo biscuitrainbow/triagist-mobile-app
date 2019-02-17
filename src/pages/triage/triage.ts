@@ -5,13 +5,14 @@ import { QuestionPage } from '../question/question';
 import { QUESTIONS } from './questions';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { ReferencePage } from '../reference/reference';
+import triages from '../../datas/triages/triages';
 
 @Component({
   selector: 'page-triage',
   templateUrl: 'triage.html',
 })
 export class TriagePage {
-  questions = QUESTIONS;
+  questions = triages;
   simpleMode = false;
   searchQuery: string = '';
   filteredTriages = [];
@@ -27,7 +28,7 @@ export class TriagePage {
     this.filteredTriages = this.questions;
   }
 
-  startTriage(question: object) {
+  navigateTriageQuestion(question: object) {
     this.app.getRootNav().push(QuestionPage, {
       question: question
     })
