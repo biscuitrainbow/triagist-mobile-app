@@ -127,7 +127,12 @@ export class QuestionPage {
 	}
 
 	navigateResult(result) {
-		this.navCtrl.push(ResultPage, { module: this.module, result: result, histories: this.histories });
+		this.navCtrl.push(ResultPage, {
+			moduleName: this.module.name,
+			result: result,
+			histories: this.histories,
+			canSave: true,
+		});
 	}
 
 	navigateModule(module) {

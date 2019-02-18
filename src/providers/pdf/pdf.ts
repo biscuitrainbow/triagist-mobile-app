@@ -33,7 +33,7 @@ export class PdfProvider {
 									style: 'code',
 								},
 								{
-									text: `${data.module.name}`,
+									text: `${data.moduleName}`,
 									style: 'subheader',
 								},
 							],
@@ -49,7 +49,7 @@ export class PdfProvider {
 									alignment: 'right',
 								},
 								{
-									text: moment().format('Do MMMM YYYY, HH:mm:ss'),
+									text: moment().add(543, 'y').format('Do MMMM YYYY, HH:mm:ss'),
 									style: 'detail',
 									alignment: 'right',
 								},
@@ -79,9 +79,9 @@ export class PdfProvider {
 						}
 					);
 				});
-				//pdfMake.createPdf(pdfContent).download();
-				pdfMake.createPdf(pdfContent).getBlob(blob => {
-				  resolve(blob);
+				// pdfMake.createPdf(pdfContent).download();
+				pdfMake.createPdf(pdfContent).getBlob((blob) => {
+					resolve(blob);
 				});
 			} catch (e) {
 				reject(e);
