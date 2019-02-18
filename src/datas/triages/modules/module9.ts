@@ -283,7 +283,7 @@ const result = {
 const questions = [
 	{
 		name: 'ผู้ป่วยรู้สึกตัวหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 0,
 		choices: [
 			{
@@ -305,7 +305,7 @@ const questions = [
 	},
 	{
 		name: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 1,
 		choices: [
 			{
@@ -323,7 +323,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีอาการซึมๆ สับสนหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 2,
 		choices: [
 			{
@@ -340,7 +340,7 @@ const questions = [
 	},
 	{
 		name: 'ลักษณะอาการหายใจเป็นอย่างไร',
-		type: questionType.button,
+		type: questionType.single,
 		from: 3,
 		choices: [
 			{
@@ -388,7 +388,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 4,
 		choices: [
 			{
@@ -405,7 +405,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยอายุเท่าไหร่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 5,
 		choices: [
 			{
@@ -447,7 +447,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยเจ็บแน่นทรวงอกหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 7,
 		choices: [
 			{
@@ -464,7 +464,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยชักหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 8,
 		choices: [
 			{
@@ -481,7 +481,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีอาการอย่างไร',
-		type: questionType.button,
+		type: questionType.single,
 		from: 9,
 		choices: [
 			{

@@ -200,7 +200,7 @@ const result = {
 const questions = [
   {
     name: "ผู้ป่วยรู้สึกตัวหรือไม่",
-    type: questionType.button,
+    type: questionType.single,
     from: 0,
     choices: [
       {
@@ -222,7 +222,7 @@ const questions = [
   },
   {
     name: "ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่",
-    type: questionType.button,
+    type: questionType.single,
     from: 1,
     choices: [
       {
@@ -239,7 +239,7 @@ const questions = [
   },
   {
     name: "ลักษณะอาการหายใจเป็นอย่างไร",
-    type: questionType.button,
+    type: questionType.single,
     from: 2,
     choices: [
       {
@@ -286,7 +286,7 @@ const questions = [
   },
   {
     name: "ผู้ป่วยมีโรคหอบหืดหรือไม่",
-    type: questionType.button,
+    type: questionType.single,
     from: 3,
     choices: [
       {
@@ -303,7 +303,7 @@ const questions = [
   },
   {
     name: "ผู้ป่วยอายุเท่าไหร่",
-    type: questionType.button,
+    type: questionType.single,
     from: 4,
     choices: [
       {
@@ -349,7 +349,7 @@ const questions = [
   },
   {
     name: "ผุ้ป่วยเคยมีประวัติแพ้รุนแรงต่อสิ่งใดหรือไม่",
-    type: questionType.button,
+    type: questionType.single,
     from: 6,
     choices: [
       {
@@ -366,7 +366,7 @@ const questions = [
   },
   {
     name: "เคยมีอาการเกิดขึ้นหลังจากได้รับสิ่งที่แพ้ภายใน 30 นาทีหรือไม่",
-    type: questionType.button,
+    type: questionType.single,
     from: 7,
     choices: [
       {
@@ -383,7 +383,7 @@ const questions = [
   },
   {
     name: "ผุ้ป่วยเคยแพ้ยา / ช่วงนี้ผู้ป่วยกิน / ได้รับยาแล้วมีอาการแพ้หรือไม่",
-    type: questionType.button,
+    type: questionType.single,
     from: 8,
     choices: [
       {
@@ -400,7 +400,7 @@ const questions = [
   },
   {
     name: "ผู้ป่วยมีอาการผิดปกติอย่างไรบ้าง",
-    type: questionType.button,
+    type: questionType.single,
     from: 9,
     choices: [
       {
@@ -422,7 +422,7 @@ const questions = [
   },
   {
     name: "ผู้ป่วยเคยมีประวัติการแพ้หรือไม่",
-    type: questionType.button,
+    type: questionType.single,
     from: 10,
     choices: [
       {

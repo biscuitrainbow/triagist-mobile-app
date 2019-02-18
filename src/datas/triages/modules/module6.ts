@@ -154,7 +154,7 @@ const result = {
 const questions = [
     {
         name: 'พิจารณาไม่ใช้เนื่องจากอย่างไรก็ตาม ก็จะส่งหน่วยแน่นอน',
-        type:questionType.button,
+        type:questionType.single,
         from: 0,
         choices: [
             {

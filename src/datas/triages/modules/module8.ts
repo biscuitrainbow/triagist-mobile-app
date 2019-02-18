@@ -268,7 +268,7 @@ const result = {
 const questions = [
 	{
 		name: 'ผู้ป่วยรู้สึกตัวหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 0,
 		choices: [
 			{
@@ -290,7 +290,7 @@ const questions = [
 	},
 	{
 		name: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 1,
 		choices: [
 			{
@@ -307,7 +307,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยพูดหรือมีเสียงร้องออกมาหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 2,
 		choices: [
 			{
@@ -324,7 +324,7 @@ const questions = [
 	},
 	{
 		name: 'หายใจโล่งแล้วหรือยัง',
-		type: questionType.button,
+		type: questionType.single,
 		from: 3,
 		choices: [
 			{
@@ -351,3 +351,4 @@ const module8 = {
 };
 
 export default module8;
+export { result };

@@ -12,6 +12,16 @@ import module12 from './modules/module12';
 import module13 from './modules/module13';
 import module14 from './modules/module14';
 import module15 from './modules/module15';
+import module16 from './modules/module16';
+import module17 from './modules/module17';
+import module18 from './modules/module18';
+import module19 from './modules/module19';
+import module20 from './modules/module20';
+import module21 from './modules/module21';
+import module22 from './modules/module22';
+import module23 from './modules/module23';
+import module25 from './modules/module25';
+import module24 from './modules/module24';
 
 const triages = [
 	module1, //
@@ -28,6 +38,16 @@ const triages = [
 	module13,
 	module14,
 	module15,
+	module16,
+	module17,
+	module18,
+	module19,
+	module20,
+	module21,
+	module22,
+	module23,
+	module24,
+	module25,
 ];
 
 export default triages;

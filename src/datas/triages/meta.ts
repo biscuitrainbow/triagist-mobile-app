@@ -1,6 +1,6 @@
 export const questionType = {
     checkbox: 'checkbox',
-    button: 'button'
+    single: 'button'
 }
 
 export const choiceType = {

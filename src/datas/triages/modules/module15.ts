@@ -460,7 +460,7 @@ const result = {
 const questions = [
 	{
 		name: 'ผู้ป่วยรู้สึกตัวหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 0,
 		choices: [
 			{
@@ -482,7 +482,7 @@ const questions = [
 	},
 	{
 		name: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 1,
 		choices: [
 			{
@@ -499,7 +499,7 @@ const questions = [
 	},
 	{
 		name: 'ลักษณะอาการหายใจเป็นอย่างไร',
-		type: questionType.button,
+		type: questionType.single,
 		from: 2,
 		choices: [
 			{
@@ -546,7 +546,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 3,
 		choices: [
 			{
@@ -563,7 +563,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยอายุเท่าไหร่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 4,
 		choices: [
 			{
@@ -606,7 +606,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีครรภ์หรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 6,
 		choices: [
 			{
@@ -623,7 +623,7 @@ const questions = [
 	},
 	{
 		name: 'อายุครรภ์มากกว่า 20 สัปดาห์ (4.5 เดือน) หรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 7,
 		choices: [
 			{
@@ -640,7 +640,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีอาการอย่างไร',
-		type: questionType.button,
+		type: questionType.single,
 		from: 8,
 		choices: [
 			{
@@ -677,7 +677,7 @@ const questions = [
 	},
 	{
 		name: 'มีน้ำเดิน หรือ มูกเลือดออกทางช่องคลอดหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 9,
 		choices: [
 			{
@@ -694,7 +694,7 @@ const questions = [
 	},
 	{
 		name: 'ปวดท้องหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 10,
 		choices: [
 			{
@@ -711,7 +711,7 @@ const questions = [
 	},
 	{
 		name: 'เป็นท้องที่เท่าไหร่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 11,
 		choices: [
 			{
@@ -728,7 +728,7 @@ const questions = [
 	},
 	{
 		name: 'ปวดมานานเท่าไหร่แล้ว',
-		type: questionType.button,
+		type: questionType.single,
 		from: 12,
 		choices: [
 			{
@@ -745,7 +745,7 @@ const questions = [
 	},
 	{
 		name: 'อายุครรภ์เท่าไหร่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 13,
 		choices: [
 			{
@@ -762,7 +762,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีอาการอย่างไร',
-		type: questionType.button,
+		type: questionType.single,
 		from: 14,
 		choices: [
 			{
@@ -784,7 +784,7 @@ const questions = [
 	},
 	{
 		name: 'มีเลือดออกทางช่องคลอดหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 15,
 		choices: [
 			{
@@ -801,7 +801,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีอาการอย่างไร',
-		type: questionType.button,
+		type: questionType.single,
 		from: 16,
 		choices: [
 			{
@@ -828,7 +828,7 @@ const questions = [
 	},
 	{
 		name: 'มีเลือดออกทางช่องคลอดหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 17,
 		choices: [
 			{

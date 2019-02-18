@@ -52,7 +52,7 @@ export class QuestionPage {
 
   onChoiceClick(choice, question) {
     switch (question.type) {
-      case questionType.button:
+      case questionType.single:
         console.log("button");
         this.buttonChoiceNavgation(choice, question);
         break;

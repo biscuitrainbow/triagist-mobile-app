@@ -289,7 +289,7 @@ const result = {
 const questions = [
 	{
 		name: 'ผู้ป่วยรู้สึกตัวหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 0,
 		choices: [
 			{
@@ -311,7 +311,7 @@ const questions = [
 	},
 	{
 		name: 'ตบไหล่ และปลุกเรียก ผู้ป่วยรู้สึกตัวขึ้นหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 1,
 		choices: [
 			{
@@ -328,7 +328,7 @@ const questions = [
 	},
 	{
 		name: 'ลักษณะอาการหายใจเป็นอย่างไร',
-		type: questionType.button,
+		type: questionType.single,
 		from: 2,
 		choices: [
 			{
@@ -376,7 +376,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีโรคหอบหืดหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 3,
 		choices: [
 			{
@@ -393,7 +393,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยอายุเท่าไหร่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 4,
 		choices: [
 			{
@@ -436,7 +436,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีอาการชักหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 6,
 		choices: [
 			{
@@ -453,7 +453,7 @@ const questions = [
 	},
 	{
 		name: 'เจ้าหน้าที่ร้องขอการเตรียมพร้อมเนื่องจากผู้ป่วยมีภาวะคุกคาม อันจะเป็นอัตรายต่อตนเองและผู้อื่นหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 7,
 		choices: [
 			{
@@ -470,7 +470,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยได้รับ/สารอะไรเข้าสู่ร่างกาย',
-		type: questionType.button,
+		type: questionType.single,
 		from: 8,
 		choices: [
 			{
@@ -502,7 +502,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยกลืน น้ำลาย น้ำ และอากหาร ลำบากหรือไม่่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 9,
 		choices: [
 			{
@@ -519,7 +519,7 @@ const questions = [
 	},
 	{
 		name: 'มีอาการผิดปกติอื่นเช่น เจ็บคอ ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
-		type: questionType.button,
+		type: questionType.single,
 		from: 10,
 		choices: [
 			{
@@ -536,7 +536,7 @@ const questions = [
 	},
 	{
 		name: 'มีอาการผิดปกติหรือไม่ เช่น ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
-		type: questionType.button,
+		type: questionType.single,
 		from: 11,
 		choices: [
 			{

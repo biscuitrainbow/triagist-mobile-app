@@ -586,7 +586,7 @@ const result = {
 const questions = [
 	{
 		name: 'สถานการณ์ปลอดภัยหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 0,
 		choices: [
 			{
@@ -628,7 +628,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีเลือดออกหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 2,
 		choices: [
 			{
@@ -645,7 +645,7 @@ const questions = [
 	},
 	{
 		name: 'ห้ามเลือดแล้วหยุดหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 3,
 		choices: [
 			{
@@ -667,7 +667,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีทำร้ายตนเองหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 4,
 		choices: [
 			{
@@ -684,7 +684,7 @@ const questions = [
 	},
 	{
 		name: 'ด้วยวิธีใด',
-		type: questionType.button,
+		type: questionType.single,
 		from: 5,
 		choices: [
 			{
@@ -711,7 +711,7 @@ const questions = [
 	},
 	{
 		name: 'มีตัวประกันหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 6,
 		choices: [
 			{
@@ -728,7 +728,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยกินยาเกินขนาด / สารพิษ / แอลกอฮอล์ ก่อนมีอาการหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 7,
 		choices: [
 			{
@@ -750,7 +750,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยได้รับยา / สารอะไรเข้าสู่ร่างกาย',
-		type: questionType.button,
+		type: questionType.single,
 		from: 8,
 		choices: [
 			{
@@ -782,7 +782,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยกลืน (น้ำลาย น้ำ อาหาร) ลำบากหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 9,
 		choices: [
 			{
@@ -799,7 +799,7 @@ const questions = [
 	},
 	{
 		name: 'มีอาการผิดปกติอื่นหรือไม่ เช่น เจ็บคอ ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
-		type: questionType.button,
+		type: questionType.single,
 		from: 10,
 		choices: [
 			{
@@ -816,7 +816,7 @@ const questions = [
 	},
 	{
 		name: 'มีอาการผิดปกติหรือไม่ เช่น ปวดท้อง ปวดศรีษะ คัน วิงเวียน',
-		type: questionType.button,
+		type: questionType.single,
 		from: 11,
 		choices: [
 			{
@@ -833,7 +833,7 @@ const questions = [
 	},
 	{
 		name: 'ผู้ป่วยมีอาการชักร่วมด้วยหรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 12,
 		choices: [
 			{
@@ -850,7 +850,7 @@ const questions = [
 	},
 	{
 		name: 'ตำรวจ / เจ้าหน้าที่ระงับภัยร้องขอการเตรียมพร้อมเนื่องจากผู้ป่วยมีภาวะคุกคาม อันอาจจะเป็นภยันอันตรายต่อตนเอง/ผู้อื่น หรือไม่',
-		type: questionType.button,
+		type: questionType.single,
 		from: 13,
 		choices: [
 			{
@@ -867,7 +867,7 @@ const questions = [
 	},
 	{
 		name: 'พิจารณาแจ้งตำรวจ',
-		type: questionType.button,
+		type: questionType.single,
 		from: 14,
 		choices: [
 			{
