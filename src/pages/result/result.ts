@@ -1,135 +1,144 @@
 import { AdvisePage } from './../advise/advise';
-import { Component } from "@angular/core";
-import { NavController, NavParams, Alert } from "ionic-angular";
-import { LoadingController } from "ionic-angular/components/loading/loading-controller";
-import { ToastController } from "ionic-angular/components/toast/toast-controller";
-import { Loading } from "ionic-angular/components/loading/loading";
+import { Component } from '@angular/core';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
+import { ToastController } from 'ionic-angular/components/toast/toast-controller';
+import { Loading } from 'ionic-angular/components/loading/loading';
 
-import { AngularFireAuth } from "angularfire2/auth";
-import { AngularFirestore } from "angularfire2/firestore";
-
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 import { FileOpener } from '@ionic-native/file-opener';
-import { SocialSharing } from "@ionic-native/social-sharing";
+import { SocialSharing } from '@ionic-native/social-sharing';
 
-import { MapProvider } from "../../providers/map/map";
-import { PdfProvider } from "../../providers/pdf/pdf";
-import { FirebaseUserProvider } from "./../../providers/firebase-user/firebase-user";
+import { MapProvider } from '../../providers/map/map';
+import { PdfProvider } from '../../providers/pdf/pdf';
+import { FirebaseUserProvider } from './../../providers/firebase-user/firebase-user';
 
-import * as _ from "lodash";
-
+import * as _ from 'lodash';
+import * as moment from 'moment';
 
 declare var google;
 
 @Component({
-  selector: "page-result",
-  templateUrl: "result.html"
+	selector: 'page-result',
+	templateUrl: 'result.html',
 })
 export class ResultPage {
-  private result;
-  public histories;
-  private loader: Loading;
+	private result;
+	public histories;
+	private loader: Loading;
+	private isSaved = false;
 
-  private pdfUrl = '';
+	private pdfUrl = '';
 
-  constructor(
-    public fileOpener: FileOpener,
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public toastCtrl: ToastController,
-    public userProvider: FirebaseUserProvider,
-    public pdf: PdfProvider,
-    public map: MapProvider,
-    public socialSharing: SocialSharing,
-    public loadingCtrl: LoadingController,
-    public firestore: AngularFirestore,
-    public firebaseAuth: AngularFireAuth
-  ) {
-    this.result = navParams.get('result');
-    this.histories = navParams.get('histories');
+	constructor(
+		public fileOpener: FileOpener,
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		public toastCtrl: ToastController,
+		public alertCtrl: AlertController,
+		public userProvider: FirebaseUserProvider,
+		public pdf: PdfProvider,
+		public map: MapProvider,
+		public socialSharing: SocialSharing,
+		public loadingCtrl: LoadingController,
+		public firestore: AngularFirestore,
+		public firebaseAuth: AngularFireAuth
+	) {
+		this.result = navParams.get('result');
+		this.histories = navParams.get('histories');
+	}
 
-    console.log(this.histories);
-  }
+	ion;
 
-  ion
+	submitResult() {
+		this.showLoading('กำลังบันทึก...');
 
-  saveResult() {
-    let uid = this.firebaseAuth.auth.currentUser.uid;
-    this.firestore
-      .collection('triages')
-      .add({ histories: this.histories, result: this.result, user: uid })
-      .then(() => console.log("Saved successfully"))
-      .catch(error => console.log(error.message));
-  }
+		let timestamp = moment().unix();
+		let uid = this.firebaseAuth.auth.currentUser.uid;
 
-  async openPdf() {
-    if (this.pdfUrl == '') {
-      this.showLoading("Generating PDF file...");
-      await this.createPdf();
-      this.hideLoading();
-    }
+		this.firestore
+			.collection('triages')
+			.add({ timestamp: timestamp, histories: this.histories, result: this.result, user: uid })
+			.then(() => {
+				this.hideLoading();
+				this.showToast('บันทึกแล้ว');
+			})
+			.catch(() => {
+				this.hideLoading();
+				this.showToast('บันทึกไม่สำเร็จ ลองอีกครั้ง');
+			});
+	}
 
-    this.fileOpener.open(this.pdfUrl, 'application/pdf')
-      .then(() => console.log('File is opened'))
-      .catch(e => console.log('Error openening file', e));
-  }
+	async openPdf() {
+		if (this.pdfUrl == '') {
+			this.showLoading('Generating PDF file...');
+			await this.createPdf();
+			this.hideLoading();
+		}
 
-  async share() {
-    if (this.pdfUrl == '') {
-      this.showLoading("Generating PDF file...");
-      await this.createPdf();
-      this.hideLoading();
-    }
+		this.fileOpener
+			.open(this.pdfUrl, 'application/pdf')
+			.then(() => console.log('File is opened'))
+			.catch((e) => console.log('Error openening file', e));
+	}
 
-    this.socialSharing.share(
-      "Body",
-      "Subject",
-      // ["natthaponsricort@gmail.com"],
-      // undefined,
-      // undefined,
-      this.pdfUrl
-    )
-      .catch(e => alert(JSON.stringify(e)));
-  }
+	async share() {
+		if (this.pdfUrl == '') {
+			this.showLoading('Generating PDF file...');
+			await this.createPdf();
+			this.hideLoading();
+		}
 
-  async createPdf() {
-    try {
-      let data = { code: this.result.code, histories: this.histories };
-      let blob = await this.pdf.create(data);
-      let saveResult = await this.pdf.save(blob);
-      return this.pdfUrl = saveResult.nativeURL;
-    } catch (e) {
-      this.showToast(e);
-      // this.hideLoading();
-    }
-  }
+		this.socialSharing
+			.share(
+				'Body',
+				'Subject',
+				// ["natthaponsricort@gmail.com"],
+				// undefined,
+				// undefined,
+				this.pdfUrl
+			)
+			.catch((e) => alert(JSON.stringify(e)));
+	}
 
-  showToast(message: string) {
-    this.toastCtrl
-      .create({
-        message: message,
-        duration: 10000
-      })
-      .present();
-  }
+	async createPdf() {
+		try {
+			let data = { code: this.result.code, histories: this.histories };
+			let blob = await this.pdf.create(data);
+			let saveResult = await this.pdf.save(blob);
+			return (this.pdfUrl = saveResult.nativeURL);
+		} catch (e) {
+			this.showToast(e);
+			// this.hideLoading();
+		}
+	}
 
-  showLoading(message: string) {
-    this.loader = this.loadingCtrl.create({
-      content: message
-    });
+	showToast(message: string) {
+		this.toastCtrl
+			.create({
+				message: message,
+				duration: 3000,
+			})
+			.present();
+	}
 
-    this.loader.present();
-  }
+	showLoading(message: string) {
+		this.loader = this.loadingCtrl.create({
+			content: message,
+		});
 
-  hideLoading() {
-    this.loader.dismiss();
-  }
+		this.loader.present();
+	}
 
-  navigateAdvisePage() {
-    //  console.log(this.result.advise.length);
+	hideLoading() {
+		this.loader.dismiss();
+	}
 
-    this.navCtrl.push(AdvisePage, {
-      advise: this.result.advise
-    })
-  }
+	navigateAdvisePage() {
+		this.navCtrl.push(AdvisePage, {
+			advise: this.result.advise,
+		});
+	}
 }
