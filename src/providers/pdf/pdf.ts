@@ -79,10 +79,10 @@ export class PdfProvider {
 						}
 					);
 				});
-				pdfMake.createPdf(pdfContent).download();
-				// pdfMake.createPdf(pdfContent).getBlob(blob => {
-				//   resolve(blob);
-				// });
+				//pdfMake.createPdf(pdfContent).download();
+				pdfMake.createPdf(pdfContent).getBlob(blob => {
+				  resolve(blob);
+				});
 			} catch (e) {
 				reject(e);
 			}

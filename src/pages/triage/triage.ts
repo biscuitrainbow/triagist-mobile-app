@@ -12,7 +12,7 @@ import modules from '../../datas/triages/triages';
 	templateUrl: 'triage.html',
 })
 export class TriagePage {
-	simpleMode = false;
+	simpleMode = true;
 	searchQuery: string = '';
 	filteredModules = [];
 
@@ -32,6 +32,10 @@ export class TriagePage {
 
 	navigateReferencePage() {
 		this.navCtrl.push(ReferencePage);
+	}
+
+	toggleSimpleMode(){
+		this.simpleMode = !this.simpleMode;
 	}
 
 	search(ev: any) {
