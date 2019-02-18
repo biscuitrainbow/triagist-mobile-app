@@ -25,8 +25,9 @@ declare var google;
 	templateUrl: 'result.html',
 })
 export class ResultPage {
+	private module;
 	private result;
-	public histories;
+	private histories;
 	private loader: Loading;
 	private isSaved = false;
 
@@ -46,6 +47,7 @@ export class ResultPage {
 		public firestore: AngularFirestore,
 		public firebaseAuth: AngularFireAuth
 	) {
+		this.module = navParams.get('module');
 		this.result = navParams.get('result');
 		this.histories = navParams.get('histories');
 	}
@@ -60,7 +62,7 @@ export class ResultPage {
 
 		this.firestore
 			.collection('triages')
-			.add({ timestamp: timestamp, histories: this.histories, result: this.result, user: uid })
+			.add({ timestamp: timestamp, histories: this.histories, result: this.result, module: this.module.name, user: uid })
 			.then(() => {
 				this.hideLoading();
 				this.showToast('บันทึกแล้ว');
@@ -105,7 +107,7 @@ export class ResultPage {
 
 	async createPdf() {
 		try {
-			let data = { code: this.result.code, histories: this.histories };
+			let data = { module: this.module, code: this.result.code, histories: this.histories };
 			let blob = await this.pdf.create(data);
 			let saveResult = await this.pdf.save(blob);
 			return (this.pdfUrl = saveResult.nativeURL);

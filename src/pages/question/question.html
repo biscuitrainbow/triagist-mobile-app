@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{question.name}}</ion-title>
+    <ion-title>{{module.name}}</ion-title>
 
     <ion-buttons end>
       <button ion-button icon-only (click)="close()">
@@ -13,7 +13,7 @@
 <ion-content padding style="background-color: #488aff" scroll="true">
 
   <ion-slides class="swiper-no-swiping ">
-    <ion-slide class="slide-zoom h-auto" *ngFor="let question of question.questions; let i = index"
+    <ion-slide class="slide-zoom h-auto" *ngFor="let question of module.questions; let i = index"
       (swipe)="onSwipe($event,question)">
       <div class="flex flex-col justify-center h-full pt-4">
         <h3 class="mb-6 text-white ">{{question.name}}</h3>

@@ -5,52 +5,44 @@ import { QuestionPage } from '../question/question';
 import { QUESTIONS } from './questions';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { ReferencePage } from '../reference/reference';
-import triages from '../../datas/triages/triages';
+import modules from '../../datas/triages/triages';
 
 @Component({
-  selector: 'page-triage',
-  templateUrl: 'triage.html',
+	selector: 'page-triage',
+	templateUrl: 'triage.html',
 })
 export class TriagePage {
-  questions = triages;
-  simpleMode = false;
-  searchQuery: string = '';
-  filteredTriages = [];
+	simpleMode = false;
+	searchQuery: string = '';
+	filteredModules = [];
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public menuCtrl: MenuController,
-    public app: App
-  ) {
-    menuCtrl.enable(true);
+	constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, public app: App) {
+		menuCtrl.enable(true);
 
-    this.filteredTriages = this.questions;
-  }
+		this.filteredModules = modules;
+	}
 
-  navigateTriageQuestion(question: object) {
-    const newQuestion = { ...question };
+	navigateTriageQuestion(module: object) {
+		const copiedModule = { ...module };
 
-    this.app.getRootNav().push(QuestionPage, {
-      question: newQuestion
-    })
-  }
+		this.app.getRootNav().push(QuestionPage, {
+			module: copiedModule,
+		});
+	}
 
-  navigateReferencePage() {
-    this.navCtrl.push(ReferencePage);
-  }
+	navigateReferencePage() {
+		this.navCtrl.push(ReferencePage);
+	}
 
+	search(ev: any) {
+		const val = ev.target.value;
 
-  search(ev: any) {
-    const val = ev.target.value;
-
-    if (val && val.trim() != '') {
-      this.filteredTriages = this.questions.filter((item) => {
-        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
-    } else {
-      this.filteredTriages = this.questions;
-    }
-
-  }
+		if (val && val.trim() != '') {
+			this.filteredModules = modules.filter((item) => {
+				return item.name.toLowerCase().indexOf(val.toLowerCase()) > -1;
+			});
+		} else {
+			this.filteredModules = modules;
+		}
+	}
 }

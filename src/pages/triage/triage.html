@@ -18,21 +18,21 @@
   <ion-searchbar (ionInput)="search($event)" debounce="0"></ion-searchbar>
 
   <ion-list>
-    <button *ngFor="let question of filteredTriages; let i = index" ion-item (click)="navigateTriageQuestion(question)">
+    <button *ngFor="let module of filteredModules; let i = index" ion-item (click)="navigateTriageQuestion(module)">
       <ion-card-header [ngClass]="{'header' : !simpleMode}">
 
         <ion-badge>
-          {{question.module}}
+          {{module.module}}
         </ion-badge>
 
-        {{question.name}}
+        {{module.name}}
       </ion-card-header>
 
-      <img class="img" *ngIf="!simpleMode" item-start [src]="question.image" />
+      <img class="img" *ngIf="!simpleMode" item-start [src]="module.image" />
 
 
       <ion-card-content *ngIf="!simpleMode" class="content">
-        {{question.description}}
+        {{module.description}}
       </ion-card-content>
 
     </button>

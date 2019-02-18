@@ -7,7 +7,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { questionType, choiceType, criteriaType } from '../../datas/triages/meta';
 import { App } from 'ionic-angular/components/app/app';
-import triages from '../../datas/triages/triages';
+import modules from '../../datas/triages/triages';
 
 @Component({
 	selector: 'page-question',
@@ -16,7 +16,7 @@ import triages from '../../datas/triages/triages';
 export class QuestionPage {
 	@ViewChild(Slides) slides: Slides;
 
-	question: any;
+	module: any;
 
 	histories = [];
 	questionStacks = [];
@@ -31,7 +31,7 @@ export class QuestionPage {
 		public menuCtrl: MenuController,
 		public app: App
 	) {
-		this.question = navParams.get('question');
+		this.module = navParams.get('module');
 	}
 
 	ionViewDidLoad() {
@@ -85,7 +85,7 @@ export class QuestionPage {
 			}
 
 			case choiceType.module: {
-				const module = triages.find((question) => choice.module == question.module);
+				const module = modules.find((question) => choice.module == question.module);
 				this.navigateModule(module);
 
 				break;
@@ -127,7 +127,7 @@ export class QuestionPage {
 	}
 
 	navigateResult(result) {
-		this.navCtrl.push(ResultPage, { result: result, histories: this.histories });
+		this.navCtrl.push(ResultPage, { module: this.module, result: result, histories: this.histories });
 	}
 
 	navigateModule(module) {

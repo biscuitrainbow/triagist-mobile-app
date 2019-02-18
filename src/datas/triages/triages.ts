@@ -23,7 +23,7 @@ import module23 from './modules/module23';
 import module25 from './modules/module25';
 import module24 from './modules/module24';
 
-const triages = [
+const modules = [
 	module1, //
 	module2,
 	module3,
@@ -50,4 +50,4 @@ const triages = [
 	module25,
 ];
 
-export default triages;
+export default modules;
