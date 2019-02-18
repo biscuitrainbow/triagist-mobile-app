@@ -132,7 +132,7 @@ export class QuestionPage {
 
 	navigateModule(module) {
 		this.app.getRootNav().push(QuestionPage, {
-			question: module,
+			module: module,
 		});
 	}
 
