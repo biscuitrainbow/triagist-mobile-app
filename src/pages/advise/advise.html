@@ -2,7 +2,14 @@
 
   <ion-navbar>
     <ion-title>คำแนะนำ</ion-title>
+     <ion-buttons end>
+      <button (click)="navigateNotePage()" clear ion-button color="primary">
+        <ion-icon class="mr-2" name="information-circle"></ion-icon>หมายเหตุ
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+
 
 </ion-header>
 
@@ -25,9 +32,7 @@
   <ion-slides pager>
     <ion-slide *ngFor="let content of advise.contents" style="overflow-y: scroll; display: block;">
       <ion-buttons end>
-        <button (click)="navigateNotePage()" clear ion-button color="primary">
-          <ion-icon class="mr-2" name="information-circle"></ion-icon>หมายเหตุ
-        </button>
+
       </ion-buttons>
       <p class="text-left leading-loose px-4 text-3xl" [innerHTML]="content.title"></p>
       <p *ngFor="let description of content.descriptions" [innerHTML]="description"
