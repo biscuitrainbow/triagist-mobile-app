@@ -24,7 +24,7 @@
   <ion-searchbar (ionInput)="search($event)" debounce="0"></ion-searchbar>
 
   <div *ngIf="simpleMode" class="flex flex-wrap p-2 ">
-    <div (click)="navigateTriageQuestion(module)" *ngFor="let module of filteredModules; let i = index" class="h-22 w-1/2 p-2 mb-2 leading-normal border border-grey-lighter rounded" >
+    <div (click)="navigateTriageQuestion(module)" *ngFor="let module of filteredModules; let i = index" class="h-22 w-1/2 p-2 mb-3 leading-normal rounded" >
      <div class="flex items-start">
       <div>
         <ion-badge class="mr-2">
