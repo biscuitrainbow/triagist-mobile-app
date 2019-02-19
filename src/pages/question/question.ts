@@ -95,7 +95,13 @@ export class QuestionPage {
 
 	checkboxChoiceNavigation(question) {
 		const checkeds = question.choices.filter((item) => item.checked == true);
-		const textChoices = checkeds.map((item) => item.name).join(' ,');
+		let textChoices = '';
+
+		if (checkeds.length !== 0) {
+			textChoices = checkeds.map((item) => item.name).join(' ,');
+		} else {
+			textChoices = 'ไม่ได้เลือกข้อใดเลย';
+		}
 
 		let history = { question: question.name, answer: textChoices, result: null };
 
