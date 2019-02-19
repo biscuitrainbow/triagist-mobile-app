@@ -1,17 +1,14 @@
 import { Injectable } from '@angular/core';
 import { File } from '@ionic-native/file';
-import { FirebaseUserProvider } from '../firebase-user/firebase-user';
-import { MapProvider } from './../map/map';
-import { style, THSarabunNew, defaultStyle } from './constant';
-
+import * as moment from 'moment';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
-import * as moment from 'moment';
-import * as jsPDF from 'jspdf';
+import { FirebaseUserProvider } from '../firebase-user/firebase-user';
+import { defaultStyle, style, THSarabunNew } from './constant';
 
 @Injectable()
 export class PdfProvider {
-	constructor(private file: File, private map: MapProvider, private user: FirebaseUserProvider) {
+	constructor(private file: File, private user: FirebaseUserProvider) {
 		pdfMake.fonts = THSarabunNew;
 		pdfMake.vfs = pdfFonts.pdfMake.vfs;
 	}
@@ -79,7 +76,7 @@ export class PdfProvider {
 						}
 					);
 				});
-				// pdfMake.createPdf(pdfContent).download();
+				pdfMake.createPdf(pdfContent).download();
 				pdfMake.createPdf(pdfContent).getBlob((blob) => {
 					resolve(blob);
 				});
