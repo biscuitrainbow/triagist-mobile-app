@@ -18,14 +18,14 @@ import { AdvisePage } from './../advise/advise';
 	templateUrl: 'result.html',
 })
 export class ResultPage {
-	private moduleName;
-	private result;
-	private histories;
-	private loader: Loading;
-	private canSave = true;
+	public moduleName;
+	public result;
+	public histories;
+	public timestamp;
+	public loader: Loading;
+	public canSave = true;
 
-	private pdfUrl = '';
-
+	public pdfUrl = '';
 	constructor(
 		public fileOpener: FileOpener,
 		public navCtrl: NavController,
@@ -44,6 +44,7 @@ export class ResultPage {
 		this.result = navParams.get('result');
 		this.histories = navParams.get('histories');
 		this.canSave = navParams.get('canSave');
+		this.timestamp = navParams.get('timestamp');
 	}
 
 	ion;
@@ -51,12 +52,11 @@ export class ResultPage {
 	submitResult() {
 		this.showLoading('กำลังบันทึก...');
 
-		let timestamp = moment().unix();
 		let uid = this.firebaseAuth.auth.currentUser.uid;
 
 		this.firestore
 			.collection('triages')
-			.add({ timestamp: timestamp, histories: this.histories, result: this.result, module: this.moduleName, user: uid })
+			.add({ histories: this.histories, result: this.result, module: this.moduleName, user: uid, timestamp: this.timestamp })
 			.then(() => {
 				this.hideLoading();
 				this.showToast('บันทึกแล้ว');
@@ -101,7 +101,7 @@ export class ResultPage {
 
 	async createPdf() {
 		try {
-			let data = { moduleName: this.moduleName, code: this.result.code, histories: this.histories };
+			let data = { moduleName: this.moduleName, code: this.result.code, histories: this.histories, timestamp: this.timestamp };
 			let blob = await this.pdf.create(data);
 			let saveResult = await this.pdf.save(blob);
 			return (this.pdfUrl = saveResult.nativeURL);

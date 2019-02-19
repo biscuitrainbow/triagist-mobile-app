@@ -45,6 +45,7 @@ export class HistoryPage extends BasePage {
 			moduleName: triage.module,
 			result: triage.result,
 			histories: triage.histories,
+			timestamp: triage.timestamp,
 			canSave: false,
 		});
 	}
@@ -64,7 +65,6 @@ export class HistoryPage extends BasePage {
 					this.lastVisible = val.docs[val.docs.length - 1];
 					val.docs.map((doc) => {
 						this.triages.push(doc.data());
-						console.log(doc.data());
 					});
 					event.complete();
 				})

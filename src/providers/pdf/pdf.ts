@@ -61,12 +61,17 @@ export class PdfProvider {
 								alignment: 'right',
 							},
 							{
-								text: userDetail.exists ? `เบอร์โทรญาติ ${userDetail.data().number}` : '',
+								text: userDetail.exists ? `เบอร์โทร ${userDetail.data().number}` : '',
 								style: 'detail',
 								alignment: 'right',
 							},
 							{
-								text: moment().add(543, 'y').format('Do MMMM YYYY, HH:mm:ss'),
+								text: `สรุปผลเมื่อ: ${moment.unix(data.timestamp).add(543, 'y').format('Do MMMM YYYY, HH:mm:ss')}`,
+								style: 'detail',
+								alignment: 'right',
+							},
+							{
+								text: `สร้างเอกสารเมื่อ: ${moment().add(543, 'y').format('Do MMMM YYYY, HH:mm:ss')}`,
 								style: 'detail',
 								alignment: 'right',
 							},

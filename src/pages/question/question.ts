@@ -8,6 +8,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { questionType, choiceType, criteriaType } from '../../datas/triages/meta';
 import { App } from 'ionic-angular/components/app/app';
 import modules from '../../datas/triages/triages';
+import * as moment from 'moment';
 
 @Component({
 	selector: 'page-question',
@@ -135,6 +136,7 @@ export class QuestionPage {
 			moduleName: this.module.name,
 			result: result,
 			histories: this.histories,
+			timestamp: moment().unix(),
 			canSave: true,
 		});
 	}
@@ -146,8 +148,6 @@ export class QuestionPage {
 	}
 
 	toQuestion(to) {
-		//console.log(this.questionStacks);
-
 		this.slides.slideTo(to);
 	}
 
@@ -163,13 +163,10 @@ export class QuestionPage {
 		if (index !== last) {
 			this.questionStacks.push(index);
 		}
-
-		console.log(this.questionStacks);
 	}
 
 	back() {
 		const to = this.questionStacks[this.questionStacks.length - 1];
-		console.log(`to : ${to}`);
 
 		this.toQuestion(to);
 		this.questionStacks.pop();
