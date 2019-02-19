@@ -52,12 +52,10 @@ export class QuestionPage {
 	onChoiceClick(choice, question) {
 		switch (question.type) {
 			case questionType.single:
-				console.log('single');
 				this.buttonChoiceNavgation(choice, question);
 				break;
 
 			case questionType.checkbox:
-				console.log('checkbox');
 				this.checkboxChoiceNavigation(question);
 				break;
 
@@ -108,7 +106,6 @@ export class QuestionPage {
 			switch (criteria.type) {
 				case criteriaType.question:
 					this.toQuestion(criteria.to);
-					this.pushQuestion(question.from);
 					break;
 
 				case criteriaType.result:
@@ -123,6 +120,7 @@ export class QuestionPage {
 			this.toQuestion(question.to);
 		}
 
+		this.pushQuestion(question.from);
 		this.histories.push(history);
 	}
 
@@ -142,7 +140,7 @@ export class QuestionPage {
 	}
 
 	toQuestion(to) {
-		console.log(this.questionStacks);
+		//console.log(this.questionStacks);
 
 		this.slides.slideTo(to);
 	}
@@ -159,6 +157,8 @@ export class QuestionPage {
 		if (index !== last) {
 			this.questionStacks.push(index);
 		}
+
+		console.log(this.questionStacks);
 	}
 
 	back() {
