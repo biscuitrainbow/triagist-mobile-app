@@ -1,26 +1,61 @@
 <ion-header>
-    <ion-toolbar no-border-top>
-        <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>
-            Triage
-        </ion-title>
-    </ion-toolbar>
+  <ion-toolbar no-border-top>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      คัดแยกผู้ป่วยตามอาการ
+    </ion-title>
+    <ion-buttons end>
+      <!-- <button ion-button icon-only (click)="navigateReferencePage()">
+        <ion-icon name="help"></ion-icon>
+      </button> -->
+
+       <button ion-button icon-only (click)="toggleSimpleMode()">
+        <ion-icon [name]="!simpleMode? 'grid' : 'list'"></ion-icon>
+      </button>
+
+
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-list no-lines>
-        <button *ngFor="let question of questions" ion-item (click)="startTriage(question)">
-            <ion-card-header class="header">
-                {{question.name}}
-            </ion-card-header>
+  <ion-searchbar (ionInput)="search($event)" debounce="0"></ion-searchbar>
 
-            <img class="img" item-start [src]="question.image" />
+  <div *ngIf="simpleMode" class="flex flex-wrap p-2 ">
+    <div (click)="navigateTriageQuestion(module)" *ngFor="let module of filteredModules; let i = index" class="h-22 w-1/2 p-2 mb-2 leading-normal border border-grey-lighter rounded" >
+     <div class="flex items-start">
+      <div>
+        <ion-badge class="mr-2">
+          {{module.module}}
+        </ion-badge>
+      </div>
 
-            <ion-card-content class="content">
-                {{question.description}}
-            </ion-card-content>
-        </button>
-    </ion-list>
+      <p class="text-2xl">{{module.name}}</p>
+     </div>
+    </div>
+  </div>
+
+
+  <ion-list *ngIf="!simpleMode">
+    <button *ngFor="let module of filteredModules; let i = index" ion-item (click)="navigateTriageQuestion(module)">
+      <ion-card-header [ngClass]="{'header' : !simpleMode}">
+
+        <ion-badge>
+          {{module.module}}
+        </ion-badge>
+
+        {{module.name}}
+      </ion-card-header>
+
+      <img class="img" *ngIf="!simpleMode" item-start [src]="module.image" />
+
+
+      <ion-card-content *ngIf="!simpleMode" class="content">
+        {{module.description}}
+      </ion-card-content>
+
+    </button>
+  </ion-list>
 </ion-content>

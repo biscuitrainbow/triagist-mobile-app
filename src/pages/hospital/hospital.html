@@ -1,11 +1,18 @@
 <ion-header>
   <ion-navbar no-border-bottom>
+
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
       Hospital
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="search()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="view">
@@ -18,16 +25,26 @@
     </ion-segment>
   </ion-toolbar>
 </ion-header>
-<ion-content overflow-scroll="true">
+<ion-content>
+  <ion-list [hidden]="autoCompleteItems.length == 0" no-padding>
+    <ion-item *ngFor="let item of autoCompleteItems" tappable>
+      <p class="font-light text-grey-darker">{{item.description}}</p>
+    </ion-item>
+  </ion-list>
+
   <div #map style="height:100%;" [style.display]="view == 'map' ? 'block' : 'none'"></div>
   <div #web_map style="display:none"></div>
 
   <div [ngSwitch]="view">
     <ion-list no-lines *ngSwitchCase="'list'">
       <ion-item *ngFor="let hospital of hospitals">
-        <p class="font-medium">{{hospital.name}}</p>
+        <p class="font-light text-grey-darker">{{hospital.phoneNumber}}</p>
+
+        <p class="font-light text-grey-darker">{{hospital.name}}</p>
         <p class="font-light font-xs font-grey-lighter">{{hospital.distance}}</p>
-        <button ion-button clear item-end (click)="callNumber(hospital.phoneNumber)">Call</button>
+        <button ion-button clear item-end (click)="callNumber(hospital.phoneNumber)">
+          <ion-icon name="call"></ion-icon>
+        </button>
       </ion-item>
     </ion-list>
   </div>

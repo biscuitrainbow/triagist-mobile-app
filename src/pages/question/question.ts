@@ -1,122 +1,178 @@
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
-import { TYPE, QUESTIONS } from './../triage/questions';
 import { ResultPage } from './../result/result';
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, Slides, Platform, App } from 'ionic-angular';
+import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
-
-import * as moment from "moment";
+import { questionType, choiceType, criteriaType } from '../../datas/triages/meta';
+import { App } from 'ionic-angular/components/app/app';
+import modules from '../../datas/triages/triages';
+import * as moment from 'moment';
 
 @Component({
-  selector: 'page-question',
-  templateUrl: 'question.html',
+	selector: 'page-question',
+	templateUrl: 'question.html',
 })
 export class QuestionPage {
-  @ViewChild(Slides) slides: Slides
-  question: object;
+	@ViewChild(Slides) slides: Slides;
 
-  answers = [];
-  questionStack = [];
+	module: any;
 
-  constructor(
-    public navCtrl: NavController,
-    public toastCtrl: ToastController,
-    public navParams: NavParams,
-    public firestore: AngularFirestore,
-    public firebaseAuth: AngularFireAuth,
-    public platform: Platform,
-    public menuCtrl: MenuController,
-    public app: App,
-  ) {
-    this.question = navParams.get('question');
-  }
+	histories = [];
+	questionStacks = [];
 
-  ionViewDidLoad() {
-    this.menuCtrl.enable(false);
+	constructor(
+		public navCtrl: NavController,
+		public toastCtrl: ToastController,
+		public navParams: NavParams,
+		public firestore: AngularFirestore,
+		public firebaseAuth: AngularFireAuth,
+		public platform: Platform,
+		public menuCtrl: MenuController,
+		public app: App
+	) {
+		this.module = navParams.get('module');
+	}
 
-    let toast = this.toastCtrl.create({
-      message: 'กวาดนิ้วไปด้านขวาเพื่อนย้อนกลับ',
-      duration: 5000
-    })
+	ionViewDidLoad() {
+		this.menuCtrl.enable(false);
 
-    toast.present();
-  }
+		let toast = this.toastCtrl.create({
+			message: 'กวาดนิ้วไปด้านขวาเพื่อนย้อนกลับ',
+			duration: 2000,
+		});
 
-  ionViewDidLeave() {
-    this.menuCtrl.enable(true);
-  }
+		toast.present();
+	}
 
+	ionViewDidLeave() {
+		this.menuCtrl.enable(true);
+	}
 
-  onChoiceClick(choice, question) {
-    switch (choice.type) {
-      case TYPE.QUESTION: {
+	onChoiceClick(choice, question) {
+		switch (question.type) {
+			case questionType.single:
+				this.buttonChoiceNavgation(choice, question);
+				break;
 
-        this.questionStack.push({ from: question.from, question: question.question, answer: choice.name });
-        this.slides.slideTo(choice.to);
-        break;
-      }
+			case questionType.checkbox:
+				this.checkboxChoiceNavigation(question);
+				break;
 
-      case TYPE.RESULT: {
+			default:
+				console.log('default');
 
+				break;
+		}
+	}
 
-        this.questionStack.push({ from: question.from, question: question.question, answer: choice.name });
-        this.saveResult(choice.payload, this.questionStack);
+	buttonChoiceNavgation(choice, question) {
+		let history = { question: question.name, answer: choice.name, result: null };
 
-        this.navCtrl.push(ResultPage, { payload: choice.payload, answers: this.questionStack });
-        break;
-      }
+		switch (choice.type) {
+			case choiceType.question: {
+				this.toQuestion(choice.to);
+				this.pushQuestion(question.from);
+				break;
+			}
 
-      case TYPE.MODULE: {
-        this.app.getRootNav().push(QuestionPage, {
-          question: QUESTIONS[choice.module_index]
-        })
-      }
-    }
-  }
+			case choiceType.result: {
+				this.navigateResult(choice.result);
+				history.result = { code: choice.result.code, level: choice.result.level };
+				break;
+			}
 
-  onNextClick(choices, question) {
+			case choiceType.module: {
+				const module = modules.find((question) => choice.module == question.module);
+				this.navigateModule(module);
 
-    let checkedChoices = choices.filter(item => item.checked == true);
-    let textChoice = checkedChoices.map(item => item.name).join(" ,");
+				break;
+			}
+		}
 
-    this.questionStack.push({ from: question.from, question: question.question, answer: textChoice });
+		this.histories.push(history);
+	}
 
-    if (checkedChoices.length >= 2) {
-      this.navCtrl.push(ResultPage, { payload: question.payload, answers: this.questionStack });
-    } else {
-      this.slides.slideTo(question.to);
-    }
-  }
+	checkboxChoiceNavigation(question) {
+		const checkeds = question.choices.filter((item) => item.checked == true);
+		let textChoices = '';
 
-  onSwipe(event, question) {
-    if (event.direction === 4) {
+		if (checkeds.length !== 0) {
+			textChoices = checkeds.map((item) => item.name).join(' ,');
+		} else {
+			textChoices = 'ไม่ได้เลือกข้อใดเลย';
+		}
 
-      this.slides.slideTo(this.questionStack[this.questionStack.length - 1].from);
-      this.questionStack.pop();
-    }
-  }
+		let history = { question: question.name, answer: textChoices, result: null };
 
-  close() {
-    this.navCtrl.pop();
-  }
+		const { criteria } = question;
+		const matchedCriteria = checkeds.length >= question.criteria.minimum;
 
-  saveResult(payload, answers) {
-    let timestamp = moment().unix();
-    let uid = this.firebaseAuth.auth.currentUser.uid;
+		if (matchedCriteria) {
+			switch (criteria.type) {
+				case criteriaType.question:
+					this.toQuestion(criteria.to);
+					break;
 
-    this.firestore
-      .collection('users')
-      .doc(uid)
-      .collection('triages')
-      .add({ timestamp: timestamp, answers: answers, payload: payload })
-      .then(() => console.log("Saved successfully"))
-      .catch(error => console.log(error.message));
-  }
+				case criteriaType.result:
+					this.navigateResult(criteria.result);
+					history.result = { code: criteria.result.code, level: criteria.result.level };
+					break;
 
+				default:
+					break;
+			}
+		} else {
+			this.toQuestion(question.to);
+		}
 
+		this.pushQuestion(question.from);
+		this.histories.push(history);
+	}
 
+	navigateResult(result) {
+		this.navCtrl.push(ResultPage, {
+			moduleName: this.module.name,
+			result: result,
+			histories: this.histories,
+			timestamp: moment().unix(),
+			canSave: true,
+		});
+	}
 
+	navigateModule(module) {
+		this.app.getRootNav().push(QuestionPage, {
+			module: module,
+		});
+	}
 
+	toQuestion(to) {
+		this.slides.slideTo(to);
+	}
+
+	onSwipe(event, question) {
+		if (event.direction === 4) {
+			this.back();
+		}
+	}
+
+	pushQuestion(index) {
+		const last = this.questionStacks[this.questionStacks.length - 1];
+
+		if (index !== last) {
+			this.questionStacks.push(index);
+		}
+	}
+
+	back() {
+		const to = this.questionStacks[this.questionStacks.length - 1];
+
+		this.toQuestion(to);
+		this.questionStacks.pop();
+	}
+
+	close() {
+		this.navCtrl.pop();
+	}
 }

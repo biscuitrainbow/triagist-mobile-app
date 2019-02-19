@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Close</button>
+    </ion-buttons>
+    <ion-searchbar [(ngModel)]="autoComplete.input" (ionInput)="updateSearchResults()" placeholder="Search for a place"></ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list [hidden]="autoCompleteItems.length == 0">
+    <ion-item *ngFor="let item of autoCompleteItems" tappable>
+      <p class="font-light text-grey-darker">{{item.description}}</p>
+      <button ion-button clear item-end (click)="callNumber(item.phoneNumber)">
+        <ion-icon name="call"></ion-icon>
+      </button>
+
+
+    </ion-item>
+
+    <!-- <ion-item *ngFor="let hospital of hospitals">
+      <p class="font-medium">{{hospital.name}}</p>
+      <p class="font-light font-xs font-grey-lighter">{{hospital.distance}}</p>
+      <button ion-button clear item-end (click)="callNumber(hospital.phoneNumber)">Call</button>
+    </ion-item> -->
+  </ion-list>
+
+  <div id='map' style="display:none"></div>
+
+</ion-content>

@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { NavController, NavParams } from 'ionic-angular';
+import { HospitalPage } from '../hospital/hospital';
 import { LoginPage } from './../login/login';
 import { TriagePage } from './../triage/triage';
-import { HospitalPage } from '../hospital/hospital';
-import { ProfilePage } from '../profile/profile';
 
 @Component({
   selector: 'page-tab',
   templateUrl: 'tab.html',
 })
 export class TabPage {
-  private triagePage = TriagePage;
-  private hospitalPage = HospitalPage;
+  public triagePage = TriagePage;
+  public hospitalPage = HospitalPage;
 
   constructor(
     public navCtrl: NavController,

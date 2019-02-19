@@ -1,85 +1,112 @@
-import { Injectable } from "@angular/core";
-import { File } from "@ionic-native/file";
-import { FirebaseUserProvider } from "../firebase-user/firebase-user";
-import { MapProvider } from "./../map/map";
-import { style, THSarabunNew, defaultStyle } from "./constant";
-
-import * as pdfMake from "pdfmake/build/pdfmake";
-import * as pdfFonts from "pdfmake/build/vfs_fonts";
-import * as moment from "moment";
-import * as jsPDF from "jspdf";
+import { Injectable } from '@angular/core';
+import { File } from '@ionic-native/file';
+import * as moment from 'moment';
+import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+import { FirebaseUserProvider } from '../firebase-user/firebase-user';
+import { defaultStyle, style, THSarabunNew } from './constant';
 
 @Injectable()
 export class PdfProvider {
-  constructor(
-    private file: File,
-    private map: MapProvider,
-    private user: FirebaseUserProvider
-  ) {
-    pdfMake.fonts = THSarabunNew;
-    pdfMake.vfs = pdfFonts.pdfMake.vfs;
-  }
+	constructor(private file: File, private user: FirebaseUserProvider) {
+		pdfMake.fonts = THSarabunNew;
+		pdfMake.vfs = pdfFonts.pdfMake.vfs;
+	}
 
-  async create(data) {
-    return new Promise(async (resolve, reject) => {
-      let user = await this.user.getUser();
+	async create(data) {
+		return new Promise(async (resolve, reject) => {
+			let user = await this.user.getUser();
+			let userDetail = await this.user.getUserDetail();
 
-      let pdfContent = {
-        content: [
-          {
-            text: `${data.code}`,
-            style: "code"
-          },
-          {
-            text: "ผลการคัดกรอง\n",
-            style: "header"
-          },
-          {
-            text: (user.isAnonymous) ? 'Anonymous' : `${user.displayName} \n`,
-            style: "subheader"
-          },
-          {
-            text: moment().format("MMMM Do YYYY, h:mm:ss a"),
-            style: "detail"
-          },
-          {
-            text: "\nลำดับการถามตอบ\n",
-            style: "header"
-          },
-        ],
-        defaultStyle: defaultStyle,
-        styles: style
-      };
+			moment.locale('th');
 
-      try {
-        data.answers.forEach(item => {
-          pdfContent.content.push(
-            {
-              text: item.question,
-              style: "question"
-            },
-            {
-              text: item.answer + "\n\n",
-              style: "answer"
-            }
-          )
-        });
+			const histories = data.histories.map((item) => {
+				return [
+					{
+						text: item.question,
+						style: 'question',
+						alignment: 'left',
+					},
+					{
+						text: item.answer,
+						style: 'answer',
+						alignment: 'left',
+					},
+				];
+			});
 
+			const content = [
+				{
+					columns: [
+						[
+							{
+								text: `${data.code}`,
+								style: 'code',
+							},
+							{
+								text: `${data.moduleName}\n\n`,
+								style: 'subheader',
+							},
+							{
+								text: 'ลำดับการถามตอบ',
+								style: 'header',
+							},
 
-        pdfMake.createPdf(pdfContent).download();
-        // pdfMake.createPdf(pdfContent).getBlob(blob => {
-        //   resolve(blob);
-        // });
-      } catch (e) {
-        reject(e);
-      }
-    })
-  }
+							...histories,
+						],
+						[
+							{
+								text: user.isAnonymous ? 'Anonymous' : `${user.displayName.toUpperCase()}`,
+								style: 'subheader',
+								alignment: 'right',
+							},
+							{
+								text: userDetail.exists ? `เบอร์โทร ${userDetail.data().number}` : '',
+								style: 'detail',
+								alignment: 'right',
+							},
+							{
+								text: `สรุปผลเมื่อ: ${moment.unix(data.timestamp).add(543, 'y').format('Do MMMM YYYY, HH:mm:ss')}`,
+								style: 'detail',
+								alignment: 'right',
+							},
+							{
+								text: `สร้างเอกสารเมื่อ: ${moment().add(543, 'y').format('Do MMMM YYYY, HH:mm:ss')}`,
+								style: 'detail',
+								alignment: 'right',
+							},
+						],
+					],
+				},
+			];
 
-  save(blob) {
-    const directory = this.file.dataDirectory;
-    const name = `${moment()}.pdf`;
+			const footer = {
+				columns: [ { text: 'แอปพลิเคชัน TRIAGIST', alignment: 'right', margin: [ 5, 0 ] } ],
+			};
 
-    return this.file.writeFile(directory, name, blob)
-  }
+			const document = {
+				content,
+				footer,
+				defaultStyle: defaultStyle,
+				styles: style,
+				pageMargins: [ 30, 20 ],
+			};
+
+			try {
+				pdfMake.createPdf(document).download();
+				pdfMake.createPdf(document).getBlob((blob) => {
+					resolve(blob);
+				});
+			} catch (e) {
+				reject(e);
+			}
+		});
+	}
+
+	save(blob) {
+		const directory = this.file.dataDirectory;
+		const name = `${moment()}.pdf`;
+
+		return this.file.writeFile(directory, name, blob);
+	}
 }

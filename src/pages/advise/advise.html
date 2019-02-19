@@ -2,21 +2,41 @@
 
   <ion-navbar>
     <ion-title>คำแนะนำ</ion-title>
+     <ion-buttons end>
+      <button (click)="navigateNotePage()" clear ion-button color="primary">
+        <ion-icon class="mr-2" name="information-circle"></ion-icon>หมายเหตุ
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+
 
 </ion-header>
 
 
 <ion-content padding>
 
+  <div *ngIf="advise.contents.length === 0" class="h-full w-full flex flex-col items-center justify-center">
+    <div class="text-center px-8 w-full">
+      <h2 class="mb-4">ไม่มีคำแนะนำ</h2>
+      <p class="text-grey-darker">หากท่านต้องการข้อมูลเพิ่มเติมกรุณาติดต่อสถานพยาบาลใกล้เคียง</p>
+    </div>
+
+    <div style="margin-top:50px;" class="w-full self-end">
+      <button ion-button block (click)="navigateToMap()">
+        ค้นหาสถาพยาบาล
+      </button>
+    </div>
+  </div>
+
   <ion-slides pager>
-    <ion-slide *ngFor="let content of advise.contents">
+    <ion-slide *ngFor="let content of advise.contents" style="overflow-y: scroll; display: block;">
       <ion-buttons end>
-        <button (click)="navigateNotePage()" clear ion-button color="primary">
-          <ion-icon class="mr-2" name="information-circle"></ion-icon>หมายเหตุ</button>
+
       </ion-buttons>
-      <p text-center class="leading-loose px-4 text-3xl" [innerHTML]="content.detail"></p>
-      <p *ngFor="let subDetail of content.subDetails" [innerHTML]="subDetail" class="text-grey-darker text-2xl leading-loose px-4 my-4"></p>
+      <p class="text-left leading-loose px-4 text-3xl" [innerHTML]="content.title"></p>
+      <p *ngFor="let description of content.descriptions" [innerHTML]="description"
+        class="text-left text-grey-darker text-2xl leading-loose px-4 my-4"></p>
     </ion-slide>
 
   </ion-slides>

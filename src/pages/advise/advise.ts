@@ -1,6 +1,7 @@
 import { NotePage } from './../note/note';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HospitalPage } from '../hospital/hospital';
 
 
 @Component({
@@ -22,6 +23,10 @@ export class AdvisePage {
     this.navCtrl.push(NotePage, {
       notes: this.advise.notes
     })
+  }
+
+  navigateToMap() {
+    this.navCtrl.push(HospitalPage);
   }
 
 }

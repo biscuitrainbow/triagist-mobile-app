@@ -1,92 +1,78 @@
-import { ResultPage } from './../result/result';
-import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Observable } from 'rxjs/Observable';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { NavController, NavParams } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import BasePage from '../BasePage';
-import * as moment from "moment";
+import { ResultPage } from './../result/result';
 
 @Component({
-  selector: 'page-history',
-  templateUrl: 'history.html',
+	selector: 'page-history',
+	templateUrl: 'history.html',
 })
 export class HistoryPage extends BasePage {
+	private triages: Array<Object> = [];
 
-  private historyObservable: Observable<any>;
-  private triages: Array<Object> = [];
+	private lastVisible;
+	private limit = 8;
 
-  private lastVisible;
-  private limit = 8;
+	constructor(
+		public navCtrl: NavController,
+		public navParams: NavParams,
+		public firestore: AngularFirestore,
+		public firebaseAuth: AngularFireAuth,
+		public loadingCtrl: LoadingController
+	) {
+		super(loadingCtrl);
+	}
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public firestore: AngularFirestore,
-    public firebaseAuth: AngularFireAuth,
-    public loadingCtrl: LoadingController
-  ) {
-    super(loadingCtrl)
-  }
+	ionViewDidLoad() {
+		this.showLoading('Fetching data...');
+		let uid = this.firebaseAuth.auth.currentUser.uid;
 
-  ionViewDidLoad() {
-    this.showLoading("Fetching data...");
-    let uid = this.firebaseAuth.auth.currentUser.uid;
+		this.firestore.collection('triages').ref.where('user', '==', uid).orderBy('timestamp', 'desc').limit(this.limit).get().then((val) => {
+			this.lastVisible = val.docs[val.docs.length - 1];
+			val.docs.map((doc) => {
+				this.triages.push(doc.data());
+			});
 
-    let ref = this.firestore
-      .collection('users')
-      .doc(uid)
-      .collection('triages')
-      .ref
-      .orderBy('timestamp', "desc")
-      .limit(this.limit)
-      .get()
-      .then(val => {
-        this.lastVisible = val.docs[val.docs.length - 1];
-        val.docs.map(doc => this.triages.push(doc.data()));
-        this.hideLoading();
-      })
-  }
+			this.hideLoading();
+		});
+	}
 
-  view(triage) {
-    this.navCtrl.push(ResultPage, {
-      payload: triage.payload,
-      answers: triage.answers
-    })
-  }
+	view(triage) {
+		this.navCtrl.push(ResultPage, {
+			moduleName: triage.module,
+			result: triage.result,
+			histories: triage.histories,
+			timestamp: triage.timestamp,
+			canSave: false,
+		});
+	}
 
-  delete(triage) {
-    // let uid = this.firebaseAuth.auth.currentUser.uid;
+	doInfinite(event) {
+		let uid = this.firebaseAuth.auth.currentUser.uid;
 
-    // this.firestore
-    //   .collection('users')
-    //   .doc(uid)
-    //   .collection('triages')
-    //   .doc(triage);
-  }
-
-  doInfinite(event) {
-    let uid = this.firebaseAuth.auth.currentUser.uid;
-
-    if (this.lastVisible !== undefined) {
-      this.firestore
-        .collection('users')
-        .doc(uid)
-        .collection('triages')
-        .ref
-        .orderBy('timestamp', "desc")
-        .startAfter(this.lastVisible)
-        .limit(this.limit)
-        .get()
-        .then(val => {
-          this.lastVisible = val.docs[val.docs.length - 1];
-          val.docs.map(doc => this.triages.push(doc.data()));
-          event.complete();
-        })
-    } else {
-      event.complete();
-    }
-  }
-
+		if (this.lastVisible !== undefined) {
+			this.firestore
+				.collection('triages')
+				.ref.where('user', '==', uid)
+				.orderBy('timestamp', 'desc')
+				.startAfter(this.lastVisible)
+				.limit(this.limit)
+				.get()
+				.then((val) => {
+					this.lastVisible = val.docs[val.docs.length - 1];
+					val.docs.map((doc) => {
+						this.triages.push(doc.data());
+					});
+					event.complete();
+				})
+				.catch((e) => {
+					console.log(e);
+				});
+		} else {
+			event.complete();
+		}
+	}
 }
