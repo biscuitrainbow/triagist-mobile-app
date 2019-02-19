@@ -24,6 +24,13 @@
     <div class="flex flex-col  h-full">
       <ion-card>
 
+          <ion-buttons end>
+              <button (click)="navigateAdvisePage()" clear ion-button color="primary">
+                <ion-icon class="mr-2" name="information-circle"></ion-icon>
+                คำแนะนำ
+              </button>
+            </ion-buttons>
+
         <ion-card-header>
           <h1 text-center ion-text [innerHTML]=" result.code "></h1>
         </ion-card-header>
@@ -40,14 +47,8 @@
       </ion-card>
 
       <ion-card>
-        <div class="flex justify-between text-center items-center">
+        <div class="flex justify-between text-center items-center py-4">
           <p class="px-8 card-header ">ลำดับการตอบคำถาม</p>
-          <ion-buttons end>
-            <button (click)="navigateAdvisePage()" clear ion-button color="primary">
-              <ion-icon class="mr-2" name="information-circle"></ion-icon>
-              คำแนะนำ
-            </button>
-          </ion-buttons>
         </div>
 
         <ion-list #scheduleList>
