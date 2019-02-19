@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{module.name}}</ion-title>
+   <div class="flex">
+    <ion-badge class="ml-2"> {{module.module}} </ion-badge>
+    <ion-title> {{module.name}}</ion-title>
+   </div>
 
     <ion-buttons end>
       <button ion-button icon-only (click)="close()">
