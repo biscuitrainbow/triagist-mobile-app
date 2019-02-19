@@ -1018,7 +1018,7 @@ const questions = [
 ];
 
 const module24 = {
-	name: 'ผลัดหกล้ม',
+	name: 'พลัดหกล้ม',
 	description: 'อุบัติเหตุ , เจ็บปวด',
 	module: 24,
 	image: 'assets/imgs/man-pushing-child.png',
