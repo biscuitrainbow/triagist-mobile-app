@@ -1,24 +1,17 @@
-import { AdvisePage } from './../advise/advise';
 import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController } from 'ionic-angular';
-import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
-import { ToastController } from 'ionic-angular/components/toast/toast-controller';
-import { Loading } from 'ionic-angular/components/loading/loading';
-
-import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFirestore } from 'angularfire2/firestore';
-
 import { FileOpener } from '@ionic-native/file-opener';
 import { SocialSharing } from '@ionic-native/social-sharing';
-
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { AlertController, NavController, NavParams } from 'ionic-angular';
+import { Loading } from 'ionic-angular/components/loading/loading';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
+import { ToastController } from 'ionic-angular/components/toast/toast-controller';
+import * as moment from 'moment';
 import { MapProvider } from '../../providers/map/map';
 import { PdfProvider } from '../../providers/pdf/pdf';
 import { FirebaseUserProvider } from './../../providers/firebase-user/firebase-user';
-
-import * as _ from 'lodash';
-import * as moment from 'moment';
-
-declare var google;
+import { AdvisePage } from './../advise/advise';
 
 @Component({
 	selector: 'page-result',

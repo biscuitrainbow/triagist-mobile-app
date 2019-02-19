@@ -1,17 +1,14 @@
-import { HistoryPage } from './../pages/history/history';
-import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
-import { TabPage } from './../pages/tab/tab';
-import { LoginPage } from './../pages/login/login';
 import { Component } from '@angular/core';
-import { Platform, NavController } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Loading } from 'ionic-angular/components/loading/loading';
+import { Platform } from 'ionic-angular';
 import { App } from 'ionic-angular/components/app/app';
-import { HospitalPage } from '../pages/hospital/hospital';
-import { HospitalSearchPage } from '../pages/hospital-search/hospital-search';
-import { ReferencePage } from '../pages/reference/reference';
+import { Loading } from 'ionic-angular/components/loading/loading';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
+import { HistoryPage } from './../pages/history/history';
+import { LoginPage } from './../pages/login/login';
+import { TabPage } from './../pages/tab/tab';
 
 @Component({
   templateUrl: 'app.html'

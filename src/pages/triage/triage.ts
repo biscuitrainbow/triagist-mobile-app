@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { App } from 'ionic-angular';
-import { QuestionPage } from '../question/question';
-import { QUESTIONS } from './questions';
+import { App, NavController, NavParams } from 'ionic-angular';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
-import { ReferencePage } from '../reference/reference';
 import modules from '../../datas/triages/triages';
+import { QuestionPage } from '../question/question';
+import { ReferencePage } from '../reference/reference';
 
 @Component({
 	selector: 'page-triage',
@@ -34,7 +32,7 @@ export class TriagePage {
 		this.navCtrl.push(ReferencePage);
 	}
 
-	toggleSimpleMode(){
+	toggleSimpleMode() {
 		this.simpleMode = !this.simpleMode;
 	}
 

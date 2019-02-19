@@ -12,7 +12,6 @@ export class FirebaseUserProvider {
   }
 
   getUser() {
-    let uid = this.firebaseAuth.auth.currentUser.uid;
     return this.firebaseAuth.auth.currentUser
   }
 

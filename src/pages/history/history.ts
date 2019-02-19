@@ -1,19 +1,16 @@
-import { ResultPage } from './../result/result';
-import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Observable } from 'rxjs/Observable';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { NavController, NavParams } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import BasePage from '../BasePage';
-import * as moment from 'moment';
+import { ResultPage } from './../result/result';
 
 @Component({
 	selector: 'page-history',
 	templateUrl: 'history.html',
 })
 export class HistoryPage extends BasePage {
-	private historyObservable: Observable<any>;
 	private triages: Array<Object> = [];
 
 	private lastVisible;
@@ -33,20 +30,14 @@ export class HistoryPage extends BasePage {
 		this.showLoading('Fetching data...');
 		let uid = this.firebaseAuth.auth.currentUser.uid;
 
-		let ref = this.firestore
-			.collection('triages')
-			.ref.where('user', '==', uid)
-			.orderBy('timestamp', 'desc')
-			.limit(this.limit)
-			.get()
-			.then((val) => {
-				this.lastVisible = val.docs[val.docs.length - 1];
-				val.docs.map((doc) => {
-					this.triages.push(doc.data());
-				});
-
-				this.hideLoading();
+		this.firestore.collection('triages').ref.where('user', '==', uid).orderBy('timestamp', 'desc').limit(this.limit).get().then((val) => {
+			this.lastVisible = val.docs[val.docs.length - 1];
+			val.docs.map((doc) => {
+				this.triages.push(doc.data());
 			});
+
+			this.hideLoading();
+		});
 	}
 
 	view(triage) {
@@ -56,15 +47,6 @@ export class HistoryPage extends BasePage {
 			histories: triage.histories,
 			canSave: false,
 		});
-	}
-
-	delete(triage) {
-		// let uid = this.firebaseAuth.auth.currentUser.uid;
-		// this.firestore
-		//   .collection('users')
-		//   .doc(uid)
-		//   .collection('triages')
-		//   .doc(triage);
 	}
 
 	doInfinite(event) {

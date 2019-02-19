@@ -15,12 +15,13 @@
           <ion-badge [style.background-color]="triage.result.level.color">{{triage.result.code}}</ion-badge>
         </div>
 
-
         <div class="flex items-center">
           <p class="font-light font-sm">{{triage.module}}</p>
           <p class="passed-time font-light mt-2">{{triage.timestamp | duration}}</p>
         </div>
+
         <button ion-button clear item-end (click)="view(triage)">View</button>
+
       </ion-item>
 
       <ion-item-options side="right">
@@ -28,11 +29,6 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-
-
-  <!-- <button ion-button (click)="doInfinite($event)">
-      Load more
-  </button> -->
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
