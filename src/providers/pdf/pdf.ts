@@ -20,64 +20,76 @@ export class PdfProvider {
 
 			moment.locale('th');
 
-			let pdfContent = {
-				content: [
+			const histories = data.histories.map((item) => {
+				return [
 					{
-						columns: [
-							[
-								{
-									text: `${data.code}`,
-									style: 'code',
-								},
-								{
-									text: `${data.moduleName}`,
-									style: 'subheader',
-								},
-							],
-							[
-								{
-									text: user.isAnonymous ? 'Anonymous' : `${user.displayName}`,
-									style: 'subheader',
-									alignment: 'right',
-								},
-								{
-									text: userDetail.exists ? `เบอร์โทรญาติ ${userDetail.data().number}` : '',
-									style: 'detail',
-									alignment: 'right',
-								},
-								{
-									text: moment().add(543, 'y').format('Do MMMM YYYY, HH:mm:ss'),
-									style: 'detail',
-									alignment: 'right',
-								},
-							],
-						],
+						text: item.question,
+						style: 'question',
+						alignment: 'left',
 					},
+					{
+						text: item.answer,
+						style: 'answer',
+						alignment: 'left',
+					},
+				];
+			});
 
-					{
-						text: '\nลำดับการถามตอบ\n',
-						style: 'header',
-					},
-				],
+			const content = [
+				{
+					columns: [
+						[
+							{
+								text: `${data.code}`,
+								style: 'code',
+							},
+							{
+								text: `${data.moduleName}\n\n`,
+								style: 'subheader',
+							},
+							{
+								text: 'ลำดับการถามตอบ',
+								style: 'header',
+							},
+
+							...histories,
+						],
+						[
+							{
+								text: user.isAnonymous ? 'Anonymous' : `${user.displayName.toUpperCase()}`,
+								style: 'subheader',
+								alignment: 'right',
+							},
+							{
+								text: userDetail.exists ? `เบอร์โทรญาติ ${userDetail.data().number}` : '',
+								style: 'detail',
+								alignment: 'right',
+							},
+							{
+								text: moment().add(543, 'y').format('Do MMMM YYYY, HH:mm:ss'),
+								style: 'detail',
+								alignment: 'right',
+							},
+						],
+					],
+				},
+			];
+
+			const footer = {
+				columns: [ { text: 'แอปพลิเคชัน TRIAGIST', alignment: 'right', margin: [ 5, 0 ] } ],
+			};
+
+			const document = {
+				content,
+				footer,
 				defaultStyle: defaultStyle,
 				styles: style,
+				pageMargins: [ 30, 20 ],
 			};
 
 			try {
-				data.histories.forEach((item) => {
-					pdfContent.content.push(
-						{
-							text: item.question,
-							style: 'question',
-						},
-						{
-							text: item.answer + '\n\n',
-							style: 'answer',
-						}
-					);
-				});
-				pdfMake.createPdf(pdfContent).download();
-				pdfMake.createPdf(pdfContent).getBlob((blob) => {
+				pdfMake.createPdf(document).download();
+				pdfMake.createPdf(document).getBlob((blob) => {
 					resolve(blob);
 				});
 			} catch (e) {
