@@ -94,6 +94,7 @@ export class HospitalPage {
 				this.googleDistanceMatrix.getDistanceMatrix(distanceRequest, (response) => {
 					hospital.distance = response.rows[0].elements[0].distance.text;
 					hospital.duration = response.rows[0].elements[0].duration.text;
+					hospital.durationValue = response.rows[0].elements[0].duration.value;
 				});
 
 				/* Request place detail for phone number */
@@ -124,6 +125,10 @@ export class HospitalPage {
 				});
 
 				this.hospitals = result;
+				this.hospitals = this.hospitals.sort((a,b) => {
+					return a.durationValue - b.durationValue;
+				});
+
 			});
 		});
 	}
