@@ -1,13 +1,17 @@
 page-triage {
-    .header {
-        font-family: 'Kanit', sans-serif;
-        font-size: 1.5em;
-    }
-    .content {
-        font-family: 'Kanit', sans-serif;
-        color: #666;
-    }
-    .img {
-        width: 75px;
-    }
+  .header {
+    font-family: "Kanit", sans-serif;
+    font-size: 1.5em;
+  }
+  .content {
+    font-family: "Kanit", sans-serif;
+    color: #666;
+  }
+  .img {
+    width: 75px;
+  }
+}
+
+.button-inner {
+  flex-flow: column;
 }
