@@ -25,8 +25,8 @@ export class LoginPage {
 		public toastCtrl: ToastController
 	) {
 		this.formLogin = formBuilder.group({
-			email: [ 'natthaponsricort@gmail.com' ],
-			password: [ 'lovesrk01' ],
+			email: [ '' ],
+			password: [ '' ],
 		});
 	}
 
