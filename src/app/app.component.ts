@@ -9,6 +9,7 @@ import { LoadingController } from 'ionic-angular/components/loading/loading-cont
 import { HistoryPage } from './../pages/history/history';
 import { LoginPage } from './../pages/login/login';
 import { TabPage } from './../pages/tab/tab';
+import { ReferencePage } from '../pages/reference/reference';
 
 @Component({
   templateUrl: 'app.html'
@@ -56,6 +57,10 @@ export class MyApp {
 
   history() {
     this.app.getRootNav().push(HistoryPage);
+  }
+
+  reference(){
+    this.app.getRootNav().push(ReferencePage);
   }
 
   showLoading(message: string) {
