@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="th.ac.cmu.camt.triage" android-versionCode="903" ios-CFBundleIdentifier="cmu.camt.triage" version="8.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Triagist</name>
-    <description>Triage mobile application</description>
+<widget android-packageName="th.ac.cmu.camt.triage" android-versionCode="903" ios-CFBundleIdentifier="cmu.camt.triage" version="9.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>คัดแยกอาการเจ็บป่วย</name>
+    <description>แอปพลิเคชันสำหรับคัดแยกอาการเจ็บป่วย</description>
     <author email="natthaponsricort@gmail.com" href="http://ionicframework.com/">CAMT MMIT</author>
     <content src="index.html" />
     <access origin="*" />

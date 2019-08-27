@@ -37,6 +37,7 @@
     "@types/lodash": "^4.14.92",
     "android-versions": "^1.3.0",
     "angularfire2": "^5.0.0-rc.5-next",
+    "apk": "1.2.0",
     "call-number": "^1.0.1",
     "cordova-android": "7.1.4",
     "cordova-android-support-gradle-release": "^1.4.7",
