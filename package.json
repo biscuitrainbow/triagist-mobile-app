@@ -64,7 +64,7 @@
     "ionic2-super-tabs": "^4.1.5",
     "ionicons": "^3.0.0",
     "jspdf": "^1.3.5",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "moment": "^2.20.1",
     "mx.ferreyra.callnumber": "0.0.2",
     "pdfmake": "^0.1.35",
