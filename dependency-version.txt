@@ -1,0 +1,22 @@
+Ionic:
+
+   Ionic CLI          : 5.4.16
+   Ionic Framework    : ionic-angular 3.9.2
+   @ionic/app-scripts : 3.1.8
+
+Cordova:
+
+   Cordova CLI       : 8.0.0
+   Cordova Platforms : android 7.1.4, ios 4.5.5
+   Cordova Plugins   : cordova-plugin-ionic-webview 1.2.1, (and 12 other plugins)
+
+Utility:
+
+   cordova-res : not installed
+   native-run  : not installed
+
+System:
+
+   NodeJS : v8.12.0 (/Users/ntpscrt/.nvm/versions/node/v8.12.0/bin/node)
+   npm    : 6.4.1
+   OS     : macOS Big Sur
